@@ -1,0 +1,30 @@
+{
+  "name": "difmo-tech",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "aos": "^2.3.4",
+    "firebase": "^10.14.1",
+    "framer-motion": "^11.11.9",
+    "next": "^14.2.15",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^5.3.0",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1",
+    "three": "^0.169.0"
+  },
+  "devDependencies": {
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
+}
