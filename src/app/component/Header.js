@@ -107,7 +107,7 @@ const Header = () => {
             )}
           </div>
 
-          <HeaderLink href="/portfolio" isActive={isActive("/portfolio")}>
+          <HeaderLink href="/products" isActive={isActive("/portfolio")}>
             Products
           </HeaderLink>
           
@@ -125,20 +125,7 @@ const Header = () => {
           className="items-center justify-center hidden h-10 px-5 text-white bg-orange-600 rounded-3xl md:flex"
         >
           <p>Get Started</p>
-          {/* <svg
-            className="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M16 12l-4-4-4 4m8-4v8H8V8"
-            />
-          </svg> */}
+           
         </Link>
       </div>
     </header>

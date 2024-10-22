@@ -201,81 +201,43 @@ function ProjectSlider({ limit }) {
 
   return (
     <div className="slider-container py-4">
-      {/* <Slider {...settings}>
-        {displayedProjects.map((project) => (
-          <div key={project.id} className="p-2">
-            <div
-              key={project.id}
-              className="bg-[#ffffff] hover:bg-warm-gray p-4 border-2 border-gray-200 rounded-xl shadow-md flex flex-col relative"
+<Slider {...settings}>
+  {displayedProjects.map((project) => (
+    <div key={project.id} className="p-2 flex-1 min-w-[300px] max-w-[350px]"> {/* Ensuring consistent width */}
+      <div
+        className="bg-white hover:bg-gray-100 p-4 border-2 border-gray-200 rounded-xl shadow-lg transition-transform transform hover:scale-105 flex flex-col h-full" // h-full ensures full height
+      >
+        <Image
+          src={project.image}
+          alt={project.title}
+          className="object-fill w-full h-40 mb-2 rounded-lg" // Adjusted height for better aspect ratio
+        />
+        <div className="flex-1 flex flex-col px-4"> 
+          <h3 className="md:text-xl text-lg font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-orange-500">
+           
+          {project.title.length > 20
+              ? `${project.title.slice(0, 15)}...`
+              : project.title}
+          
+          </h3>
+          <p className="text-gray-700 text-base sm:pt-2 leading-relaxed  text-justify flex-1">
+            {project.description.length > 65
+              ? `${project.description.slice(0, 60)}...`
+              : project.description}
+          </p>
+          <div className="mt-6 self-end">
+            <Link
+              href={`/our-projects/${project.id}`}
+              className="bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg shadow hover:bg-primary-orange transition duration-200"
             >
-              <Image
-                src={project.image}
-                alt={project.title}
-                className="object-cover w-full mb-2 rounded-lg h-100"
-              />
-              <div className="flex-1 px-4">
-                <h3 className="md:text-xl    text-lg font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange ">
-                  {project.title}
-                </h3>
-                <p className="text-gray-700 text-[16px] sm:pt-2  leading-loose tracking-wide text-justify">
-                  {project.description.length > 65
-                    ? `${project.description.slice(0, 65)}...`
-                    : project.description}
-                </p>
-
-                <div className="mt-4">
-                  <Link
-                    href={`/our-projects/${project.id}`}
-                    className="absolute bottom-4 right-4 text-[#26baf6] font-semibold cursor-pointer animate-blink"
-                  >
-                    View Detail's
-                  </Link>
-                </div>
-              </div>
-            </div>
+              View Details
+            </Link>
           </div>
-        ))}
-      </Slider> */}
-       <Slider {...settings}>
-        {displayedProjects.map((project) => (
-          <div key={project.id} className="p-2">
-            <div
-              key={project.id}
-              className="bg-[#ffffff] hover:bg-warm-gray p-4 border-2 border-gray-200 rounded-xl shadow-md flex flex-col relative h-full" // h-full added for full height
-            >
-              {/* <Image
-                src={project.image}
-                alt={project.title}
-                className="object-cover w-full mb-2 rounded-lg"
-                style={{ height: "200px" }} // Set a fixed height for the image
-              /> */}
-              <Image
-              src={project.image}
-              alt={project.title}
-              className="object-cover w-full mb-2 rounded-lg h-200"
-            />
-              <div className="flex-1 flex flex-col px-4"> {/* flex-1 added to make the content grow */}
-                <h3 className="md:text-xl text-lg font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange ">
-                  {project.title}
-                </h3>
-                <p className="text-gray-700 text-[16px] sm:pt-2 leading-loose tracking-wide text-justify flex-1">
-                  {project.description.length > 65
-                    ? `${project.description.slice(0, 60)}...`
-                    : project.description}
-                </p>
-                <div className="mt-6 self-end">
-                  <Link
-                    href={`/our-projects/${project.id}`}
-                    className="absolute bottom-4 right-4 text-[#26baf6] font-semibold cursor-pointer animate-blink"
-                  >
-                    View Details
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </Slider>
+        </div>
+      </div>
+    </div>
+  ))}
+</Slider>
     </div>
   );
 }
