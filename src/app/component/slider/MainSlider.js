@@ -5,14 +5,14 @@ import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-// Dynamic import to avoid SSR issues
+//Dynamic import to avoid SSR issues
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
 // Import images
-import image1 from "../../assets/b1.jpg";
-import image2 from "../../assets/b2.jpg";
-import image3 from "../../assets/b3.jpg";
-import image4 from "../../assets/img1.jpg";
+import image1 from "../../assets/home1.jpg";
+import image2 from "../../assets/home2.jpg";
+import image3 from "../../assets/home3.jpg";
+import image4 from "../../assets/home4.jpg";
 
 const MainSlider = () => {
   const settings = {

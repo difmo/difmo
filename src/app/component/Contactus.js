@@ -4,12 +4,12 @@ import Image from "next/image";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 const Contactus = () => {
   return (
-    <div className="mx-4 sm:mx-8 lg:mx-16  my-6">
+    <div className="mx-4 my-6 sm:mx-8 lg:mx-16">
       {/* Grid Container for mobile responsive layout */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {/* Text Section */}
         <div className="rounded-lg">
-          <h2 className="md:text-3xl text-4xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange  mb-6">
+          <h2 className="mb-6 text-4xl font-extrabold text-transparent md:text-3xl font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange">
             Question About Services
           </h2>
           <p className="text-gray-700 text-[16px] leading-relaxed md:leading-loose tracking-wide text-justify">
@@ -18,7 +18,7 @@ const Contactus = () => {
             you to create a strategy that will drive you towards success.
           </p>
           <div className="py-2">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               <div className="p-4 bg-white border rounded-lg shadow-md">
                 <span className="block text-sm font-bold">Phone Number</span>
                 <a
@@ -54,7 +54,7 @@ const Contactus = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            <div className="grid grid-cols-1 gap-6 mt-6 md:grid-cols-2">
               <div className="p-4 bg-white border rounded-lg shadow-md">
                 <span className="block text-sm font-bold">Address</span>
                 <span>
@@ -62,7 +62,7 @@ const Contactus = () => {
                 </span>
               </div>
 
-              <div className="p-4 bg-white border rounded-lg shadow-md flex justify-between items-center">
+              <div className="flex items-center justify-between p-4 bg-white border rounded-lg shadow-md">
                 <p className="text-sm font-bold">Social Media</p>
                 <br />
                 <div className="flex space-x-4">
@@ -107,7 +107,7 @@ const Contactus = () => {
             alt="About Us"
             width={500}
             height={300}
-            className="w-full transition-transform duration-300 ease-in-out transform shadow-lg rounded-xl  "
+            className="w-full transition-transform duration-300 ease-in-out transform shadow-lg rounded-xl "
           />
         </div>
       </div>
