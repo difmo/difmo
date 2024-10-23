@@ -6,7 +6,7 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCogs, faUsers, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import fqaQ from "../assets/backgrounds_images/aboutbg2.jpg";
-import career from "../assets/career.jpeg";
+import career from "../assets/career.jpg";
 import Contactus from "../component/Contactus";
 import OurContact from "../component/OurContact";
 import see from "../assets/Question.png";
@@ -80,7 +80,7 @@ const About = () => {
   <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
   
   {/* Text Section */}
-  <div className="flex flex-col justify-between rounded-lg p-4">
+  <div className="flex flex-col justify-between p-4 rounded-lg">
     <h2 className="mb-6 text-4xl font-extrabold text-transparent md:text-3xl font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange">
       Want to be a part of an ever-warming culture?
     </h2>
@@ -106,11 +106,11 @@ const About = () => {
     />
   </div>
 </div>
-<div className="bg-warm-gray py-10 flex flex-col items-center justify-center">
-  <h2 className="md:text-3xl text-xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange mb-6 text-center">
+<div className="flex flex-col items-center justify-center py-10 bg-warm-gray">
+  <h2 className="mb-6 text-xl font-extrabold text-center text-transparent md:text-3xl font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange">
     Mastering Web Application Technologies for Your Success
   </h2>
-  <button className="px-6 py-2 text-white bg-primary-orange rounded-lg hover:bg-deep-blue transition duration-300">
+  <button className="px-6 py-2 text-white transition duration-300 rounded-lg bg-primary-orange hover:bg-deep-blue">
   <Link href="/apply-job">
     Apply Now
   </Link>

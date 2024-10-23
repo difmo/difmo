@@ -6,6 +6,7 @@ import {
   faCloud,
   faShieldAlt,
   faBrain,
+  faNavicon
 } from "@fortawesome/free-solid-svg-icons";
 
 const OurServices = () => {
@@ -75,17 +76,17 @@ const OurServices = () => {
       textColor: "text-red-800",
     },
     {
-      icon: faBrain,
-      title: "Machine Learning",
+      icon: faNavicon,
+      title: "Data Analytics",
       description:
-        "Explore machine learning solutions to optimize your business processes and decision-making.",
+        "Analyze and visualize complex data patterns to stay ahead of the competition and improve business performance.",
       bgColor: "bg-indigo-100",
       textColor: "text-indigo-800",
     },
   ];
   return (
-    <div className="mx-4 sm:mx-8 lg:mx-16 my-8">
-      <h2 className="md:text-3xl text-4xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange  mb-4">
+    <div className="mx-4 my-8 sm:mx-8 lg:mx-16">
+      <h2 className="mb-4 text-4xl font-extrabold text-transparent md:text-3xl font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange">
         Our Services
       </h2>
       <p className="text-gray-700 text-[16px] leading-relaxed md:leading-loose tracking-wide text-justify">
@@ -95,7 +96,7 @@ const OurServices = () => {
         stand out with solutions that push boundaries.
       </p>
       {/* <div className="grid w-full grid-cols-1 gap-6 px-4 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3"> */}
-      <div className="grid w-full grid-cols-1 gap-6  sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-7">
+      <div className="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-7">
         {servicesData.map((service, index) => (
           <div
             key={index}
@@ -112,7 +113,7 @@ const OurServices = () => {
             >
               {service.title}
             </h2>
-            <p className="text-center px-4 text-gray-700">
+            <p className="px-4 text-center text-gray-700">
               {service.description}
             </p>
           </div>
