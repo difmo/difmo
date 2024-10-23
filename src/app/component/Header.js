@@ -39,10 +39,10 @@ const Header = () => {
       <div className="container flex items-center justify-between px-6 py-4 mx-auto">
         {/* Logo Section */}
         <Link href="/" className="flex items-center space-x-2">
-          {/* <Image src={logo} alt="Hexad Logo" width={40} height={40} /> */}
-          <span className="text-2xl font-semibold text-orange-600">
+          <Image src={logo} alt="Difmo Logo" width={200} height={64} />
+          {/* <span className="text-2xl font-semibold text-orange-600">
             Difmo Technologies
-          </span>
+          </span> */}
         </Link>
 
         {/* Hamburger Icon */}
@@ -134,7 +134,7 @@ const Header = () => {
               
               <div>
               <button
-  className="flex items-center text-gray-700 hover:text-primary-orange w-full text-left "
+  className="flex items-center w-full text-left text-gray-700 hover:text-primary-orange "
   onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
   aria-expanded={isMobileDropdownOpen}
   aria-haspopup="true" // indicates that the button controls a dropdown
