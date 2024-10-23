@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
       <body className="">
         <Header />
 
-        <div className="mt-[82px] min-h-screen">{children}</div>
+        <div className="mt-[74px] min-h-screen">{children}</div>
         <Footer />
       </body>
     </html>

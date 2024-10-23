@@ -5,7 +5,7 @@ import sakshamstudy from "../assets/ourprojects/3.png";
 import Pragaticoaching from "../assets/ourprojects/4.png";
 import Bhatiasportsv2 from "../assets/ourprojects/5.png";
 import Bhatiasportsv1 from "../assets/ourprojects/6.png";
-import Agape from "../assets/ourprojects/7.png";
+ 
 import Jmart from "../assets/ourprojects/8.png";
 import Jstore from "../assets/ourprojects/9.png";
 import JDelivery from "../assets/ourprojects/10.png";

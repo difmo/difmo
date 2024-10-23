@@ -61,7 +61,7 @@ export default function Home() {
             Get In Touch
           </h2>
         </div>
-        {/* <OurContact /> */}
+        <OurContact />
       </div>
     </>
   );

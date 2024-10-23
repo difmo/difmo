@@ -1,5 +1,7 @@
+
+
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -10,9 +12,27 @@ const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State for popup menu
   const pathname = usePathname(); // Current route for active styling
-
+  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false); // Mobile dropdown toggle
+ 
   // Helper to determine if a link is active
   const isActive = (path) => pathname === path;
+  const closeDropdown = () => {
+    setIsDropdownOpen(false);
+  };
+
+  // Ensure dropdown is closed on resize to desktop view
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsMenuOpen(false);
+        setIsMobileDropdownOpen(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <header className="fixed top-0 left-0 z-50 w-full bg-white shadow-sm">
@@ -111,23 +131,71 @@ const Header = () => {
               <HeaderLink href="/about" isActive={isActive("/about")}>
                 About Us
               </HeaderLink>
-              <DropdownMenu
-                title="Services"
-                isActive={isActive("/services")}
-                items={[
-                  { href: "/web-development", label: "Web Development" },
-                  { href: "/mobile-development", label: "Mobile Development" },
-                  {
-                    href: "/ecommerce-development",
-                    label: "E-Commerce Development",
-                  },
-                  {
-                    href: "/software-maintenance",
-                    label: "Software Maintenance",
-                  },
-                  { href: "/software-testing", label: "Software Testing" },
-                ]}
-              />
+              
+              <div>
+              <button
+  className="flex items-center text-gray-700 hover:text-primary-orange w-full text-left "
+  onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
+  aria-expanded={isMobileDropdownOpen}
+  aria-haspopup="true" // indicates that the button controls a dropdown
+>
+  Services
+  <svg
+    className="w-4 h-4 ml-1 transition-transform duration-200"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+    style={{
+      transform: isMobileDropdownOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+    }} // Rotates the icon when the dropdown is open
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      d="M19 9l-7 7-7-7"
+    ></path>
+  </svg>
+</button>
+
+              {isMobileDropdownOpen && (
+                <div className="ml-4">
+                  <Link
+                    href="/web-development"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
+                  >
+                    Web Development
+                  </Link>
+                  <Link
+                    href="/mobile-development"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
+                  >
+                    Mobile Development
+                  </Link>
+
+                  <Link
+                    href="/ecommerce-development"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
+                  >
+                    E-Commerce Development
+                  </Link>
+                  <Link
+                    href="/software-maintenance"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
+                  >
+                    Software Maintenance Services
+                  </Link>
+
+                  <Link
+                    href="/software-testing"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
+                  >
+                    Software Testing Services
+                  </Link>
+                </div>
+              )}
+            </div>
               <HeaderLink href="/products" isActive={isActive("/products")}>
                 Products
               </HeaderLink>
