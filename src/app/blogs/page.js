@@ -29,7 +29,7 @@ const Projects = () => {
         </div>
       </div>
 
-      {/* Blog List Section */}
+   
       <div className="py-12 bg-gray-100">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
@@ -38,39 +38,41 @@ const Projects = () => {
 
           {/* Blog grid with 4 cards per row */}
           <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
-            {technicalBlog.map((blog, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out overflow-hidden"
-              >
-                {/* Blog Image */}
-                <div className="relative w-full h-[200px]">
-                  <Image
-                    src={blog.image}
-                    alt={blog.title}
-                    layout="fill"
-                    // objectFit="cover"
-                    className="rounded-t-lg"
-                  />
-                </div>
-
-                {/* Blog Content */}
-                <div className="p-6">
-                  <h2 className="md:text-xl text-xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange mb-2">
-                    {blog.title.length > 16 ? `${blog.title.substring(0, 16)}...` : blog.title}
-                  </h2>
-                  <p className="text-gray-700 text-[16px] leading-relaxed tracking-wide text-justify mb-4">
-                    {blog.description.length > 60 ? `${blog.description.substring(0, 60)}...` : blog.description}
-                  </p>
-                   
-                  <Link href={`/blogs/${blog.id}`} className="inline-flex items-center text-orange-600 hover:text-orange-500 font-semibold">
-                    Read More
-                    <FontAwesomeIcon icon={faArrowRight} className="ml-2 text-sm" />
-                  </Link>
-                </div>
-              </div>
-            ))}
+  {technicalBlog.map((blog, index) => (
+    <Link href={`/blogs/${blog.id}`} key={index} passHref>
+      {/* <a className="block"> */}
+        <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out overflow-hidden">
+          {/* Blog Image */}
+          <div className="relative w-full h-[200px]">
+            <Image
+              src={blog.image}
+              alt={blog.title}
+              layout="fill"
+              objectFit="cover"
+              className="rounded-t-lg"
+            />
           </div>
+
+          {/* Blog Content */}
+          <div className="p-6">
+            <h2 className="md:text-xl text-xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange mb-2">
+              {blog.title.length > 16 ? `${blog.title.substring(0, 20)}...` : blog.title}
+            </h2>
+            <p className="text-gray-700 text-[16px] leading-relaxed tracking-wide text-justify mb-4">
+              {blog.description.length > 60 ? `${blog.description.substring(0, 60)}...` : blog.description}
+            </p>
+
+            <span className="inline-flex items-center text-orange-600 hover:text-orange-500 font-semibold">
+              Read More
+              <FontAwesomeIcon icon={faArrowRight} className="ml-2 text-sm" />
+            </span>
+          </div>
+        </div>
+      {/* </a> */}
+    </Link>
+  ))}
+</div>
+
         </div>
       </div>
     </>
