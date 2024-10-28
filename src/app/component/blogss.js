@@ -1,9 +1,9 @@
-import website from "../assets/blogsvg/1.svg";
-import appdev from "../assets/blogsvg/2.svg";
-import cybersecurityImage from "../assets/blogsvg/3.svg";
+import website from "../assets/blogsvg/e-commercesecurity.svg";
+import appdev from "../assets/blogsvg/e-commercesecurity.svg";
+import cybersecurityImage from "../assets/blogsvg/e-commercesecurity.svg";
 import ecommerce from "../assets/blogsvg/e-commercesecurity.svg";
-import aiml from "../assets/blogsvg/5.svg";
-import adsense from "../assets/blogsvg/6.svg";
+import aiml from "../assets/blogsvg/e-commercesecurity.svg";
+import adsense from "../assets/blogsvg/e-commercesecurity.svg";
 
 
 export const technicalBlog = [

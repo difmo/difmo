@@ -1,5 +1,3 @@
-
-
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
@@ -13,7 +11,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State for popup menu
   const pathname = usePathname(); // Current route for active styling
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false); // Mobile dropdown toggle
- 
+
   // Helper to determine if a link is active
   const isActive = (path) => pathname === path;
   const closeDropdown = () => {
@@ -47,14 +45,14 @@ const Header = () => {
 
         {/* Hamburger Icon */}
         <button
-          className="text-3xl md:hidden"
+          className="text-3xl lg:hidden"
           onClick={() => setIsMenuOpen(true)}
         >
           <HiOutlineMenu />
         </button>
 
         {/* Desktop Navigation */}
-        <nav className="items-center hidden space-x-8 text-lg font-medium text-gray-800 md:flex">
+        <nav className="items-center hidden  space-x-8 text-lg font-medium text-gray-800 lg:flex">
           <HeaderLink href="/" isActive={isActive("/")}>
             Home
           </HeaderLink>
@@ -86,7 +84,7 @@ const Header = () => {
           </HeaderLink>
           <Link
             href="/contact-us"
-            className="items-center justify-center hidden h-10 px-5 space-x-2 text-white transition-colors duration-300 bg-orange-600 rounded-3xl md:flex hover:bg-orange-700"
+            className="items-center justify-center hidden h-11 px-5 space-x-2 text-white transition-colors duration-300 bg-orange-600 rounded-xl md:flex hover:bg-orange-700"
           >
             <p>Get Started</p>
             <svg
@@ -131,71 +129,73 @@ const Header = () => {
               <HeaderLink href="/about" isActive={isActive("/about")}>
                 About Us
               </HeaderLink>
-              
+
               <div>
-              <button
-  className="flex items-center w-full text-left text-gray-700 hover:text-primary-orange "
-  onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
-  aria-expanded={isMobileDropdownOpen}
-  aria-haspopup="true" // indicates that the button controls a dropdown
->
-  Services
-  <svg
-    className="w-4 h-4 ml-1 transition-transform duration-200"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-    style={{
-      transform: isMobileDropdownOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-    }} // Rotates the icon when the dropdown is open
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
-      d="M19 9l-7 7-7-7"
-    ></path>
-  </svg>
-</button>
+                <button
+                  className="flex items-center w-full text-left text-gray-700 hover:text-primary-orange "
+                  onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
+                  aria-expanded={isMobileDropdownOpen}
+                  aria-haspopup="true" // indicates that the button controls a dropdown
+                >
+                  Services
+                  <svg
+                    className="w-4 h-4 ml-1 transition-transform duration-200"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style={{
+                      transform: isMobileDropdownOpen
+                        ? "rotate(180deg)"
+                        : "rotate(0deg)",
+                    }} // Rotates the icon when the dropdown is open
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M19 9l-7 7-7-7"
+                    ></path>
+                  </svg>
+                </button>
 
-              {isMobileDropdownOpen && (
-                <div className="ml-4">
-                  <Link
-                    href="/web-development"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
-                  >
-                    Web Development
-                  </Link>
-                  <Link
-                    href="/mobile-development"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
-                  >
-                    Mobile Development
-                  </Link>
+                {isMobileDropdownOpen && (
+                  <div className="ml-4">
+                    <Link
+                      href="/web-development"
+                      className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
+                    >
+                      Web Development
+                    </Link>
+                    <Link
+                      href="/mobile-development"
+                      className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
+                    >
+                      Mobile Development
+                    </Link>
 
-                  <Link
-                    href="/ecommerce-development"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
-                  >
-                    E-Commerce Development
-                  </Link>
-                  <Link
-                    href="/software-maintenance"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
-                  >
-                    Software Maintenance Services
-                  </Link>
+                    <Link
+                      href="/ecommerce-development"
+                      className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
+                    >
+                      E-Commerce Development
+                    </Link>
+                    <Link
+                      href="/software-maintenance"
+                      className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
+                    >
+                      Software Maintenance Services
+                    </Link>
 
-                  <Link
-                    href="/software-testing"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
-                  >
-                    Software Testing Services
-                  </Link>
-                </div>
-              )}
-            </div>
+                    <Link
+                      href="/software-testing"
+                      className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
+                    >
+                      Software Testing Services
+                    </Link>
+                  </div>
+                )}
+              </div>
               <HeaderLink href="/products" isActive={isActive("/products")}>
                 Products
               </HeaderLink>
@@ -226,7 +226,6 @@ const HeaderLink = ({ href, isActive, children }) => (
     )}
   </Link>
 );
-
 
 const DropdownMenu = ({ title, isActive, items }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);

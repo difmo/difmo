@@ -1,11 +1,59 @@
+"use client"
 import Link from "next/link";
 import Image from "next/image";
 import { technicalBlog } from "../component/blogss"; // Import the project data
 import about from "../assets/about.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useState } from "react";
+import { collection, getDocs,  } from "firebase/firestore"; // Import deleteDoc and doc
+import { db } from "../config/config";
 
 const Projects = () => {
+  const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  // Fetch blogs from Firestore on component mount
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const blogsCollection = collection(db, "blogs"); // Reference to the blogs collection
+        const blogsSnapshot = await getDocs(blogsCollection); // Fetch the documents
+        const blogsList = blogsSnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        })); // Map to an array
+        setBlogs(blogsList); // Set the state with fetched blogs
+      } catch (err) {
+        setError("Failed to load blogs"); // Handle any errors
+        console.error("Error fetching blogs:", err);
+      } finally {
+        setLoading(false); // Set loading to false after fetch
+      }
+    };
+
+    fetchBlogs();
+  }, []); // Empty dependency array to run only on mount
+
+  if (loading) {
+    return <div>Loading...</div>; // Show loading state
+  }
+
+  if (error) {
+    return <div>{error}</div>; // Show error if any
+  }
+  const removeHtmlTags = (text) => {
+    return text.replace(/<[^>]+>/g, ""); // Regular expression to remove HTML tags
+  };
+
+  const truncateDescription = (description, wordCount) => {
+    const plainText = removeHtmlTags(description); // Remove HTML tags first
+    const words = plainText.split(" ");
+    return words.length > wordCount
+      ? words.slice(0, wordCount).join(" ") + "..."
+      : plainText;
+  };
   return (
     <>
       <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen">
@@ -36,41 +84,76 @@ const Projects = () => {
             Latest Blogs
           </h2>
 
-          {/* Blog grid with 4 cards per row */}
+         
           <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
-  {technicalBlog.map((blog, index) => (
-    <Link href={`/blogs/${blog.id}`} key={index} passHref>
-      {/* <a className="block"> */}
-        <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out overflow-hidden">
-          {/* Blog Image */}
-          <div className="relative w-full h-[200px]">
-            <Image
-              src={blog.image}
-              alt={blog.title}
-              layout="fill"
-              objectFit="cover"
-              className="rounded-t-lg"
-            />
-          </div>
+  {blogs.map((blog, index) => (
+    <Link href={`/blogs/${blog.id}`} key={blog.id} passHref>
+    <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out overflow-hidden">
+      <div className="relative w-full h-[200px]">
+        {/* <Image
+          src={blog.image}
+          alt={blog.title}
+          layout="fill"
+          objectFit="cover"
+          className="rounded-t-lg"
+        /> */}
+        <img
+                  src={blog.image}
+                  alt={blog.title}
+                  // className="w-24 h-24 object-cover"
+                   className="rounded-t-lg"
+                />
+      </div>
+      <div className="p-6">
+        <h2 className="md:text-xl text-xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange mb-2">
+          {blog.title.length > 16 ? `${blog.title.substring(0, 10)}...` : blog.title}
+        </h2>
+        <p className="text-gray-700 text-[16px] leading-relaxed tracking-wide text-justify mb-4">
+          {truncateDescription(blog.description, 10)}
+        </p>
+        <span className="inline-flex items-center text-orange-600 hover:text-orange-500 font-semibold">
+          Read More
+          <FontAwesomeIcon icon={faArrowRight} className="ml-2 text-sm" />
+        </span>
+      </div>
+    </div>
+  </Link>
+  
+    // <Link href={`/blogs/${blog.id}`} key={index} passHref>
+       
+    //     <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out overflow-hidden">
+        
+    //       <div className="relative w-full h-[200px]">
+    //         <Image
+    //           src={blog.image}
+    //           alt={blog.title}
+    //           layout="fill"
+    //           objectFit="cover"
+    //           className="rounded-t-lg"
+    //         />
+    //       </div>
 
-          {/* Blog Content */}
-          <div className="p-6">
-            <h2 className="md:text-xl text-xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange mb-2">
-              {blog.title.length > 16 ? `${blog.title.substring(0, 20)}...` : blog.title}
-            </h2>
-            <p className="text-gray-700 text-[16px] leading-relaxed tracking-wide text-justify mb-4">
-              {blog.description.length > 60 ? `${blog.description.substring(0, 60)}...` : blog.description}
-            </p>
+         
+    //       <div className="p-6">
+    //         <h2 className="md:text-xl text-xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange mb-2">
+             
+    //           {blog.title.length > 16 ? `${blog.title.substring(0, 10)}...` : blog.title}
+    //         </h2>
+    //         <p className="text-gray-700 text-[16px] leading-relaxed tracking-wide text-justify mb-4">
+    //         {truncateDescription(blog.description, 10)}
+    //           {/* {blog.description.length > 60 ? `${blog.description.substring(0, 60)}...` : blog.description} */}
+    //         </p>
 
-            <span className="inline-flex items-center text-orange-600 hover:text-orange-500 font-semibold">
-              Read More
-              <FontAwesomeIcon icon={faArrowRight} className="ml-2 text-sm" />
-            </span>
-          </div>
-        </div>
-      {/* </a> */}
-    </Link>
+    //         <span className="inline-flex items-center text-orange-600 hover:text-orange-500 font-semibold">
+    //           Read More
+    //           <FontAwesomeIcon icon={faArrowRight} className="ml-2 text-sm" />
+    //         </span>
+    //       </div>
+    //     </div>
+     
+    // </Link>
   ))}
+ 
 </div>
 
         </div>
