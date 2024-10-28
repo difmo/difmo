@@ -5,7 +5,7 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCogs, faUsers, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import fqaQ from "../assets/backgrounds_images/mibileapp.png";
-import webdevlopment from "../assets/webdevlopment .jpg";
+import webdevlopment from "../assets/mobapp.jpg";
 import webimage from "../assets/dev.jpg";
 import software from "../assets/projectImages/sh.png";
 import appdev from "../assets/appdevs.png";
@@ -70,15 +70,42 @@ const Mobiledevlopment = () => {
 
   return (
     <>
-      <div className="w-full h-[250px] md:h-[400px] mb-6 relative">
-        <Image
-          src={webdevlopment}
-          alt="About Illustration"
-          layout="fill"
-          objectFit="cover"
-          className="rounded-b-[20%]"
-        />
+    <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen">
+      {/* Image Component */}
+      <Image
+        src={webdevlopment}
+        alt="Contact Illustration"
+        layout="fill"
+        objectFit="cover"
+        className="brightness-75" 
+      />
+
+      {/* Text Overlay */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center px-4 space-y-4 text-center sm:px-8 md:px-16 sm:space-y-6 md:space-y-8">
+        {/* Headline */}
+        <h1 className="text-2xl font-bold leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
+       Software Maintenance
+        </h1>
+
+        {/* Subtitle */}
+        <p className="text-sm font-medium text-orange-500 sm:text-lg md:text-xl lg:text-2xl">
+        Explore Difmo’s Software Maintenance insights to build smarter, scale faster, and grow stronger!
+        </p>
+
+        {/* Description */}
+        <ul className="space-y-2 text-sm text-white sm:text-md md:text-lg lg:text-xl">
+          <li>
+          Build smarter, scale faster, grow stronger
+          </li>
+        </ul>
+
+        {/* Call to Action Button */}
+        <button className="px-4 py-2 mt-6 font-semibold text-white transition duration-300 ease-in-out bg-orange-600 rounded-lg sm:px-6 sm:py-3 hover:bg-orange-500">
+        Read Below More Blogs
+        </button>
       </div>
+    </div>
+       
 
       <div className="mx-4 sm:mx-8 lg:mx-16 my-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

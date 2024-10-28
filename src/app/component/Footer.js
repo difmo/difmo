@@ -96,7 +96,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#111827] text-white  relative overflow-hidden w-full font-poppins pl-5 sm:pl-0 pt-10 sm:16">
       <div className="relative z-10 max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-8  sm:grid-cols-2 md:grid-cols-4 md:text-left">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 md:text-left">
           {/* First column with logo, description, and social icons */}
           <div>
             <Image
@@ -126,7 +126,7 @@ const Footer = () => {
               >
                 <FontAwesomeIcon
                   icon={social.icon}
-                  className="h-5 w-5 hover:text-primary-orange"
+                  className="w-5 h-5 hover:text-primary-orange"
                 />
                 <span className="sr-only">{social.name} page</span>
               </a>
@@ -187,18 +187,18 @@ const Footer = () => {
               <li className="mb-2">
                 <FontAwesomeIcon
                   icon={faEnvelope}
-                  className="mr-2 w-4 h-4 hover:text-primary-orange"
+                  className="w-4 h-4 mr-2 hover:text-primary-orange"
                 />
                 {footerData.contact.email}
               </li>
               <li className="mb-2">
-                <FontAwesomeIcon icon={faPhone} className="mr-2 w-4 h-4" />
+                <FontAwesomeIcon icon={faPhone} className="w-4 h-4 mr-2" />
                 {footerData.contact.phone}
               </li>
               <li>
                 <FontAwesomeIcon
                   icon={faMapMarkerAlt}
-                  className="mr-2 w-4 h-4"
+                  className="w-4 h-4 mr-2"
                 />
                 {footerData.contact.location}
               </li>
@@ -224,16 +224,16 @@ const Footer = () => {
       <div className="flex flex-col-reverse items-center justify-center mb-8 sm:flex-row sm:items-center ">
         {/* Copyright notice */}
         <span className="mb-4 text-sm text-white dark:text-gray-400 sm:text-center sm:mb-0">
-        <Link href="/terms-conditions" className="hover:underline mx-3" >
+        <Link href="/terms-conditions" className="mx-3 hover:underline" >
         Terms & Conditions 
         </Link>
           ||
 
-          <Link href="/privacy-policy" className="hover:underline mx-3">
+          <Link href="/privacy-policy" className="mx-3 hover:underline">
           Privacy Policy
           </Link>
            ||
-          <Link href='/cookie-policy' className="hover:underline mx-3">
+          <Link href='/cookie-policy' className="mx-3 hover:underline">
           Cookie Policy
           </Link>
         </span>

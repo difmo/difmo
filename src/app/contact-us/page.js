@@ -4,9 +4,9 @@ import React from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCogs, faUsers, faGlobe } from "@fortawesome/free-solid-svg-icons";
-import fqaQ from "../assets/backgrounds_images/aboutbg2.jpg";
-import about from "../assets/contact.jpg";
+import contact from "../assets/contact.jpeg";
 import OurContact from "../component/OurContact";
+
 
 const Contact = () => {
   const cardData = [
@@ -35,26 +35,48 @@ const Contact = () => {
 
   return (
     <>
-      <div className="w-full h-[250px] md:h-[400px] mb-6 relative">
-        <Image
-          src={about}
-          alt="About Illustration"
-          layout="fill"
-          objectFit="cover"
-          className="rounded-b-[10%]"
-        />
-      </div>
+    <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen">
+      {/* Image Component */}
+      <Image
+        src={contact}
+        alt="Contact Illustration"
+        layout="fill"
+        objectFit="cover"
+        className="brightness-75" 
+      />
 
-      <div className=" my-7 ">
-        <div className="bg-slate-200" >
-          {/* <h2 className="md:text-3xl text-center p-4 sm:p-0  text-4xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange   ">
-            Get In Touch
-          </h2> */}
+      {/* Text Overlay */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center px-4 space-y-4 text-center sm:px-8 md:px-16 sm:space-y-6 md:space-y-8">
+        {/* Headline */}
+        <h1 className="text-2xl font-bold leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
+          Do You Need a Technology Partner <br className="hidden sm:inline" /> For Your Business Idea?
+        </h1>
 
-          <OurContact />
-        </div>
+        {/* Subtitle */}
+        <p className="text-sm font-medium text-orange-500 sm:text-lg md:text-xl lg:text-2xl">
+          Tailored solutions for your business needs are just a click away.
+        </p>
+
+        {/* Description */}
+        <ul className="space-y-2 text-sm text-white sm:text-md md:text-lg lg:text-xl">
+          <li>
+            Our experts are ready to connect with you upon receiving your inquiry.
+          </li>
+        </ul>
+
+        {/* Call to Action Button */}
+        <button className="px-4 py-2 mt-6 font-semibold text-white transition duration-300 ease-in-out bg-orange-600 rounded-lg sm:px-6 sm:py-3 hover:bg-orange-500">
+          Get In Touch
+        </button>
       </div>
-    </>
+    </div>
+
+    <div className="my-7">
+      <div className="bg-slate-200">
+        <OurContact />
+      </div>
+    </div>
+  </>
   );
 };
 
