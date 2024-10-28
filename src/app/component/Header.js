@@ -104,16 +104,6 @@ const Header = () => {
           </Link>
         </nav>
 
-<<<<<<< HEAD
-        {/* Email Icon */}
-        <Link
-          href="/contact-us"
-          className="items-center justify-center hidden h-10 px-5 text-white bg-orange-600 rounded-3xl md:flex"
-        >
-          <p>Get Started</p>
-           
-        </Link>
-=======
         {/* Popup Menu for Mobile */}
         {isMenuOpen && (
           <div className="fixed inset-0 z-50 p-6 bg-white">
@@ -218,7 +208,6 @@ const Header = () => {
             </nav>
           </div>
         )}
->>>>>>> vimal
       </div>
     </header>
   );

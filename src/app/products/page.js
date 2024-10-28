@@ -175,30 +175,6 @@ const About = () => {
           </div>
 
           <div className="flex justify-center py-8">
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              {cardData.map((card) => (
-                <div
-                  key={card.id}
-                  className="bg-warm-gray rounded-tr-[2rem] rounded-bl-[2rem] p-3 md:mx-0 mx-5 shadow-2xl transition-transform transform"
-                >
-                  <div className="text-center ">
-                    <div className="h-[100px] w-[100px]  rounded-full overflow-hidden flex items-center justify-center mx-auto">
-                      <Image
-                        src={card.imageUrl} // Use the image URL from the cardData
-                        alt={card.title}
-                        width={100} // Set the width
-                        height={100} // Set the height
-                        className="h-full w-full object-cover" // Add styling to the image
-                      />
-                    </div>
-
-                    <h2 className="md:text-[16px] text-xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange mb-1">
-                      {card.title}
-                    </h2>
-                    <p className="text-gray-700 px-4 sm:px-0 sm:pt-2 text-[12px] leading-relaxed md:leading-loose tracking-wide text-justify">
-                      {/* <p className="font-concert text-start text-gray-700 leading-relaxed"> */}
-=======
             <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
               {cardData.map((card) => (
                 <div
@@ -214,7 +190,6 @@ const About = () => {
                       {card.title}
                     </h2>
                     <p className="text-gray-700 px-4 sm:px-0 sm:pt-2 text-[12px] leading-relaxed md:leading-loose tracking-wide text-justify">
->>>>>>> vimal
                       {card.description}
                     </p>
                   </div>
@@ -223,24 +198,9 @@ const About = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
-      <div className="py-2 pb-8   bg-warm-gray p-4 ">
-        <div className="rounded-lg shadow-2xl p-1">
-
-  <Contactus/>
-        </div>
-</div>
-
-=======
       </div> */}
->>>>>>> vimal
     </>
   );
 };
 
-<<<<<<< HEAD
-export default Products;
-=======
 export default About;
->>>>>>> vimal
