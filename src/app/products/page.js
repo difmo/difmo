@@ -149,7 +149,7 @@ const About = () => {
             <div className="flex items-center pt-10 justify-center col-span-1">
               <Image
                 src={service.image}
-                alt={service.title}
+                alt={service.title || "image"}
                 width={500}
                 height={300}
                 className="w-full max-w-md bg-cover rounded-lg shadow-lg hover:shadow-xl transition-shadow bg-red-500 duration-300 ease-in-out"

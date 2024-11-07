@@ -29,8 +29,8 @@ const footerData = {
         { name: "Home", path: "/" },
         { name: "About Us", path: "/about" },
         // { name: "Pricing", path: "#" },
-        { name: "Services", path: "/service" },
-        { name: "Contact Us", path: "/contact" },
+        { name: "Services", path: "/web-development" },
+        { name: "Contact Us", path: "/contact-us" },
         // { name: "Term And Condition", path: "/termandcondition" },
         // { name: "Privacy And Policy", path: "/privacypolicy" },
       ],
@@ -38,13 +38,13 @@ const footerData = {
     {
       title: "Services",
       links: [
-        { name: "Web Development", path: "/services/web-development" },
+        { name: "Web Development", path: "/web-development" },
         {
           name: "Mobile App Development",
-          path: "/services/mobile-app-development",
+          path: "/mobile-app-development",
         },
-        { name: "UI/UX Design", path: "/services/ui-ux-design" },
-        { name: "SEO Optimization", path: "/services/seo-optimization" },
+        { name: "UI/UX Design", path: "/web-development" },
+        { name: "Software Maintenance", path: "/software-maintenance" },
         // { name: "Cloud Computing", path: "/services/cloud-computing" },
         // {
         //   name: "Blockchain Solutions",
@@ -68,12 +68,12 @@ const footerData = {
   social: [
     {
       name: "Facebook",
-      href: "https://www.facebook.com/difmotechnologies",
+      href: "https://www.facebook.com/share/1AiopdgVyY/",
       icon: faFacebook,
     },
-    { name: "Instagram", href: "#", icon: faInstagram },
-    { name: "GitHub", href: "#", icon: faGithub },
-    { name: "YouTube", href: "#", icon: faYoutube },
+    { name: "Instagram", href: "https://www.instagram.com/difmotech", icon: faInstagram },
+    { name: "GitHub", href: "https://x.com/difmotech", icon: faGithub },
+    { name: "YouTube", href: "https://www.youtube.com/@thedifmo", icon: faYoutube },
     {
       name: "Twitter",
       href: "https://x.com/Difmo",

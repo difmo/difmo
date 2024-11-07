@@ -11,7 +11,9 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State for popup menu
   const pathname = usePathname(); // Current route for active styling
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false); // Mobile dropdown toggle
-
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
   // Helper to determine if a link is active
   const isActive = (path) => pathname === path;
   const closeDropdown = () => {
@@ -72,6 +74,8 @@ const Header = () => {
               { href: "/software-maintenance", label: "Software Maintenance" },
               { href: "/software-testing", label: "Software Testing" },
             ]}
+            // closeMenu={closeMenu}
+            closeMenu={() => setIsMenuOpen(false)}
           />
           <HeaderLink href="/products" isActive={isActive("/products")}>
             Products
@@ -227,12 +231,12 @@ const HeaderLink = ({ href, isActive, children }) => (
   </Link>
 );
 
-const DropdownMenu = ({ title, isActive, items }) => {
+const DropdownMenu = ({ title, isActive, items, closeMenu }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
     <div
-      className="relative"
+      className="relative  "
       onMouseEnter={() => setIsDropdownOpen(true)}
       onMouseLeave={() => setIsDropdownOpen(false)}
     >
@@ -254,12 +258,14 @@ const DropdownMenu = ({ title, isActive, items }) => {
         </svg>
       </button>
       {isDropdownOpen && (
-        <div className="absolute left-0 w-48 mt-2 bg-white rounded-md shadow-lg top-full">
+        <div className="absolute left-0 w-56 pt-3 bg-white rounded-md shadow-lg top-full">
           <ul className="py-2">
             {items.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
+                  // onClick={() => setIsMenuOpen(false)}
+                  onClick={closeMenu}
                   className="block px-4 py-2 hover:bg-gray-100 hover:text-orange-600"
                 >
                   {item.label}

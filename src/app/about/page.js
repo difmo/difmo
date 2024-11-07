@@ -39,9 +39,12 @@ const About = () => {
       <Image
         src={about}
         alt="Contact Illustration"
-        layout="fill"
-        objectFit="cover"
+        // layout="fill"
+        // objectFit="cover"
         className="brightness-75" 
+        fill 
+  style={{ objectFit: 'cover' }} 
+  // alt="About Image"
       />
 
       {/* Text Overlay */}

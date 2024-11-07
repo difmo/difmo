@@ -57,7 +57,7 @@ const MainSlider = () => {
     <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen">
       <Slider {...settings}>
         {images.map((image, index) => (
-         <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen">
+         <div key={  index} className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen">
             {/* Background Image */}
             
             <Image
