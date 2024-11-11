@@ -70,6 +70,7 @@ const footerData = {
       name: "Facebook",
       href: "https://www.facebook.com/difmotech",
       icon: faFacebook,
+      
     },
     { name: "Instagram", href: "https://www.instagram.com/thedifmo", icon: faInstagram },
     { name: "GitHub", href: "https://github.com/difmo", icon: faGithub },
@@ -78,6 +79,12 @@ const footerData = {
       name: "Twitter",
       href: "https://x.com/difmotech",
       icon: faTwitter,
+    },
+    {
+      name: "LinkedIn",
+      href:
+        "https://www.linkedin.com/company/difmo",
+      icon: faLinkedin,
     },
     {
       name: "LinkedIn",
