@@ -68,21 +68,21 @@ const footerData = {
   social: [
     {
       name: "Facebook",
-      href: "https://www.facebook.com/share/1AiopdgVyY/",
+      href: "https://www.facebook.com/difmotech",
       icon: faFacebook,
     },
-    { name: "Instagram", href: "https://www.instagram.com/difmotech", icon: faInstagram },
-    { name: "GitHub", href: "https://x.com/difmotech", icon: faGithub },
+    { name: "Instagram", href: "https://www.instagram.com/thedifmo", icon: faInstagram },
+    { name: "GitHub", href: "https://github.com/difmo", icon: faGithub },
     { name: "YouTube", href: "https://www.youtube.com/@thedifmo", icon: faYoutube },
     {
       name: "Twitter",
-      href: "https://x.com/Difmo",
+      href: "https://x.com/difmotech",
       icon: faTwitter,
     },
     {
       name: "LinkedIn",
       href:
-        "https://in.linkedin.com/company/difmo-technologies-private-limited",
+        "https://www.linkedin.com/company/difmo",
       icon: faLinkedin,
     },
   ],

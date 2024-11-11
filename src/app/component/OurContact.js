@@ -214,7 +214,7 @@ const OurContact = () => {
           <a href="https://in.linkedin.com/company/difmo" target="_blank" rel="noopener noreferrer">
             <FaLinkedin size={30} className="text-blue-700" />
           </a>
-          <a href="https://www.instagram.com/difmotech" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/thedifmo" target="_blank" rel="noopener noreferrer">
             <FaInstagram size={30} className="text-pink-600" />
           </a>
         </div>
