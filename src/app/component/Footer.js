@@ -86,12 +86,6 @@ const footerData = {
         "https://www.linkedin.com/company/difmo",
       icon: faLinkedin,
     },
-    {
-      name: "LinkedIn",
-      href:
-        "https://www.linkedin.com/company/difmo",
-      icon: faLinkedin,
-    },
   ],
 };
 
