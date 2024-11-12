@@ -51,45 +51,45 @@ const AllBlogs = () => {
     }
   };
 
-  if (loading) return <div className="text-center text-gray-500 py-10">Loading...</div>;
-  if (error) return <div className="text-center text-red-500 py-10">{error}</div>;
+  if (loading) return <div className="py-10 text-center text-gray-500">Loading...</div>;
+  if (error) return <div className="py-10 text-center text-red-500">{error}</div>;
 
   return (
-    <div className="max-w-6xl mx-auto py-12 px-6">
-      <div className="flex justify-between items-center mb-8">
+    <div className="max-w-6xl px-6 py-12 mx-auto">
+      <div className="flex items-center justify-between mb-8">
         <h2 className="text-4xl font-semibold text-gray-800">All Blogs</h2>
         <button
-          className="bg-red-500  text-white font-semibold py-2 px-6 rounded-lg shadow-lg hover:bg-red-600 transition ease-in-out duration-300"
+          className="px-6 py-2 font-semibold text-white transition duration-300 ease-in-out bg-red-500 rounded-lg shadow-lg hover:bg-red-600"
           onClick={() => router.push('/addblog')}
         >
           Add Blog
         </button>
       </div>
-      <table className="min-w-full bg-white shadow-lg rounded-lg overflow-hidden">
-        <thead className="bg-gray-50 border-b">
+      <table className="min-w-full overflow-hidden bg-white rounded-lg shadow-lg">
+        <thead className="border-b bg-gray-50">
           <tr>
-            <th className="py-3 px-6 text-left font-semibold text-gray-600">Title</th>
-            <th className="py-3 px-6 text-left font-semibold text-gray-600">Description</th>
-            <th className="py-3 px-6 text-left font-semibold text-gray-600">Image</th>
-            <th className="py-3 px-6 text-center font-semibold text-gray-600">Actions</th>
+            <th className="px-6 py-3 font-semibold text-left text-gray-600">Title</th>
+            <th className="px-6 py-3 font-semibold text-left text-gray-600">Description</th>
+            <th className="px-6 py-3 font-semibold text-left text-gray-600">Image</th>
+            <th className="px-6 py-3 font-semibold text-center text-gray-600">Actions</th>
           </tr>
         </thead>
         <tbody>
           {blogs.map((blog) => (
-            <tr key={blog.id} className="border-b hover:bg-gray-50 transition duration-200 ease-in-out">
-              <td className="py-4 px-6 text-gray-800">{blog.title}</td>
-              <td className="py-4 px-6 text-gray-600">{truncateDescription(blog.description, 20)}</td>
-              <td className="py-4 px-6">
+            <tr key={blog.id} className="transition duration-200 ease-in-out border-b hover:bg-gray-50">
+              <td className="px-6 py-4 text-gray-800">{blog.title}</td>
+              <td className="px-6 py-4 text-gray-600">{truncateDescription(blog.description, 20)}</td>
+              <td className="px-6 py-4">
                 <img
                   src={blog.image}
                   alt={blog.title}
-                  className="w-24 h-24 rounded-md object-cover border"
+                  className="object-cover w-24 h-24 border rounded-md"
                 />
               </td>
-              <td className="py-4 px-6 text-center">
+              <td className="px-6 py-4 text-center">
                 <button
                   onClick={() => handleDelete(blog.id)}
-                  className="text-red-500 hover:text-red-600 font-medium transition ease-in-out duration-300"
+                  className="font-medium text-red-500 transition duration-300 ease-in-out hover:text-red-600"
                 >
                   Delete
                 </button>
