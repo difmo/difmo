@@ -1,16 +1,18 @@
-"use client"
+"use client";
 
 import React, { useState } from "react";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css"; // Import Quill CSS for styling
+import dynamic from "next/dynamic"; // Import dynamic for SSR handling
+import "react-quill/dist/quill.snow.css"; 
 import { collection, addDoc, Timestamp } from "firebase/firestore";
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage"; // Import getDownloadURL
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { db, storage } from "../config/config";
 import { useRouter } from "next/navigation";
-// import { useNavigate } from "react-router-dom";
+
+// Dynamically import ReactQuill with ssr: false
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
 const AddBlogForm = () => {
-    const router   = useRouter();
+  const router = useRouter();
   const [formData, setFormData] = useState({
     title: "",
     image: null,
@@ -111,7 +113,7 @@ const AddBlogForm = () => {
         image: null,
         description: "",
       });
-    router.push('/adminBlog');
+      router.push("/adminBlog");
     } catch (error) {
       console.error("Error submitting form: ", error);
       alert("Failed to submit blog. Please try again.");
@@ -119,12 +121,12 @@ const AddBlogForm = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto bg-white p-8 shadow-md rounded-lg">
-      <h2 className="text-2xl font-bold mb-6">Add New Blog</h2>
+    <div className="max-w-2xl p-8 mx-auto bg-white rounded-lg shadow-md">
+      <h2 className="mb-6 text-2xl font-bold">Add New Blog</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Title Input */}
         <div>
-          <label className="block text-gray-700 mb-2">Title</label>
+          <label className="block mb-2 text-gray-700">Title</label>
           <input
             type="text"
             id="title"
@@ -133,12 +135,12 @@ const AddBlogForm = () => {
             className="w-full p-2 border rounded"
             placeholder="Enter blog title"
           />
-          {errors.title && <p className="text-red-500 text-sm">{errors.title}</p>}
+          {errors.title && <p className="text-sm text-red-500">{errors.title}</p>}
         </div>
 
         {/* Image Upload */}
         <div>
-          <label className="block text-gray-700 mb-2">Image</label>
+          <label className="block mb-2 text-gray-700">Image</label>
           <input
             type="file"
             id="image"
@@ -146,29 +148,29 @@ const AddBlogForm = () => {
             onChange={handleImageChange}
             className="w-full p-2 border rounded"
           />
-          {errors.image && <p className="text-red-500 text-sm">{errors.image}</p>}
+          {errors.image && <p className="text-sm text-red-500">{errors.image}</p>}
         </div>
 
         {/* Description (React Quill Editor) */}
         <div>
-          <label className="block text-gray-700 mb-2">Description</label>
+          <label className="block mb-2 text-gray-700">Description</label>
           <ReactQuill
             value={formData.description}
             onChange={handleDescriptionChange}
             className="h-40"
             theme="snow"
-                          modules={{
-                            toolbar: [
-                              ["bold", "italic", "underline", "strike"],
-                              ["link"],
-                              [{ list: "ordered" }, { list: "bullet" }],
-                              ["clean"],
-                            ],
-                          }}
+            modules={{
+              toolbar: [
+                ["bold", "italic", "underline", "strike"],
+                ["link"],
+                [{ list: "ordered" }, { list: "bullet" }],
+                ["clean"],
+              ],
+            }}
             placeholder="Write your blog description here..."
           />
           {errors.description && (
-            <p className="text-red-500 text-sm">{errors.description}</p>
+            <p className="text-sm text-red-500">{errors.description}</p>
           )}
         </div>
 
@@ -176,7 +178,7 @@ const AddBlogForm = () => {
         <div className="mt-4">
           <button
             type="submit"
-            className="bg-red-500   text-white py-2 mt-10 px-4 rounded hover:bg-red-500 "
+            className="px-4 py-2 mt-10 text-white bg-red-500 rounded hover:bg-red-500 "
           >
             Add Blog
           </button>
