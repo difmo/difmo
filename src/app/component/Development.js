@@ -1,6 +1,7 @@
 import React from "react";
 import see from "../assets/svgfiles/pathCurve.svg";
 import Image from "next/image";
+import TrustPilotWidget from "../trustpilat/page";
 
 const Development = () => {
   return (
@@ -11,6 +12,7 @@ const Development = () => {
           <h2 className="md:text-3xl text-4xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange  mb-3">
             Development Cycle
           </h2>
+          
           <p className="text-gray-700 text-[16px] leading-relaxed md:leading-loose tracking-wide text-justify">
             we turn your ideas into reality with a complete development process
             aimed at sustainable growth. From concept to launch, we manage every
@@ -39,6 +41,7 @@ const Development = () => {
           </div>
         </div>
       </div>
+      <TrustPilotWidget/>
     </div>
   );
 };

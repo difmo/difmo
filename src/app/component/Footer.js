@@ -19,6 +19,7 @@ import {
   faPhone,
   faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
+import TrustPilotWidget from "../trustpilat/page";
 
 // Footer data
 const footerData = {
@@ -95,7 +96,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#111827] text-white  relative overflow-hidden w-full font-poppins pl-5 sm:pl-0 pt-10 sm:16">
+    <footer className="bg-[#111827] text-white  relative overflow-hidden w-full font-poppins pl-5 sm:pl-0 pt-10">
       <div className="relative z-10 max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 md:text-left">
           {/* First column with logo, description, and social icons */}
@@ -238,6 +239,7 @@ const Footer = () => {
           Cookie Policy
           </Link>
         </span>
+ 
       </div>
     </footer>
   );
