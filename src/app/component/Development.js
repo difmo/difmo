@@ -6,9 +6,8 @@ import TrustPilotWidget from "../trustpilat/page";
 const Development = () => {
   return (
     <div className="mx-4 sm:mx-8 lg:mx-16 mt-20 my-12">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Text Section - Spans 1 column */}
-        <div className="md:col-span-1    rounded-lg">
+        <div className="md:col-span-1 rounded-lg">
           <h2 className="md:text-3xl text-4xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange  mb-3">
             Development Cycle
           </h2>
@@ -28,20 +27,15 @@ const Development = () => {
 
         {/* Image Section - Spans 2 columns */}
         <div className="md:col-span-2">
-          <div className="relative p-10 bg-[#0c2b46] rounded-xl flex justify-center items-center">
-            <div className="relative w-full h-[400px] flex justify-center items-center">
+            <div className="relative w-full  flex justify-center items-center">
               <Image
                 src={see}
                 alt="Path Curve"
                 objectFit="contain"
-                width={500}
-                height={300}
               />
             </div>
-          </div>
-        </div>
       </div>
-      <TrustPilotWidget/>
+   
     </div>
   );
 };
