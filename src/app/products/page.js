@@ -50,7 +50,7 @@ const About = () => {
       description:
         "Streamlined Booking for Expert Car Detailing. Our car washing app makes it easier than ever to keep your vehicle in top shape. With seamless booking features available for both Android and iOS, you can effortlessly schedule car wash and detailing services at your convenience. Schedule Services: Choose a time that suits your schedule and book professional car washing and detailing services in just a few taps. Manage Bookings: Easily view, modify, or cancel your bookings, ensuring a hassle-free experience. Expert Care for Your Vehicle: Our app connects you with the best car wash experts, ensuring your vehicle always shines like new.",
       image: carwash,
-      link: "#",
+      link: "https://play.google.com/store/apps/details?id=com.codeservir.carcleanplus.new ",
     },
      
     
@@ -60,15 +60,15 @@ const About = () => {
       description:
         "The RK Fitness app is a tranquil fitness studio application dedicated to fostering mindfulness and enhancing exercise practices. Designed with serene wellness experiences in mind, the app provides users with a holistic approach to fitness that emphasizes both physical health and mental well-being. Users can explore a variety of guided workouts, meditation sessions, and mindfulness exercises tailored to their individual needs. The app features customizable workout plans, progress tracking, and community support, allowing users to connect with like-minded individuals on their wellness journey. With its intuitive interface and engaging content, RK Fitness empowers users to cultivate a balanced lifestyle and achieve their health goals in a peaceful environment.",
       image: RKGym,
-      link: "#",
+      link: "https://play.google.com/store/apps/details?id=com.dfimo.jdsgym",
     },
     {
       id: 4,
-      title: "RK Gym Staff Management",
+      title: "JDS Gym Staff Management",
       description:
         "The RK Gym Staff Management app is an efficient and comprehensive solution designed to streamline the management of gym staff and schedules. This powerful tool ensures smooth operations within the gym, enhancing communication and coordination among staff members. With features such as shift scheduling, task assignments, and performance tracking, gym managers can easily oversee daily activities and optimize workforce efficiency. The app also includes a communication platform that allows staff to share updates, collaborate on projects, and address any concerns in real-time. By utilizing the RK Gym Staff Management app, gym owners can improve employee engagement, reduce scheduling conflicts, and create a cohesive working environment that ultimately enhances the overall member experience.",
       image: RKGymStaff,
-      link: "#",
+      link: "https://play.google.com/store/apps/details?id=com.dfimo.jdsgym",
     },
   ];
   return (
