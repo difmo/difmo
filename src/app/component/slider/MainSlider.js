@@ -5,7 +5,6 @@ import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-//Dynamic import to avoid SSR issues
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
 // Import images
@@ -13,6 +12,7 @@ import image1 from "../../assets/home1.jpg";
 import image2 from "../../assets/home2.jpg";
 import image3 from "../../assets/home3.jpg";
 import image4 from "../../assets/home4.jpg";
+import Link from "next/link";
 
 const MainSlider = () => {
   const settings = {
@@ -31,35 +31,42 @@ const MainSlider = () => {
       src: image1,
       alt: "Slide 1",
       title: "Empower Your Digital Presence",
-      description: "Build feature-rich web applications that drive engagement and elevate your brand.",
+      description:
+        "Build feature-rich web applications that drive engagement and elevate your brand.",
     },
     {
       src: image2,
       alt: "Slide 2",
       title: "Seamless Mobile App Development",
-      description: "Deliver fast, user-friendly Android and iOS apps that create unforgettable experiences.",
+      description:
+        "Deliver fast, user-friendly Android and iOS apps that create unforgettable experiences.",
     },
     {
       src: image3,
       alt: "Slide 3",
       title: "Unified Cross-Platform Solutions",
-      description: "Build apps for mobile, web, and desktop simultaneously using cutting-edge technology stacks.",
+      description:
+        "Build apps for mobile, web, and desktop simultaneously using cutting-edge technology stacks.",
     },
     {
       src: image4,
       alt: "Slide 4",
       title: "Custom Software Tailored to Scale",
-      description: "Design, develop, and deploy enterprise-level applications that grow with your business.",
+      description:
+        "Design, develop, and deploy enterprise-level applications that grow with your business.",
     },
   ];
-  
+
   return (
     <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen">
       <Slider {...settings}>
         {images.map((image, index) => (
-         <div key={  index} className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen">
+          <div
+            key={index}
+            className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen"
+          >
             {/* Background Image */}
-            
+
             <Image
               src={image.src}
               alt={image.alt}
@@ -76,23 +83,25 @@ const MainSlider = () => {
               <p className="text-sm text-gray-300 sm:text-lg md:text-xl">
                 {image.description}
               </p>
-              <button className="flex items-center px-5 py-2 space-x-2 text-white bg-orange-600 rounded-md hover:bg-orange-700 sm:px-6 sm:py-3">
-                <span>Learn More</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-5 h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </button>
+              <Link href="/about">
+                <button className="flex items-center px-5 py-2 space-x-2 text-white bg-orange-600 rounded-md hover:bg-orange-700 sm:px-6 sm:py-3">
+                  <span>More About Us</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-5 h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
+              </Link>
             </div>
           </div>
         ))}
