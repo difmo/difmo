@@ -9,7 +9,7 @@ import OurContact from "./component/OurContact";
 import ProjectSlider from "./component/ProjectSlider";
 
 export default function Home() {
-  const router = useRouter(); // Initialize the Next.js router
+  const router = useRouter(); // Initialize the Next.js 
 
   const handleViewMoreClick = () => {
     router.push("/our-projects"); // Navigate to the projects page
