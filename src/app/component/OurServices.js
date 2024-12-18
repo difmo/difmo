@@ -79,7 +79,7 @@ const OurServices = () => {
 
   return (
     <div className="mx-4 my-8 sm:mx-8 lg:mx-16">
-      <h2 className="mb-4 text-4xl font-extrabold text-transparent md:text-3xl font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange">
+      <h2 className="mb-4 text-4xl font-extrabold text-transparent md:text-3xl font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-[#EA130C]">
         Our Services
       </h2>
       <p className="text-gray-700 text-[16px] leading-relaxed md:leading-loose tracking-wide text-justify">

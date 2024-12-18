@@ -158,7 +158,7 @@ const OurContact = () => {
         <CustomButton
           type="submit"
           label="Submit"
-          className="w-full py-3 text-lg text-white bg-deep-blue hover:bg-primary-orange rounded-lg shadow-md transition duration-300 ease-in-out"
+          className="w-full py-3 text-lg text-white bg-deep-blue hover:bg-[#EA130C] rounded-lg shadow-md transition duration-300 ease-in-out"
         />
       </form>
     </div>
@@ -177,10 +177,10 @@ const OurContact = () => {
       {/* Phone Number */}
       <div className="p-6 border-b border-gray-200">
         <span className="block mb-3 text-2xl font-semibold text-gray-800">Phone Number</span>
-        <a href="tel:+919455791624" className="block text-xl text-blue-600 hover:text-primary-orange hover:underline">
+        <a href="tel:+919455791624" className="block text-xl text-blue-600 hover:text-[#EA130C] hover:underline">
           +91 945-579-1624
         </a>
-        <a href="tel:+918172848306" className="block text-xl text-blue-600 hover:text-primary-orange hover:underline">
+        <a href="tel:+918172848306" className="block text-xl text-blue-600 hover:text-[#EA130C] hover:underline">
           +91 817-284-8306
         </a>
       </div>
@@ -188,10 +188,10 @@ const OurContact = () => {
       {/* Email Address */}
       <div className="p-6 border-b border-gray-200">
         <span className="block mb-3 text-2xl font-semibold text-gray-800">Email Address</span>
-        <a href="mailto:info@difmo.com" className="block text-xl text-blue-600 hover:text-primary-orange hover:underline">
+        <a href="mailto:info@difmo.com" className="block text-xl text-blue-600 hover:text-[#EA130C] hover:underline">
           info@difmo.com
         </a>
-        <a href="mailto:difmotech@gmail.com" className="block text-xl text-blue-600 hover:text-primary-orange hover:underline">
+        <a href="mailto:difmotech@gmail.com" className="block text-xl text-blue-600 hover:text-[#EA130C] hover:underline">
           difmotech@gmail.com
         </a>
       </div>
@@ -209,16 +209,16 @@ const OurContact = () => {
         <span className="block mb-3 text-2xl font-semibold text-gray-800">Follow Us</span>
         <div className="flex space-x-6">
           <a href="https://www.facebook.com/difmotech" target="_blank" rel="noopener noreferrer">
-            <FaFacebook size={32} className="text-blue-600 hover:text-primary-orange transition-all duration-300" />
+            <FaFacebook size={32} className="text-blue-600 hover:text-[#EA130C] transition-all duration-300" />
           </a>
           <a href="https://x.com/difmotech" target="_blank" rel="noopener noreferrer">
-            <FaTwitter size={32} className="text-blue-500 hover:text-primary-orange transition-all duration-300" />
+            <FaTwitter size={32} className="text-blue-500 hover:text-[#EA130C] transition-all duration-300" />
           </a>
           <a href="https://in.linkedin.com/company/difmo" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin size={32} className="text-blue-700 hover:text-primary-orange transition-all duration-300" />
+            <FaLinkedin size={32} className="text-blue-700 hover:text-[#EA130C] transition-all duration-300" />
           </a>
           <a href="https://www.instagram.com/thedifmo" target="_blank" rel="noopener noreferrer">
-            <FaInstagram size={32} className="text-pink-600 hover:text-primary-orange transition-all duration-300" />
+            <FaInstagram size={32} className="text-pink-600 hover:text-[#EA130C] transition-all duration-300" />
           </a>
         </div>
       </div>
@@ -242,7 +242,7 @@ const OurContact = () => {
 
       <div className="relative w-full bg-gradient-to-b from-gray-50 to-gray-200 py-16">
         <div className=" mx-auto px-6 sm:px-8 lg:px-16">
-          <h2 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange text-center mb-6 sm:mb-10">
+          <h2 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-[#EA130C] text-center mb-6 sm:mb-10">
             Our Location
           </h2>
 

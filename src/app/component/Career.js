@@ -97,12 +97,15 @@ const Career = () => {
     <div className="min-h-screen">
       <div className="container grid grid-cols-1 gap-8 py-10 mx-auto md:grid-cols-1 md:px-36">
         <div className="col-span-1 p-4 bg-white rounded-lg shadow-lg">
-          <h2 className="md:text-3xl text-xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange mb-6 text-center">
+          <h2 className="md:text-3xl text-xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-[#EA130C] mb-6 text-center">
             Apply for a Job
           </h2>
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
-              <label htmlFor="position" className="   block text-sm font-medium mb-2 ">
+              <label
+                htmlFor="position"
+                className="   block text-sm font-medium mb-2 "
+              >
                 Position to Apply for
               </label>
               <input
@@ -119,7 +122,10 @@ const Career = () => {
             </div>
 
             <div className="mb-4">
-              <label htmlFor="fullName" className="block text-sm font-medium mb-2 ">
+              <label
+                htmlFor="fullName"
+                className="block text-sm font-medium mb-2 "
+              >
                 Full Name
               </label>
               <input
@@ -136,7 +142,10 @@ const Career = () => {
             </div>
 
             <div className="mb-4">
-              <label htmlFor="email" className="block text-sm font-medium mb-2 ">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium mb-2 "
+              >
                 Email Address
               </label>
               <input
@@ -153,7 +162,10 @@ const Career = () => {
             </div>
 
             <div className="mb-4">
-              <label htmlFor="number" className="block text-sm font-medium mb-2 ">
+              <label
+                htmlFor="number"
+                className="block text-sm font-medium mb-2 "
+              >
                 Phone Number
               </label>
               <input
@@ -183,7 +195,10 @@ const Career = () => {
             </div>
 
             <div className="mb-4">
-              <label htmlFor="gender" className="block text-sm font-medium mb-2 ">
+              <label
+                htmlFor="gender"
+                className="block text-sm font-medium mb-2 "
+              >
                 Gender
               </label>
               <input
@@ -197,7 +212,10 @@ const Career = () => {
             </div>
 
             <div className="mb-4">
-              <label htmlFor="address" className="block text-sm font-medium mb-2 ">
+              <label
+                htmlFor="address"
+                className="block text-sm font-medium mb-2 "
+              >
                 Address
               </label>
               <input
@@ -211,7 +229,10 @@ const Career = () => {
             </div>
 
             <div className="mb-4">
-              <label htmlFor="education" className="block text-sm font-medium mb-2 ">
+              <label
+                htmlFor="education"
+                className="block text-sm font-medium mb-2 "
+              >
                 Education & Qualification
               </label>
               <input
@@ -259,7 +280,10 @@ const Career = () => {
             </div>
 
             <div className="mb-4">
-              <label htmlFor="ppgCourse" className="block text-sm font-medium mb-2 ">
+              <label
+                htmlFor="ppgCourse"
+                className="block text-sm font-medium mb-2 "
+              >
                 PPG Course (School/University Name/Degree)
               </label>
               <input
@@ -273,7 +297,10 @@ const Career = () => {
             </div>
 
             <div className="mb-4">
-              <label htmlFor="certificates" className="block text-sm font-medium mb-2 ">
+              <label
+                htmlFor="certificates"
+                className="block text-sm font-medium mb-2 "
+              >
                 Professional Certificates / Skills
               </label>
               <input
@@ -287,7 +314,10 @@ const Career = () => {
             </div>
 
             <div className="mb-4">
-              <label htmlFor="experience" className="block text-sm font-medium mb-2 ">
+              <label
+                htmlFor="experience"
+                className="block text-sm font-medium mb-2 "
+              >
                 Work Experience
               </label>
               <input
@@ -301,7 +331,10 @@ const Career = () => {
             </div>
 
             <div className="mb-4">
-              <label htmlFor="resume" className="block text-sm font-medium mb-2 ">
+              <label
+                htmlFor="resume"
+                className="block text-sm font-medium mb-2 "
+              >
                 Resume & Portfolio (Link or Upload)
               </label>
               <input
@@ -315,14 +348,13 @@ const Career = () => {
             </div>
 
             <div className="flex justify-center">
-  <button
-    type="submit"
-    className="w-[50%] p-5 py-2 my-5  text-white bg-primary-orange rounded-lg hover:bg-deep-blue transition duration-300"
-  >
-    Submit Application
-  </button>
-</div>
-
+              <button
+                type="submit"
+                className="w-[50%] p-5 py-2 my-5  text-white bg-[#EA130C] rounded-lg hover:bg-deep-blue transition duration-300"
+              >
+                Submit Application
+              </button>
+            </div>
           </form>
         </div>
       </div>

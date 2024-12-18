@@ -8,7 +8,7 @@ const BuildingSoft = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Text Section */}
         <div className=" rounded-lg">
-          <h2 className="md:text-3xl text-4xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r  from-deep-blue to-primary-orange  mb-6">
+          <h2 className="md:text-3xl text-4xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r  from-deep-blue to-[#EA130C]  mb-6">
             Building Software for World Changers
           </h2>
           <p className="text-gray-700 text-[16px] leading-relaxed md:leading-loose tracking-wide text-justify">
@@ -20,14 +20,12 @@ const BuildingSoft = () => {
           </p>
         </div>
         <div>
-  <Image
-    src={see} // Image from public folder
-    alt="About Us"
-    className="w-full h-50 transition-all duration-500 ease-in-out transform hover:scale-105 hover:translate-x-4 hover:translate-y-4 hover:rotate-3"
-  />
-</div>
-
-
+          <Image
+            src={see} // Image from public folder
+            alt="About Us"
+            className="w-full h-50 transition-all duration-500 ease-in-out transform hover:scale-105 hover:translate-x-4 hover:translate-y-4 hover:rotate-3"
+          />
+        </div>
       </div>
     </div>
   );

@@ -128,7 +128,7 @@ const Footer = () => {
               >
                 <FontAwesomeIcon
                   icon={social.icon}
-                  className="w-5 h-5 hover:text-primary-orange"
+                  className="w-5 h-5 hover:text-[#EA130C]"
                 />
                 <span className="sr-only">{social.name} page</span>
               </a>
@@ -149,7 +149,7 @@ const Footer = () => {
                   <Link href={link.path}>
                     <span
                       onClick={handleLinkClick}
-                      className="cursor-pointer hover:underline hover:text-primary-orange"
+                      className="cursor-pointer hover:underline hover:text-[#EA130C]"
                     >
                       {link.name}
                     </span>
@@ -170,7 +170,7 @@ const Footer = () => {
                   <Link href={link.path}>
                     <span
                       onClick={handleLinkClick}
-                      className="cursor-pointer hover:underline hover:text-primary-orange"
+                      className="cursor-pointer hover:underline hover:text-[#EA130C]"
                     >
                       {link.name}
                     </span>
@@ -189,7 +189,7 @@ const Footer = () => {
               <li className="mb-2">
                 <FontAwesomeIcon
                   icon={faEnvelope}
-                  className="w-4 h-4 mr-2 hover:text-primary-orange"
+                  className="w-4 h-4 mr-2 hover:text-[#EA130C]"
                 />
                 {footerData.contact.email}
               </li>

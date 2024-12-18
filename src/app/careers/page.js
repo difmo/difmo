@@ -70,7 +70,7 @@ const About = () => {
         </ul>
 
         {/* Call to Action Button */}
-        <button className="px-4 py-2 mt-6 font-semibold text-white transition duration-300 ease-in-out bg-orange-600 rounded-lg sm:px-6 sm:py-3 hover:bg-orange-500">
+        <button className="px-4 py-2 mt-6 font-semibold text-white transition duration-300 ease-in-out bg-orange-600 rounded-lg sm:px-6 sm:py-3 hover:bg-[#EA130C]">
         Read Below More Careers
         </button>
       </div>
@@ -81,7 +81,7 @@ const About = () => {
   
   {/* Text Section */}
   <div className="flex flex-col justify-between p-4 rounded-lg">
-    <h2 className="mb-6 text-4xl font-extrabold text-transparent md:text-3xl font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange">
+    <h2 className="mb-6 text-4xl font-extrabold text-transparent md:text-3xl font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-[#EA130C]">
       Want to be a part of an ever-warming culture?
     </h2>
     <p className="text-gray-700 text-[16px] leading-relaxed md:leading-loose tracking-wide text-justify">
@@ -107,10 +107,10 @@ const About = () => {
   </div>
 </div>
 <div className="flex flex-col items-center justify-center py-10 bg-warm-gray">
-  <h2 className="mb-6 text-xl font-extrabold text-center text-transparent md:text-3xl font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange">
+  <h2 className="mb-6 text-xl font-extrabold text-center text-transparent md:text-3xl font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-[#EA130C]">
     Mastering Web Application Technologies for Your Success
   </h2>
-  <button className="px-6 py-2 text-white transition duration-300 rounded-lg bg-primary-orange hover:bg-deep-blue">
+  <button className="px-6 py-2 text-white transition duration-300 rounded-lg bg-[#EA130C] hover:bg-deep-blue">
   <Link href="/apply-job">
     Apply Now
   </Link>

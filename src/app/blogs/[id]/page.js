@@ -77,7 +77,7 @@ const BlogDetails = () => {
             Discover insights and inspiration on Difmo’s web development!
           </p>
           <button
-            className="px-4 py-2 mt-4 font-semibold text-white transition duration-300 ease-in-out bg-orange-600 rounded-lg sm:px-6 sm:py-3 hover:bg-orange-500"
+            className="px-4 py-2 mt-4 font-semibold text-white transition duration-300 ease-in-out bg-orange-600 rounded-lg sm:px-6 sm:py-3 hover:bg-[#EA130C]"
             aria-label="Explore more blogs"
           >
             Explore More Blogs

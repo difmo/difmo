@@ -40,7 +40,7 @@ const Header = () => {
         {/* Logo Section */}
         <Link href="/" className="flex items-center space-x-2">
           <Image src={logo} alt="Difmo Logo" width={200} height={64} />
-          {/* <span className="text-2xl font-semibold text-orange-600">
+          {/* <span className="text-2xl font-semibold text-[#EA130C]">
             Difmo Technologies
           </span> */}
         </Link>
@@ -88,7 +88,7 @@ const Header = () => {
           </HeaderLink>
           <Link
             href="/contact-us"
-            className="items-center justify-center hidden h-11 px-5 space-x-2 text-white transition-colors duration-300 bg-orange-600 rounded-xl md:flex hover:bg-orange-700"
+            className="items-center justify-center hidden h-11 px-5 space-x-2 text-white transition-colors duration-300 bg-[#EA130C] rounded-xl md:flex hover:bg-[#EA130C]"
           >
             <p>Get Started</p>
             <svg
@@ -115,7 +115,7 @@ const Header = () => {
               {/* Logo */}
               <Link href="/" className="flex items-center space-x-2">
                 {/* <Image src={logo} alt="Hexad Logo" width={40} height={40} /> */}
-                <span className="text-2xl font-semibold text-orange-600">
+                <span className="text-2xl font-semibold text-[#EA130C]">
                   Difmo Technologies
                 </span>
               </Link>
@@ -136,7 +136,7 @@ const Header = () => {
 
               <div>
                 <button
-                  className="flex items-center w-full text-left text-gray-700 hover:text-primary-orange "
+                  className="flex items-center w-full text-left text-gray-700 hover:text-[#EA130C] "
                   onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
                   aria-expanded={isMobileDropdownOpen}
                   aria-haspopup="true" // indicates that the button controls a dropdown
@@ -167,33 +167,33 @@ const Header = () => {
                   <div className="ml-4">
                     <Link
                       href="/web-development"
-                      className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
+                      className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#EA130C]"
                     >
                       Web Development
                     </Link>
                     <Link
                       href="/mobile-development"
-                      className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
+                      className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#EA130C]"
                     >
                       Mobile Development
                     </Link>
 
                     <Link
                       href="/ecommerce-development"
-                      className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
+                      className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#EA130C]"
                     >
                       E-Commerce Development
                     </Link>
                     <Link
                       href="/software-maintenance"
-                      className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
+                      className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#EA130C]"
                     >
                       Software Maintenance Services
                     </Link>
 
                     <Link
                       href="/software-testing"
-                      className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
+                      className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#EA130C]"
                     >
                       Software Testing Services
                     </Link>
@@ -220,13 +220,13 @@ const Header = () => {
 const HeaderLink = ({ href, isActive, children }) => (
   <Link
     href={href}
-    className={`relative hover:text-orange-600 ${
+    className={`relative hover:text-[#EA130C] ${
       isActive ? "text-black font-semibold" : ""
     }`}
   >
     {children}
     {isActive && (
-      <span className="absolute left-0 w-full h-0.5 bg-orange-600 -bottom-1" />
+      <span className="absolute left-0 w-full h-0.5 bg-[#EA130C] -bottom-1" />
     )}
   </Link>
 );
@@ -240,7 +240,7 @@ const DropdownMenu = ({ title, isActive, items, closeMenu }) => {
       onMouseEnter={() => setIsDropdownOpen(true)}
       onMouseLeave={() => setIsDropdownOpen(false)}
     >
-      <button className="flex items-center space-x-1 hover:text-orange-600">
+      <button className="flex items-center space-x-1 hover:text-[#EA130C]">
         <span>{title}</span>
         <svg
           className="w-4 h-4"
@@ -266,7 +266,7 @@ const DropdownMenu = ({ title, isActive, items, closeMenu }) => {
                   href={item.href}
                   // onClick={() => setIsMenuOpen(false)}
                   onClick={closeMenu}
-                  className="block px-4 py-2 hover:bg-gray-100 hover:text-orange-600"
+                  className="block px-4 py-2 hover:bg-gray-100 hover:text-[#EA130C]"
                 >
                   {item.label}
                 </Link>

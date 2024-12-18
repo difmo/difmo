@@ -84,7 +84,7 @@ const MainSlider = () => {
                 {image.description}
               </p>
               <Link href="/about">
-                <button className="flex items-center px-5 py-2 space-x-2 text-white bg-orange-600 rounded-md hover:bg-orange-700 sm:px-6 sm:py-3">
+                <button className="flex items-center px-5 py-2 space-x-2 text-white bg-orange-600 rounded-md hover:bg-[#EA130C] sm:px-6 sm:py-3">
                   <span>More About Us</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +102,7 @@ const MainSlider = () => {
                   </svg>
                 </button>
               </Link>
-            </div>
+              </div>
           </div>
         ))}
       </Slider>

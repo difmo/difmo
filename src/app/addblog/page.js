@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import dynamic from "next/dynamic"; // Import dynamic for SSR handling
-import "react-quill/dist/quill.snow.css"; 
+import "react-quill/dist/quill.snow.css";
 import { collection, addDoc, Timestamp } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { db, storage } from "../config/config";
@@ -135,7 +135,9 @@ const AddBlogForm = () => {
             className="w-full p-2 border rounded"
             placeholder="Enter blog title"
           />
-          {errors.title && <p className="text-sm text-red-500">{errors.title}</p>}
+          {errors.title && (
+            <p className="text-sm text-red-500">{errors.title}</p>
+          )}
         </div>
 
         {/* Image Upload */}
@@ -148,7 +150,9 @@ const AddBlogForm = () => {
             onChange={handleImageChange}
             className="w-full p-2 border rounded"
           />
-          {errors.image && <p className="text-sm text-red-500">{errors.image}</p>}
+          {errors.image && (
+            <p className="text-sm text-red-500">{errors.image}</p>
+          )}
         </div>
 
         {/* Description (React Quill Editor) */}
@@ -178,7 +182,7 @@ const AddBlogForm = () => {
         <div className="mt-4">
           <button
             type="submit"
-            className="px-4 py-2 mt-10 text-white bg-red-500 rounded hover:bg-red-500 "
+            className="px-4 py-2 mt-10 text-white bg-red-500 rounded hover:bg-[#EA130C] "
           >
             Add Blog
           </button>

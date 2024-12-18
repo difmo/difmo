@@ -103,7 +103,7 @@ const About = () => {
           </ul>
 
           {/* Call to Action Button */}
-          <button className="px-4 py-2 mt-6 font-semibold text-white transition duration-300 ease-in-out bg-orange-600 rounded-lg sm:px-6 sm:py-3 hover:bg-orange-500">
+          <button className="px-4 py-2 mt-6 font-semibold text-white transition duration-300 ease-in-out bg-orange-600 rounded-lg sm:px-6 sm:py-3 hover:bg-[#EA130C]">
             Read Below More Product
           </button>
         </div>
@@ -113,7 +113,7 @@ const About = () => {
         <div className="mx-4 my-20 sm:mx-8 lg:mx-16" key={service.id}>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             <div className="col-span-1 rounded-lg">
-              <h2 className="mb-6 text-xl font-extrabold text-transparent md:text-3xl font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange">
+              <h2 className="mb-6 text-xl font-extrabold text-transparent md:text-3xl font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-[#EA130C]">
                 {service.title}
               </h2>
               <p className="text-gray-700 text-[16px] leading-relaxed md:leading-loose tracking-wide text-justify">
@@ -123,7 +123,7 @@ const About = () => {
               {/* Read More Button */}
               <div className="mt-6">
                 <Link href={service.link}>
-                  <button className="relative px-6 pr-10 py-3 text-white font-semibold transition-transform duration-300 ease-in-out bg-gradient-to-r from-primary-orange to-deep-blue rounded-full hover:scale-105 focus:outline-none active:scale-95 shadow-lg shadow-primary-orange/50 hover:shadow-xl">
+                  <button className="relative px-6 pr-10 py-3 text-white font-semibold transition-transform duration-300 ease-in-out bg-gradient-to-r from-[#EA130C] to-deep-blue rounded-full hover:scale-105 focus:outline-none active:scale-95 shadow-lg shadow-primary-orange/50 hover:shadow-xl">
                     Read More
                     <span className="absolute w-4 h-4 ml-2 transition-all duration-300 transform translate-x-0 group-hover:translate-x-1">
                       <svg

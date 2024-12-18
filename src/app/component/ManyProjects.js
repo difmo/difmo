@@ -188,7 +188,7 @@ const ManyProjects = ({ limit }) => {
                 <div className="mt-6 self-end">
                   <Link
                     href={`/our-projects/${project.id}`}
-                    className="bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg shadow hover:bg-primary-orange transition duration-200"
+                    className="bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg shadow hover:bg-[#EA130C] transition duration-200"
                   >
                     View Details
                   </Link>

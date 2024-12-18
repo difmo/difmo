@@ -100,7 +100,7 @@ const Webdevlopment = () => {
         </ul>
 
         {/* Call to Action Button */}
-        <button className="px-4 py-2 mt-6 font-semibold text-white transition duration-300 ease-in-out bg-orange-600 rounded-lg sm:px-6 sm:py-3 hover:bg-orange-500">
+        <button className="px-4 py-2 mt-6 font-semibold text-white transition duration-300 ease-in-out bg-orange-600 rounded-lg sm:px-6 sm:py-3 hover:bg-[#EA130C]">
         Read Below More Blogs
         </button>
       </div>
@@ -110,7 +110,7 @@ const Webdevlopment = () => {
       <div className="mx-4 sm:mx-8 lg:mx-16 my-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="col-span-2 rounded-lg">
-            <h2 className="md:text-3xl text-xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange mb-6">
+          <h2 className="md:text-3xl text-xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-[#EA130C] mb-6">
               Elevating Your Business with Cutting-Edge Web Solutions
             </h2>
             <p className="text-gray-700 text-[16px] leading-relaxed md:leading-loose tracking-wide text-justify">
@@ -147,7 +147,7 @@ const Webdevlopment = () => {
       <div className="bg-warm-gray py-2 pb-8">
         <div className="mx-4 sm:mx-8 lg:mx-16">
           <div className="my-7">
-            <h2 className="md:text-3xl text-xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange mb-6">
+            <h2 className="md:text-3xl text-xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-[#EA130C] mb-6">
               Mastering Web Application Technologies for Your Success
             </h2>
             <p className="text-gray-700 px-4 sm:px-0 sm:pt-2 text-[16px] leading-relaxed md:leading-loose tracking-wide text-justify">
@@ -177,7 +177,7 @@ const Webdevlopment = () => {
                       />
                     </div>
 
-                    <h2 className="md:text-[16px] text-xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange mb-1">
+                    <h2 className="md:text-[16px] text-xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-[#EA130C] mb-1">
                       {card.title}
                     </h2>
                     <p className="text-gray-700 px-4 sm:px-0 sm:pt-2 text-[12px] leading-relaxed md:leading-loose tracking-wide text-justify">
