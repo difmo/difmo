@@ -55,7 +55,7 @@ const About = () => {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-sm font-medium text-orange-500 sm:text-lg md:text-xl lg:text-2xl">
+          <p className="text-sm font-medium text-white sm:text-lg md:text-xl lg:text-2xl">
             Transforming ideas into impactful digital solutions
           </p>
 
@@ -65,9 +65,9 @@ const About = () => {
           </ul>
 
           {/* Call to Action Button */}
-          <button className="px-4 py-2 mt-6 font-semibold text-white transition duration-300 ease-in-out bg-orange-600 rounded-lg sm:px-6 sm:py-3 hover:bg-[#EA130C]">
+          {/* <button className="px-4 py-2 mt-6 font-semibold text-white transition duration-300 ease-in-out bg-orange-600 rounded-lg sm:px-6 sm:py-3 hover:bg-[#EA130C]">
             Read Below More About Us
-          </button>
+          </button> */}
         </div>
       </div>
 

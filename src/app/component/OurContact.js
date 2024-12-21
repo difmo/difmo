@@ -88,157 +88,200 @@ const OurContact = () => {
 
   return (
     <div className="min-h-screen">
+      <div className="container mx-auto py-12 md:py-16 px-4">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 items-center">
+          {/* Right section with image */}
+          <div className="flex items-center justify-center">
+            <Image
+              src={contactImage}
+              alt="Contact Illustration"
+              width={500}
+              height={400}
+              className="w-full h-auto rounded-lg object-cover transition-transform duration-300 hover:scale-105"
+            />
+          </div>
 
-<div className="container mx-auto py-12 md:py-16 px-4">
-  <div className="grid grid-cols-1 gap-8 md:grid-cols-2 items-center">
-    {/* Right section with image */}
-    <div className="flex items-center justify-center">
-      <Image
-        src={contactImage}
-        alt="Contact Illustration"
-        width={500}
-        height={400}
-        className="w-full h-auto rounded-lg object-cover transition-transform duration-300 hover:scale-105"
-      />
-    </div>
-
-    {/* Left section with form */}
-    <div className="bg-white p-8 sm:p-10 md:p-12 ">
-      <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#26baf6] to-[#1d4ed8] text-center mb-8">
+          {/* Left section with form */}
+          <div className="bg-white p-8 sm:p-10 md:p-12 ">
+            {/* <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#26baf6] to-[#1d4ed8] text-center mb-8">
         Take a Meet
-      </h2>
+      </h2> */}
 
-      <form onSubmit={handleSubmit} className="space-y-6">
-        <CustomInput
-          id="fullName"
-          label="Full Name"
-          type="text"
-          placeholder="Enter your full name"
-          value={formData.fullName}
-          onChange={handleChange}
-        />
-        {errors.fullName && (
-          <p className="text-xs text-red-500 italic">{errors.fullName}</p>
-        )}
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <CustomInput
+                id="fullName"
+                label="Full Name"
+                type="text"
+                placeholder="Enter your full name"
+                value={formData.fullName}
+                onChange={handleChange}
+              />
+              {errors.fullName && (
+                <p className="text-xs text-red-500 italic">{errors.fullName}</p>
+              )}
 
-        <CustomInput
-          id="email"
-          label="Email Address"
-          type="email"
-          placeholder="Enter your email address"
-          value={formData.email}
-          onChange={handleChange}
-        />
-        {errors.email && (
-          <p className="text-xs text-red-500 italic">{errors.email}</p>
-        )}
+              <CustomInput
+                id="email"
+                label="Email Address"
+                type="email"
+                placeholder="Enter your email address"
+                value={formData.email}
+                onChange={handleChange}
+              />
+              {errors.email && (
+                <p className="text-xs text-red-500 italic">{errors.email}</p>
+              )}
 
-        <CustomInput
-          id="number"
-          label="Mobile Number"
-          placeholder="Enter your mobile number"
-          value={formData.number}
-          onChange={handleChange}
-        />
-        {errors.number && (
-          <p className="text-xs text-red-500 italic">{errors.number}</p>
-        )}
+              <CustomInput
+                id="number"
+                label="Mobile Number"
+                placeholder="Enter your mobile number"
+                value={formData.number}
+                onChange={handleChange}
+              />
+              {errors.number && (
+                <p className="text-xs text-red-500 italic">{errors.number}</p>
+              )}
 
-        <CustomInput
-          id="message"
-          label="Message"
-          placeholder="Enter your message"
-          value={formData.message}
-          onChange={handleChange}
-        />
-        {errors.message && (
-          <p className="text-xs text-red-500 italic">{errors.message}</p>
-        )}
+              <CustomInput
+                id="message"
+                label="Message"
+                placeholder="Enter your message"
+                value={formData.message}
+                onChange={handleChange}
+              />
+              {errors.message && (
+                <p className="text-xs text-red-500 italic">{errors.message}</p>
+              )}
 
-        <CustomButton
-          type="submit"
-          label="Submit"
-          className="w-full py-3 text-lg text-white bg-deep-blue hover:bg-[#EA130C] rounded-lg shadow-md transition duration-300 ease-in-out"
-        />
-      </form>
-    </div>
-  </div>
-</div>
-
-{/* Contact Info and Social Media */}
-<div className="p-8 md:p-12">
-  <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-
-    {/* Left Section: Contact Info */}
-    <div className="space-y-8 flex flex-col justify-between">
-    <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#26baf6] to-[#1d4ed8] text-center mb-8">
-    We're here to help – contact us anytime.
-      </h2>
-      {/* Phone Number */}
-      <div className="p-6 border-b border-gray-200">
-        <span className="block mb-3 text-2xl font-semibold text-gray-800">Phone Number</span>
-        <a href="tel:+919455791624" className="block text-xl text-blue-600 hover:text-[#EA130C] hover:underline">
-          +91 945-579-1624
-        </a>
-        <a href="tel:+918172848306" className="block text-xl text-blue-600 hover:text-[#EA130C] hover:underline">
-          +91 817-284-8306
-        </a>
-      </div>
-
-      {/* Email Address */}
-      <div className="p-6 border-b border-gray-200">
-        <span className="block mb-3 text-2xl font-semibold text-gray-800">Email Address</span>
-        <a href="mailto:info@difmo.com" className="block text-xl text-blue-600 hover:text-[#EA130C] hover:underline">
-          info@difmo.com
-        </a>
-        <a href="mailto:difmotech@gmail.com" className="block text-xl text-blue-600 hover:text-[#EA130C] hover:underline">
-          difmotech@gmail.com
-        </a>
-      </div>
-
-      {/* Address */}
-      <div className="p-6 border-b border-gray-200">
-        <span className="block mb-3 text-2xl font-semibold text-gray-800">Address</span>
-        <span className="text-lg text-gray-700">
-          4/37 Vibhav Khand, Gomtinagar, Lucknow, Uttar Pradesh, 226010
-        </span>
-      </div>
-
-      {/* Social Media Links */}
-      <div className="p-6">
-        <span className="block mb-3 text-2xl font-semibold text-gray-800">Follow Us</span>
-        <div className="flex space-x-6">
-          <a href="https://www.facebook.com/difmotech" target="_blank" rel="noopener noreferrer">
-            <FaFacebook size={32} className="text-blue-600 hover:text-[#EA130C] transition-all duration-300" />
-          </a>
-          <a href="https://x.com/difmotech" target="_blank" rel="noopener noreferrer">
-            <FaTwitter size={32} className="text-blue-500 hover:text-[#EA130C] transition-all duration-300" />
-          </a>
-          <a href="https://in.linkedin.com/company/difmo" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin size={32} className="text-blue-700 hover:text-[#EA130C] transition-all duration-300" />
-          </a>
-          <a href="https://www.instagram.com/thedifmo" target="_blank" rel="noopener noreferrer">
-            <FaInstagram size={32} className="text-pink-600 hover:text-[#EA130C] transition-all duration-300" />
-          </a>
+              <CustomButton
+                type="submit"
+                label="Submit"
+                className="w-full py-3 text-lg text-white bg-deep-blue hover:bg-[#EA130C] rounded-lg shadow-md transition duration-300 ease-in-out"
+              />
+            </form>
+          </div>
         </div>
       </div>
-    </div>
 
-    {/* Right Section: Contact Image */}
-    <div className="flex items-stretch justify-center">
-      <Image
-        src={contactImage}
-        alt="Contact Illustration"
-        width={500}
-        height={400}
-        className="w-full h-full object-cover rounded-lg"
-      />
-    </div>
+      {/* Contact Info and Social Media */}
+      <div className="p-8 md:p-12">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          {/* Left Section: Contact Info */}
+          <div className="space-y-8 flex flex-col justify-between">
+            <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#26baf6] to-[#1d4ed8] text-center mb-8">
+              We're here to help – contact us anytime.
+            </h2>
+            {/* Phone Number */}
+            <div className="p-6 border-b border-gray-200">
+              <span className="block mb-3 text-2xl font-semibold text-gray-800">
+                Phone Number
+              </span>
+              <a
+                href="tel:+919455791624"
+                className="block text-xl text-blue-600 hover:text-[#EA130C] hover:underline"
+              >
+                +91 945-579-1624
+              </a>
+              <a
+                href="tel:+918172848306"
+                className="block text-xl text-blue-600 hover:text-[#EA130C] hover:underline"
+              >
+                +91 817-284-8306
+              </a>
+            </div>
 
-  </div>
-</div>
+            {/* Email Address */}
+            <div className="p-6 border-b border-gray-200">
+              <span className="block mb-3 text-2xl font-semibold text-gray-800">
+                Email Address
+              </span>
+              <a
+                href="mailto:info@difmo.com"
+                className="block text-xl text-blue-600 hover:text-[#EA130C] hover:underline"
+              >
+                info@difmo.com
+              </a>
+              <a
+                href="mailto:difmotech@gmail.com"
+                className="block text-xl text-blue-600 hover:text-[#EA130C] hover:underline"
+              >
+                difmotech@gmail.com
+              </a>
+            </div>
 
+            {/* Address */}
+            <div className="p-6 border-b border-gray-200">
+              <span className="block mb-3 text-2xl font-semibold text-gray-800">
+                Address
+              </span>
+              <span className="text-lg text-gray-700">
+                4/37 Vibhav Khand, Gomtinagar, Lucknow, Uttar Pradesh, 226010
+              </span>
+            </div>
 
+            {/* Social Media Links */}
+            <div className="p-6">
+              <span className="block mb-3 text-2xl font-semibold text-gray-800">
+                Follow Us
+              </span>
+              <div className="flex space-x-6">
+                <a
+                  href="https://www.facebook.com/difmotech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaFacebook
+                    size={32}
+                    className="text-blue-600 hover:text-[#EA130C] transition-all duration-300"
+                  />
+                </a>
+                <a
+                  href="https://x.com/difmotech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaTwitter
+                    size={32}
+                    className="text-blue-500 hover:text-[#EA130C] transition-all duration-300"
+                  />
+                </a>
+                <a
+                  href="https://in.linkedin.com/company/difmo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaLinkedin
+                    size={32}
+                    className="text-blue-700 hover:text-[#EA130C] transition-all duration-300"
+                  />
+                </a>
+                <a
+                  href="https://www.instagram.com/thedifmo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaInstagram
+                    size={32}
+                    className="text-pink-600 hover:text-[#EA130C] transition-all duration-300"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Section: Contact Image */}
+          <div className="flex items-stretch justify-center">
+            <Image
+              src={contactImage}
+              alt="Contact Illustration"
+              width={500}
+              height={400}
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
 
       <div className="relative w-full bg-gradient-to-b from-gray-50 to-gray-200 py-16">
         <div className=" mx-auto px-6 sm:px-8 lg:px-16">
@@ -247,7 +290,8 @@ const OurContact = () => {
           </h2>
 
           <p className="text-xl text-gray-700 mb-10 text-center max-w-3xl mx-auto">
-            Visit us at our office to see how we innovate and bring your ideas to life. Explore the map below to find our exact location.
+            Visit us at our office to see how we innovate and bring your ideas
+            to life. Explore the map below to find our exact location.
           </p>
 
           <div className="w-full h-[500px] sm:h-[600px] lg:h-[700px] rounded-2xl overflow-hidden shadow-xl border:0; transition-all duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl">
@@ -261,14 +305,9 @@ const OurContact = () => {
               className="transition-transform transform duration-300"
             ></iframe>
           </div>
-        
         </div>
-        <div className="ml-3 mt-5">
-       
-        </div>
-       
+        <div className="ml-3 mt-5"></div>
       </div>
-
     </div>
   );
 };

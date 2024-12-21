@@ -29,7 +29,7 @@ const Projects = () => {
         setError("Failed to load blogs"); // Handle any errors
         console.error("Error fetching blogs:", err);
       } finally {
-        setLoading(false); // Set loading to false after fetch
+        setLoading(false);
       }
     };
 
@@ -68,12 +68,12 @@ const Projects = () => {
           <h1 className="text-2xl font-bold text-white sm:text-4xl md:text-5xl lg:text-6xl">
             Blogs
           </h1>
-          <p className="mt-4 text-sm font-medium text-[#EA130C] sm:text-lg md:text-xl lg:text-2xl">
+          <p className="mt-4 text-sm font-medium text-white sm:text-lg md:text-xl lg:text-2xl">
             Discover insights and inspiration on Difmo’s web development!
           </p>
-          <button className="px-4 py-2 mt-6 font-semibold text-white transition duration-300 ease-in-out bg-orange-600 rounded-lg sm:px-6 sm:py-3 hover:bg-[#EA130C]">
+          {/* <button className="px-4 py-2 mt-6 font-semibold text-white transition duration-300 ease-in-out bg-orange-600 rounded-lg sm:px-6 sm:py-3 hover:bg-[#EA130C]">
             Explore More Blogs
-          </button>
+          </button> */}
         </div>
       </div>
 

@@ -6,8 +6,9 @@ import {
   faCloud,
   faShieldAlt,
   faBrain,
-  faNavicon
+  faNavicon,
 } from "@fortawesome/free-solid-svg-icons";
+import StatsSection from "./StatsSection";
 
 const OurServices = () => {
   const servicesData = [
@@ -100,7 +101,9 @@ const OurServices = () => {
                 className={`text-4xl ${service.textColor}`}
               />
             </div>
-            <h2 className={`text-2xl sm:text-xl font-semibold mb-4 ${service.textColor}`}>
+            <h2
+              className={`text-2xl sm:text-xl font-semibold mb-4 ${service.textColor}`}
+            >
               {service.title}
             </h2>
             <p className="px-4 text-center text-gray-700">
@@ -109,9 +112,9 @@ const OurServices = () => {
           </div>
         ))}
       </div>
+      <StatsSection/>
     </div>
   );
 };
 
 export default OurServices;
-

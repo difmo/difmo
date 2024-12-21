@@ -76,12 +76,12 @@ const BlogDetails = () => {
           <p className="mt-2 text-lg font-medium text-orange-300 sm:text-xl lg:text-2xl">
             Discover insights and inspiration on Difmo’s web development!
           </p>
-          <button
+          {/* <button
             className="px-4 py-2 mt-4 font-semibold text-white transition duration-300 ease-in-out bg-orange-600 rounded-lg sm:px-6 sm:py-3 hover:bg-[#EA130C]"
             aria-label="Explore more blogs"
           >
             Explore More Blogs
-          </button>
+          </button> */}
         </div>
       </div>
 
@@ -98,7 +98,7 @@ const BlogDetails = () => {
         </p>
 
         {/* Blog Image */}
-        <div className="relative w-full h-[350px] sm:h-[250px] md:h-[300px] lg:h-[600px] mb-6 bg-gray-100 rounded-lg overflow-hidden">
+        <div className="relative w-full h-[350px] sm:h-[250px] md:h-full lg:h-full mb-6 bg-gray-100 rounded-lg overflow-hidden">
           {/* <Image
             src={blog.image}
             alt={blog.title}
@@ -107,20 +107,19 @@ const BlogDetails = () => {
             className="rounded-lg object-cover"
           /> */}
           <img
-                  src={blog.image}
-                  alt={blog.title}
-                  className="rounded-lg object-cover"
-                />
+            src={blog.image}
+            alt={blog.title}
+            className="rounded-lg object-cover"
+          />
         </div>
 
         <div className="flex flex-col justify-center p-6 bg-white rounded-lg shadow-lg">
-        <p
-             className="text-gray-700 text-[16px] leading-relaxed tracking-wide text-justify"
+          <p
+            className="text-gray-700 text-[16px] leading-relaxed tracking-wide text-justify"
             dangerouslySetInnerHTML={{
               __html: blog?.description,
             }}
           ></p>
-          
         </div>
       </div>
     </>

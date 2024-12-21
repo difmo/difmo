@@ -67,10 +67,10 @@ const Header = () => {
             items={[
               { href: "/web-development", label: "Web Development" },
               { href: "/mobile-development", label: "Mobile Development" },
-              {
-                href: "/ecommerce-development",
-                label: "E-Commerce Development",
-              },
+              // {
+              //   href: "/ecommerce-development",
+              //   label: "E-Commerce Development",
+              // },
               { href: "/software-maintenance", label: "Software Maintenance" },
               { href: "/software-testing", label: "Software Testing" },
             ]}

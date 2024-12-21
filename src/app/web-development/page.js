@@ -17,6 +17,13 @@ import ailear from "../assets/ailear.png";
 import sofware1 from "../assets/imagess.png";
 import Contactus from "../component/Contactus";
 import about from "../assets/blogs.jpg";
+import Ecommerce from "../component/webComponent/Ecommerce";
+import BusinessProfile from "../component/webComponent/BusinessProfile";
+import PersinalWebsite from "../component/webComponent/PersinalWebsite";
+import Socialmedioa from "../component/webComponent/Socialmedia";
+import CorporateWebsite from "../component/webComponent/CorporateWebsite";
+import Chatingwebsite from "../component/webComponent/Chatingwebsite";
+
 const Webdevlopment = () => {
   const cardData = [
     {
@@ -70,51 +77,44 @@ const Webdevlopment = () => {
 
   return (
     <>
-       <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen">
-      {/* Image Component */}
-      <Image
-        src={about}
-        alt="Contact Illustration"
-        layout="fill"
-        objectFit="cover"
-        className="brightness-75" 
-      />
+      {/* <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen">
+        Image Component
+        <Image
+          src={about}
+          alt="Contact Illustration"
+          layout="fill"
+          objectFit="cover"
+          className="brightness-75"
+        />
 
-      {/* Text Overlay */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center px-4 space-y-4 text-center sm:px-8 md:px-16 sm:space-y-6 md:space-y-8">
-        {/* Headline */}
-        <h1 className="text-2xl font-bold leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
-       Web Development
-        </h1>
+        <div className="absolute inset-0 flex flex-col items-center justify-center px-4 space-y-4 text-center sm:px-8 md:px-16 sm:space-y-6 md:space-y-8">
+          <h1 className="text-2xl font-bold leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
+            Web Development
+          </h1>
 
-        {/* Subtitle */}
-        <p className="text-sm font-medium text-orange-500 sm:text-lg md:text-xl lg:text-2xl">
-        Explore Difmo’s web development insights to build smarter, scale faster, and grow stronger!
-        </p>
+          <p className="text-sm font-medium text-orange-500 sm:text-lg md:text-xl lg:text-2xl">
+            Explore Difmo’s web development insights to build smarter, scale
+            faster, and grow stronger!
+          </p>
 
-        {/* Description */}
-        <ul className="space-y-2 text-sm text-white sm:text-md md:text-lg lg:text-xl">
-          <li>
-          Build smarter, scale faster, grow stronger
-          </li>
-        </ul>
+          <ul className="space-y-2 text-sm text-white sm:text-md md:text-lg lg:text-xl">
+            <li>Build smarter, scale faster, grow stronger</li>
+          </ul>
 
-        {/* Call to Action Button */}
-        <button className="px-4 py-2 mt-6 font-semibold text-white transition duration-300 ease-in-out bg-orange-600 rounded-lg sm:px-6 sm:py-3 hover:bg-[#EA130C]">
-        Read Below More Blogs
-        </button>
-      </div>
-    </div>
-      
+          <button className="px-4 py-2 mt-6 font-semibold text-white transition duration-300 ease-in-out bg-orange-600 rounded-lg sm:px-6 sm:py-3 hover:bg-[#EA130C]">
+            Read Below More Blogs
+          </button>
+        </div>
+      </div> */}
 
-      <div className="mx-4 sm:mx-8 lg:mx-16 my-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="mx-4 sm:mx-8 lg:mx-28 my-20 mt-36">
+        <div className="">
           <div className="col-span-2 rounded-lg">
-          <h2 className="md:text-3xl text-xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-[#EA130C] mb-6">
-              Elevating Your Business with Cutting-Edge Web Solutions
+            <h2 className="md:text-4xl text-xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-[#EA130C] mb-6 flex justify-center">
+              Wev Development
             </h2>
-            <p className="text-gray-700 text-[16px] leading-relaxed md:leading-loose tracking-wide text-justify">
-              In today's fast-paced digital age, staying ahead isn’t just an
+            <p className="text-gray-700 text-[18px] leading-relaxed md:leading-loose tracking-wide text-justify  ">
+              {/* In today's fast-paced digital age, staying ahead isn’t just an
               advantage—it’s essential. With customer preferences evolving
               rapidly and brand loyalty fleeting, businesses must innovate to
               remain competitive. At Difmo Technologies, we understand the pulse
@@ -128,11 +128,16 @@ const Webdevlopment = () => {
               and innovation at the core. At Difmo Technologies, we are driven
               by a commitment to excellence, pushing the boundaries of what’s
               possible to help your business soar. Trust us for forward-thinking
-              web solutions that keep you at the forefront of your industry.
+              web solutions that keep you at the forefront of your industry. */}
+              We specialize in designing and developing cutting-edge web
+              applications that perfectly showcase your local business
+              portfolio. Our goal is to craft applications that not only stand
+              out with stunning design but also deliver seamless functionality,
+              ensuring a lasting impression on your audience.
             </p>
           </div>
 
-          <div className="col-span-1 flex justify-center items-center">
+          {/* <div className="col-span-1 flex justify-center items-center">
             <Image
               src={fqaQ}
               alt="FAQ Illustration"
@@ -140,64 +145,20 @@ const Webdevlopment = () => {
               height={300}
               className="w-full max-w-md bg-cover rounded-full"
             />
-          </div>
+          </div> */}
         </div>
-      </div>
-
-      <div className="bg-warm-gray py-2 pb-8">
-        <div className="mx-4 sm:mx-8 lg:mx-16">
-          <div className="my-7">
-            <h2 className="md:text-3xl text-xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-[#EA130C] mb-6">
-              Mastering Web Application Technologies for Your Success
-            </h2>
-            <p className="text-gray-700 px-4 sm:px-0 sm:pt-2 text-[16px] leading-relaxed md:leading-loose tracking-wide text-justify">
-              At Difmo Technologies, years of expertise have made us leaders in
-              web development. We've mastered the latest technologies to build
-              fast, secure, and scalable web applications tailored to your
-              unique business needs. Stay ahead with innovative solutions
-              powered by the best in tech, only from Difmo.
-            </p>
-          </div>
-
-          <div className="flex justify-center py-8">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              {cardData.map((card) => (
-                <div
-                  key={card.id}
-                  className="bg-warm-gray rounded-tr-[2rem] rounded-bl-[2rem] p-3 md:mx-0 mx-5 shadow-2xl transition-transform transform"
-                >
-                  <div className="text-center ">
-                    <div className="h-[100px] w-[100px]  rounded-full overflow-hidden flex items-center justify-center mx-auto">
-                      <Image
-                        src={card.imageUrl} // Use the image URL from the cardData
-                        alt={card.title}
-                        width={100} // Set the width
-                        height={100} // Set the height
-                        className="h-full w-full object-cover" // Add styling to the image
-                      />
-                    </div>
-
-                    <h2 className="md:text-[16px] text-xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-[#EA130C] mb-1">
-                      {card.title}
-                    </h2>
-                    <p className="text-gray-700 px-4 sm:px-0 sm:pt-2 text-[12px] leading-relaxed md:leading-loose tracking-wide text-justify">
-                      {/* <p className="font-concert text-start text-gray-700 leading-relaxed"> */}
-                      {card.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        <Ecommerce />
+        <BusinessProfile />
+        <PersinalWebsite />
+        <Socialmedioa />
+        <Chatingwebsite />
+        <CorporateWebsite />
       </div>
       <div className="py-2 pb-8   bg-warm-gray p-4 ">
         <div className="rounded-lg shadow-2xl p-1">
-
-  <Contactus/>
+          <Contactus />
         </div>
-</div>
-
+      </div>
     </>
   );
 };

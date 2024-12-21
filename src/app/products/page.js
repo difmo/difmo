@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCogs, faUsers, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import defeat from "../assets/difeatlogo.jpg";
 // import carwash from "../assets/ourprojects/difeat.jpg";
-import carwash from "../assets/ourprojects/19.png"; 
+import carwash from "../assets/ourprojects/19.png";
 import about from "../assets/about.jpg";
 import Link from "next/link";
 import RKGym from "../assets/ourprojects/17.png";
@@ -52,8 +52,7 @@ const About = () => {
       image: carwash,
       link: "https://play.google.com/store/apps/details?id=com.codeservir.carcleanplus.new ",
     },
-     
-    
+
     {
       id: 3,
       title: "RK Fitness Android & iOS",
@@ -93,7 +92,7 @@ const About = () => {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-sm font-medium text-orange-500 sm:text-lg md:text-xl lg:text-2xl">
+          <p className="text-sm font-medium text-white sm:text-lg md:text-xl lg:text-2xl">
             Transforming ideas into impactful digital solutions
           </p>
 
@@ -103,9 +102,9 @@ const About = () => {
           </ul>
 
           {/* Call to Action Button */}
-          <button className="px-4 py-2 mt-6 font-semibold text-white transition duration-300 ease-in-out bg-orange-600 rounded-lg sm:px-6 sm:py-3 hover:bg-[#EA130C]">
+          {/* <button className="px-4 py-2 mt-6 font-semibold text-white transition duration-300 ease-in-out bg-orange-600 rounded-lg sm:px-6 sm:py-3 hover:bg-[#EA130C]">
             Read Below More Product
-          </button>
+          </button> */}
         </div>
       </div>
 

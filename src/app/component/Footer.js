@@ -71,11 +71,18 @@ const footerData = {
       name: "Facebook",
       href: "https://www.facebook.com/difmotech",
       icon: faFacebook,
-      
     },
-    { name: "Instagram", href: "https://www.instagram.com/thedifmo", icon: faInstagram },
+    {
+      name: "Instagram",
+      href: "https://www.instagram.com/thedifmo",
+      icon: faInstagram,
+    },
     { name: "GitHub", href: "https://github.com/difmo", icon: faGithub },
-    { name: "YouTube", href: "https://www.youtube.com/@thedifmo", icon: faYoutube },
+    {
+      name: "YouTube",
+      href: "https://www.youtube.com/@thedifmo",
+      icon: faYoutube,
+    },
     {
       name: "Twitter",
       href: "https://x.com/difmotech",
@@ -83,8 +90,7 @@ const footerData = {
     },
     {
       name: "LinkedIn",
-      href:
-        "https://www.linkedin.com/company/difmo",
+      href: "https://www.linkedin.com/company/difmo",
       icon: faLinkedin,
     },
   ],
@@ -113,29 +119,28 @@ const Footer = () => {
               Solutions
             </h3>
             <div className="flex flex-col justify-between md:flex-row">
-          {/* <p className="max-w-md mx-auto mt-4 text-sm text-white md:mx-0">
+              {/* <p className="max-w-md mx-auto mt-4 text-sm text-white md:mx-0">
             At Difmo Technologies, we don’t just build software—we craft the
             future. Powered by innovation, driven for global impact.
           </p> */}
-          <div className="flex justify-center mt-4 space-x-6 md:justify-start">
-            {footerData.social.map((social, index) => (
-              <a
-                key={index}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white hover:text-gray-900 dark:hover:text-white"
-              >
-                <FontAwesomeIcon
-                  icon={social.icon}
-                  className="w-5 h-5 hover:text-[#EA130C]"
-                />
-                <span className="sr-only">{social.name} page</span>
-              </a>
-            ))}
-          </div>
-        </div>
-
+              <div className="flex justify-center mt-4 space-x-6 md:justify-start">
+                {footerData.social.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white hover:text-gray-900 dark:hover:text-white"
+                  >
+                    <FontAwesomeIcon
+                      icon={social.icon}
+                      className="w-5 h-5 hover:text-[#EA130C]"
+                    />
+                    <span className="sr-only">{social.name} page</span>
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Second column with links */}
@@ -207,12 +212,9 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-
-         
       </div>
       <hr className="my-8 border-white lg:my-8" />
 
- 
       <div className="flex flex-col-reverse items-center justify-center mt-8 mb-2 sm:flex-row sm:items-center ">
         {/* Copyright notice */}
         <span className="mb-4 text-sm text-white dark:text-gray-400 sm:text-center sm:mb-0">
@@ -226,20 +228,18 @@ const Footer = () => {
       <div className="flex flex-col-reverse items-center justify-center mb-8 sm:flex-row sm:items-center ">
         {/* Copyright notice */}
         <span className="mb-4 text-sm text-white dark:text-gray-400 sm:text-center sm:mb-0">
-        <Link href="/terms-conditions" className="mx-3 hover:underline" >
-        Terms & Conditions 
-        </Link>
-          ||
-
-          <Link href="/privacy-policy" className="mx-3 hover:underline">
-          Privacy Policy
+          <Link href="/terms-conditions" className="mx-3 hover:underline">
+            Terms & Conditions
           </Link>
-           ||
-          <Link href='/cookie-policy' className="mx-3 hover:underline">
-          Cookie Policy
+          ||
+          <Link href="/privacy-policy" className="mx-3 hover:underline">
+            Privacy Policy
+          </Link>
+          ||
+          <Link href="/cookie-policy" className="mx-3 hover:underline">
+            Cookie Policy
           </Link>
         </span>
- 
       </div>
     </footer>
   );
