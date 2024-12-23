@@ -35,11 +35,11 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full bg-white shadow-sm">
-      <div className="container flex items-center justify-between px-6 py-4 mx-auto">
+    <header className="sticky top-0 left-0 z-50 w-full bg-white shadow-sm">
+      <div className="container flex items-center justify-between px-6 py-2 mx-auto">
         {/* Logo Section */}
         <Link href="/" className="flex items-center space-x-2">
-          <Image src={logo} alt="Difmo Logo" width={200} height={64} />
+          <Image src={logo} alt="Difmo Logo" width={150} height={64} />
           {/* <span className="text-2xl font-semibold text-[#EA130C]">
             Difmo Technologies
           </span> */}
@@ -47,14 +47,14 @@ const Header = () => {
 
         {/* Hamburger Icon */}
         <button
-          className="text-3xl lg:hidden"
+          className="text-2xl lg:hidden"
           onClick={() => setIsMenuOpen(true)}
         >
           <HiOutlineMenu />
         </button>
 
         {/* Desktop Navigation */}
-        <nav className="items-center hidden  space-x-8 text-lg font-medium text-gray-800 lg:flex">
+        <nav className="items-center hidden space-x-8 text-sm font-medium text-gray-800 lg:flex">
           <HeaderLink href="/" isActive={isActive("/")}>
             Home
           </HeaderLink>
@@ -88,7 +88,7 @@ const Header = () => {
           </HeaderLink>
           <Link
             href="/contact-us"
-            className="items-center justify-center hidden h-11 px-5 space-x-2 text-white transition-colors duration-300 bg-[#EA130C] rounded-xl md:flex hover:bg-[#EA130C]"
+            className="items-center justify-center hidden h-9 px-5 space-x-2 text-white transition-colors duration-300 bg-[#EA130C] rounded-sm md:flex hover:bg-[#ff8d89]"
           >
             <p>Get Started</p>
             <svg
@@ -236,7 +236,7 @@ const DropdownMenu = ({ title, isActive, items, closeMenu }) => {
 
   return (
     <div
-      className="relative  "
+      className="relative "
       onMouseEnter={() => setIsDropdownOpen(true)}
       onMouseLeave={() => setIsDropdownOpen(false)}
     >
