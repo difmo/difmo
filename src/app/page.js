@@ -36,14 +36,10 @@ export default function Home() {
   return (
     <>
       {/* Main Slider */}
-      <div className="my-4">
         <MainSlider />
-      </div>
 
       {/* Building Soft */}
-      <div className="my-7">
         <BuildingSoft />
-      </div>
 
       {/* Our Services */}
       <div className="my-7">
