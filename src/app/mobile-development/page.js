@@ -90,7 +90,7 @@ const Mobiledevlopment = () => {
           </div>
           <Ecommercemonile />
           <BusinessProfilemobile />
-          {/* <Persinalmobile /> */}
+          <Persinalmobile />
           <Chatbort />
         </div>
       </div>

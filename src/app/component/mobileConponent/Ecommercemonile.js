@@ -1,5 +1,5 @@
 import React from "react";
-import ecom from "../../assets/Ecommerce.png";
+import ecom from "../../assets/mobiledeveoper/mobile.png";
 import Image from "next/image";
 import { FaCheck } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -29,7 +29,7 @@ function Ecommercemonile() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        E-Commerce Mobile Application 
+        E-Commerce Mobile Application
       </motion.h1>
 
       {/* Content Section */}

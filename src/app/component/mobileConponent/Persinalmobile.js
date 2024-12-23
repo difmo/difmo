@@ -1,5 +1,5 @@
 import React from "react";
-import ecom from "../../assets/Cover1.png";
+import ecom from "../../assets/mobiledeveoper/prisnal.jpg";
 import Image from "next/image";
 import { FaCheck } from "react-icons/fa";
 import CustomButton from "../Buttons/CustomButton";
