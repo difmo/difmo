@@ -1,12 +1,12 @@
 import React from "react";
 
 const data = [
-  { point: ".", label: " Mobile Apps Developed", value: "1400+" },
-  { point: ".", label: "Happy Partners", value: "800+" },
-  { point: ".", label: "Industries Covered", value: "50+" },
-  { point: ".", label: "Tech Enthusiasts", value: "200+" },
-  { point: ".", label: "AI Solutions", value: "50+" },
-  { point: ".", label: "Raised through developed Apps", value: "$869+M" },
+  { point: ".", label: " Mobile Apps Developed", value: "4+" },
+  { point: ".", label: "Happy Partners", value: "10+" },
+  { point: ".", label: "Industries Covered", value: "5+" },
+  { point: ".", label: "Tech Enthusiasts", value: "10+" },
+  { point: ".", label: "AI Solutions", value: "5+" },
+  { point: ".", label: "Raised through developed Apps", value: "$860+" },
 ];
 
 const StatsSection = () => {

@@ -107,7 +107,7 @@ const Webdevlopment = () => {
         </div>
       </div> */}
 
-      <div className="mx-4 sm:mx-8 lg:mx-28 my-20 mt-36">
+      <div className="mx-4 sm:mx-8 lg:mx-28 my-20 pt-12">
         <div className="">
           <div className="col-span-2 rounded-lg">
             <h2 className="md:text-4xl text-xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-[#EA130C] mb-6 flex justify-center">

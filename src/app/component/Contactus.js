@@ -71,28 +71,40 @@ const Contactus = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FaFacebook size={30} className="text-blue-600" />
+                    <FaFacebook
+                      size={30}
+                      className="text-blue-600  hover:text-[#EA130C]"
+                    />
                   </a>
                   <a
                     href="https://x.com/difmotech"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FaTwitter size={30} className="text-blue-400" />
+                    <FaTwitter
+                      size={30}
+                      className="text-blue-400  hover:text-[#EA130C]"
+                    />
                   </a>
                   <a
                     href="https://in.linkedin.com/company/difmo"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FaLinkedin size={30} className="text-blue-700" />
+                    <FaLinkedin
+                      size={30}
+                      className="text-blue-700  hover:text-[#EA130C]"
+                    />
                   </a>
                   <a
                     href="https://www.instagram.com/difmotech"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FaInstagram size={30} className="text-pink-600" />
+                    <FaInstagram
+                      size={30}
+                      className="text-pink-600  hover:text-[#EA130C]"
+                    />
                   </a>
                 </div>
               </div>
