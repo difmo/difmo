@@ -88,9 +88,9 @@ const Header = () => {
           </HeaderLink>
           <Link
             href="/contact-us"
-            className="items-center justify-center hidden h-9 px-5 space-x-2 text-white transition-colors duration-300 bg-[#EA130C] rounded-sm md:flex hover:bg-[#ff8d89]"
+            className="items-center justify-center hidden h-9 px-5 space-x-2 text-white transition-colors duration-300 bg-[#EA130C] rounded-3xl md:flex hover:bg-[#ff8d89]"
           >
-            <p>Get Started</p>
+            <p>GET STARTED</p>
             <svg
               className="w-5 h-5 animate-bounce-right"
               fill="none"
