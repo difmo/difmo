@@ -77,8 +77,8 @@ const Header = () => {
             // closeMenu={closeMenu}
             closeMenu={() => setIsMenuOpen(false)}
           />
-          <HeaderLink href="/products" isActive={isActive("/products")}>
-            Products
+          <HeaderLink href="/projects" isActive={isActive("/projects")}>
+            Projects
           </HeaderLink>
           <HeaderLink href="/blogs" isActive={isActive("/blogs")}>
             Blogs
@@ -200,8 +200,8 @@ const Header = () => {
                   </div>
                 )}
               </div>
-              <HeaderLink href="/products" isActive={isActive("/products")}>
-                Products
+              <HeaderLink href="/projects" isActive={isActive("/projects")}>
+                Projects
               </HeaderLink>
               <HeaderLink href="/blogs" isActive={isActive("/blogs")}>
                 Blogs

@@ -78,15 +78,15 @@ const Projects = () => {
       </div>
 
       <div className="py-12 bg-gray-100">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
+        <div className="container px-4 mx-auto sm:px-6 lg:px-8">
+          <h2 className="mb-8 text-3xl font-bold text-center text-gray-800">
             Latest Blogs
           </h2>
 
           <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
             {blogs.map((blog, index) => (
               <Link href={`/blogs/${blog.id}`} key={blog.id} passHref>
-                <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out overflow-hidden">
+                <div className="overflow-hidden transition-shadow duration-300 ease-in-out bg-white rounded-lg shadow-md hover:shadow-lg">
                   <div className="relative w-full h-[200px]">
                     {/* <Image
           src={blog.image}
@@ -98,12 +98,12 @@ const Projects = () => {
                     <img
                       src={blog.image}
                       alt={blog.title}
-                      // className="w-24 h-24 object-cover"
+                      // className="object-cover w-24 h-24"
                       className="rounded-t-lg"
                     />
                   </div>
                   <div className="p-6">
-                    <h2 className="md:text-xl text-xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange mb-2">
+                    <h2 className="mb-2 text-xl font-extrabold text-transparent md:text-xl font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange">
                       {blog.title.length > 16
                         ? `${blog.title.substring(0, 10)}...`
                         : blog.title}
@@ -124,7 +124,7 @@ const Projects = () => {
 
               // <Link href={`/blogs/${blog.id}`} key={index} passHref>
 
-              //     <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out overflow-hidden">
+              //     <div className="overflow-hidden transition-shadow duration-300 ease-in-out bg-white rounded-lg shadow-md hover:shadow-lg">
 
               //       <div className="relative w-full h-[200px]">
               //         <Image
@@ -137,7 +137,7 @@ const Projects = () => {
               //       </div>
 
               //       <div className="p-6">
-              //         <h2 className="md:text-xl text-xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange mb-2">
+              //         <h2 className="mb-2 text-xl font-extrabold text-transparent md:text-xl font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange">
 
               //           {blog.title.length > 16 ? `${blog.title.substring(0, 10)}...` : blog.title}
               //         </h2>
