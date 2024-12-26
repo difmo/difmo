@@ -71,7 +71,7 @@ const ProjectDetails = ({ params }) => {
         </div>
 
         {/* Expertise Section */}
-        <div className="flex flex-col items-center w-full p-6 mt-8 space-y-4 rounded-lg shadow-lg sm:flex-row sm:space-y-0 sm:space-x-6 bg-gradient-to-r from-[#EA130C] to-red-800">
+        <div className="flex flex-col items-center justify-between w-full p-6 mt-8 space-y-4 rounded-lg shadow-lg sm:flex-row sm:space-y-0 sm:space-x-6 bg-gradient-to-r from-[#EA130C] to-red-800">
           {project.link && (
             <b className="text-xl font-extrabold text-center text-white sm:text-2xl sm:text-left">
               Does your need match our expertise?
