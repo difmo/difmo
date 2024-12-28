@@ -60,7 +60,7 @@ const About = () => {
       <div className="mx-4 my-20 sm:mx-8 lg:mx-16">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           <div className="col-span-1">
-            <h2 className="mb-6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-[#EA130C]">
+            <h2 className="mb-6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange">
               Transforming Businesses Through Technology
             </h2>
             <p className="text-base leading-relaxed tracking-wide text-justify text-gray-700 md:leading-loose">
@@ -85,7 +85,7 @@ const About = () => {
       {/* Core Values Section */}
       <div className="py-10 bg-warm-gray">
         <div className="mx-4 sm:mx-8 lg:mx-16">
-          <h2 className="mb-6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-[#EA130C]">
+          <h2 className="mb-6 text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange">
             Our Core Values: Guiding Our Every Step
           </h2>
           <p className="px-4 text-lg leading-relaxed tracking-wide text-justify text-gray-700 sm:px-0 sm:pt-2 md:leading-loose">
@@ -104,7 +104,7 @@ const About = () => {
                       icon={card.icon}
                       className="mx-auto mb-4 text-4xl text-primary-orange"
                     />
-                    <h3 className="mb-4 text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-[#EA130C]">
+                    <h3 className="mb-4 text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange">
                       {card.title}
                     </h3>
                     <p className="text-base leading-relaxed tracking-wide text-justify text-gray-700">
@@ -119,7 +119,7 @@ const About = () => {
       </div>
 
       {/* Call to Action Section */}
-      <div className="py-10 px-2 bg-gradient-to-r from-deep-blue to-[#EA130C] text-white text-center">
+      <div className="py-10 px-2 bg-gradient-to-r from-deep-blue to-primary-orange text-white text-center">
         <h2 className="text-3xl font-extrabold sm:text-4xl">
           Ready to Transform Your Business?
         </h2>

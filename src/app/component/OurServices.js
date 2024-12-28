@@ -80,7 +80,7 @@ const OurServices = () => {
 
   return (
     <div className="mx-4 my-8 sm:mx-8 lg:mx-16">
-      <h2 className="mb-4 text-4xl font-extrabold text-transparent md:text-3xl font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-[#EA130C]">
+      <h2 className="mb-4 text-4xl font-extrabold text-transparent md:text-3xl font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange">
         Our Services
       </h2>
       <p className="text-gray-700 text-[16px] leading-relaxed md:leading-loose tracking-wide text-justify">
@@ -89,11 +89,11 @@ const OurServices = () => {
         engagement, taking your digital presence to new heights. Innovate and
         stand out with solutions that push boundaries.
       </p>
-      <div className="container mx-auto mt-7 grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
+      <div className="container grid w-full grid-cols-1 gap-6 mx-auto mt-7 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center">
         {servicesData.map((service, index) => (
           <div
             key={index}
-            className="cursor-pointer p-4 sm:p-5 rounded-lg flex flex-col items-center shadow-2xl transition-transform transform hover:scale-105 hover:shadow-xl duration-300 ease-in-out mb-5"
+            className="flex flex-col items-center p-4 mb-5 transition-transform duration-300 ease-in-out transform rounded-lg shadow-2xl cursor-pointer sm:p-5 hover:scale-105 hover:shadow-xl"
           >
             <div className="flex items-center justify-center w-16 h-16 mb-4 bg-white rounded-full">
               <FontAwesomeIcon

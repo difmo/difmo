@@ -21,7 +21,7 @@ function Chatbort() {
     <div className="py-10">
       {/* Heading */}
       <motion.h1
-        className="text-left text-3xl sm:text-4xl md:text-4xl py-6 font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-[#EA130C]"
+        className="text-left text-3xl sm:text-4xl md:text-4xl py-6 font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -68,7 +68,7 @@ function Chatbort() {
             >
               <Link href="/contact-us">
                 <CustomButton
-                  className="bg-[#EA130C] text-white p-3 w-36 rounded-3xl flex justify-center hover:bg-[#f8710f]"
+                  className="bg-primary-orange text-white p-3 w-36 rounded-3xl flex justify-center hover:bg-[#f8710f]"
                   fname="Contact Us"
                 />
               </Link>
@@ -80,7 +80,7 @@ function Chatbort() {
             >
               <Link href="/blogs">
                 <CustomButton
-                  className="bg-[#EA130C] text-white p-3 w-36 rounded-3xl flex justify-center hover:bg-[#f8710f]"
+                  className="bg-primary-orange text-white p-3 w-36 rounded-3xl flex justify-center hover:bg-[#f8710f]"
                   fname="Learn More"
                 />
               </Link>

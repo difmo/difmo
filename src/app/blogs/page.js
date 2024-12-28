@@ -71,7 +71,7 @@ const Projects = () => {
           <p className="mt-4 text-sm font-medium text-white sm:text-lg md:text-xl lg:text-2xl">
             Discover insights and inspiration on Difmo’s web development!
           </p>
-          {/* <button className="px-4 py-2 mt-6 font-semibold text-white transition duration-300 ease-in-out bg-orange-600 rounded-lg sm:px-6 sm:py-3 hover:bg-[#EA130C]">
+          {/* <button className="px-4 py-2 mt-6 font-semibold text-white transition duration-300 ease-in-out bg-orange-600 rounded-lg sm:px-6 sm:py-3 hover:bg-primary-orange">
             Explore More Blogs
           </button> */}
         </div>
@@ -111,7 +111,7 @@ const Projects = () => {
                     <p className="text-gray-700 text-[16px] leading-relaxed tracking-wide text-justify mb-4">
                       {truncateDescription(blog.description, 10)}
                     </p>
-                    <span className="inline-flex items-center text-orange-600 hover:text-[#EA130C] font-semibold">
+                    <span className="inline-flex items-center text-orange-600 hover:text-primary-orange font-semibold">
                       Read More
                       <FontAwesomeIcon
                         icon={faArrowRight}
@@ -146,7 +146,7 @@ const Projects = () => {
               //           {/* {blog.description.length > 60 ? `${blog.description.substring(0, 60)}...` : blog.description} */}
               //         </p>
 
-              //         <span className="inline-flex items-center text-orange-600 hover:text-[#EA130C] font-semibold">
+              //         <span className="inline-flex items-center text-orange-600 hover:text-primary-orange font-semibold">
               //           Read More
               //           <FontAwesomeIcon icon={faArrowRight} className="ml-2 text-sm" />
               //         </span>

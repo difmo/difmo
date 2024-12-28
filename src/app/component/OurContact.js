@@ -108,13 +108,13 @@ const OurContact = () => {
               </span>
               <a
                 href="tel:+919455791624"
-                className="block  text-blue-600 hover:text-[#EA130C] hover:underline"
+                className="block  text-blue-600 hover:text-primary-orange hover:underline"
               >
                 +91 945-579-1624
               </a>
               <a
                 href="tel:+918172848306"
-                className="block  text-blue-600 hover:text-[#EA130C] hover:underline"
+                className="block  text-blue-600 hover:text-primary-orange hover:underline"
               >
                 +91 817-284-8306
               </a>
@@ -127,13 +127,13 @@ const OurContact = () => {
               </span>
               <a
                 href="mailto:info@difmo.com"
-                className="block  text-blue-600 hover:text-[#EA130C] hover:underline"
+                className="block  text-blue-600 hover:text-primary-orange hover:underline"
               >
                 info@difmo.com
               </a>
               <a
                 href="mailto:difmotech@gmail.com"
-                className="block  text-blue-600 hover:text-[#EA130C] hover:underline"
+                className="block  text-blue-600 hover:text-primary-orange hover:underline"
               >
                 difmotech@gmail.com
               </a>
@@ -162,7 +162,7 @@ const OurContact = () => {
                 >
                   <FaFacebook
                     size={32}
-                    className="text-blue-600 hover:text-[#EA130C] transition-all duration-300"
+                    className="text-blue-600 hover:text-primary-orange transition-all duration-300"
                   />
                 </a>
                 <a
@@ -172,7 +172,7 @@ const OurContact = () => {
                 >
                   <FaTwitter
                     size={32}
-                    className="text-blue-500 hover:text-[#EA130C] transition-all duration-300"
+                    className="text-blue-500 hover:text-primary-orange transition-all duration-300"
                   />
                 </a>
                 <a
@@ -182,7 +182,7 @@ const OurContact = () => {
                 >
                   <FaLinkedin
                     size={32}
-                    className="text-blue-700 hover:text-[#EA130C] transition-all duration-300"
+                    className="text-blue-700 hover:text-primary-orange transition-all duration-300"
                   />
                 </a>
                 <a
@@ -192,7 +192,7 @@ const OurContact = () => {
                 >
                   <FaInstagram
                     size={32}
-                    className="text-pink-600 hover:text-[#EA130C] transition-all duration-300"
+                    className="text-pink-600 hover:text-primary-orange transition-all duration-300"
                   />
                 </a>
               </div>
@@ -256,7 +256,7 @@ const OurContact = () => {
               <CustomButton
                 type="submit"
                 label="Submit"
-                className="w-full py-3 text-lg text-white bg-[#EA130C] hover:bg-[#ea130c9d] rounded-lg shadow-md transition duration-300 ease-in-out"
+                className="w-full py-3 text-lg text-white bg-primary-orange hover:bg-[#ea130c9d] rounded-lg shadow-md transition duration-300 ease-in-out"
               />
             </form>
           </div>
@@ -265,7 +265,7 @@ const OurContact = () => {
 
       <div className="mx-auto lg:flex-row">
         <div className="px-6 mx-auto sm:px-8 lg:px-16">
-          <h2 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-[#EA130C] text-center mb-6 sm:mb-10">
+          <h2 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange text-center mb-6 sm:mb-10">
             Our Location
           </h2>
 

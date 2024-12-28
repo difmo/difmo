@@ -8,7 +8,7 @@ const Development = () => {
     <div className="mx-4 sm:mx-8 lg:mx-16 mt-20 my-12">
       {/* Text Section - Spans 1 column */}
       <div className="md:col-span-1 rounded-lg">
-        <h2 className="md:text-3xl text-4xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-[#EA130C]  mb-3">
+        <h2 className="md:text-3xl text-4xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange  mb-3">
           Development Cycle
         </h2>
 

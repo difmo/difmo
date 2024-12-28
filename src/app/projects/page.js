@@ -30,7 +30,7 @@ const About = () => {
           </p>
         </div>
         {/* Call to Action Button */}
-        {/* <button className="px-4 py-2 mt-6 font-semibold text-white transition duration-300 ease-in-out bg-orange-600 rounded-lg sm:px-6 sm:py-3 hover:bg-[#EA130C]">
+        {/* <button className="px-4 py-2 mt-6 font-semibold text-white transition duration-300 ease-in-out bg-orange-600 rounded-lg sm:px-6 sm:py-3 hover:bg-primary-orange">
             Read Below More Product
           </button> */}
       </div>
@@ -63,7 +63,7 @@ const About = () => {
                 {/* Read More Button */}
                 <Link href={`/our-projects/${service.id}`}>
                   <button
-                    className="relative px-6 pr-10 py-3 text-white font-semibold bg-gradient-to-r from-[#EA130C] to-deep-blue rounded-full shadow-lg hover:scale-105 focus:outline-none active:scale-95 transition-transform duration-300"
+                    className="relative px-6 pr-10 py-3 text-white font-semibold bg-gradient-to-r from-primary-orange to-deep-blue rounded-full shadow-lg hover:scale-105 focus:outline-none active:scale-95 transition-transform duration-300"
                     aria-label={`Read more about ${service.title}`}
                   >
                     Read More

@@ -61,7 +61,7 @@ const ProjectDetails = ({ params }) => {
           {project.link && (
             <Link href={project.link}>
               <button
-                className="px-6 py-3 font-semibold text-white transition-transform rounded-lg shadow-md bg-gradient-to-r from-red-500 to-[#EA130C] hover:scale-105 focus:outline-none active:scale-95"
+                className="px-6 py-3 font-semibold text-white transition-transform rounded-lg shadow-md bg-gradient-to-r from-red-500 to-primary-orange hover:scale-105 focus:outline-none active:scale-95"
                 aria-label={`Explore ${project.title}`}
               >
                 Explore Live
@@ -71,7 +71,7 @@ const ProjectDetails = ({ params }) => {
         </div>
 
         {/* Expertise Section */}
-        <div className="flex flex-col items-center justify-between w-full p-6 mt-8 space-y-4 rounded-lg shadow-lg sm:flex-row sm:space-y-0 sm:space-x-6 bg-gradient-to-r from-[#EA130C] to-red-800">
+        <div className="flex flex-col items-center justify-between w-full p-6 mt-8 space-y-4 rounded-lg shadow-lg sm:flex-row sm:space-y-0 sm:space-x-6 bg-gradient-to-r from-primary-orange to-red-800">
           {project.link && (
             <b className="text-xl font-extrabold text-center text-white sm:text-2xl sm:text-left">
               Does your need match our expertise?
@@ -83,7 +83,7 @@ const ProjectDetails = ({ params }) => {
           
           <button 
           href="/contact-us"
-          className="flex items-center justify-center w-full px-6 py-3 space-x-2 text-lg font-semibold text-center text-white transition-all bg-[#EA130C] border-2 border-white rounded-lg hover:bg-red-800 sm:max-w-screen-lg sm:ml-auto focus:outline-none focus:ring-2 focus:ring-red-300">
+          className="flex items-center justify-center w-full px-6 py-3 space-x-2 text-lg font-semibold text-center text-white transition-all bg-primary-orange border-2 border-white rounded-lg hover:bg-red-800 sm:max-w-screen-lg sm:ml-auto focus:outline-none focus:ring-2 focus:ring-red-300">
             <span>GET STARTED</span>
             <svg
               className="w-6 h-6 text-white"
