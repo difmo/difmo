@@ -52,10 +52,10 @@ const Contact = () => {
           Do You Need a Technology Partner <br className="hidden sm:inline" /> For Your Business Idea?
         </h1>
 
-        {/* Subtitle */}
+        {/* Subtitle
         <p className="text-sm font-medium text-orange-500 sm:text-lg md:text-xl lg:text-2xl">
           Tailored solutions for your business needs are just a click away.
-        </p>
+        </p> */}
 
         {/* Description */}
         <ul className="space-y-2 text-sm text-white sm:text-md md:text-lg lg:text-xl">
