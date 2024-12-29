@@ -5,7 +5,7 @@ import { projects } from "../component/projects"; // Import the project data
 const Projects = () => {
   return (
     <div className="md:p-10 sm:mx-[2rem] md:my-3 my-7">
-      <h2 className="md:text-3xl p-4 sm:p-0 text-4xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange ">
+      <h2 className="p-4 text-4xl font-extrabold text-transparent md:text-3xl sm:p-0 font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange ">
         Our Projects
       </h2>
       <p className="text-gray-700 px-4 sm:px-0 sm:pt-2 text-[16px] leading-relaxed md:leading-loose tracking-wide text-justify">
@@ -21,14 +21,14 @@ const Projects = () => {
               className="bg-[#ffffff] hover:bg-warm-gray p-4 border-2 border-gray-200 rounded-xl shadow-md flex flex-col relative"
             >
               <Image
-                src={project.image}
+                src={project.image[0]}
                 alt={project.title}
                 className="object-cover w-full mb-2 rounded-lg h-100"
                 width={400}
                 height={300}
               />
               <div className="flex-1 px-4">
-                <h3 className="md:text-xl text-lg font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange ">
+                <h3 className="text-lg font-extrabold text-transparent md:text-xl font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange ">
                   {project.title}
                 </h3>
                 <p className="text-gray-700 text-[16px] sm:pt-2 leading-loose tracking-wide text-justify">
@@ -220,7 +220,7 @@ export default Projects;
 //   return (
 //     <>
 //       <div className="md:p-10 sm:mx-[2rem] md:my-3 my-7">
-//         <h2 className="md:text-3xl p-4 sm:p-0  text-4xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange   ">
+//         <h2 className="p-4 text-4xl font-extrabold text-transparent md:text-3xl sm:p-0 font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange ">
 //           Our Projects
 //         </h2>
 //         <p className="text-gray-700 px-4 sm:px-0  sm:pt-2 text-[16px] leading-relaxed md:leading-loose tracking-wide text-justify">
@@ -242,7 +242,7 @@ export default Projects;
 //                   className="object-cover w-full mb-2 rounded-lg h-100"
 //                 />
 //                 <div className="flex-1 px-4">
-//                   <h3 className="md:text-xl    text-lg font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange ">
+//                   <h3 className="text-lg font-extrabold text-transparent md:text-xl font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange ">
 //                     {project.title}
 //                   </h3>
 //                   <p className="text-gray-700 text-[16px] sm:pt-2  leading-loose tracking-wide text-justify">

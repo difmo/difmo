@@ -41,7 +41,7 @@ const ProjectDetails = ({ params }) => {
         {/* Project Image */}
         <div className="relative w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden">
           <Image
-            src={project.image}
+            src={project.image[0]}
             alt={project.title}
             layout="fill"
             objectFit="contain"
@@ -83,7 +83,7 @@ const ProjectDetails = ({ params }) => {
           
           <button 
           href="/contact-us"
-          className="flex items-center justify-center w-full px-6 py-3 space-x-2 text-lg font-semibold text-center text-white transition-all bg-primary-orange border-2 border-white rounded-lg hover:bg-red-800 sm:max-w-screen-lg sm:ml-auto focus:outline-none focus:ring-2 focus:ring-red-300">
+          className="flex items-center justify-center w-full px-6 py-3 space-x-2 text-lg font-semibold text-center text-white transition-all border-2 border-white rounded-lg bg-primary-orange hover:bg-red-800 sm:max-w-screen-lg sm:ml-auto focus:outline-none focus:ring-2 focus:ring-red-300">
             <span>GET STARTED</span>
             <svg
               className="w-6 h-6 text-white"

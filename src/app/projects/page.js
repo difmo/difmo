@@ -45,7 +45,7 @@ const About = () => {
             >
               {/* Image */}
               <Image
-                src={service.image}
+                src={service.image[0]}
                 alt={`${service.title} image`}
                 width={300}
                 height={200}
@@ -63,7 +63,7 @@ const About = () => {
                 {/* Read More Button */}
                 <Link href={`/our-projects/${service.id}`}>
                   <button
-                    className="relative px-6 pr-10 py-3 text-white font-semibold bg-gradient-to-r from-primary-orange to-deep-blue rounded-full shadow-lg hover:scale-105 focus:outline-none active:scale-95 transition-transform duration-300"
+                    className="relative px-6 py-3 pr-10 font-semibold text-white transition-transform duration-300 rounded-full shadow-lg bg-gradient-to-r from-primary-orange to-deep-blue hover:scale-105 focus:outline-none active:scale-95"
                     aria-label={`Read more about ${service.title}`}
                   >
                     Read More

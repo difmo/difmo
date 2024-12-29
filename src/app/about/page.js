@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCogs, faUsers, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import fqaQ from "../assets/backgrounds_images/aboutbg2.jpg";
 import about from "../assets/about.jpg";
+import Link from "next/link";
 
 const About = () => {
   const cardData = [
@@ -119,16 +120,22 @@ const About = () => {
       </div>
 
       {/* Call to Action Section */}
-      <div className="py-10 px-2 bg-gradient-to-r from-deep-blue to-primary-orange text-white text-center">
+      <div className="px-2 py-10 text-center text-white bg-gradient-to-r from-deep-blue to-primary-orange">
         <h2 className="text-3xl font-extrabold sm:text-4xl">
           Ready to Transform Your Business?
         </h2>
         <p className="mt-4 text-lg sm:text-xl">
           Join hands with Difmo Technologies and take your business to the next level with our advanced solutions.
         </p>
-        <button className="px-6 py-3 mt-6 font-semibold text-white transition duration-300 bg-red-600 rounded-lg hover:bg-red-500">
+        <Link
+        href={'/contact-us'}
+        >
+        
+        <button 
+        className="px-6 py-3 mt-6 font-semibold text-white transition duration-300 bg-red-600 rounded-lg hover:bg-red-500">
           Contact Us Now
         </button>
+        </Link>
       </div>
     </>
   );
