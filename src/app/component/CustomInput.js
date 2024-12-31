@@ -6,17 +6,18 @@ const CustomInput = ({
   type,
   onChange,
   value,
+  error,
 }) => {
   return (
-    <div className="relative mb-6">
+    <div className="relative mb-1">
       <label
-        className="block mb-1 text-sm font-semibold text-gray-800 transition-all duration-300 ease-in-out"
+        className="block mb-1 text-sm  text-gray-800 transition-all duration-300 ease-in-out"
         htmlFor={id}
       >
         {label}
       </label>
       <input
-        className="appearance-none border-2 border-gray-300 rounded-lg w-full py-4 px-4 text-gray-800 leading-tight focus:outline-none focus:ring-1 focus:ring-primary-orange focus:border-primary-orange transition-all duration-300 ease-in-out shadow-sm hover:shadow-md"
+        className="appearance-none border-2 border-gray-300 w-full py-2.5 px-4 text-gray-800 leading-tight focus:outline-none focus:ring-1 focus:ring-primary-orange focus:border-primary-orange transition-all duration-300 ease-in-out "
         id={id}
         type={type}
         placeholder={placeholder}
@@ -24,6 +25,7 @@ const CustomInput = ({
         onChange={onChange}
         style={style}
       />
+      <p className="text-xs mt-1 italic text-red-500">{error}</p>
     </div>
   );
 };

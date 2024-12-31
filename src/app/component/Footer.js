@@ -42,7 +42,7 @@ const footerData = {
         { name: "Web Development", path: "/web-development" },
         {
           name: "Mobile App Development",
-          path: "/mobile-app-development",
+          path: "/mobile-development",
         },
         { name: "UI/UX Design", path: "/web-development" },
         { name: "Software Maintenance", path: "/software-maintenance" },
