@@ -7,13 +7,14 @@ export const metadata = {
   description:
     "Enhancing Customer Experience with Innovative Web and Mobile App Solutions",
 };
+// fsdlkf;
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="">
         <Header />
 
-        <div className="min-h-screen ">{children}</div>
+        <div className="min-h-screen   bg-white">{children}</div>
         <Footer />
       </body>
     </html>

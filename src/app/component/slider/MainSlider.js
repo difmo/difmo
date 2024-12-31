@@ -1,10 +1,13 @@
 "use client";
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Formcontect from "../OurContactForm";
+import { motion, AnimatePresence } from "framer-motion";
 
+// Dynamically import Slider
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
 // Import images
@@ -12,18 +15,42 @@ import image1 from "../../assets/home1.jpg";
 import image2 from "../../assets/home2.jpg";
 import image3 from "../../assets/home3.jpg";
 import image4 from "../../assets/home4.jpg";
-import Link from "next/link";
+import RequestForm from "../RequestForm";
 
 const MainSlider = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const modalRef = useRef(null);
+
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
+
+  // Close modal when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        setIsModalOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  // Callback for form submission
+  const handleFormSubmit = () => {
+    setIsModalOpen(true); // Close modal after successful form submission
+  };
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: false, // Disable next/previous buttons
-    autoplay: true, // Enable auto-sliding
-    autoplaySpeed: 3000, // Slide change interval
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
   };
 
   const images = [
@@ -58,6 +85,7 @@ const MainSlider = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen">
       <Slider {...settings}>
         {images.map((image, index) => (
@@ -86,6 +114,36 @@ const MainSlider = () => {
               <Link href="/about">
                 <button className="flex items-center px-5 py-2 space-x-2 text-white bg-orange-600 rounded-md hover:bg-primary-orange sm:px-6 sm:py-3">
                   <span>More About Us</span>
+=======
+    <>
+      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen">
+        <Slider {...settings}>
+          {images.map((image, index) => (
+            <div
+              key={index}
+              className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen"
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                layout="fill"
+                objectFit="cover"
+                className="w-full h-full brightness-75"
+                priority={index === 0}
+              />
+              <div className="absolute inset-0 flex flex-col items-start justify-center px-6 space-y-4 sm:px-16 md:px-24 lg:px-32">
+                <h1 className="text-2xl font-bold leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
+                  {image.title}
+                </h1>
+                <p className="text-sm text-gray-300 sm:text-lg md:text-xl">
+                  {image.description}
+                </p>
+                <button
+                  onClick={handleOpenModal}
+                  className="flex items-center px-5 py-2 space-x-2 text-white bg-orange-600 rounded-md hover:bg-primary-orange sm:px-6 sm:py-3"
+                >
+                  <span>Request Demo</span>
+>>>>>>> amar
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="w-5 h-5"
@@ -101,12 +159,38 @@ const MainSlider = () => {
                     />
                   </svg>
                 </button>
-              </Link>
               </div>
-          </div>
-        ))}
-      </Slider>
-    </div>
+            </div>
+          ))}
+        </Slider>
+
+        {/* Modal */}
+        {isModalOpen && (
+          <AnimatePresence>
+            <motion.div
+              className="fixed inset-0 flex items-center mt-14 justify-center bg-black bg-opacity-80 z-50"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <motion.div
+                ref={modalRef}
+                className="rounded-lg shadow-lg flex justify-center w-1/2"
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.8, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <RequestForm
+                  onSubmit={handleFormSubmit}
+                  onClose={handleCloseModal}
+                />
+              </motion.div>
+            </motion.div>
+          </AnimatePresence>
+        )}
+      </div>
+    </>
   );
 };
 

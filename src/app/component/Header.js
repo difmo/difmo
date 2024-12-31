@@ -178,12 +178,12 @@ const Header = () => {
                       Mobile Development
                     </Link>
 
-                    <Link
+                    {/* <Link
                       href="/ecommerce-development"
                       className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
                     >
                       E-Commerce Development
-                    </Link>
+                    </Link> */}
                     <Link
                       href="/software-maintenance"
                       className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary-orange"

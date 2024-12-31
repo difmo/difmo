@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       colors: {
         "primary-orange": "#ff4548", // Red-Orange Accent
+        secondary: "#273d6b", // Red-Orange Accent
 
         "deep-blue": "#00509D", // Deep Blue Accent
         "golden-yellow": "#FFC107", // Golden Yellow
