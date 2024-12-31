@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { projects } from "../../component/projects"; // Adjust the import path
+import { projects } from "../../component/projects";
+import Link from "next/link";
 
-// This will generate the static paths at build time
 export async function generateStaticParams() {
   const paths = projects.map((project) => ({
     id: project.id.toString(),
@@ -17,40 +17,92 @@ const ProjectDetails = ({ params }) => {
   const project = projects.find((proj) => proj.id.toString() === id);
 
   if (!project) {
-    return <p>Project not found</p>;
+    return (
+      <p className="mt-10 text-xl text-center text-gray-700">
+        Project not found
+      </p>
+    );
   }
 
   return (
-    <div className="container mx-auto p-6 md:p-12">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Text Section */}
-        <div className="flex flex-col justify-center p-6 bg-white rounded-lg shadow-lg">
-          <h1 className="text-4xl font-extrabold text-gradient mb-6">
-            {project.title}
-          </h1>
+    <div className="container px-6 py-12 mx-auto">
+      {/* Header Section */}
+      <div className="mb-8 text-center">
+        <h1 className="text-4xl font-extrabold text-gray-800 sm:text-5xl">
+          {project.title}
+        </h1>
+        <p className="mt-4 text-lg text-gray-600">
+          Discover the details of our live project
+        </p>
+      </div>
 
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            {project.description}
-          </p>
-
-          <div className="mt-6">
-            {/* Optional Call-to-Action Button */}
-            <button className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300">
-              Learn More
-            </button>
-          </div>
-        </div>
-
-        {/* Image Section */}
-        <div className="relative w-full h-[350px] sm:h-[250px] md:h-[300px] lg:h-[400px] mb-4 bg-gray-100 rounded-lg shadow-lg overflow-hidden">
+      {/* Content Section */}
+      <div className="flex flex-col items-center gap-8 p-6 bg-white lg:p-12">
+        {/* Project Image */}
+        <div className="relative w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden">
           <Image
-            src={project.image}
+            src={project.image[0]}
             alt={project.title}
-            layout="fill" // Ensures the image fills the parent container
-            objectFit="contain" // Ensures the image covers the container maintaining aspect ratio
-            className="rounded-lg"
+            layout="fill"
+            objectFit="contain"
+            className="transition-transform transform rounded-lg hover:scale-105"
           />
         </div>
+
+        {/* Project Details */}
+        <div className="text-center">
+          <p className="text-lg leading-relaxed text-gray-700">
+            {project.description}
+          </p>
+        </div>
+
+        {/* Buttons Section */}
+        <div className="flex w-full gap-4 sm:flex-row sm:gap-8 sm:justify-center">
+          {project.link && (
+            <Link href={project.link}>
+              <button
+                className="px-6 py-3 font-semibold text-white transition-transform rounded-lg shadow-md bg-gradient-to-r from-red-500 to-primary-orange hover:scale-105 focus:outline-none active:scale-95"
+                aria-label={`Explore ${project.title}`}
+              >
+                Explore Live
+              </button>
+            </Link>
+          )}
+        </div>
+
+        {/* Expertise Section */}
+        <div className="flex flex-col items-center justify-between w-full p-6 mt-8 space-y-4 rounded-lg shadow-lg sm:flex-row sm:space-y-0 sm:space-x-6 bg-gradient-to-r from-primary-orange to-red-800">
+          {project.link && (
+            <b className="text-xl font-extrabold text-center text-white sm:text-2xl sm:text-left">
+              Does your need match our expertise?
+            </b>
+          )}
+          <Link
+          href="/contact-us"
+          >
+          
+          <button 
+          href="/contact-us"
+          className="flex items-center justify-center w-full px-6 py-3 space-x-2 text-lg font-semibold text-center text-white transition-all border-2 border-white rounded-lg bg-primary-orange hover:bg-red-800 sm:max-w-screen-lg sm:ml-auto focus:outline-none focus:ring-2 focus:ring-red-300">
+            <span>GET STARTED</span>
+            <svg
+              className="w-6 h-6 text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M10 6l6 6-6 6"
+              ></path>
+            </svg>
+          </button>
+          </Link>
+        </div>
+
       </div>
     </div>
   );

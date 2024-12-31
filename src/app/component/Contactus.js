@@ -9,7 +9,7 @@ const Contactus = () => {
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {/* Text Section */}
         <div className="rounded-lg">
-          <h2 className="mb-6 text-4xl font-extrabold text-transparent md:text-3xl font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-[#EA130C]">
+          <h2 className="mb-6 text-4xl font-extrabold text-transparent md:text-3xl font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange">
             Question About Services
           </h2>
           <p className="text-gray-700 text-[16px] leading-relaxed md:leading-loose tracking-wide text-justify">
@@ -23,14 +23,14 @@ const Contactus = () => {
                 <span className="block text-sm font-bold">Phone Number</span>
                 <a
                   href="tel:+919455791624"
-                  className="text-blue-500 hover:underline hover:text-[#EA130C]"
+                  className="text-blue-500 hover:underline hover:text-primary-orange"
                 >
                   +91 945-579-1624
                 </a>
                 ,{" "}
                 <a
                   href="tel:+918172848306"
-                  className="text-blue-500 hover:underline hover:text-[#EA130C]"
+                  className="text-blue-500 hover:underline hover:text-primary-orange"
                 >
                   +91 817-284-8306
                 </a>
@@ -40,14 +40,14 @@ const Contactus = () => {
                 <span className="block text-sm font-bold">Email Address</span>
                 <a
                   href="mailto:info@difmo.com"
-                  className="text-blue-500 hover:underline hover:text-[#EA130C]"
+                  className="text-blue-500 hover:underline hover:text-primary-orange"
                 >
                   info@difmo.com
                 </a>
                 ,{" "}
                 <a
                   href="mailto:difmotech@gmail.com"
-                  className="text-blue-500 hover:underline hover:text-[#EA130C]"
+                  className="text-blue-500 hover:underline hover:text-primary-orange"
                 >
                   difmotech@gmail.com
                 </a>

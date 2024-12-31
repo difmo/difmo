@@ -52,10 +52,10 @@ const Contact = () => {
           Do You Need a Technology Partner <br className="hidden sm:inline" /> For Your Business Idea?
         </h1>
 
-        {/* Subtitle */}
+        {/* Subtitle
         <p className="text-sm font-medium text-orange-500 sm:text-lg md:text-xl lg:text-2xl">
           Tailored solutions for your business needs are just a click away.
-        </p>
+        </p> */}
 
         {/* Description */}
         <ul className="space-y-2 text-sm text-white sm:text-md md:text-lg lg:text-xl">
@@ -64,14 +64,11 @@ const Contact = () => {
           </li>
         </ul>
 
-        {/* Call to Action Button */}
-        <button className="px-4 py-2 mt-6 font-semibold text-white transition duration-300 ease-in-out bg-orange-600 rounded-lg sm:px-6 sm:py-3 hover:bg-[#EA130C]">
-          Get In Touch
-        </button>
+      
       </div>
     </div>
 
-    <div className="my-7">
+    <div className="">
       <div className="bg-slate-200">
         <OurContact />
       </div>

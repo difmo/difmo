@@ -97,7 +97,7 @@ const Career = () => {
     <div className="min-h-screen">
       <div className="container grid grid-cols-1 gap-8 py-10 mx-auto md:grid-cols-1 md:px-36">
         <div className="col-span-1 p-4 bg-white rounded-lg shadow-lg">
-          <h2 className="md:text-3xl text-xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-[#EA130C] mb-6 text-center">
+          <h2 className="md:text-3xl text-xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange mb-6 text-center">
             Apply for a Job
           </h2>
           <form onSubmit={handleSubmit}>
@@ -350,7 +350,7 @@ const Career = () => {
             <div className="flex justify-center">
               <button
                 type="submit"
-                className="w-[50%] p-5 py-2 my-5  text-white bg-[#EA130C] rounded-lg hover:bg-deep-blue transition duration-300"
+                className="w-[50%] p-5 py-2 my-5  text-white bg-primary-orange rounded-lg hover:bg-deep-blue transition duration-300"
               >
                 Submit Application
               </button>

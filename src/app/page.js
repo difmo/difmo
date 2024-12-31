@@ -5,11 +5,9 @@ import Script from "next/script";
 
 import BuildingSoft from "./component/BuildingSoft";
 import Development from "./component/Development";
-import ManyProjects from "./component/ManyProjects";
 import OurServices from "./component/OurServices";
 import MainSlider from "./component/slider/MainSlider";
 import OurContact from "./component/OurContact";
-import ProjectSlider from "./component/ProjectSlider";
 
 export default function Home() {
   const router = useRouter(); // Initialize the Next.js router
@@ -51,22 +49,10 @@ export default function Home() {
         <Development />
       </div>
 
-      {/* Our Projects */}
-      <div className="my-7 md:p-10 sm:mx-[2rem] md:my-3">
-        <h2 className="p-4 text-4xl font-extrabold text-transparent md:text-3xl sm:p-0 font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-[#EA130C]">
-          Our Projects
-        </h2>
-        <p className="text-gray-700 px-4 sm:px-0 sm:pt-2 text-[16px] leading-relaxed md:leading-loose tracking-wide text-justify">
-          At Difmo Tech, we transform your ideas into impactful digital
-          experiences using a wide array of cutting-edge web and mobile
-          technologies.
-        </p>
-        <ProjectSlider />
-      </div>
-
+    
       {/* Get In Touch */}
       <div className="my-7 md:p-10 sm:mx-[2rem] md:my-3">
-        <h2 className="p-4 text-4xl font-extrabold text-transparent md:text-3xl sm:p-0 font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-[#EA130C]">
+        <h2 className="p-4 text-4xl font-extrabold text-transparent md:text-3xl sm:p-0 font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange">
           Get In Touch
         </h2>
         <p className="text-gray-700 px-4 sm:px-0 sm:pt-2 text-[16px] leading-relaxed md:leading-loose tracking-wide text-justify">

@@ -4,7 +4,7 @@ const Page = () => {
   return (
     <div className="bg-[#8e878708] text-gray-700 text-[16px] leading-relaxed md:leading-loose tracking-wide text-justify">
       <div className="md:p-10 p-6 md:px-40 sm:mx-[2rem] md:mt-3 mt-7">
-        <h2 className="md:text-3xl mb-4 p-4 sm:p-0 text-4xl font-lilita font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-[#EA130C]">
+        <h2 className="md:text-3xl mb-4 p-4 sm:p-0 text-4xl font-lilita font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange">
           Legal Notice
         </h2>
 
