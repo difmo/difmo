@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Formcontect from "../OurContactForm";
+
 import { motion, AnimatePresence } from "framer-motion";
 
 // Dynamically import Slider
@@ -86,7 +86,10 @@ const MainSlider = () => {
 
   return (
     <>
-      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen">
+      <div
+        className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen"
+        inert={isModalOpen ? "true" : undefined} // Disable background when modal is open
+      >
         <Slider {...settings}>
           {images.map((image, index) => (
             <div

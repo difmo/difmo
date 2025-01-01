@@ -117,8 +117,8 @@ const OurContact = () => {
           </div>
           {/* right */}
           <Formcontect
-            username="Reach Us"
-            discraption="Please complete the form below, to request a quote, and we’ll be in touch."
+         
+         
           />
          
         </div>

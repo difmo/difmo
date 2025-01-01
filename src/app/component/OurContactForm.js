@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CustomInput from "./CustomInput";
 import CustomButton from "./Buttons/CustomButton";
 
-function Formcontect({ username, discraption }) {
+function Formcontect() {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -77,13 +77,13 @@ function Formcontect({ username, discraption }) {
 
   return (
     <div className="p-8 bg-white lg:w-2/5  rounded-[50px] ">
-      {username && (
-        <h2 className="mb-8 font-extrabold text-4xl text-center text-transparent bg-clip-text bg-secondary ">
-          {username}
-        </h2>
-      )}
+      <h2 className="mb-8 font-extrabold text-4xl text-center text-transparent bg-clip-text bg-secondary ">
+        Reach Us
+      </h2>
+
       <h2 className="mb-8 font-extrabold text-center bg-clip-text bg-gradient-to-r">
-        {discraption}
+        Please complete the form below, to request a quote, and we’ll be in
+        touch.
       </h2>
       <form onSubmit={handleSubmit} className="space-y-3">
         <CustomInput
