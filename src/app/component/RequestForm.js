@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import CustomInput from "./CustomInput";
 import CustomButton from "./Buttons/CustomButton";
+import { db, firebase } from "../config/config";
+// import { db } from "."; // Import db (Firestore) from your Firebase setup
 
-function RequestForm({ handleFormSubmit }) {
+function RequestForm() {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
     number: "",
     message: "",
+    date: "",
   });
 
   const [errors, setErrors] = useState({
@@ -33,25 +36,19 @@ function RequestForm({ handleFormSubmit }) {
     let valid = true;
     const newErrors = {};
 
-    if (!formData.fullName.trim()) {
+    if (!formData.fullName) {
       newErrors.fullName = "Full name is required.";
       valid = false;
     }
-    if (!formData.email.trim()) {
+    if (!formData.email) {
       newErrors.email = "Email address is required.";
       valid = false;
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = "Enter a valid email address.";
+    }
+    if (!formData.number) {
+      newErrors.number = "Number is required.";
       valid = false;
     }
-    if (!formData.number.trim()) {
-      newErrors.number = "Mobile number is required.";
-      valid = false;
-    } else if (!/^\d{10}$/.test(formData.number)) {
-      newErrors.number = "Enter a valid 10-digit mobile number.";
-      valid = false;
-    }
-    if (!formData.message.trim()) {
+    if (!formData.message) {
       newErrors.message = "Message is required.";
       valid = false;
     }
@@ -60,35 +57,47 @@ function RequestForm({ handleFormSubmit }) {
     return valid;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!validate()) return;
+    if (!validate()) {
+      return;
+    }
 
     try {
+      // Reference to the location in Firestore where the data will be stored
+      const newRequestRef = db
+        .collection("requests")
+        .doc(Date.now().toString()); // Using timestamp as a unique ID
+
+      // Set the data at that location
+      await newRequestRef.set({
+        fullName: formData.fullName,
+        email: formData.email,
+        number: formData.number,
+        message: formData.message,
+        date: firebase.firestore.FieldValue.serverTimestamp(), // Current date and time
+      });
+
       console.log("Form submitted:", formData);
-
-      // If a parent callback is provided, invoke it
-      if (handleFormSubmit) {
-        handleFormSubmit(formData);
-      }
-
       alert("Message sent successfully!");
+
+      // Reset form data
       setFormData({
         fullName: "",
         email: "",
         number: "",
         message: "",
+        date: "",
       });
-      setErrors({});
     } catch (error) {
-      console.error("Error submitting form:", error);
-      alert("Failed to send the message. Please try again.");
+      console.error("Error sending data to Firebase: ", error);
+      alert("Failed to send message. Please try again.");
     }
   };
 
   return (
-    <div className=" bg-white w-full  ">
-      <h2 className="mb-8 font-extrabold text-2xl md:text-4xl text-center text-transparent bg-clip-text bg-deep-blue ">
+    <div className="p-2 bg-white w-full">
+      <h2 className="mb-8 font-extrabold text md:text-4xl text-center text-transparent bg-clip-text bg-secondary">
         Request a Demo
       </h2>
 
@@ -125,7 +134,6 @@ function RequestForm({ handleFormSubmit }) {
         <CustomInput
           id="message"
           label="Message"
-          type="textarea"
           placeholder="Enter your message"
           value={formData.message}
           onChange={handleChange}
@@ -135,7 +143,7 @@ function RequestForm({ handleFormSubmit }) {
         <CustomButton
           type="submit"
           label="Submit"
-          className="w-full py-3 text-lg text-white bg-orange-600 hover:bg-orange-500 transition duration-300"
+          className="w-full py-3 text-lg text-white bg-primary-orange hover:bg-[#ea130c9d] transition duration-300 ease-in-out"
         />
       </form>
     </div>

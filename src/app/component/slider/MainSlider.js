@@ -136,7 +136,7 @@ const MainSlider = () => {
           <div
             className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
             role="dialog"
-            aria-modal="true"
+            aria-modal="true" 
           >
             <div
               ref={modalRef}
