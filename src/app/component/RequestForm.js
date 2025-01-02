@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CustomInput from "./CustomInput";
 import CustomButton from "./Buttons/CustomButton";
 
-function RequestForm() {
+function RequestForm({ handleFormSubmit }) {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -33,19 +33,25 @@ function RequestForm() {
     let valid = true;
     const newErrors = {};
 
-    if (!formData.fullName) {
+    if (!formData.fullName.trim()) {
       newErrors.fullName = "Full name is required.";
       valid = false;
     }
-    if (!formData.email) {
+    if (!formData.email.trim()) {
       newErrors.email = "Email address is required.";
       valid = false;
-    }
-    if (!formData.number) {
-      newErrors.number = "Number is required.";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Enter a valid email address.";
       valid = false;
     }
-    if (!formData.message) {
+    if (!formData.number.trim()) {
+      newErrors.number = "Mobile number is required.";
+      valid = false;
+    } else if (!/^\d{10}$/.test(formData.number)) {
+      newErrors.number = "Enter a valid 10-digit mobile number.";
+      valid = false;
+    }
+    if (!formData.message.trim()) {
       newErrors.message = "Message is required.";
       valid = false;
     }
@@ -54,14 +60,18 @@ function RequestForm() {
     return valid;
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if (!validate()) {
-      return;
-    }
+    if (!validate()) return;
+
     try {
-      // Simulating a submission
       console.log("Form submitted:", formData);
+
+      // If a parent callback is provided, invoke it
+      if (handleFormSubmit) {
+        handleFormSubmit(formData);
+      }
+
       alert("Message sent successfully!");
       setFormData({
         fullName: "",
@@ -69,15 +79,16 @@ function RequestForm() {
         number: "",
         message: "",
       });
+      setErrors({});
     } catch (error) {
-      console.error("Error adding document: ", error);
-      alert("Failed to send message. Please try again.");
+      console.error("Error submitting form:", error);
+      alert("Failed to send the message. Please try again.");
     }
   };
 
   return (
-    <div className="p-8 bg-white  w-full lg:w-2/4 md:w-2/4 ">
-      <h2 className="mb-8 font-extrabold text-2xl md:text-4xl text-center text-transparent bg-clip-text bg-secondary ">
+    <div className=" bg-white w-full  ">
+      <h2 className="mb-8 font-extrabold text-2xl md:text-4xl text-center text-transparent bg-clip-text bg-deep-blue ">
         Request a Demo
       </h2>
 
@@ -114,6 +125,7 @@ function RequestForm() {
         <CustomInput
           id="message"
           label="Message"
+          type="textarea"
           placeholder="Enter your message"
           value={formData.message}
           onChange={handleChange}
@@ -123,7 +135,7 @@ function RequestForm() {
         <CustomButton
           type="submit"
           label="Submit"
-          className="w-full py-3 text-lg text-white bg-primary-orange hover:bg-[#ea130c9d] transition duration-300 ease-in-out"
+          className="w-full py-3 text-lg text-white bg-orange-600 hover:bg-orange-500 transition duration-300"
         />
       </form>
     </div>

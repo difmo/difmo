@@ -1,14 +1,14 @@
+
+
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
-import { motion, AnimatePresence } from "framer-motion";
+import "slick-carousel/slick/slick-theme.css"; 
 
 // Dynamically import Slider
-const Slider = dynamic(() => import("react-slick"), { ssr: false });
+const Slider = dynamic(() => import("react-slick"));
 
 // Import images
 import image1 from "../../assets/home1.jpg";
@@ -36,11 +36,6 @@ const MainSlider = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-
-  // Callback for form submission
-  const handleFormSubmit = () => {
-    setIsModalOpen(true); // Close modal after successful form submission
-  };
 
   const settings = {
     dots: true,
@@ -88,7 +83,7 @@ const MainSlider = () => {
     <>
       <div
         className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen"
-        inert={isModalOpen ? "true" : undefined} // Disable background when modal is open
+        aria-hidden={isModalOpen}
       >
         <Slider {...settings}>
           {images.map((image, index) => (
@@ -138,28 +133,25 @@ const MainSlider = () => {
 
         {/* Modal */}
         {isModalOpen && (
-          <AnimatePresence>
-            <motion.div
-              className="fixed inset-0 z-50 flex items-center justify-center bg-black mt-14 bg-opacity-80"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+            role="dialog"
+            aria-modal="true"
+          >
+            <div
+              ref={modalRef}
+              className="bg-white  p-8 w-11/12 max-w-md"
             >
-              <motion.div
-                ref={modalRef}
-                className="flex justify-center md:w-1/2 sm:w-1/2 rounded-lg shadow-lg"
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.8, opacity: 0 }}
-                transition={{ duration: 0.3 }}
+              <button
+                className="absolute top-2 right-2 text-gray-500 hover:text-black"
+                onClick={handleCloseModal}
+                aria-label="Close modal"
               >
-                <RequestForm
-                  onSubmit={handleFormSubmit}
-                  onClose={handleCloseModal}
-                />
-              </motion.div>
-            </motion.div>
-          </AnimatePresence>
+                ×
+              </button>
+              <RequestForm handleFormSubmit={handleCloseModal} />
+            </div>
+          </div>
         )}
       </div>
     </>
