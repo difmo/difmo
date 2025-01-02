@@ -76,8 +76,8 @@ function RequestForm() {
   };
 
   return (
-    <div className="p-8 bg-white  sm:w-full lg:w-2/4 md:w-2/4 ">
-      <h2 className="mb-8 font-extrabold text-4xl text-center text-transparent bg-clip-text bg-secondary ">
+    <div className="p-8 bg-white  w-full lg:w-2/4 md:w-2/4 ">
+      <h2 className="mb-8 font-extrabold text-2xl md:text-4xl text-center text-transparent bg-clip-text bg-secondary ">
         Request a Demo
       </h2>
 

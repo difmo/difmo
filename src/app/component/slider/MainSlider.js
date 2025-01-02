@@ -147,7 +147,7 @@ const MainSlider = () => {
             >
               <motion.div
                 ref={modalRef}
-                className="flex justify-center w-1/2 rounded-lg shadow-lg"
+                className="flex justify-center md:w-1/2 sm:w-1/2 rounded-lg shadow-lg"
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.8, opacity: 0 }}
