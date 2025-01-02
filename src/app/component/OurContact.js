@@ -16,28 +16,28 @@ const OurContact = () => {
   return (
     <div className="min-h-screen">
       <div className="container px-4 py-12 mx-auto md:py-16">
-        <div className="container  flex flex-col gap-8 mx-auto lg:flex-row">
+        <div className="container flex flex-col gap-8 mx-auto lg:flex-row">
           {/* Left section with image */}
 
           <div className="p-8 bg-secondary border-secondary   rounded-[50px]  lg:w-2/3">
-            <h2 className="mb-8 font-extrabold text-center text-4xl text-transparent bg-clip-text text-white">
+            <h2 className="mb-8 text-4xl font-extrabold text-center text-transparent text-white bg-clip-text">
               Quick Contact
             </h2>
-            <h2 className="mb-8 text-white capitalize font-extrabold text-center bg-clip-text bg-gradient-to-r ">
+            <h2 className="mb-8 font-extrabold text-center text-white capitalize bg-clip-text bg-gradient-to-r ">
               Feel free to contact with our team
             </h2>
             {/* Phone Number */}
-            <div className="p-6  border-b border-gray-200">
-              <span className="block mb-3  text-white">Phone Number</span>
+            <div className="p-6 border-b border-gray-200">
+              <span className="block mb-3 text-white">Phone Number</span>
               <a
                 href="tel:+919455791624"
-                className="block  text-white hover:text-primary-orange hover:underline"
+                className="block text-white hover:text-primary-orange hover:underline"
               >
                 +91 945-579-1624
               </a>
               <a
                 href="tel:+918172848306"
-                className="block  text-white hover:text-primary-orange hover:underline"
+                className="block text-white hover:text-primary-orange hover:underline"
               >
                 +91 817-284-8306
               </a>
@@ -45,16 +45,16 @@ const OurContact = () => {
 
             {/* Email Address */}
             <div className="p-6 border-b border-gray-200">
-              <span className="block mb-3  text-white">Email Address</span>
+              <span className="block mb-3 text-white">Email Address</span>
               <a
                 href="mailto:info@difmo.com"
-                className="block  text-white hover:text-primary-orange hover:underline"
+                className="block text-white hover:text-primary-orange hover:underline"
               >
                 info@difmo.com
               </a>
               <a
                 href="mailto:difmotech@gmail.com"
-                className="block  text-white hover:text-primary-orange hover:underline"
+                className="block text-white hover:text-primary-orange hover:underline"
               >
                 difmotech@gmail.com
               </a>
@@ -62,7 +62,7 @@ const OurContact = () => {
 
             {/* Address */}
             <div className="p-6 border-b border-gray-200">
-              <span className="block mb-3  text-white">Address</span>
+              <span className="block mb-3 text-white">Address</span>
               <span className="text-white ">
                 4/37 Vibhav Khand, Gomtinagar, Lucknow, Uttar Pradesh, 226010
               </span>
@@ -70,7 +70,7 @@ const OurContact = () => {
 
             {/* Social Media Links */}
             <div className="p-6">
-              <span className="block mb-3  text-white">Follow Us</span>
+              <span className="block mb-3 text-white">Follow Us</span>
               <div className="flex space-x-6">
                 <a
                   href="https://www.facebook.com/difmotech"
@@ -79,7 +79,7 @@ const OurContact = () => {
                 >
                   <FaFacebook
                     size={32}
-                    className="text-white hover:text-white transition-all duration-300"
+                    className="text-white transition-all duration-300 hover:text-white"
                   />
                 </a>
                 <a
@@ -89,7 +89,7 @@ const OurContact = () => {
                 >
                   <FaTwitter
                     size={32}
-                    className="text-white hover:text-white transition-all duration-300"
+                    className="text-white transition-all duration-300 hover:text-white"
                   />
                 </a>
                 <a
@@ -99,7 +99,7 @@ const OurContact = () => {
                 >
                   <FaLinkedin
                     size={32}
-                    className="text-white hover:text-white transition-all duration-300"
+                    className="text-white transition-all duration-300 hover:text-white"
                   />
                 </a>
                 <a
@@ -109,7 +109,7 @@ const OurContact = () => {
                 >
                   <FaInstagram
                     size={32}
-                    className="text-white hover:text-white transition-all duration-300"
+                    className="text-white transition-all duration-300 hover:text-white"
                   />
                 </a>
               </div>
@@ -126,7 +126,7 @@ const OurContact = () => {
 
       <div className="mx-auto lg:flex-row">
         <div className="px-6 mx-auto sm:px-8 lg:px-16">
-          <h2 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange text-center mb-6 sm:mb-10">
+          <h2 className="mb-6 text-5xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange sm:mb-10">
             Our Location
           </h2>
 

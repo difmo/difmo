@@ -11,7 +11,7 @@ const CustomInput = ({
   return (
     <div className="relative mb-1">
       <label
-        className="block mb-1 text-sm  text-gray-800 transition-all duration-300 ease-in-out"
+        className="block mb-1 text-sm text-gray-800 transition-all duration-300 ease-in-out"
         htmlFor={id}
       >
         {label}
@@ -25,7 +25,7 @@ const CustomInput = ({
         onChange={onChange}
         style={style}
       />
-      <p className="text-xs mt-1 italic text-red-500">{error}</p>
+      <p className="mt-1 text-xs italic text-red-500">{error}</p>
     </div>
   );
 };

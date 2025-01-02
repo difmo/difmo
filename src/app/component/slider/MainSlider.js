@@ -140,14 +140,14 @@ const MainSlider = () => {
         {isModalOpen && (
           <AnimatePresence>
             <motion.div
-              className="fixed inset-0 flex items-center mt-14 justify-center bg-black bg-opacity-80 z-50"
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black mt-14 bg-opacity-80"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
               <motion.div
                 ref={modalRef}
-                className="rounded-lg shadow-lg flex justify-center w-1/2"
+                className="flex justify-center w-1/2 rounded-lg shadow-lg"
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.8, opacity: 0 }}
