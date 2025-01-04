@@ -71,24 +71,6 @@ const About = () => {
             className="rounded-lg shadow-md"
           />
         </div>
-
-        {/* Right Content Section */}
-        <div className="px-4 sm:px-6 md:px-8">
-          <h1 className="text-2xl sm:text-3xl font-bold text-secondary mb-4">
-            Who are we?
-          </h1>
-          <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-            At Difmo Technologies, growth is more than a goal—it’s our mission
-            and way of life. Guided by our motto, "Innovate Together," we are
-            dedicated to empowering clients and team members to achieve their
-            fullest potential. We blend cutting-edge technology, top-tier
-            expertise, and an unwavering commitment to quality to deliver
-            exceptional solutions in software development, digital
-            transformation, and IT services. At Difmo Technologies, you’ll join
-            a forward-thinking, collaborative environment where every idea
-            matters, and every contribution propels businesses to new heights.
-          </p>
-        </div>
       </div>
 
       <PhotoGallery />
@@ -112,7 +94,7 @@ const About = () => {
 
           {/* Right Content Section */}
           <div className="flex flex-col justify-center space-y-6">
-            <h1 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange">
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-800">
               Grow Our Team, Earn Rewards
             </h1>
 
