@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCogs, faUsers, faGlobe } from "@fortawesome/free-solid-svg-icons";
-import fqaQ from "../assets/backgrounds_images/aboutbg2.jpg";
+// import fqaQ from "../assets/backgrounds_images/aboutbg2.jpg";
 import about from "../assets/about.jpg";
 import Link from "next/link";
 
@@ -65,13 +65,24 @@ const About = () => {
               Transforming Businesses Through Technology
             </h2>
             <p className="text-base leading-relaxed tracking-wide text-justify text-gray-700 md:leading-loose">
-              Based in Lucknow, India, Difmo Technologies is a premier provider of custom web and mobile app development solutions. We specialize in delivering tailored software, CRM solutions, and web design that accelerates business growth. Our team of skilled engineers and marketers work tirelessly to craft digital experiences that elevate brands, drive success, and provide exceptional value to clients across the globe.
+              Based in Lucknow, India, Difmo Technologies is a premier provider
+              of custom web and mobile app development solutions. We specialize
+              in delivering tailored software, CRM solutions, and web design
+              that accelerates business growth. Our team of skilled engineers
+              and marketers work tirelessly to craft digital experiences that
+              elevate brands, drive success, and provide exceptional value to
+              clients across the globe.
               <br />
               <br />
-              We believe in the power of innovation and continuously push the boundaries of technology to ensure your business stays ahead of the curve. Our comprehensive suite of services—ranging from custom software and mobile app development to digital marketing strategies—ensures your digital presence is impactful and engaging.
+              We believe in the power of innovation and continuously push the
+              boundaries of technology to ensure your business stays ahead of
+              the curve. Our comprehensive suite of services—ranging from custom
+              software and mobile app development to digital marketing
+              strategies—ensures your digital presence is impactful and
+              engaging.
             </p>
           </div>
-          <div className="flex items-center justify-center col-span-1">
+          {/* <div className="flex items-center justify-center col-span-1">
             <Image
               src={fqaQ}
               alt="FAQ Illustration"
@@ -79,7 +90,7 @@ const About = () => {
               height={300}
               className="w-full max-w-md bg-cover "
             />
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -90,7 +101,12 @@ const About = () => {
             Our Core Values: Guiding Our Every Step
           </h2>
           <p className="px-4 text-lg leading-relaxed tracking-wide text-justify text-gray-700 sm:px-0 sm:pt-2 md:leading-loose">
-            At Difmo Technologies, our culture is defined by the core values we hold dear. We strive for excellence in every project, valuing transparency, respect, and ethical practices in our relationships with clients and teams. Our commitment to continuous learning and collaboration ensures we stay at the forefront of technological advancements, delivering innovative solutions that shape the future.
+            At Difmo Technologies, our culture is defined by the core values we
+            hold dear. We strive for excellence in every project, valuing
+            transparency, respect, and ethical practices in our relationships
+            with clients and teams. Our commitment to continuous learning and
+            collaboration ensures we stay at the forefront of technological
+            advancements, delivering innovative solutions that shape the future.
           </p>
 
           <div className="flex justify-center py-8">
@@ -125,16 +141,13 @@ const About = () => {
           Ready to Transform Your Business?
         </h2>
         <p className="mt-4 text-lg sm:text-xl">
-          Join hands with Difmo Technologies and take your business to the next level with our advanced solutions.
+          Join hands with Difmo Technologies and take your business to the next
+          level with our advanced solutions.
         </p>
-        <Link
-        href={'/contact-us'}
-        >
-        
-        <button 
-        className="px-6 py-3 mt-6 font-semibold text-white transition duration-300 bg-red-600 rounded-lg hover:bg-red-500">
-          Contact Us Now
-        </button>
+        <Link href={"/contact-us"}>
+          <button className="px-6 py-3 mt-6 font-semibold text-white transition duration-300 bg-red-600 rounded-lg hover:bg-red-500">
+            Contact Us Now
+          </button>
         </Link>
       </div>
     </>

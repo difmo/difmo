@@ -24,7 +24,7 @@ const photos = [
 export default function Gallery() {
   return (
     <div className="md:px-12 px-2">
-      <h1 className="text-4xl sm:text-5xl font-bold flex justify-center pb-5 text-gray-800">
+      <h1 className="text-4xl sm:text-5xl font-bold flex justify-center py-5 text-gray-800">
         Our Celebrations
       </h1>
       <PhotoAlbum layout="rows" photos={photos} />;

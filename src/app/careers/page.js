@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import see1 from "../assets/career/alpha.jpg";
-import see2 from "../assets/career/xyz1.jpg";
+// import see2 from "../assets/career/xyz1.jpg";
 import Link from "next/link";
 import JoinRemoteTeam from "../component/JoinRemoteTeam";
 import PhotoGallery from "../component/PhotoGallery";
@@ -59,20 +59,7 @@ const About = () => {
           ></div>
         </div>
       </div>
-      {/* dkcndovnd nx mlskcjdolkn xsa;ocewofnkwdif;y */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:px-10 lg:px-20 h-full py-10">
-        {/* Left Image Section */}
-        <div className="relative w-full h-60 sm:h-80 md:h-96 lg:h-auto">
-          <Image
-            src={see2}
-            alt="Small team photo"
-            layout="fill"
-            objectFit="cover"
-            className="rounded-lg shadow-md"
-          />
-        </div>
-      </div>
-
+      
       <PhotoGallery />
       {/* /////////////  video ///////////////// */}
       <div className="bg-gray-50 h-full flex justify-center items-center">
