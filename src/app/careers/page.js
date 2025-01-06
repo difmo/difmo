@@ -16,7 +16,7 @@ const About = () => {
           <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-bold py-3 text-white">
             Looking For An Exciting{" "}
             <span className="text-primary-orange">Career in Technology</span>{" "}
-            And Innovation
+            And Innovat ion
           </h1>
           <p className="mt-4 text-base sm:text-lg md:text-xl text-white py-2">
             Join our dynamic team and make an impact!
@@ -37,12 +37,12 @@ const About = () => {
         {/* Right Image Section */}
         <div className="relative w-full md:w-1/2 flex items-center justify-center mt-8 md:mt-0">
           {/* Small Image */}
-          <div className="absolute -top-8 right-0 h-32 w-28 sm:h-40 sm:w-36 md:h-60 md:w-52 rounded-lg overflow-hidden border-4 border-white shadow-md">
+          <div className="absolute -top-16 right-0 h-32 w-28 sm:h-40 sm:w-36 md:h-60 md:w-52 rounded-lg overflow-hidden border-4 border-primary-orange shadow-lg">
             <Image
               src={see1}
               alt="Small team photo"
               layout="fill"
-              objectFit="cover"
+              // objectFit="cover"
             />
           </div>
 
@@ -74,7 +74,6 @@ const About = () => {
               height="100%"
               src="https://www.youtube.com/embed/_gxv4BnSiBU"
               title="Referral video"
-              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="object-center"

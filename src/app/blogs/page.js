@@ -56,7 +56,12 @@ const Projects = () => {
   };
   return (
     <>
-      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen">
+      <div>
+        <h1 className="text-2xl font-bold text-deep-blue sm:text-4xl md:text-5xl lg:text-5xl px-10">
+          Start, Build & Grow Your Business with the Difmo Technologies Blog
+        </h1>
+      </div>
+      {/* <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen">
         <Image
           src={about}
           alt="Blog Header"
@@ -71,11 +76,11 @@ const Projects = () => {
           <p className="mt-4 text-sm font-medium text-white sm:text-lg md:text-xl lg:text-2xl">
             Discover insights and inspiration on Difmo’s web development!
           </p>
-          {/* <button className="px-4 py-2 mt-6 font-semibold text-white transition duration-300 ease-in-out bg-orange-600 rounded-lg sm:px-6 sm:py-3 hover:bg-primary-orange">
+          <button className="px-4 py-2 mt-6 font-semibold text-white transition duration-300 ease-in-out bg-orange-600 rounded-lg sm:px-6 sm:py-3 hover:bg-primary-orange">
             Explore More Blogs
-          </button> */}
+          </button>
         </div>
-      </div>
+      </div> */}
 
       <div className="py-12 bg-gray-100">
         <div className="container px-4 mx-auto sm:px-6 lg:px-8">

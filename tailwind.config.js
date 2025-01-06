@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "primary-orange": "#ff4548", // Red-Orange Accent
+        "primary-orange": "#e00909", // Red-Orange Accent
         secondary: "#273d6b", // Red-Orange Accent
 
         "deep-blue": "#00509D", // Deep Blue Accent

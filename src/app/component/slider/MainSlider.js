@@ -1,11 +1,9 @@
-
-
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 // Dynamically import Slider
 const Slider = dynamic(() => import("react-slick"));
@@ -100,7 +98,7 @@ const MainSlider = () => {
                 priority={index === 0}
               />
               <div className="absolute inset-0 flex flex-col items-start justify-center px-6 space-y-4 sm:px-16 md:px-24 lg:px-32">
-                <h1 className="text-2xl font-bold leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
+                <h1 className="text-2xl font-bold leading-tight text-[#ff5e5e] sm:text-4xl md:text-5xl lg:text-6xl">
                   {image.title}
                 </h1>
                 <p className="text-sm text-gray-300 sm:text-lg md:text-xl">
@@ -108,7 +106,7 @@ const MainSlider = () => {
                 </p>
                 <button
                   onClick={handleOpenModal}
-                  className="flex items-center px-5 py-2 space-x-2 text-white bg-orange-600 rounded-md hover:bg-primary-orange sm:px-6 sm:py-3"
+                  className="flex items-center px-5 py-2 space-x-2 text-white bg-[#ff5e5e] rounded-md hover:bg-primary-orange sm:px-6 sm:py-3"
                 >
                   <span>Request Demo</span>
                   <svg
@@ -136,12 +134,9 @@ const MainSlider = () => {
           <div
             className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
             role="dialog"
-            aria-modal="true" 
+            aria-modal="true"
           >
-            <div
-              ref={modalRef}
-              className="bg-white  p-8 w-11/12 max-w-md"
-            >
+            <div ref={modalRef} className="bg-white  p-8 w-11/12 max-w-md">
               <button
                 className="absolute top-2 right-2 text-gray-500 hover:text-black"
                 onClick={handleCloseModal}

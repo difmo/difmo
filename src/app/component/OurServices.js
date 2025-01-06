@@ -93,7 +93,7 @@ const OurServices = () => {
         {servicesData.map((service, index) => (
           <div
             key={index}
-            className="flex flex-col items-center p-4 mb-5 transition-transform duration-300 ease-in-out transform rounded-lg shadow-2xl cursor-pointer sm:p-5 hover:scale-105 hover:shadow-xl"
+            className="flex flex-col items-center p-4 mb-5 transition-transform duration-300 ease-in-out transform rounded-lg shadow-2xl cursor-pointer sm:p-5 hover:scale-105  border border-gray-200"
           >
             <div className="flex items-center justify-center w-16 h-16 mb-4 bg-white rounded-full">
               <FontAwesomeIcon
@@ -112,7 +112,7 @@ const OurServices = () => {
           </div>
         ))}
       </div>
-      <StatsSection/>
+      <StatsSection />
     </div>
   );
 };

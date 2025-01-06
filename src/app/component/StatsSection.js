@@ -58,10 +58,11 @@ const StatsSection = () => {
   }, [inView]);
 
   return (
-    <div ref={sectionRef} className="py-16 text-white bg-gradient-to-b from-gray-900 to-gray-800">
+    <div ref={sectionRef} className="py-16 text-white bg-[#273d6b]">
       <div className="mb-12 text-center">
         <h2 className="text-4xl font-extrabold text-white sm:text-5xl">
-          Why <span className="text-primary-orange">Difmo</span> for Your Next Project?
+          Why <span className="text-primary-orange">Difmo</span> for Your Next
+          Project?
         </h2>
         <p className="mt-4 text-gray-400 sm:text-lg">
           Empowering businesses with technology that scales.

@@ -34,10 +34,10 @@ export default function Home() {
   return (
     <>
       {/* Main Slider */}
-        <MainSlider />
+      <MainSlider />
 
       {/* Building Soft */}
-        <BuildingSoft />
+      <BuildingSoft />
 
       {/* Our Services */}
       <div className="my-7">
@@ -49,10 +49,9 @@ export default function Home() {
         <Development />
       </div>
 
-    
       {/* Get In Touch */}
       <div className="my-7 md:p-10 sm:mx-[2rem] md:my-3">
-        <h2 className="p-4 text-4xl font-extrabold text-transparent md:text-3xl sm:p-0 font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange">
+        <h2 className="p-4 text-4xl font-extrabold text-transparent md:text-3xl sm:p-0 font-lilita text-deep-blue">
           Get In Touch
         </h2>
         <p className="text-gray-700 px-4 sm:px-0 sm:pt-2 text-[16px] leading-relaxed md:leading-loose tracking-wide text-justify">

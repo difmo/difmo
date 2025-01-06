@@ -31,15 +31,16 @@ const JoinRemoteTeam = () => {
         </div>
 
         {/* Right Image Section */}
-        <div className="relative w-full h-64 lg:h-auto rounded-xl overflow-hidden bg-blue-200">
-          <Image
-            src="/image/a1.jpg" // Replace with the actual image path
-            alt="Team Member"
-            layout="fill"
-            objectFit="cover"
-            className="object-center"
-          />
-        </div>
+        <div className="relative w-full h-64 lg:h-auto rounded-xl overflow-hidden bg-blue-200 opacity-80 z-10">
+  <Image
+    src="/image/a1.jpg" // Replace with the actual image path
+    alt="Team Member"
+    layout="fill"
+    objectFit="cover"
+    className="object-center"
+  />
+</div>
+
       </div>
     </div>
   );

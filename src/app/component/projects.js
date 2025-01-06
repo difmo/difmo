@@ -32,7 +32,6 @@ import j9 from "../assets/ourprojects/jyoti/j9.png";
 import j10 from "../assets/ourprojects/jyoti/j10.png";
 import j11 from "../assets/ourprojects/jyoti/j11.png";
 
-
 export const projects = [
   {
     id: 1,
@@ -170,28 +169,28 @@ export const projects = [
     image: [genzoalpha],
     link: "https://www.genzoalphaconsulting.com/",
   },
-  {
-    id: 18,
-    title: "Jai Jyotish",
-    description:
-      "Jai Jyotish is a personalized astrology app offering insights into your life based on celestial predictions. The app provides daily, weekly, and monthly horoscopes, along with astrological guidance for making important life decisions. With expert advice and accurate readings, Jai Jyotish helps users better understand their destiny and navigate challenges.",
-    image: [jaijyotish],
-    link: "http://www.jaijyotish.com/",
-  },
-  {
-    id: 19,
-    title: "Ravi Photo Films And Studio",
-    description:
-      "Ravi Photo Films and Studio offers a comprehensive suite of tools for photography studios, streamlining operations and enhancing client communication. From booking appointments to managing client details, this app simplifies studio management tasks while delivering a premium client experience. With user-friendly features, Ravi Photo Films ensures that studios can focus more on their craft and less on logistics.",
-    image: [raviphotostudio],
-    link: "https://ravistudio.vercel.app/",
-  },
-  {
-    id: 20,
-    title: "Jyoti Electronics",
-    description:
-      "Jyoti Electronics is an innovative e-commerce platform where users can explore and purchase a wide range of electronics products. The website is designed to provide a seamless shopping experience, featuring a user-friendly interface and secure payment options. With Jyoti Electronics, customers can find the latest gadgets, home appliances, and accessories all in one place.",
-    image: [j1,j2,j3,j4,j5,j6,j7,j8,j9,j10,j11],
-    link: "https://electecommerce.vercel.app/",
-  },
+  // {
+  //   id: 18,
+  //   title: "Jai Jyotish",
+  //   description:
+  //     "Jai Jyotish is a personalized astrology app offering insights into your life based on celestial predictions. The app provides daily, weekly, and monthly horoscopes, along with astrological guidance for making important life decisions. With expert advice and accurate readings, Jai Jyotish helps users better understand their destiny and navigate challenges.",
+  //   image: [jaijyotish],
+  //   link: "http://www.jaijyotish.com/",
+  // },
+  // {
+  //   id: 19,
+  //   title: "Ravi Photo Films And Studio",
+  //   description:
+  //     "Ravi Photo Films and Studio offers a comprehensive suite of tools for photography studios, streamlining operations and enhancing client communication. From booking appointments to managing client details, this app simplifies studio management tasks while delivering a premium client experience. With user-friendly features, Ravi Photo Films ensures that studios can focus more on their craft and less on logistics.",
+  //   image: [raviphotostudio],
+  //   link: "https://ravistudio.vercel.app/",
+  // },
+  // {
+  //   id: 20,
+  //   title: "Jyoti Electronics",
+  //   description:
+  //     "Jyoti Electronics is an innovative e-commerce platform where users can explore and purchase a wide range of electronics products. The website is designed to provide a seamless shopping experience, featuring a user-friendly interface and secure payment options. With Jyoti Electronics, customers can find the latest gadgets, home appliances, and accessories all in one place.",
+  //   image: [j1,j2,j3,j4,j5,j6,j7,j8,j9,j10,j11],
+  //   link: "https://electecommerce.vercel.app/",
+  // },
 ];

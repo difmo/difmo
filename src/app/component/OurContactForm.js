@@ -89,7 +89,7 @@ function Formcontect() {
   };
 
   return (
-    <div className="p-8 bg-white lg:w-2/5  rounded-[50px] ">
+    <div className="p-8 bg-white lg:w-2/5  rounded-[50px] border-2 border-red-600 ">
       <h2 className="mb-8 font-extrabold text-4xl text-center text-transparent bg-clip-text bg-secondary ">
         Reach Us
       </h2>
