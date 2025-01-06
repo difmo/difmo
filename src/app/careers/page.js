@@ -10,11 +10,13 @@ import PhotoGallery from "../component/PhotoGallery";
 const About = () => {
   return (
     <>
-      <div className=" bg-secondary border-secondary  min-h-screen flex flex-col md:flex-row items-center justify-center pt-10     md:pt-16 px-4 md:px-6 lg:px-20">
+      <div className=" bg-secondary border-secondary  min-h-screen flex flex-col md:flex-row items-center justify-center pt-10  md:pt-16 px-4 md:px-6 lg:px-20">
         {/* Left Content Section */}
         <div className="w-full md:w-1/2 p-2 md:p-3">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold py-3 text-white">
-            Looking for an exciting career in technology and innovation
+          <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-bold py-3 text-white">
+            Looking For An Exciting{" "}
+            <span className="text-primary-orange">Career in Technology</span>{" "}
+            And Innovation
           </h1>
           <p className="mt-4 text-base sm:text-lg md:text-xl text-white py-2">
             Join our dynamic team and make an impact!
@@ -25,7 +27,7 @@ const About = () => {
           <div className="py-5">
             <Link
               href="/apply-job"
-              className="mt-6 text-white px-6 py-2 sm:px-8 sm:py-3 bg-red-700 rounded-3xl  hover:bg-[#ff8d89]"
+              className="mt-6 text-white px-6 py-2 sm:px-8 sm:py-3 bg-primary-orange rounded-3xl  hover:bg-[#ff8d89]"
             >
               Apply Now
             </Link>
@@ -46,7 +48,7 @@ const About = () => {
 
           {/* Large Circular Image */}
           <div
-            className="rounded-full border-4 border-blue-500 shadow-xl"
+            className="rounded-full border-4 border-primary-orange shadow-xl"
             style={{
               backgroundImage: `url('/bgim.png')`,
               backgroundSize: "cover",
@@ -59,7 +61,7 @@ const About = () => {
           ></div>
         </div>
       </div>
-      
+
       <PhotoGallery />
       {/* /////////////  video ///////////////// */}
       <div className="bg-gray-50 h-full flex justify-center items-center">

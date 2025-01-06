@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCogs, faUsers, faGlobe } from "@fortawesome/free-solid-svg-icons";
-// import fqaQ from "../assets/backgrounds_images/aboutbg2.jpg";
+import fqaQ from "../assets/abouta.png";
 import about from "../assets/about.jpg";
 import Link from "next/link";
 
@@ -82,7 +82,7 @@ const About = () => {
               engaging.
             </p>
           </div>
-          {/* <div className="flex items-center justify-center col-span-1">
+          <div className="flex items-center justify-center col-span-1">
             <Image
               src={fqaQ}
               alt="FAQ Illustration"
@@ -90,7 +90,7 @@ const About = () => {
               height={300}
               className="w-full max-w-md bg-cover "
             />
-          </div> */}
+          </div>
         </div>
       </div>
 

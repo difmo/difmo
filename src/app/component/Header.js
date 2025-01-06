@@ -60,7 +60,7 @@ const Header = () => {
           </HeaderLink>
           <HeaderLink href="/about" isActive={isActive("/about")}>
             About Us
-          </HeaderLink>
+          </HeaderLink> 
           <DropdownMenu
             title="Services"
             isActive={isActive("/services")}
