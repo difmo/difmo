@@ -1,6 +1,7 @@
 import React from "react";
 import see from "../assets/tech.png";
 import Image from "next/image";
+import Heading from "./Headings";
 const BuildingSoft = () => {
   return (
     <div className="mx-4 my-12 mt-20 sm:mx-8 lg:mx-16">
@@ -8,9 +9,8 @@ const BuildingSoft = () => {
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {/* Text Section */}
         <div className="rounded-lg ">
-          <h2 className="md:text-3xl text-4xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r  from-deep-blue to-primary-orange  mb-6">
-            Building Software for World Changers
-          </h2>
+          <Heading headingtext=" Building Software for World Changers"/>
+      
           <p className="text-gray-700 text-[16px] leading-relaxed md:leading-loose tracking-wide text-justify">
             Websites are essential nowadays. Whether it&apos;s a large-scale
             industry or a new startup, everyone owns a website for their

@@ -60,7 +60,6 @@ function RequestForm() {
       return;
     }
     try {
-      // Simulating a submission
       console.log("Form submitted:", formData);
       alert("Message sent successfully!");
       setFormData({
@@ -76,12 +75,12 @@ function RequestForm() {
   };
 
   return (
-    <div className="p-8 bg-white  sm:w-full lg:w-2/4 md:w-2/4 ">
-      <h2 className="mb-8 font-extrabold text-4xl text-center text-transparent bg-clip-text bg-secondary ">
+    <div className="px-4 py-6 mx-auto bg-white rounded-lg shadow-lg md:max-w-2xl lg:max-w-4xl">
+      <h2 className="mb-6 text-xl font-bold text-center text-gray-800 sm:text-2xl md:text-3xl lg:text-4xl">
         Request a Demo
       </h2>
 
-      <form onSubmit={handleSubmit} className="w-full">
+      <form onSubmit={handleSubmit} className="space-y-6">
         <CustomInput
           id="fullName"
           label="Full Name"
@@ -90,6 +89,7 @@ function RequestForm() {
           value={formData.fullName}
           onChange={handleChange}
           error={errors.fullName}
+          className="text-sm sm:text-base md:text-lg lg:text-xl"
         />
 
         <CustomInput
@@ -100,6 +100,7 @@ function RequestForm() {
           value={formData.email}
           onChange={handleChange}
           error={errors.email}
+          className="text-sm sm:text-base md:text-lg lg:text-xl"
         />
 
         <CustomInput
@@ -109,6 +110,7 @@ function RequestForm() {
           value={formData.number}
           onChange={handleChange}
           error={errors.number}
+          className="text-sm sm:text-base md:text-lg lg:text-xl"
         />
 
         <CustomInput
@@ -118,12 +120,13 @@ function RequestForm() {
           value={formData.message}
           onChange={handleChange}
           error={errors.message}
+          className="text-sm sm:text-base md:text-lg lg:text-xl"
         />
 
         <CustomButton
           type="submit"
           label="Submit"
-          className="w-full py-3 text-lg text-white bg-primary-orange hover:bg-[#ea130c9d] transition duration-300 ease-in-out"
+          className="w-full py-2 text-base text-white bg-primary-orange hover:bg-[#ea130c9d] rounded transition duration-300 ease-in-out sm:py-3 sm:text-lg md:py-4 md:text-xl lg:py-5"
         />
       </form>
     </div>
