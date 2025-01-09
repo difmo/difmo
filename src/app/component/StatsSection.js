@@ -58,13 +58,16 @@ const StatsSection = () => {
   }, [inView]);
 
   return (
-    <div ref={sectionRef} className="py-16 text-white bg-[#273d6b]">
+    <div
+      ref={sectionRef}
+      className="py-16 text-white border border-primary-orange  rounded-md"
+    >
       <div className="mb-12 text-center">
-        <h2 className="text-4xl font-extrabold text-white sm:text-5xl">
+        <h2 className="text-4xl font-extrabold text-secondary sm:text-5xl">
           Why <span className="text-primary-orange">Difmo</span> for Your Next
           Project?
         </h2>
-        <p className="mt-4 text-gray-400 sm:text-lg">
+        <p className="mt-4 text-white sm:text-lg">
           Empowering businesses with technology that scales.
         </p>
       </div>
@@ -90,7 +93,7 @@ const StatsSection = () => {
       <div className="mt-12 text-center">
         <a
           href="/contact-us"
-          className="inline-block px-6 py-3 text-lg font-semibold text-white transition-all duration-300 rounded-full shadow-md bg-primary-orange hover:bg-primary-orange-dark"
+          className="inline-block px-6 py-3 text-lg font-semibold text-white transition-all duration-300 rounded-full shadow-md bg-primary-orange hover:bg-primary-orange border-3 border-white"
         >
           See for Yourself!
         </a>

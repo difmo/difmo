@@ -56,11 +56,11 @@ const Projects = () => {
   };
   return (
     <>
-      <div>
+      {/* <div>
         <h1 className="text-2xl font-bold text-deep-blue sm:text-4xl md:text-5xl lg:text-5xl px-10">
           Start, Build & Grow Your Business with the Difmo Technologies Blog
         </h1>
-      </div>
+      </div> */}
       {/* <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen">
         <Image
           src={about}
@@ -85,7 +85,7 @@ const Projects = () => {
       <div className="py-12 bg-gray-100">
         <div className="container px-4 mx-auto sm:px-6 lg:px-8">
           <h2 className="mb-8 text-3xl font-bold text-center text-gray-800">
-            Latest Blogs
+            Difmo Technologies Blog
           </h2>
 
           <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">

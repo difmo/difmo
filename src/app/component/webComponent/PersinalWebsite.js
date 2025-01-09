@@ -70,12 +70,12 @@ function PersinalWebsite() {
             >
               <Link href="/contact-us">
                 <CustomButton
-                  className="bg-primary-orange text-white p-3 w-36 rounded-3xl flex justify-center hover:bg-[#f8710f]"
-                  fname="Contact Us"
+                  className="bg-primary-orange text-white p-3 w-36 rounded-3xl flex justify-center hover:bg-[#f8710f] border-2 border-deep-blue"
+                  fname="Get Started"
                 />
               </Link>
             </motion.div>
-            <motion.div
+            {/* <motion.div
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.3 }}
@@ -86,7 +86,7 @@ function PersinalWebsite() {
                   fname="Learn More"
                 />
               </Link>
-            </motion.div>
+            </motion.div> */}
           </div>
         </motion.div>
 

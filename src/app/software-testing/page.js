@@ -7,6 +7,7 @@ import Image from "next/image";
 // import webdevlopment from "../assets/webdevlopment .jpg";
 
 import Contactus from "../component/Contactus";
+import Pageseo from "../marketing/Page";
 
 const Mobiledevlopment = () => {
   return (
@@ -143,6 +144,7 @@ const Mobiledevlopment = () => {
       <div className="py-2 pb-8   bg-warm-gray p-4 ">
         <div className="rounded-lg shadow-2xl p-1">
           <Contactus />
+          <Pageseo />
         </div>
       </div>
     </>

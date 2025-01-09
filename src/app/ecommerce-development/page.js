@@ -2,8 +2,8 @@
 
 import React from "react";
 import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCogs, faUsers, faGlobe } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faCogs, faUsers, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import fqaQ from "../assets/backgrounds_images/mibileapp.png";
 import webdevlopment from "../assets/webdevlopment .jpg";
 import webimage from "../assets/dev.jpg";

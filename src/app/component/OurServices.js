@@ -93,7 +93,7 @@ const OurServices = () => {
         {servicesData.map((service, index) => (
           <div
             key={index}
-            className="flex flex-col items-center p-4 mb-5 transition-transform duration-300 ease-in-out transform rounded-lg shadow-2xl cursor-pointer sm:p-5 hover:scale-105  border border-gray-200"
+            className="flex flex-col items-center p-4 mb-5 transition-transform duration-300 ease-in-out transform rounded-lg cursor-pointer sm:p-5 hover:scale-105  bg-gray-100 border-5  border-red-700"
           >
             <div className="flex items-center justify-center w-16 h-16 mb-4 bg-white rounded-full">
               <FontAwesomeIcon
@@ -106,7 +106,7 @@ const OurServices = () => {
             >
               {service.title}
             </h2>
-            <p className="px-4 text-center text-gray-700">
+            <p className="px-4 text-center text-gray-600">
               {service.description}
             </p>
           </div>
