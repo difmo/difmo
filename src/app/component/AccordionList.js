@@ -1,15 +1,7 @@
 import { useState } from "react";
-import acco1 from "../assets/marketing/1.png";
+import acco1 from "../assets/marketing/sce.png";
+
 import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { FaAddressCard } from "react-icons/fa";
-import { faFacebook } from "@fortawesome/free-brands-svg-icons";
-import {
-  faFingerprint,
-  faHandMiddleFinger,
-  faKey,
-  faUserShield,
-} from "@fortawesome/free-solid-svg-icons";
 import web from "../assets/Deliver/code2.svg";
 import web1 from "../assets/Deliver/serch.svg";
 import note from "../assets/Deliver/note.svg";
@@ -146,72 +138,75 @@ const AccordionList = () => {
   ];
   return (
     <>
-      <div className="px-16">
-        <h1 className="font-bold text-2xl md:text-5xl py-4 flex justify-center text-gray-800">
-          Our <span className="text-primary-orange"> Process </span>
-        </h1>
-        <p className="text-xl flex justify-center text-gray-600 p-2">
-          Our on-page optimization process is designed to maximize your
-          website's potential and achieve tangible results. We follow a
-          comprehensive, data-driven approach to ensure your site performs at
-          its best:
-        </p>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2">
-        <div className="max-w-4xl mx-auto p-5">
-          {accordionData.map((item) => (
-            <Accordion
-              key={item.id}
-              id={item.id}
-              title={item.title}
-              content={item.content}
-            />
-          ))}
+      <div className=" bg-blue-50">
+        {" "}
+        <div className="px-16">
+          <h1 className="font-bold text-2xl md:text-5xl py-4 flex justify-center text-gray-800">
+            Our <span className="text-primary-orange"> Process </span>
+          </h1>
+          <p className="text-xl flex justify-center text-gray-600 p-2">
+            Our on-page optimization process is designed to maximize your
+            website's potential and achieve tangible results. We follow a
+            comprehensive, data-driven approach to ensure your site performs at
+            its best:
+          </p>
         </div>
-        <div>
-          <Image src={acco1} />
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="max-w-4xl mx-auto p-5">
+            {accordionData.map((item) => (
+              <Accordion
+                key={item.id}
+                id={item.id}
+                title={item.title}
+                content={item.content}
+              />
+            ))}
+          </div>
+          <div>
+            <Image src={acco1} />
+          </div>
         </div>
-      </div>
-      <div className=" flex justify-center py-3">
-        <p className="text-white bg-deep-blue py-2 px-4 rounded-xl border-2 border-gray-300">
-          Gat a Quote
-        </p>
-      </div>
-      {/* Our Deliverables */}
-      <div className="bg-gray-100 py-10">
-        <h1 className="font-bold text-2xl md:text-5xl flex justify-center py-2 text-gray-800 ">
-          Our Deliverables
-        </h1>
-        <p className="text-base sm:text-lg md:text-xl py-5    flex justify-center text-gray-600 ">
-          When you partner
-          <span className="font-semibold">
-            {" "}
-            with Difmo for on-page optimization,{" "}
-          </span>
-          you can expect a comprehensive set of deliverables:
-        </p>
-        {/* </div> */}
+        <div className=" flex justify-center py-3">
+          <p className="text-white bg-deep-blue py-2 px-4 rounded-xl border-2 border-gray-300">
+            Gat a Quote
+          </p>
+        </div>
+        {/* Our Deliverables */}
+        <div className="bg-gray-100 py-10">
+          <h1 className="font-bold text-2xl md:text-5xl flex justify-center py-2 text-gray-800 ">
+            Our Deliverables
+          </h1>
+          <p className="text-base sm:text-lg md:text-xl py-5    flex justify-center text-gray-600 ">
+            When you partner
+            <span className="font-semibold">
+              {" "}
+              with Difmo for on-page optimization,{" "}
+            </span>
+            you can expect a comprehensive set of deliverables:
+          </p>
+          {/* </div> */}
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {cards.map((card, index) => (
-              <div
-                key={index}
-                className="bg-white shadow-lg rounded-lg p-6 flex flex-col text-gray-800 items-start"
-              >
-                <div className="flex items-center justify-center text-blue-500 w-16 h-16 mb-4 bg-gray-300 rounded-full">
-                  <Image
-                    src={card.icon}
-                    className={`text-4xl ${card.textColor}`}
-                  />
-                </div>
-                {/* <div className="text-blue-500 text-3xl mb-4">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {cards.map((card, index) => (
+                <div
+                  key={index}
+                  className="bg-white shadow-lg rounded-lg p-6 flex flex-col text-gray-800 items-start"
+                >
+                  <div className="flex items-center justify-center text-blue-500 w-16 h-16 mb-4 bg-gray-300 rounded-full">
+                    <Image
+                      src={card.icon}
+                      className={`text-4xl ${card.textColor}`}
+                    />
+                  </div>
+                  {/* <div className="text-blue-500 text-3xl mb-4">
                   <FontAwesomeIcon className={`fas fa-${card.icon}`} />
                 </div> */}
-                <h3 className="text-lg font-semibold mb-2">{card.title}</h3>
-                <p className="text-gray-600">{card.description}</p>
-              </div>
-            ))}
+                  <h3 className="text-lg font-semibold mb-2">{card.title}</h3>
+                  <p className="text-gray-600">{card.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
