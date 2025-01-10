@@ -67,8 +67,7 @@ const About = () => {
       <div className="bg-gray-50 h-full flex justify-center items-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl w-full px-6 py-10">
           {/* Left Video/Image Section */}
-          <div className="relative w-full h-64 sm:h-96 lg:h-full bg-gray-200 rounded-lg shadow-md overflow-hidden">
-            {/* YouTube Video Embed */}
+          <div className="relative w-full h-64 sm:h-96 lg:h-full bg-gray-200 rounded-lg shadow-md ">
             <iframe
               width="100%"
               height="100%"

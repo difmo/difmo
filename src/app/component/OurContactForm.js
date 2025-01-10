@@ -94,7 +94,7 @@ function Formcontect() {
         Reach Us
       </h2>
 
-      <h2 className="mb-8 font-extrabold text-center bg-clip-text bg-gradient-to-r">
+      <h2 className="mb-8 font-extrabold text-center text-gray-700">
         Please complete the form below, to request a quote, and we’ll be in
         touch.
       </h2>

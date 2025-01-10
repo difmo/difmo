@@ -1,21 +1,13 @@
 import { useState } from "react";
-import acco1 from "../assets/marketing/1.png";
+import acco1 from "../../assets/marketing/1.png";
 import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { FaAddressCard } from "react-icons/fa";
-import { faFacebook } from "@fortawesome/free-brands-svg-icons";
-import {
-  faFingerprint,
-  faHandMiddleFinger,
-  faKey,
-  faUserShield,
-} from "@fortawesome/free-solid-svg-icons";
-import web from "../assets/Deliver/code2.svg";
-import web1 from "../assets/Deliver/serch.svg";
-import note from "../assets/Deliver/note.svg";
-import note1 from "../assets/Deliver/note1.svg";
-import pancil from "../assets/Deliver/pancial.svg";
-import pen from "../assets/Deliver/pen.svg";
+
+import web from "../../assets/Deliver/code2.svg";
+import web1 from "../../assets/Deliver/serch.svg";
+import note from "../../assets/Deliver/note.svg";
+import note1 from "../../assets/Deliver/note1.svg";
+import pancil from "../../assets/Deliver/pancial.svg";
+import pen from "../../assets/Deliver/pen.svg";
 const Accordion = ({ title, content, id }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -66,7 +58,7 @@ const Accordion = ({ title, content, id }) => {
   );
 };
 
-const AccordionList = () => {
+const AccordingListInbiund = () => {
   // Data for multiple accordion items
   const accordionData = [
     {
@@ -219,4 +211,4 @@ const AccordionList = () => {
   );
 };
 
-export default AccordionList;
+export default AccordingListInbiund;

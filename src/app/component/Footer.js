@@ -62,7 +62,12 @@ const footerData = {
     },
     {
       title: "Marketing",
-      links: [{ name: "On-page SEO", path: "/newmarket" }],
+      links: [
+        { name: "On-page SEO", path: "/newmarket" },
+        { name: "Google Ads", path: "/googleads" },
+        { name: "Meta Ads", path: "/metaads" },
+        { name: "Inbound-Marketing", path: "/inbound-marketing" },
+      ],
     },
   ],
   contact: {

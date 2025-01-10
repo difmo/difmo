@@ -3,12 +3,12 @@ import React, { useState } from "react";
 import Image from "next/image";
 import sco1 from "../assets/marketing/1.png";
 import sco2 from "../assets/marketing/2.png";
-import AccordionList from "../component/AccordionList";
-import FAQ from "../component/Faq";
-import Seovedio from "../component/Seovedio";
-import Contact from "../contact-us/page";
+
 import OurContact from "../component/OurContact";
 import app from "../assets/Deliver/app.svg";
+import AccordingListads from "../component/googleAds/AccordingListads";
+import Faqads from "../component/googleAds/Faqads";
+import Seovedioads from "../component/googleAds/Seovedioads";
 export default function Pageseo() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -159,9 +159,9 @@ export default function Pageseo() {
           </div>
         </div>
       </div>
-      <AccordionList />
-      <Seovedio />
-      <FAQ />
+     <AccordingListads/>
+     <Faqads/>
+     <Seovedioads/>
       <OurContact />
     </>
   );

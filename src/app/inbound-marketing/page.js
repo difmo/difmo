@@ -3,12 +3,12 @@ import React, { useState } from "react";
 import Image from "next/image";
 import sco1 from "../assets/marketing/1.png";
 import sco2 from "../assets/marketing/2.png";
-import AccordionList from "../component/AccordionList";
-import FAQ from "../component/Faq";
-import Seovedio from "../component/Seovedio";
-import Contact from "../contact-us/page";
+
 import OurContact from "../component/OurContact";
 import app from "../assets/Deliver/app.svg";
+import AccordingListInbiund from "../component/inbound-Marketing/AccordingListInbiund";
+import FaqInbiuond from "../component/inbound-Marketing/FaqInbiuond";
+import SeovedioInbund from "../component/inbound-Marketing/SeovedioInbund";
 export default function Pageseo() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -64,16 +64,18 @@ export default function Pageseo() {
         <div className="container mx-auto px-6 md:px-12 lg:px-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left Section */}
           <div>
+            {" "}
+            with Inbound Strategy!
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-center md:text-left text-gray-800">
-              <span className="text-primary-orange">Boost Rankings</span> with
-              On-Page SEO Optimization
+              Upgrade Your{" "}
+              <span className="text-primary-orange">Marketing Approach</span>{" "}
+              with Inbound Strategy!
             </h1>
             <p className="text-base sm:text-lg text-gray-800 mb-6 text-center md:text-left">
-              Enhance your{" "}
               <span className="font-bold text-gray-800">
-                business’s SERP rankings
+                Drive traffic, attract leads, and boost conversions
               </span>{" "}
-              with our expert on-page SEO optimization.
+              with our certified Inbound marketers.
             </p>
             <div className="flex justify-center md:justify-start gap-4">
               <button className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition">
@@ -159,9 +161,9 @@ export default function Pageseo() {
           </div>
         </div>
       </div>
-      <AccordionList />
-      <Seovedio />
-      <FAQ />
+     <AccordingListInbiund/>
+     <FaqInbiuond/>
+     <SeovedioInbund/>
       <OurContact />
     </>
   );

@@ -55,7 +55,7 @@ const Contactus = () => {
             </div>
 
             <div className="grid grid-cols-1 gap-6 mt-6 md:grid-cols-2">
-              <div className="p-4 bg-white border rounded-lg shadow-md">
+              <div className="p-4 text-blue-500  bg-white border rounded-lg shadow-md">
                 <span className="block text-sm font-bold">Address</span>
                 <span>
                   4/37 Vibhav Khand, Gomtinagar, Lucknow, Uttar Pradesh, 226010
@@ -63,7 +63,7 @@ const Contactus = () => {
               </div>
 
               <div className="flex items-center justify-between p-4 bg-white border rounded-lg shadow-md">
-                <p className="text-sm font-bold">Social Media</p>
+                <p className="text-sm font-bold ">Social Media</p>
                 <br />
                 <div className="flex space-x-4">
                   <a

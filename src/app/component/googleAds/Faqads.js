@@ -33,7 +33,7 @@ const faqs = [
   },
 ];
 
-const FAQ = () => {
+const Faqads = () => {
   const [openIndex, setOpenIndex] = useState(null);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -82,4 +82,4 @@ const FAQ = () => {
   );
 };
 
-export default FAQ;
+export default Faqads;

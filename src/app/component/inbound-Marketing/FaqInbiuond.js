@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
-const faqs = [
+const FaqInbiuonds = [
   {
     question:
       "What makes Difmo on-page optimization different from other providers?",
@@ -33,12 +33,12 @@ const faqs = [
   },
 ];
 
-const FAQ = () => {
+const FaqInbiuond = () => {
   const [openIndex, setOpenIndex] = useState(null);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
-  const toggleFAQ = (index) => {
+  const toggleFaqInbiuond = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
@@ -51,7 +51,7 @@ const FAQ = () => {
         Frequently <span className="text-primary">Asked Questions</span>
       </h2>
       <div className="container space-y-4">
-        {faqs.map((faq, index) => (
+        {FaqInbiuonds.map((FaqInbiuond, index) => (
           <motion.div
             key={index}
             className="overflow-hidden bg-white border-2 border-gray-200 rounded-lg shadow-lg"
@@ -61,10 +61,10 @@ const FAQ = () => {
           >
             <div
               className="flex items-center justify-between p-5 transition duration-300 cursor-pointer hover:bg-gray-100"
-              onClick={() => toggleFAQ(index)}
+              onClick={() => toggleFaqInbiuond(index)}
             >
               <h3 className="text-lg font-semibold text-gray-800">
-                {faq.question}
+                {FaqInbiuond.question}
               </h3>
               <span className="p-2 text-5xl text-red-500 ">
                 {openIndex === index ? "-" : "+"}
@@ -72,7 +72,7 @@ const FAQ = () => {
             </div>
             {openIndex === index && (
               <div className="p-5 text-gray-700 bg-gray-50">
-                <p>{faq.answer}</p>
+                <p>{FaqInbiuond.answer}</p>
               </div>
             )}
           </motion.div>
@@ -82,4 +82,4 @@ const FAQ = () => {
   );
 };
 
-export default FAQ;
+export default FaqInbiuond;

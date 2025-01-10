@@ -1,14 +1,15 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import sco1 from "../assets/marketing/1.png";
+// import sco1 from "../assets/Deliver/app.svg";
 import sco2 from "../assets/marketing/2.png";
 import AccordionList from "../component/AccordionList";
-import FAQ from "../component/Faq";
-import Seovedio from "../component/Seovedio";
-import Contact from "../contact-us/page";
+
 import OurContact from "../component/OurContact";
 import app from "../assets/Deliver/app.svg";
+import AccordingListMeta from "../component/metaAds/AccordingListMeta";
+import FaqMeta from "../component/metaAds/FaqMeta";
+import Seovediometa from "../component/metaAds/Seovediometa";
 export default function Pageseo() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -66,7 +67,7 @@ export default function Pageseo() {
           <div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-center md:text-left text-gray-800">
               <span className="text-primary-orange">Boost Rankings</span> with
-              On-Page SEO Optimization
+              Meta-ads SEO Optimization
             </h1>
             <p className="text-base sm:text-lg text-gray-800 mb-6 text-center md:text-left">
               Enhance your{" "}
@@ -159,9 +160,9 @@ export default function Pageseo() {
           </div>
         </div>
       </div>
-      <AccordionList />
-      <Seovedio />
-      <FAQ />
+      <AccordingListMeta />
+      <FaqMeta />
+      <Seovediometa />
       <OurContact />
     </>
   );
