@@ -17,31 +17,31 @@ const OurServices = () => {
       icon: faLaptopCode,
       title: "Android & iOS",
       description:
-        "Crafting robust, scalable Android & iOS apps customized to meet your business requirements for optimal mobile experiences.",
+        "Building scalable, feature-rich mobile apps for Android and iOS to meet your business needs.",
       bgColor: "bg-green-100",
       textColor: "text-green-800",
     },
     {
       icon: faLaptopCode,
-      title: "Web",
+      title: "Web Development",
       description:
-        "Our web development team crafts responsive, user-friendly websites and web applications tailored to elevate your online presence and user experience.",
+        "Creating responsive, user-friendly websites to boost your online presence.",
       bgColor: "bg-blue-100",
       textColor: "text-blue-800",
     },
     {
       icon: faLaptopCode,
-      title: "UI/UX",
+      title: "UI/UX Design",
       description:
-        "We specialize in building responsive, user-centered websites and web apps, designed to enhance your digital presence and deliver a seamless user experience.",
-      bgColor: "bg-blue-100",
-      textColor: "text-blue-800",
+        "Crafting intuitive and visually appealing designs for exceptional user experiences.",
+      bgColor: "bg-teal-100",
+      textColor: "text-teal-800",
     },
     {
       icon: faTools,
       title: "Tech Consulting",
       description:
-        "We provide expert tech consulting services to help you navigate the latest technologies and solutions.",
+        "Offering expert guidance to help you adopt the best technology solutions.",
       bgColor: "bg-yellow-100",
       textColor: "text-yellow-800",
     },
@@ -49,7 +49,7 @@ const OurServices = () => {
       icon: faCloud,
       title: "Cloud Solutions",
       description:
-        "We offer cloud computing solutions to enhance your business infrastructure and scalability.",
+        "Empowering businesses with secure and scalable cloud computing services.",
       bgColor: "bg-purple-100",
       textColor: "text-purple-800",
     },
@@ -57,7 +57,7 @@ const OurServices = () => {
       icon: faBrain,
       title: "Machine Learning",
       description:
-        "Explore machine learning solutions to optimize your business processes and decision-making.",
+        "Integrating AI-powered solutions to enhance automation and decision-making.",
       bgColor: "bg-indigo-100",
       textColor: "text-indigo-800",
     },
@@ -65,7 +65,7 @@ const OurServices = () => {
       icon: faShieldAlt,
       title: "Cybersecurity",
       description:
-        "Our cybersecurity services ensure the safety and integrity of your business data.",
+        "Protecting your business data with advanced security solutions.",
       bgColor: "bg-red-100",
       textColor: "text-red-800",
     },
@@ -73,46 +73,45 @@ const OurServices = () => {
       icon: faNavicon,
       title: "Data Analytics",
       description:
-        "Analyze and visualize complex data patterns to stay ahead of the competition and improve business performance.",
-      bgColor: "bg-indigo-100",
-      textColor: "text-indigo-800",
+        "Transforming data into actionable insights to drive business success.",
+      bgColor: "bg-pink-100",
+      textColor: "text-pink-800",
     },
   ];
 
   return (
-    <div className="mx-4 my-8 sm:mx-8 lg:mx-16">
-      <Heading headingtext="Our Services"/>
-     
-      <p className="text-gray-700 text-[16px] leading-relaxed md:leading-loose tracking-wide text-justify">
-        We elevate your business with cutting-edge mobile app and website
-        development services. Our SEO expertise ensures maximum visibility and
-        engagement, taking your digital presence to new heights. Innovate and
-        stand out with solutions that push boundaries.
+    <div className="mx-4 my-12 sm:mx-8 lg:mx-16">
+      {/* Section Heading */}
+      <Heading headingtext="Our Services" />
+      <p className="text-gray-700 text-[16px] leading-relaxed md:leading-loose tracking-wide text-justify mb-8">
+        We deliver innovative solutions to empower your business, from mobile app and web development to advanced tech services. With a focus on quality and innovation, we ensure your digital transformation stands out.
       </p>
-      <div className="container grid w-full grid-cols-1 gap-6 mx-auto mt-7 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center">
+
+      {/* Services Grid */}
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center">
         {servicesData.map((service, index) => (
           <div
             key={index}
-            className="flex flex-col items-center p-4 mb-5 transition-transform duration-300 ease-in-out transform rounded-lg shadow-2xl cursor-pointer sm:p-5 hover:scale-105 hover:shadow-xl"
+            className={`flex flex-col items-center p-5 transition-transform duration-300 ease-in-out transform rounded-lg shadow-lg hover:scale-105 cursor-pointer ${service.bgColor}`}
           >
-            <div className="flex items-center justify-center w-16 h-16 mb-4 bg-white rounded-full">
+            <div className="flex items-center justify-center w-16 h-16 mb-4 bg-white rounded-full shadow-md">
               <FontAwesomeIcon
                 icon={service.icon}
-                className={`text-4xl ${service.textColor}`}
+                className={`text-3xl ${service.textColor}`}
               />
             </div>
-            <h2
-              className={`text-2xl sm:text-xl font-semibold mb-4 ${service.textColor}`}
-            >
+            <h3 className={`text-xl font-semibold mb-3 ${service.textColor}`}>
               {service.title}
-            </h2>
-            <p className="px-4 text-center text-gray-700">
-              {service.description}
-            </p>
+            </h3>
+            <p className="text-center text-gray-600">{service.description}</p>
           </div>
         ))}
       </div>
-      <StatsSection/>
+
+      {/* Stats Section */}
+      <div className="mt-12">
+        <StatsSection />
+      </div>
     </div>
   );
 };

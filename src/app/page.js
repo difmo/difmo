@@ -8,6 +8,7 @@ import Development from "./component/Development";
 import OurServices from "./component/OurServices";
 import MainSlider from "./component/slider/MainSlider";
 import OurContact from "./component/OurContact";
+import LandingPage from "./component/landingpage/LandingPage";
 
 export default function Home() {
   const router = useRouter(); // Initialize the Next.js router
@@ -34,10 +35,10 @@ export default function Home() {
   return (
     <>
       {/* Main Slider */}
-        <MainSlider />
-
+      {/* <MainSlider /> */}
+<LandingPage/>
       {/* Building Soft */}
-        <BuildingSoft />
+      <BuildingSoft />
 
       {/* Our Services */}
       <div className="my-7">
@@ -49,19 +50,17 @@ export default function Home() {
         <Development />
       </div>
 
-    
-      {/* Get In Touch */}
-      <div className="my-7 md:p-10 sm:mx-[2rem] md:my-3">
-        <h2 className="p-4 text-4xl font-extrabold text-transparent md:text-3xl sm:p-0 font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange">
-          Get In Touch
-        </h2>
-        <p className="text-gray-700 px-4 sm:px-0 sm:pt-2 text-[16px] leading-relaxed md:leading-loose tracking-wide text-justify">
-          At Difmo Technologies, we specialize in creating innovative,
-          user-friendly mobile apps for Android and iOS. Our expert team
-          delivers custom solutions that drive business success.
-        </p>
+      <section className="px-6 py-12 text-center rounded-lg shadow-md bg-gray-50 sm:px-8 lg:px-16">
+      <h2 className="mb-4 text-3xl font-extrabold sm:text-4xl text-deep-blue">
+        Get In Touch
+      </h2>
+      <p className="max-w-3xl mx-auto text-base leading-relaxed text-gray-700 sm:text-lg">
+        At <strong>Difmo Technologies</strong>, we craft innovative mobile apps for Android and iOS, delivering tailored solutions to drive your business success. Let’s create something amazing together!
+      </p>
+      <div className="mt-6">
         <OurContact />
       </div>
+    </section>
 
       {/* Google Analytics Scripts */}
       <Script

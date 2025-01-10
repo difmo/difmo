@@ -4,7 +4,6 @@ import React from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCogs, faUsers, faGlobe } from "@fortawesome/free-solid-svg-icons";
-import fqaQ from "../assets/backgrounds_images/aboutbg2.jpg";
 import Contactus from "../component/Contactus";
 import Ecommerce from "../component/webComponent/Ecommerce";
 import BusinessProfile from "../component/webComponent/BusinessProfile";
@@ -23,7 +22,6 @@ const Webdevlopment = () => {
               Web Development
             </h2>
             <p className="text-gray-700 text-[18px] leading-relaxed md:leading-loose tracking-wide text-justify  ">
-
               We specialize in designing and developing cutting-edge web
               applications that perfectly showcase your local business
               portfolio. Our goal is to craft applications that not only stand

@@ -12,7 +12,6 @@ import TrustPilotWidget from "../trustpilat/page";
 import Formcontect from "./OurContactForm";
 
 const OurContact = () => {
-
   return (
     <div className="min-h-screen">
       <div className="container px-4 py-12 mx-auto md:py-16">
@@ -116,17 +115,13 @@ const OurContact = () => {
             </div>
           </div>
           {/* right */}
-          <Formcontect
-            username="Reach Us"
-            discraption="Please complete the form below, to request a quote, and we’ll be in touch."
-          />
-         
+          <Formcontect />
         </div>
       </div>
 
       <div className="mx-auto lg:flex-row">
         <div className="px-6 mx-auto sm:px-8 lg:px-16">
-          <h2 className="mb-6 text-5xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange sm:mb-10">
+          <h2 className="mb-6 text-5xl font-extrabold text-center   text-deep-blue sm:mb-10">
             Our Location
           </h2>
 

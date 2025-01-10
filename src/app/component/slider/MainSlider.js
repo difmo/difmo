@@ -4,8 +4,8 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Formcontect from "../OurContactForm";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion"; // Added for modal animations
+import RequestForm from "../RequestForm"; // Assuming the path to your RequestForm component
 
 // Dynamically import Slider
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
@@ -15,7 +15,6 @@ import image1 from "../../assets/home1.jpg";
 import image2 from "../../assets/home2.jpg";
 import image3 from "../../assets/home3.jpg";
 import image4 from "../../assets/home4.jpg";
-import RequestForm from "../RequestForm";
 
 const MainSlider = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -36,11 +35,6 @@ const MainSlider = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-
-  // Callback for form submission
-  const handleFormSubmit = () => {
-    setIsModalOpen(true); // Close modal after successful form submission
-  };
 
   const settings = {
     dots: true,
@@ -86,7 +80,10 @@ const MainSlider = () => {
 
   return (
     <>
-      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen">
+      <div
+        className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen"
+        aria-hidden={isModalOpen}
+      >
         <Slider {...settings}>
           {images.map((image, index) => (
             <div
@@ -102,7 +99,7 @@ const MainSlider = () => {
                 priority={index === 0}
               />
               <div className="absolute inset-0 flex flex-col items-start justify-center px-6 space-y-4 sm:px-16 md:px-24 lg:px-32">
-                <h1 className="text-2xl font-bold leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
+                <h1 className="text-2xl font-bold leading-tight text-[#ff5e5e] sm:text-4xl md:text-5xl lg:text-6xl">
                   {image.title}
                 </h1>
                 <p className="text-sm text-gray-300 sm:text-lg md:text-xl">
@@ -110,7 +107,7 @@ const MainSlider = () => {
                 </p>
                 <button
                   onClick={handleOpenModal}
-                  className="flex items-center px-5 py-2 space-x-2 text-white bg-orange-600 rounded-md hover:bg-primary-orange sm:px-6 sm:py-3"
+                  className="flex items-center px-5 py-2 space-x-2 text-white bg-[#ff5e5e] rounded-md hover:bg-primary-orange sm:px-6 sm:py-3"
                 >
                   <span>Request Demo</span>
                   <svg
@@ -132,34 +129,36 @@ const MainSlider = () => {
             </div>
           ))}
         </Slider>
-
- 
       </div>
-             {/* Modal */}
-             {isModalOpen && (
-          <AnimatePresence>
+
+      {/* Modal */}
+      <AnimatePresence>
+        {isModalOpen && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
             <motion.div
-              className="fixed inset-0 z-50 flex items-center justify-center bg-black mt-14 bg-opacity-80"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              ref={modalRef}
+              className="p-6 bg-white rounded-lg shadow-lg"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 0.3 }}
             >
-              <motion.div
-                ref={modalRef}
-                className="flex justify-center rounded-lg shadow-lg"
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.8, opacity: 0 }}
-                transition={{ duration: 0.3 }}
+              <button
+                className="absolute text-gray-500 top-2 right-2 hover:text-gray-800"
+                onClick={handleCloseModal}
               >
-                <RequestForm
-                  onSubmit={handleFormSubmit}
-                  onClose={handleCloseModal}
-                />
-              </motion.div>
+                &times;
+              </button>
+              <RequestForm handleFormSubmit={handleCloseModal} />
             </motion.div>
-          </AnimatePresence>
+          </motion.div>
         )}
+      </AnimatePresence>
     </>
   );
 };

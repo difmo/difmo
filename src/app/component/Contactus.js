@@ -9,7 +9,7 @@ const Contactus = () => {
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {/* Text Section */}
         <div className="rounded-lg">
-          <h2 className="mb-6 text-4xl font-extrabold text-transparent md:text-3xl font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange">
+          <h2 className="mb-6 text-4xl font-extrabold md:text-3xl text-deep-blue">
             Question About Services
           </h2>
           <p className="text-gray-700 text-[16px] leading-relaxed md:leading-loose tracking-wide text-justify">

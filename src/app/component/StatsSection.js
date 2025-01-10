@@ -12,14 +12,10 @@ const data = [
 const StatsSection = () => {
   const [inView, setInView] = useState(false);
   const [numbers, setNumbers] = useState(
-    data.map((item) => ({
-      ...item,
-      currentValue: 0, // Initial value for animation
-    }))
+    data.map((item) => ({ ...item, currentValue: 0 }))
   );
   const sectionRef = useRef(null);
 
-  // IntersectionObserver to detect when the section is in view
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -31,68 +27,58 @@ const StatsSection = () => {
       { threshold: 0.5 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+    if (sectionRef.current) observer.observe(sectionRef.current);
 
     return () => observer.disconnect();
   }, [inView]);
 
-  // Increment logic for animating numbers
   useEffect(() => {
     if (inView) {
+      const duration = 1000; // Animation duration in ms
+      const incrementInterval = 20; // Interval in ms
+      const maxSteps = duration / incrementInterval;
+
       const interval = setInterval(() => {
         setNumbers((prevNumbers) =>
           prevNumbers.map((item) => {
             const targetValue = parseInt(item.value.replace(/[^0-9]/g, ""));
+            const increment = Math.ceil(targetValue / maxSteps);
             if (item.currentValue < targetValue) {
-              return { ...item, currentValue: item.currentValue + 1 };
+              return {
+                ...item,
+                currentValue: Math.min(item.currentValue + increment, targetValue),
+              };
             }
             return item;
           })
         );
-      }, 20); // Smooth animation interval
+      }, incrementInterval);
 
       return () => clearInterval(interval);
     }
   }, [inView]);
 
+  const formatNumber = (num) =>
+    num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
   return (
-    <div ref={sectionRef} className="py-16 text-white bg-gradient-to-b from-gray-900 to-gray-800">
-      <div className="mb-12 text-center">
-        <h2 className="text-4xl font-extrabold text-white sm:text-5xl">
-          Why <span className="text-primary-orange">Difmo</span> for Your Next Project?
-        </h2>
-        <p className="mt-4 text-gray-400 sm:text-lg">
-          Empowering businesses with technology that scales.
-        </p>
+    <div ref={sectionRef} className="py-12">
+      <div className="text-center">
+        <h2 className="text-3xl font-bold sm:text-4xl">Why Choose Us?</h2>
+        <p className="mt-2 text-gray-600">Empowering businesses with scalable technology solutions.</p>
       </div>
-      <div className="grid grid-cols-1 gap-6 px-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+      <div className="grid grid-cols-2 gap-6 mt-8 sm:grid-cols-3 lg:grid-cols-6">
         {numbers.map((item, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center justify-center h-full p-6 transition-all duration-300 transform bg-white rounded-lg shadow-lg hover:scale-105"
-          >
-            <span className="text-5xl font-bold text-primary-orange">
-              {item.currentValue}
-              <span className="text-lg font-medium">
+          <div key={index} className="text-center">
+            <div className="text-4xl font-bold text-blue-600">
+              {formatNumber(item.currentValue)}
+              <span className="text-xl font-medium">
                 {item.value.replace(/[^a-zA-Z+$]/g, "")}
               </span>
-            </span>
-            <p className="mt-4 text-lg font-medium text-center text-gray-700">
-              {item.label}
-            </p>
+            </div>
+            <p className="mt-2 text-gray-700">{item.label}</p>
           </div>
         ))}
-      </div>
-
-      <div className="mt-12 text-center">
-        <a
-          href="/contact-us"
-          className="inline-block px-6 py-3 text-lg font-semibold text-white transition-all duration-300 rounded-full shadow-md bg-primary-orange hover:bg-primary-orange-dark"
-        >
-          See for Yourself!
-        </a>
       </div>
     </div>
   );

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import CustomInput from "./CustomInput";
 import CustomButton from "./Buttons/CustomButton";
+import { db, firebase } from "../config/config";
+// import { db } from "."; // Import db (Firestore) from your Firebase setup
 
 function RequestForm() {
   const [formData, setFormData] = useState({
@@ -8,6 +10,7 @@ function RequestForm() {
     email: "",
     number: "",
     message: "",
+    date: "",
   });
 
   const [errors, setErrors] = useState({
@@ -59,24 +62,29 @@ function RequestForm() {
     if (!validate()) {
       return;
     }
+
     try {
+      // Simulating a submission
       console.log("Form submitted:", formData);
       alert("Message sent successfully!");
+
+      // Reset form data
       setFormData({
         fullName: "",
         email: "",
         number: "",
         message: "",
+        date: "",
       });
     } catch (error) {
-      console.error("Error adding document: ", error);
+      console.error("Error sending data to Firebase: ", error);
       alert("Failed to send message. Please try again.");
     }
   };
 
   return (
-    <div className="px-4 py-6 mx-auto bg-white rounded-lg shadow-lg md:max-w-2xl lg:max-w-4xl">
-      <h2 className="mb-6 text-xl font-bold text-center text-gray-800 sm:text-2xl md:text-3xl lg:text-4xl">
+    <div className="p-8 bg-white sm:w-full lg:w-2/4 md:w-2/4 ">
+      <h2 className="mb-8 text-4xl font-extrabold text-center text-transparent bg-clip-text bg-secondary ">
         Request a Demo
       </h2>
 
