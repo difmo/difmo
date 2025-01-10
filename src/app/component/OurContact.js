@@ -4,11 +4,7 @@ import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { db } from "../config/config"; // Ensure the Firebase setup is correct
 import { collection, addDoc, Timestamp } from "firebase/firestore";
 
-import Image from "next/image";
-import contactImage from "../assets/contactimg.svg";
-import CustomButton from "./Buttons/CustomButton";
-import CustomInput from "./CustomInput";
-import TrustPilotWidget from "../trustpilat/page";
+
 import Formcontect from "./OurContactForm";
 
 const OurContact = () => {
