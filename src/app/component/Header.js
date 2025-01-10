@@ -110,11 +110,10 @@ const Header = () => {
 
         {/* Popup Menu for Mobile */}
         {isMenuOpen && (
-          <div className="fixed inset-0 z-50 p-6 bg-white">
+          <div className="fixed inset-0 z-50 p-6 bg-white text-black">
             <div className="flex items-center justify-between mb-6">
               {/* Logo */}
               <Link href="/" className="flex items-center space-x-2">
-                {/* <Image src={logo} alt="Hexad Logo" width={40} height={40} /> */}
                 <span className="text-2xl font-semibold text-primary-orange">
                   Difmo Technologies
                 </span>
@@ -127,19 +126,27 @@ const Header = () => {
 
             {/* Mobile Menu Links */}
             <nav className="flex flex-col space-y-6">
-              <HeaderLink href="/" isActive={isActive("/")}>
+              <HeaderLink
+                href="/"
+                isActive={isActive("/")}
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Home
               </HeaderLink>
-              <HeaderLink href="/about" isActive={isActive("/about")}>
+              <HeaderLink
+                href="/about"
+                isActive={isActive("/about")}
+                onClick={() => setIsMenuOpen(false)}
+              >
                 About Us
               </HeaderLink>
 
               <div>
                 <button
-                  className="flex items-center w-full text-left text-gray-700 hover:text-primary-orange "
+                  className="flex items-center w-full text-left text-gray-700 hover:text-primary-orange"
                   onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
                   aria-expanded={isMobileDropdownOpen}
-                  aria-haspopup="true" // indicates that the button controls a dropdown
+                  aria-haspopup="true"
                 >
                   Services
                   <svg
@@ -152,7 +159,7 @@ const Header = () => {
                       transform: isMobileDropdownOpen
                         ? "rotate(180deg)"
                         : "rotate(0deg)",
-                    }} // Rotates the icon when the dropdown is open
+                    }}
                   >
                     <path
                       strokeLinecap="round"
@@ -168,45 +175,53 @@ const Header = () => {
                     <Link
                       href="/web-development"
                       className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
+                      onClick={() => setIsMenuOpen(false)}
                     >
                       Web Development
                     </Link>
                     <Link
                       href="/mobile-development"
                       className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
+                      onClick={() => setIsMenuOpen(false)}
                     >
                       Mobile Development
-                    </Link>
-
-                    <Link
-                      href="/ecommerce-development"
-                      className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
-                    >
-                      E-Commerce Development
                     </Link>
                     <Link
                       href="/software-maintenance"
                       className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
+                      onClick={() => setIsMenuOpen(false)}
                     >
                       Software Maintenance Services
                     </Link>
-
                     <Link
                       href="/software-testing"
                       className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
+                      onClick={() => setIsMenuOpen(false)}
                     >
                       Software Testing Services
                     </Link>
                   </div>
                 )}
               </div>
-              <HeaderLink href="/projects" isActive={isActive("/projects")}>
+              <HeaderLink
+                href="/projects"
+                isActive={isActive("/projects")}
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Projects
               </HeaderLink>
-              <HeaderLink href="/blogs" isActive={isActive("/blogs")}>
+              <HeaderLink
+                href="/blogs"
+                isActive={isActive("/blogs")}
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Blogs
               </HeaderLink>
-              <HeaderLink href="/careers" isActive={isActive("/careers")}>
+              <HeaderLink
+                href="/careers"
+                isActive={isActive("/careers")}
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Careers
               </HeaderLink>
             </nav>
@@ -221,12 +236,12 @@ const HeaderLink = ({ href, isActive, children }) => (
   <Link
     href={href}
     className={`relative hover:text-primary-orange ${
-      isActive ? "text-black font-semibold" : ""
+      isActive ? " font-semibold" : ""
     }`}
   >
     {children}
     {isActive && (
-      <span className="absolute left-0 w-full h-0.5 bg-primary-orange -bottom-1" />
+      <span className="absolute left-0 w-full h-0.5  bg-primary-orange -bottom-1" />
     )}
   </Link>
 );

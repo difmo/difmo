@@ -60,6 +60,15 @@ const footerData = {
         // { name: "IT Consulting", path: "/services/it-consulting" },
       ],
     },
+    {
+      title: "Marketing",
+      links: [
+        { name: "On-page SEO", path: "/newmarket" },
+        { name: "Google Ads", path: "/googleads" },
+        { name: "Meta Ads", path: "/metaads" },
+        { name: "Inbound-Marketing", path: "/inbound-marketing" },
+      ],
+    },
   ],
   contact: {
     email: "info@difmo.com",
@@ -104,8 +113,9 @@ const Footer = () => {
   return (
     <footer className="bg-[#111827] text-white  relative overflow-hidden w-full font-poppins pl-5 sm:pl-0 pt-10">
       <div className="relative z-10 max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 md:text-left">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-5 md:text-left">
           {/* First column with logo, description, and social icons */}
+          {/* <Pageseo /> */}
           <div>
             <Image
               src={logo}
@@ -123,7 +133,7 @@ const Footer = () => {
             At Difmo Technologies, we don’t just build software—we craft the
             future. Powered by innovation, driven for global impact.
           </p> */}
-              <div className="flex justify-center mt-4 space-x-6 md:justify-start">
+              <div className="flex justify-center mt-4 space-x-4 md:justify-start">
                 {footerData.social.map((social, index) => (
                   <a
                     key={index}
@@ -184,8 +194,27 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-
           {/* Fourth column with contact details */}
+          <div className="mb-6">
+            <h2 className="mb-4 text-sm font-semibold text-white uppercase dark:text-white">
+              Marketing
+            </h2>
+            <ul className="font-medium text-white">
+              {footerData.sections[2].links.map((link, index) => (
+                <li key={index} className="mb-2">
+                  <Link href={link.path}>
+                    <span
+                      onClick={handleLinkClick}
+                      className="cursor-pointer hover:underline hover:text-primary-orange"
+                    >
+                      {link.name}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          {/* fiveth column with contact details */}
           <div className="mb-6">
             <h2 className="mb-4 text-sm font-semibold text-white uppercase dark:text-white">
               Contact

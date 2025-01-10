@@ -2,8 +2,8 @@
 
 import React from "react";
 import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCogs, faUsers, faGlobe } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faCogs, faUsers, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import Contactus from "../component/Contactus";
 import Ecommerce from "../component/webComponent/Ecommerce";
 import BusinessProfile from "../component/webComponent/BusinessProfile";
@@ -15,7 +15,7 @@ import Chatingwebsite from "../component/webComponent/Chatingwebsite";
 const Webdevlopment = () => {
   return (
     <>
-      <div className="mx-4 my-20 sm:mx-8 lg:mx-28 mt-36">
+      <div className="mx-4 my-20 sm:mx-8 lg:mx-28 mt-8">
         <div className="">
           <div className="col-span-2 rounded-lg">
             <h2 className="flex justify-center mb-6 text-xl font-extrabold text-transparent md:text-4xl font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange">
