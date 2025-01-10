@@ -161,7 +161,7 @@ export default function Pageseo() {
       <AccordingListMeta />
       <FaqMeta />
       {/* <Seovediometa /> */}
-      <Contactus />
+      <OurContact />
     </>
   );
 }

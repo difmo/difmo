@@ -1,8 +1,11 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import acco1 from "../assets/marketing/sec1.jpeg";
+import acco2 from "../assets/marketing/seo2.png";
+
 import sco1 from "../assets/marketing/1.png";
-import sco2 from "../assets/marketing/2.png";
+import sco2 from "../assets/marketing/sce.png";
 import AccordionList from "../component/AccordionList";
 import FAQ from "../component/Faq";
 import Seovedio from "../component/Seovedio";
@@ -60,13 +63,13 @@ export default function Pageseo() {
   return (
     <>
       {/* Main Section */}
-      <div className="min-h-screen flex items-center justify-cente bg-gradient-to-b from-blue-50 to-white  ">
+      <div className="min-h-screen flex items-center  bg-white  ">
         <div className="container mx-auto px-6 md:px-12 lg:px-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left Section */}
           <div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-center md:text-left text-gray-800">
-              <span className="text-primary-orange">Boost Rankings</span> with
-              On-Page SEO Optimization
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-center md:text-left text-gray-800 ">
+              <span className="text-primary-orange">Boost Rankings</span>&nbsp;
+              with On-Page SEO Optimization
             </h1>
             <p className="text-base sm:text-lg text-gray-800 mb-6 text-center md:text-left">
               Enhance your{" "}
@@ -76,7 +79,7 @@ export default function Pageseo() {
               with our expert on-page SEO optimization.
             </p>
             <div className="flex justify-center md:justify-start gap-4">
-              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition">
+              <button className="bg-blue-600 text-white px-12 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition">
                 Get a Quote
               </button>
               <button className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg shadow-lg hover:bg-blue-100 transition">
@@ -87,15 +90,15 @@ export default function Pageseo() {
 
           <div className="relative w-full h-full bg-gray-200 rounded-lg shadow-md overflow-hidden">
             {/* YouTube Video Embed */}
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/_gxv4BnSiBU"
+            <Image
+              // width="100%"
+              // height="100%"
+              src={acco2}
               title="Referral video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="object-center"
-            ></iframe>
+            ></Image>
           </div>
         </div>
       </div>
@@ -104,7 +107,7 @@ export default function Pageseo() {
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="w-full px-12">
           <Image
-            src={sco2}
+            src={acco1}
             alt="difmo seo service"
             width={534}
             height={328}
@@ -130,7 +133,7 @@ export default function Pageseo() {
             into a high-performing asset that delivers measurable results.
           </p>
           <button
-            className="bg-deep-blue border-2 border-gray-400  text-center text-white rounded-xl p-2 flex justify-center "
+            className="bg-deep-blue border-2 border-gray-400  text-center text-white rounded-xl py-3 px-12 flex justify-center "
             onClick={openModal}
           >
             Get a Quote
@@ -160,7 +163,7 @@ export default function Pageseo() {
         </div>
       </div>
       <AccordionList />
-      <Seovedio />
+      {/* <Seovedio /> */}
       <FAQ />
       <OurContact />
     </>
