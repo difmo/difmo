@@ -10,15 +10,15 @@ import PhotoGallery from "../component/PhotoGallery";
 const About = () => {
   return (
     <>
-      <div className=" bg-secondary border-secondary  min-h-screen flex flex-col md:flex-row items-center justify-center pt-10  md:pt-16 px-4 md:px-6 lg:px-20">
+      <div className="flex flex-col items-center justify-center min-h-screen px-4 pt-10 bg-secondary border-secondary md:flex-row md:pt-16 md:px-6 lg:px-20">
         {/* Left Content Section */}
-        <div className="w-full md:w-1/2 p-2 md:p-3">
-          <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-bold py-3 text-white">
+        <div className="w-full p-2 md:w-1/2 md:p-3">
+          <h1 className="py-3 text-2xl font-bold text-white sm:text-2xl md:text-3xl lg:text-4xl">
             Looking For An Exciting{" "}
             <span className="text-primary-orange">Career in Technology</span>{" "}
             And Innovat ion
           </h1>
-          <p className="mt-4 text-base sm:text-lg md:text-xl text-white py-2">
+          <p className="py-2 mt-4 text-base text-white sm:text-lg md:text-xl">
             Join our dynamic team and make an impact!
             <span className="font-semibold"> Explore</span> opportunities to
             grow,learn, and achieve your
@@ -35,9 +35,9 @@ const About = () => {
         </div>
 
         {/* Right Image Section */}
-        <div className="relative w-full md:w-1/2 flex items-center justify-center mt-8 md:mt-0">
+        <div className="relative flex items-center justify-center w-full mt-8 md:w-1/2 md:mt-0">
           {/* Small Image */}
-          <div className="absolute -top-16 right-0 h-32 w-28 sm:h-40 sm:w-36 md:h-60 md:w-52 rounded-lg overflow-hidden border-4 border-primary-orange shadow-lg">
+          <div className="absolute right-0 h-32 overflow-hidden border-4 rounded-lg shadow-lg -top-16 w-28 sm:h-40 sm:w-36 md:h-60 md:w-52 border-primary-orange">
             <Image
               src={see1}
               alt="Small team photo"
@@ -48,7 +48,7 @@ const About = () => {
 
           {/* Large Circular Image */}
           <div
-            className="rounded-full border-4 border-primary-orange shadow-xl"
+            className="border-4 rounded-full shadow-xl border-primary-orange"
             style={{
               backgroundImage: `url('/bgim.png')`,
               backgroundSize: "cover",
@@ -64,10 +64,15 @@ const About = () => {
 
       <PhotoGallery />
       {/* /////////////  video ///////////////// */}
-      <div className="bg-gray-50 h-full flex justify-center items-center">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl w-full px-6 py-10">
+      <div className="flex items-center justify-center h-full bg-gray-50 z-70 ">
+        <div className="grid w-full grid-cols-1 gap-8 px-6 py-10 lg:grid-cols-2 max-w-7xl">
           {/* Left Video/Image Section */}
+<<<<<<< HEAD
           <div className="relative w-full h-64 sm:h-96 lg:h-full bg-gray-200 rounded-lg shadow-md ">
+=======
+          <div className="relative inset-0 z-20 w-full h-64 overflow-hidden bg-black rounded-lg shadow-md sm:h-96 lg:h-full bg-opacity-80 z-70">
+            {/* YouTube Video Embed */}
+>>>>>>> master
             <iframe
               width="100%"
               height="100%"
@@ -81,11 +86,11 @@ const About = () => {
 
           {/* Right Content Section */}
           <div className="flex flex-col justify-center space-y-6">
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-800">
+            <h1 className="text-4xl font-bold text-gray-800 sm:text-5xl">
               Grow Our Team, Earn Rewards
             </h1>
 
-            <p className="text-gray-700 text-lg sm:text-xl leading-relaxed">
+            <p className="text-lg leading-relaxed text-gray-700 sm:text-xl">
               At Difmo Technologies, we deeply appreciate the hard work and
               dedication of our incredible team. We’re excited to launch our
               Employee Referral Bonus Program! Know someone who would be a
@@ -99,7 +104,7 @@ const About = () => {
 
       <JoinRemoteTeam />
       <div className="flex flex-col items-center justify-center py-10 bg-secondary border-secondary">
-        <h2 className="mb-6 text-xl font-extrabold text-center text-transparent md:text-3xl font-lilita text-white">
+        <h2 className="mb-6 text-xl font-extrabold text-center text-transparent text-white md:text-3xl font-lilita">
           Mastering Web Application Technologies for Your Success
         </h2>
         <button className="px-6  py-2 text-white transition duration-300 rounded-3xl bg-red-700 hover:bg-[#ff8d89]">

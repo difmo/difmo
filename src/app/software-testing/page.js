@@ -12,10 +12,10 @@ import Contactus from "../component/Contactus";
 const Mobiledevlopment = () => {
   return (
     <>
-      <div className="bg-gray-50 min-h-screen">
+      <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <div className="bg-deep-blue text-white py-16 px-4 md:px-12 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold">
+        <div className="px-4 py-16 text-center text-white bg-deep-blue md:px-12">
+          <h1 className="text-4xl font-bold md:text-5xl">
             Ensuring Quality eCommerce Solutions through Rigorous Software
             Testing
           </h1>
@@ -26,9 +26,9 @@ const Mobiledevlopment = () => {
         </div>
 
         {/* Introduction Section */}
-        <section className="py-12 px-4 md:px-12">
+        <section className="px-4 py-12 md:px-12">
           <div className="max-w-5xl mx-auto text-gray-800">
-            <h2 className="text-3xl font-bold mb-6 text-deep-blue">
+            <h2 className="mb-6 text-3xl font-bold text-deep-blue">
               Why Software Testing Matters in eCommerce
             </h2>
             <p className="text-lg leading-relaxed">
@@ -43,12 +43,12 @@ const Mobiledevlopment = () => {
         </section>
 
         {/* Expertise Section */}
-        <section className="bg-gray-100 py-12 px-4 md:px-12">
+        <section className="px-4 py-12 bg-gray-100 md:px-12">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-deep-blue">
+            <h2 className="mb-6 text-3xl font-bold text-deep-blue">
               Mastering eCommerce Development Technologies for Your Success
             </h2>
-            <p className="text-lg leading-relaxed mb-6">
+            <p className="mb-6 text-lg leading-relaxed">
               At Difmo Technologies, our years of expertise in eCommerce
               development have not only made us leaders in the industry but have
               also highlighted the importance of top-notch software testing
@@ -56,7 +56,7 @@ const Mobiledevlopment = () => {
               secure, and scalable online stores tailored to your business
               needs.
             </p>
-            <ul className="list-disc pl-8 space-y-3 text-lg text-gray-700">
+            <ul className="pl-8 space-y-3 text-lg text-gray-700 list-disc">
               <li>
                 Comprehensive functional testing ensures every feature of your
                 platform works as expected.
@@ -78,12 +78,12 @@ const Mobiledevlopment = () => {
         </section>
 
         {/* Call-to-Action Section */}
-        <section className="py-12 px-4 md:px-12 text-center">
+        <section className="px-4 py-12 text-center md:px-12">
           <div className="max-w-4xl mx-auto text-gray-800">
-            <h2 className="text-3xl font-bold mb-6 text-deep-blue">
+            <h2 className="mb-6 text-3xl font-bold text-deep-blue">
               Stay Ahead with Difmo Technologies
             </h2>
-            <p className="text-lg leading-relaxed mb-6">
+            <p className="mb-6 text-lg leading-relaxed">
               By adopting the most advanced testing methodologies, we eliminate
               bugs and performance issues, keeping your eCommerce solutions
               running flawlessly. Stay ahead of the competition with innovative,
@@ -92,7 +92,7 @@ const Mobiledevlopment = () => {
             </p>
             <a
               href="/contact"
-              className="bg-deep-blue text-white px-6 py-3 rounded-lg font-semibold text-lg hover:bg-blue-700 transition duration-300"
+              className="px-6 py-3 text-lg font-semibold text-white transition duration-300 rounded-lg bg-deep-blue hover:bg-blue-700"
             >
               Contact Us Today
             </a>
@@ -100,9 +100,9 @@ const Mobiledevlopment = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="bg-gray-100 py-12 px-4 md:px-12">
+        <section className="px-4 py-12 bg-gray-100 md:px-12">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-deep-blue">
+            <h2 className="mb-6 text-3xl font-bold text-deep-blue">
               Frequently Asked Questions
             </h2>
             <div className="space-y-6">
@@ -141,8 +141,8 @@ const Mobiledevlopment = () => {
           </div>
         </section>
       </div>
-      <div className="py-2 pb-8   bg-warm-gray p-4 ">
-        <div className="rounded-lg shadow-2xl p-1">
+      <div className="p-4 py-2 pb-8 bg-warm-gray ">
+        <div className="p-1 rounded-lg shadow-2xl">
           <Contactus />
           {/* <Pageseo /> */}
         </div>

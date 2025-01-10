@@ -64,20 +64,7 @@ function RequestForm() {
     }
 
     try {
-      // Reference to the location in Firestore where the data will be stored
-      const newRequestRef = db
-        .collection("requests")
-        .doc(Date.now().toString()); // Using timestamp as a unique ID
-
-      // Set the data at that location
-      await newRequestRef.set({
-        fullName: formData.fullName,
-        email: formData.email,
-        number: formData.number,
-        message: formData.message,
-        date: firebase.firestore.FieldValue.serverTimestamp(), // Current date and time
-      });
-
+      // Simulating a submission
       console.log("Form submitted:", formData);
       alert("Message sent successfully!");
 
@@ -96,12 +83,12 @@ function RequestForm() {
   };
 
   return (
-    <div className="p-2 bg-white w-full">
-      <h2 className="mb-8 font-extrabold text md:text-4xl text-center text-transparent bg-clip-text bg-secondary">
+    <div className="p-8 bg-white sm:w-full lg:w-2/4 md:w-2/4 ">
+      <h2 className="mb-8 text-4xl font-extrabold text-center text-transparent bg-clip-text bg-secondary ">
         Request a Demo
       </h2>
 
-      <form onSubmit={handleSubmit} className="w-full">
+      <form onSubmit={handleSubmit} className="space-y-6">
         <CustomInput
           id="fullName"
           label="Full Name"
@@ -110,6 +97,7 @@ function RequestForm() {
           value={formData.fullName}
           onChange={handleChange}
           error={errors.fullName}
+          className="text-sm sm:text-base md:text-lg lg:text-xl"
         />
 
         <CustomInput
@@ -120,6 +108,7 @@ function RequestForm() {
           value={formData.email}
           onChange={handleChange}
           error={errors.email}
+          className="text-sm sm:text-base md:text-lg lg:text-xl"
         />
 
         <CustomInput
@@ -129,6 +118,7 @@ function RequestForm() {
           value={formData.number}
           onChange={handleChange}
           error={errors.number}
+          className="text-sm sm:text-base md:text-lg lg:text-xl"
         />
 
         <CustomInput
@@ -138,12 +128,13 @@ function RequestForm() {
           value={formData.message}
           onChange={handleChange}
           error={errors.message}
+          className="text-sm sm:text-base md:text-lg lg:text-xl"
         />
 
         <CustomButton
           type="submit"
           label="Submit"
-          className="w-full py-3 text-lg text-white bg-primary-orange hover:bg-[#ea130c9d] transition duration-300 ease-in-out"
+          className="w-full py-2 text-base text-white bg-primary-orange hover:bg-[#ea130c9d] rounded transition duration-300 ease-in-out sm:py-3 sm:text-lg md:py-4 md:text-xl lg:py-5"
         />
       </form>
     </div>

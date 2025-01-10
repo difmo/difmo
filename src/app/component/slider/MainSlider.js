@@ -4,16 +4,17 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { AnimatePresence, motion } from "framer-motion"; // Added for modal animations
+import RequestForm from "../RequestForm"; // Assuming the path to your RequestForm component
 
 // Dynamically import Slider
-const Slider = dynamic(() => import("react-slick"));
+const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
 // Import images
 import image1 from "../../assets/home1.jpg";
 import image2 from "../../assets/home2.jpg";
 import image3 from "../../assets/home3.jpg";
 import image4 from "../../assets/home4.jpg";
-import RequestForm from "../RequestForm";
 
 const MainSlider = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -128,27 +129,36 @@ const MainSlider = () => {
             </div>
           ))}
         </Slider>
+      </div>
 
-        {/* Modal */}
+      {/* Modal */}
+      <AnimatePresence>
         {isModalOpen && (
-          <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
-            role="dialog"
-            aria-modal="true"
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
           >
-            <div ref={modalRef} className="bg-white  p-8 w-11/12 max-w-md">
+            <motion.div
+              ref={modalRef}
+              className="p-6 bg-white rounded-lg shadow-lg"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+            >
               <button
-                className="absolute top-2 right-2 text-gray-500 hover:text-black"
+                className="absolute text-gray-500 top-2 right-2 hover:text-gray-800"
                 onClick={handleCloseModal}
-                aria-label="Close modal"
               >
-                ×
+                &times;
               </button>
               <RequestForm handleFormSubmit={handleCloseModal} />
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         )}
-      </div>
+      </AnimatePresence>
     </>
   );
 };
