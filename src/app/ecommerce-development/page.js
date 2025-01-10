@@ -7,12 +7,12 @@ import { faCogs, faUsers, faGlobe } from "@fortawesome/free-solid-svg-icons";
 // import webimage from "../assets/dev.jpg";
 // import software from "../assets/projectImages/sh.png";
 // import appdev from "../assets/appdevs.png";
-import apiint from "../assets/apiint.png";
-import crmimg from "../assets/crmimg.png";
-import consulating from "../assets/consulating.png";
-import iot from "../assets/iot.png";
-import ailear from "../assets/ailear.png";
-import sofware1 from "../assets/imagess.png";
+// import apiint from "../assets/apiint.png";
+// import crmimg from "../assets/crmimg.png";
+// import consulating from "../assets/consulating.png";
+// import iot from "../assets/iot.png";
+// import ailear from "../assets/ailear.png";
+// import sofware1 from "../assets/imagess.png";
 import Contactus from "../component/Contactus";
 
 const Mobiledevlopment = () => {
@@ -37,22 +37,22 @@ const Mobiledevlopment = () => {
     {
       id: 4,
       title: "3rd Party API's integration",
-      imageUrl: apiint, // Add your image path here
+      // imageUrl: apiint, // Add your image path here
     },
     {
       id: 5,
       title: "CRM development",
-      imageUrl: crmimg, // Add your image path here
+      // imageUrl: crmimg, // Add your image path here
     },
     {
       id: 6,
       title: "Software consulting",
-      imageUrl: consulating, // Add your image path here
+      // imageUrl: consulating, // Add your image path here
     },
     {
       id: 7,
       title: "IOT & Automation",
-      imageUrl: iot, // Add your image path here
+      // imageUrl: iot, // Add your image path here
     },
     {
       id: 8,
@@ -62,7 +62,7 @@ const Mobiledevlopment = () => {
     {
       id: 9,
       title: "Software Re-engineering",
-      imageUrl: sofware1,
+      // imageUrl: sofware1,
     },
   ];
 
