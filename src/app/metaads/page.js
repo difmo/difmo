@@ -2,7 +2,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 // import sco1 from "../assets/Deliver/app.svg";
-import sco2 from "../assets/marketing/meta.png";
+import sco1 from "../assets/landing/landing3.png";
+import sco2 from "../assets/landing/landing6.png";
 import AccordionList from "../component/AccordionList";
 
 import OurContact from "../component/OurContact";
@@ -62,45 +63,43 @@ export default function Pageseo() {
   return (
     <>
       {/* Main Section */}
-      <div className="min-h-screen flex items-center justify-cente bg-gradient-to-b from-blue-50 to-white  ">
-        <div className="container mx-auto px-6 md:px-12 lg:px-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div className="flex items-center min-h-screen justify-cente bg-gradient-to-b from-blue-50 to-white ">
+        <div className="container grid items-center grid-cols-1 gap-8 px-6 mx-auto md:px-12 lg:px-20 md:grid-cols-2">
           {/* Left Section */}
           <div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl  font-bold pb-5 text-center md:text-left text-gray-800">
+            <h1 className="pb-5 text-3xl font-bold text-center text-gray-800 sm:text-4xl md:text-5xl md:text-left">
               Maximize Your Reach, Multiply{" "}
               <span className="text-primary-orange">
                 Your Leads with Meta Ads!{" "}
               </span>{" "}
             </h1>
-            <p className="text-base sm:text-lg text-gray-800 mb-6 text-center md:text-left">
+            <p className="mb-6 text-base text-center text-gray-800 sm:text-lg md:text-left">
               Generate designed to grow your business.{" "}
               <span className="font-bold text-gray-800">
                 top-quality leads with our expert Meta ad services,{" "}
               </span>{" "}
               designed to grow your business.
             </p>
-            <div className="flex justify-center md:justify-start gap-4">
-              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition">
+            <div className="flex justify-center gap-4 md:justify-start">
+              <button className="px-6 py-3 text-white transition bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700">
                 Get a Quote
               </button>
-              <button className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg shadow-lg hover:bg-blue-100 transition">
+              <button className="px-6 py-3 text-blue-600 transition border border-blue-600 rounded-lg shadow-lg hover:bg-blue-100">
                 Book a Consultation
               </button>
             </div>
           </div>
-
-          <div className="relative w-full h-full bg-gray-200 rounded-lg shadow-md overflow-hidden">
-            {/* YouTube Video Embed */}
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/_gxv4BnSiBU"
-              title="Referral video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="object-center"
-            ></iframe>
-          </div>
+ {/* Image Section */}
+                 <div className="image-content">
+                   <Image
+                     src={sco1}
+                     alt="Business Illustration"
+                     width={500}
+                     height={500}
+                     className="illustration"
+                   />
+                 </div>
+          
         </div>
       </div>
 
@@ -119,18 +118,18 @@ export default function Pageseo() {
         {/* Content Section */}
 
         <div className="w-full">
-          <h2 className="font-bold text-3xl md:text-5xl leading-normal px-2  py-4 text-gray-800">
+          <h2 className="px-2 py-4 text-3xl font-bold leading-normal text-gray-800 md:text-5xl">
             Navigating success with strategic{" "}
             <span className="text-primary-orange">Meta ads </span>
           </h2>
-          <p className="text-xl text-gray-600  py-4 px-7">
+          <p className="py-4 text-xl text-gray-600 px-7">
             Unlock new growth for your business with our Meta ad services. We
             create and manage ad campaigns that attract the right customers and
             help turn them into loyal clients. Our goal is to deliver a steady
             flow of leads that match your business needs.
           </p>
           <button
-            className="bg-deep-blue border-2 border-gray-400  text-center text-white rounded-xl p-2 flex justify-center "
+            className="flex justify-center p-2 text-center text-white border-2 border-gray-400 bg-deep-blue rounded-xl "
             onClick={openModal}
           >
             Get a Quote
@@ -140,17 +139,17 @@ export default function Pageseo() {
       {/*      */}
 
       <div>
-        <div className=" py-10 px-6">
-          <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="px-6 py-10 ">
+          <div className="container grid grid-cols-1 gap-6 mx-auto sm:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center text-center"
+                className="flex flex-col items-center p-6 text-center bg-white rounded-lg shadow-md"
               >
-                <div className="text-5xl text-blue-600 mb-4">
+                <div className="mb-4 text-5xl text-blue-600">
                   {feature.icon}
                 </div>
-                <h3 className="text-lg font-bold mb-2 text-gray-800">
+                <h3 className="mb-2 text-lg font-bold text-gray-800">
                   {feature.title}
                 </h3>
                 <p className="text-gray-600">{feature.description}</p>

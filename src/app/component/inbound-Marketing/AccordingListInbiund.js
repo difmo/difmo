@@ -1,13 +1,12 @@
 import { useState } from "react";
 import acco1 from "../../assets/marketing/inbound.webp";
 import Image from "next/image";
-
+import sco2 from "../../assets/landing/landing7.png";
 import web from "../../assets/Deliver/code2.svg";
 import web1 from "../../assets/Deliver/serch.svg";
 import note from "../../assets/Deliver/note.svg";
 import note1 from "../../assets/Deliver/note1.svg";
 import pancil from "../../assets/Deliver/pancial.svg";
-import pen from "../../assets/Deliver/pen.svg";
 const Accordion = ({ title, content, id }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -16,7 +15,7 @@ const Accordion = ({ title, content, id }) => {
   };
 
   return (
-    <div className="border rounded-md shadow-sm bg-white mb-4">
+    <div className="mb-4 bg-white border rounded-md shadow-sm">
       {/* Accordion Header */}
       <div className="kt-accordion-header-wrap">
         <button
@@ -139,16 +138,16 @@ const AccordingListInbiund = () => {
   return (
     <>
       <div className="px-16">
-        <h1 className="font-bold text-2xl md:text-5xl py-4 flex justify-center text-gray-800">
+        <h1 className="flex justify-center py-4 text-2xl font-bold text-gray-800 md:text-5xl">
           Our <span className="text-primary-orange"> Process </span>
         </h1>
-        <p className="text-xl flex justify-center text-gray-600 p-2">
+        <p className="flex justify-center p-2 text-xl text-gray-600">
           Our Inbound Marketing methodology guides the way to elevating your ROI
           and nurturing business expansion through a three-step approach:
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2">
-        <div className="max-w-4xl mx-auto p-5">
+        <div className="max-w-4xl p-5 mx-auto">
           {accordionData.map((item) => (
             <Accordion
               key={item.id}
@@ -159,20 +158,20 @@ const AccordingListInbiund = () => {
           ))}
         </div>
         <div>
-          <Image src={acco1} />
+          <Image src={sco2} />
         </div>
       </div>
-      <div className=" flex justify-center py-3">
-        <p className="text-white bg-deep-blue py-2 px-4 rounded-xl border-2 border-gray-300">
-          Gat a Quote
+      <div className="flex justify-center py-3 ">
+        <p className="px-8 py-2 text-white border-2 border-gray-300 bg-deep-blue rounded-xl">
+          GET STARTED
         </p>
       </div>
       {/* Our Deliverables */}
-      <div className="bg-gray-100 py-10">
-        <h1 className="font-bold text-2xl md:text-5xl flex justify-center py-2 text-gray-800 ">
+      <div className="py-10 bg-gray-100">
+        <h1 className="flex justify-center py-2 text-2xl font-bold text-gray-800 md:text-5xl ">
           Our Deliverables
         </h1>
-        <p className="text-base sm:text-lg md:text-xl py-5    flex justify-center text-gray-600 ">
+        <p className="flex justify-center py-5 text-base text-gray-600 sm:text-lg md:text-xl ">
           When you{" "}
           <span className="font-semibold">
             choose our Inbound Marketing services,{" "}
@@ -181,23 +180,23 @@ const AccordingListInbiund = () => {
         </p>
         {/* </div> */}
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {cards.map((card, index) => (
               <div
                 key={index}
-                className="bg-white shadow-lg rounded-lg p-6 flex flex-col text-gray-800 items-start"
+                className="flex flex-col items-start p-6 text-gray-800 bg-white rounded-lg shadow-lg"
               >
-                <div className="flex items-center justify-center text-blue-500 w-16 h-16 mb-4 bg-gray-300 rounded-full">
+                <div className="flex items-center justify-center w-16 h-16 mb-4 text-blue-500 bg-gray-300 rounded-full">
                   <Image
                     src={card.icon}
                     className={`text-4xl ${card.textColor}`}
                   />
                 </div>
-                {/* <div className="text-blue-500 text-3xl mb-4">
+                {/* <div className="mb-4 text-3xl text-blue-500">
                   <FontAwesomeIcon className={`fas fa-${card.icon}`} />
                 </div> */}
-                <h3 className="text-lg font-semibold mb-2">{card.title}</h3>
+                <h3 className="mb-2 text-lg font-semibold">{card.title}</h3>
                 <p className="text-gray-600">{card.description}</p>
               </div>
             ))}

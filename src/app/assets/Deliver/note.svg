@@ -1,11 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" id="Journal">
-  <path fill="#ffefef" d="M82,54V88.91a8,8,0,0,1-8,8H18a8,8,0,0,1-8-8V10a8,8,0,0,1,8-8H74a8,8,0,0,1,8,8v4" class="coloreff6ff svgShape"></path>
-  <polygon fill="#f83b3b" points="26 82 50 74 34 58 26 82" class="colordfedff svgShape"></polygon>
-  <path fill="#ff6060" d="M90,34,74,18c-.31.15-5.52,5.33-12.09,11.91L78,46Z" class="color60a4ff svgShape"></path>
-  <path fill="#f83b3b" d="M61.91,29.91C50.13,41.7,34,58,34,58L50,74,78,46Z" class="colordfedff svgShape"></path>
-  <polygon fill="#ff6060" points="78 46 50 74 26 82 30 86 54 78 82 50 82 42 78 46" class="color60a4ff svgShape"></polygon>
-  <path fill="#ffefef" d="M78,46l-8-8C58.2,49.79,42,66.05,42,66.05l8,8Z" class="coloreff6ff svgShape"></path>
-  <path fill="#f32f2f" d="M74,98.91H18a10,10,0,0,1-10-10V10A10,10,0,0,1,18,0H74A10,10,0,0,1,84,10v4a2,2,0,0,1-4,0V10a6,6,0,0,0-6-6H18a6,6,0,0,0-6,6V88.91a6,6,0,0,0,6,6H74a6,6,0,0,0,6-6V54a2,2,0,0,1,4,0V88.91A10,10,0,0,1,74,98.91Z" class="color2f67f3 svgShape"></path>
-  <path fill="#f32f2f" d="M26,84a2,2,0,0,1-1.42-.59,2,2,0,0,1-.48-2l8-24a2,2,0,0,1,.48-.78C72,16.79,72.73,16.4,73.1,16.21a2,2,0,0,1,2.31.38l16,16a2,2,0,0,1,0,2.82l-40,40a2,2,0,0,1-.78.49l-24,8A2,2,0,0,1,26,84Zm9.75-24.92L29.16,78.84l19.76-6.59L87.17,34,73.94,20.77C68.74,25.82,49.23,45.45,35.75,59.08Z" class="color2f67f3 svgShape"></path>
-  <path fill="#f32f2f" d="M42 68a2 2 0 01-1.41-.59l-8-8a2 2 0 012.82-2.82l8 8A2 2 0 0142 68zM78 48a2 2 0 01-1.41-.59L60.5 31.33a2 2 0 012.83-2.83L79.41 44.59A2 2 0 0178 48zM58 20H26a2 2 0 010-4H58a2 2 0 010 4zM46 32H26a2 2 0 010-4H46a2 2 0 010 4zM34 44H26a2 2 0 010-4h8a2 2 0 010 4z" class="color2f67f3 svgShape"></path>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 100 100"
+  id="Journal"
+  width="48"
+  height="48"
+>
+  <path
+    fill="#ffefef"
+    d="M82,54V88.91a8,8,0,0,1-8,8H18a8,8,0,0,1-8-8V10a8,8,0,0,1,8-8H74a8,8,0,0,1,8,8v4"
+    class="coloreff6ff svgShape"
+  ></path>
+  <polygon
+    fill="#f83b3b"
+    points="26 82 50 74 34 58 26 82"
+    class="colordfedff svgShape"
+  ></polygon>
+  <path
+    fill="#ff6060"
+    d="M90,34,74,18c-.31.15-5.52,5.33-12.09,11.91L78,46Z"
+    class="color60a4ff svgShape"
+  ></path>
+  <path
+    fill="#f83b3b"
+    d="M61.91,29.91C50.13,41.7,34,58,34,58L50,74,78,46Z"
+    class="colordfedff svgShape"
+  ></path>
+  <polygon
+    fill="#ff6060"
+    points="78 46 50 74 26 82 30 86 54 78 82 50 82 42 78 46"
+    class="color60a4ff svgShape"
+  ></polygon>
+  <path
+    fill="#ffefef"
+    d="M78,46l-8-8C58.2,49.79,42,66.05,42,66.05l8,8Z"
+    class="coloreff6ff svgShape"
+  ></path>
+  <path
+    fill="#f32f2f"
+    d="M74,98.91H18a10,10,0,0,1-10-10V10A10,10,0,0,1,18,0H74A10,10,0,0,1,84,10v4a2,2,0,0,1-4,0V10a6,6,0,0,0-6-6H18a6,6,0,0,0-6,6V88.91a6,6,0,0,0,6,6H74a6,6,0,0,0,6-6V54a2,2,0,0,1,4,0V88.91A10,10,0,0,1,74,98.91Z"
+    class="color2f67f3 svgShape"
+  ></path>
+  <path
+    fill="#f32f2f"
+    d="M26,84a2,2,0,0,1-1.42-.59,2,2,0,0,1-.48-2l8-24a2,2,0,0,1,.48-.78C72,16.79,72.73,16.4,73.1,16.21a2,2,0,0,1,2.31.38l16,16a2,2,0,0,1,0,2.82l-40,40a2,2,0,0,1-.78.49l-24,8A2,2,0,0,1,26,84Zm9.75-24.92L29.16,78.84l19.76-6.59L87.17,34,73.94,20.77C68.74,25.82,49.23,45.45,35.75,59.08Z"
+    class="color2f67f3 svgShape"
+  ></path>
+  <path
+    fill="#f32f2f"
+    d="M42 68a2 2 0 01-1.41-.59l-8-8a2 2 0 012.82-2.82l8 8A2 2 0 0142 68zM78 48a2 2 0 01-1.41-.59L60.5 31.33a2 2 0 012.83-2.83L79.41 44.59A2 2 0 0178 48zM58 20H26a2 2 0 010-4H58a2 2 0 010 4zM46 32H26a2 2 0 010-4H46a2 2 0 010 4zM34 44H26a2 2 0 010-4h8a2 2 0 010 4z"
+    class="color2f67f3 svgShape"
+  ></path>
 </svg>
