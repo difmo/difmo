@@ -1,5 +1,5 @@
 import { useState } from "react";
-import acco1 from "../../assets/marketing/1.png";
+import acco1 from "../../assets/marketing/inbound.webp";
 import Image from "next/image";
 
 import web from "../../assets/Deliver/code2.svg";
@@ -63,78 +63,78 @@ const AccordingListInbiund = () => {
   const accordionData = [
     {
       id: 1,
-      title: "In-Depth Website Audit",
+      title: "Strategy Creation",
       content:
-        "We begin by thoroughly analyzing your website's current on-page elements, identifying areas for improvement and opportunities for optimization.",
+        "We’ll position your brand where potential customers are actively seeking your products or services.",
     },
     {
       id: 2,
-      title: "Keyword Research & Strategy",
+      title: "Implemented Methods",
       content:
-        "We conduct extensive research to identify relevant keywords that align with your target audience's search intent. Our tailored keyword strategy incorporates these terms strategically.",
+        "Calling, prospecting, email marketing, meeting scheduling, and deploying chatbots.",
     },
     {
       id: 3,
-      title: "Content Optimization",
+      title: "Video Formats",
       content:
-        "We optimize your website content to ensure it is engaging, informative, and SEO-friendly, driving more organic traffic.",
+        "We’ll adapt our messaging formats to fit varied audience preferences, ensuring that every interaction resonates.",
     },
     {
       id: 4,
-      title: "Technical SEO Enhancement",
+      title: "Components",
       content:
-        "Our team ensures your website is technically sound by optimizing page speed, mobile responsiveness, and other critical elements.",
+        "Deals, videos, playbooks, email sequences, and sales automation for better outcome for your business.",
     },
     {
       id: 5,
-      title: "Meta Tag Optimization",
+      title: "Value Delivery",
       content:
-        "We craft compelling meta titles and descriptions that improve your click-through rates and search engine rankings.",
+        "We’ll consistently deliver value to your existing customers to uncover new sales opportunities and enhance brand loyalty.",
     },
     {
       id: 6,
-      title: "Performance Tracking & Reporting",
+      title: "Add-ons",
       content:
-        "We monitor your website's performance after implementing our on-page optimizations, tracking key metrics like organic traffic, search rankings, and user engagement.",
+        "Quotes, sales automation, smart notifications, conversations inbox, and conversation routing.",
     },
   ];
   const cards = [
     {
-      title: "Website Audit Report",
+      title: "Comprehensive Strategy",
       description:
-        "A detailed on-page analysis of your website, highlighting strengths and weaknesses.",
+        "A customized inbound marketing approach that attracts, engages, and delights your target audience.",
       icon: web, // Tailwind icons can be used here
     },
     {
-      title: "Keyword Research & Strategy",
+      title: "Content Creation",
       description:
-        "A list of keywords, search volumes, competitor analysis, and a website integration plan.",
+        "Crafting high-quality, engaging content designed to boost traffic, nurture leads, and drive conversions.",
       icon: web1,
     },
     {
-      title: "On-Page Optimization Roadmap",
+      title: "Marketing Automation",
       description:
-        "A clear outline of the recommended on-page actions, timelines, and expected outcomes.",
+        "Streamlining your marketing processes with tools and strategies that enhance efficiency.",
       icon: note,
     },
     {
-      title: "Optimized Content",
+      title: "Ongoing Support",
       description:
-        "Rewritten or optimized content with targeted keywords for better search visibility and engagement.",
+        "Offering continuous support to ensure your inbound marketing strategy evolves with your business goals.",
       icon: note1,
     },
     {
-      title: "Technical SEO Implementation",
+      title: "Detailed Reporting",
       description:
-        "Resolution of technical issues like site speed, mobile optimization, and broken link fixes.",
+        "Providing regular, insightful reports that highlight campaign performance and offer actionable recommendations.",
       icon: pancil,
     },
-    {
-      title: "Meta Tag Optimization",
-      description:
-        "Engaging meta titles and descriptions designed to attract clicks from search results.",
-      icon: pen,
-    },
+    // {
+    //   title: "Meta Tag Optimization",
+    //   description:
+    //     "Engaging meta titles and descriptions designed to attract clicks from search results.",
+    //   icon: pen,
+    // },
   ];
   return (
     <>
@@ -143,10 +143,8 @@ const AccordingListInbiund = () => {
           Our <span className="text-primary-orange"> Process </span>
         </h1>
         <p className="text-xl flex justify-center text-gray-600 p-2">
-          Our on-page optimization process is designed to maximize your
-          website's potential and achieve tangible results. We follow a
-          comprehensive, data-driven approach to ensure your site performs at
-          its best:
+          Our Inbound Marketing methodology guides the way to elevating your ROI
+          and nurturing business expansion through a three-step approach:
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2">
@@ -175,12 +173,11 @@ const AccordingListInbiund = () => {
           Our Deliverables
         </h1>
         <p className="text-base sm:text-lg md:text-xl py-5    flex justify-center text-gray-600 ">
-          When you partner
+          When you{" "}
           <span className="font-semibold">
-            {" "}
-            with Difmo for on-page optimization,{" "}
+            choose our Inbound Marketing services,{" "}
           </span>
-          you can expect a comprehensive set of deliverables:
+          you receive:
         </p>
         {/* </div> */}
 

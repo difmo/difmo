@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import sco1 from "../assets/marketing/1.png";
-import sco2 from "../assets/marketing/2.png";
+import sco2 from "../assets/marketing/google.gif";
 
 import OurContact from "../component/OurContact";
 import app from "../assets/Deliver/app.svg";
@@ -22,40 +22,40 @@ export default function Pageseo() {
   const features = [
     {
       icon: "📊", // Replace with an appropriate icon or image
-      title: "Higher Search Rankings",
+      title: "Better Leads",
       description:
-        "We optimize your website's content to align with SEO algorithms, increasing visibility and organic traffic.",
+        "Connect and engage with the right audience—individuals genuinely interested in your products or services.",
     },
     {
       icon: "📈", // Replace with an appropriate icon or image
-      title: "Increased Organic Traffic",
+      title: "Cost-Effective",
       description:
-        "Our on-page strategies attract visitors actively searching for your products or services.",
+        "Optimize your budget by targeting the right audience and maximizing your return on investment.",
     },
     {
       icon: "🛡️", // Replace with an appropriate icon or image
-      title: "Improved User Experience",
+      title: "Fits Any Business Size",
       description:
-        "We improve your website's navigation, readability, and design to keep visitors engaged.",
+        "Whether you’re a growing startup or an established enterprise, our services are designed to deliver results for businesses of all sizes.",
     },
     {
       icon: "🎯", // Replace with an appropriate icon or image
-      title: "Targeted Keyword Optimization",
+      title: "Expert Assistance",
       description:
-        "We identify and integrate relevant keywords into your content to reach your ideal audience.",
+        "Our skilled team is here to guide you at every step, offering dedicated support and expert advice",
     },
     {
       icon: "📉", // Replace with an appropriate icon or image
-      title: "Data-Driven Insights",
+      title: "More Conversions",
       description:
-        "We track KPIs to measure the impact of our on-page efforts and refine strategies for improvement.",
+        "Transform more of your website visitors into loyal customers with precisely targeted Google Ads. ",
     },
-    {
-      icon: "💾",
-      title: "App Store Optimization (ASO)",
-      description:
-        "App title and description Keywords in app listing  Positive user reviews",
-    },
+    // {
+    //   icon: "💾",
+    //   title: "App Store Optimization (ASO)",
+    //   description:
+    //     "App title and description Keywords in app listing  Positive user reviews",
+    // },
   ];
   return (
     <>
@@ -65,15 +65,17 @@ export default function Pageseo() {
           {/* Left Section */}
           <div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-center md:text-left text-gray-800">
-              <span className="text-primary-orange">Boost Rankings</span> with
-              On-Page SEO Optimization
+              Maximize Your Impact, Multiply {""}
+              <span className="text-primary-orange">
+                Your Leads with Google Ads!{" "}
+              </span>{" "}
             </h1>
             <p className="text-base sm:text-lg text-gray-800 mb-6 text-center md:text-left">
-              Enhance your{" "}
+              Generate{" "}
               <span className="font-bold text-gray-800">
-                business’s SERP rankings
+                high-quality leads with precision-targeted Google Ads
               </span>{" "}
-              with our expert on-page SEO optimization.
+              powered by our expert services!
             </p>
             <div className="flex justify-center md:justify-start gap-4">
               <button className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition">
@@ -116,18 +118,16 @@ export default function Pageseo() {
 
         <div className="w-full">
           <h2 className="font-bold text-3xl md:text-5xl leading-normal px-2  py-4 text-gray-800">
-            Navigating success with strategic{" "}
-            <span className="text-primary-orange">
-              Search Engine Optimization
-            </span>
+            Achieve success with expertly crafted{" "}
+            <span className="text-primary-orange">Google Ads strategies!</span>
           </h2>
           <p className="text-xl text-gray-600  py-4 px-7">
-            Difmo's on-page specialists are your partners in digital success. We
-            understand the intricacies of search engines and user behavior. We
-            work closely with you to understand your goals, target audience, and
-            brand voice. Through meticulous audits, keyword research, content
-            optimization, and technical enhancements, we transform your website
-            into a high-performing asset that delivers measurable results.
+            Unlock your business's potential with our expert Google Ads lead
+            generation services. We design and run highly effective campaigns
+            that connect you with the right audience and convert them into
+            valuable leads. Our goal is to drive consistent growth for your
+            business by delivering a steady stream of high-quality leads
+            tailored to your needs.
           </p>
           <button
             className="bg-deep-blue border-2 border-gray-400  text-center text-white rounded-xl p-2 flex justify-center "
@@ -141,7 +141,7 @@ export default function Pageseo() {
 
       <div>
         <div className=" py-10 px-6">
-          <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="container justify-center mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (
               <div
                 key={index}
@@ -159,9 +159,9 @@ export default function Pageseo() {
           </div>
         </div>
       </div>
-     <AccordingListads/>
-     <Faqads/>
-     <Seovedioads/>
+      <AccordingListads />
+      <Faqads />
+      {/* <Seovedioads /> */}
       <OurContact />
     </>
   );

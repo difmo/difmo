@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 // import sco1 from "../assets/Deliver/app.svg";
-import sco2 from "../assets/marketing/2.png";
+import sco2 from "../assets/marketing/meta.png";
 import AccordionList from "../component/AccordionList";
 
 import OurContact from "../component/OurContact";
@@ -10,6 +10,7 @@ import app from "../assets/Deliver/app.svg";
 import AccordingListMeta from "../component/metaAds/AccordingListMeta";
 import FaqMeta from "../component/metaAds/FaqMeta";
 import Seovediometa from "../component/metaAds/Seovediometa";
+import Contactus from "../component/Contactus";
 export default function Pageseo() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -23,40 +24,40 @@ export default function Pageseo() {
   const features = [
     {
       icon: "📊", // Replace with an appropriate icon or image
-      title: "Higher Search Rankings",
+      title: "Better Leads",
       description:
-        "We optimize your website's content to align with SEO algorithms, increasing visibility and organic traffic.",
+        "Connect with individuals genuinely interested in your products or services for higher conversion rates.",
     },
     {
       icon: "📈", // Replace with an appropriate icon or image
-      title: "Increased Organic Traffic",
+      title: "Smart Spending",
       description:
-        "Our on-page strategies attract visitors actively searching for your products or services.",
+        "Maximize your ad budget by targeting the right audience and ensuring cost-effective campaigns.",
     },
     {
       icon: "🛡️", // Replace with an appropriate icon or image
-      title: "Improved User Experience",
+      title: "Fits All Sizes",
       description:
-        "We improve your website's navigation, readability, and design to keep visitors engaged.",
+        " Our services are flexible and scalable, supporting businesses at any stage of growth.",
     },
     {
       icon: "🎯", // Replace with an appropriate icon or image
-      title: "Targeted Keyword Optimization",
+      title: "Expert Support",
       description:
-        "We identify and integrate relevant keywords into your content to reach your ideal audience.",
+        "Benefit from our experienced team, providing guidance and support throughout your campaign journey.",
     },
     {
       icon: "📉", // Replace with an appropriate icon or image
-      title: "Data-Driven Insights",
+      title: "More Sales",
       description:
-        "We track KPIs to measure the impact of our on-page efforts and refine strategies for improvement.",
+        "Drive higher sales and conversions through expertly targeted ads that resonate with your audience.",
     },
-    {
-      icon: "💾",
-      title: "App Store Optimization (ASO)",
-      description:
-        "App title and description Keywords in app listing  Positive user reviews",
-    },
+    // {
+    //   icon: "💾",
+    //   title: "App Store Optimization (ASO)",
+    //   description:
+    //     "App title and description Keywords in app listing  Positive user reviews",
+    // },
   ];
   return (
     <>
@@ -65,16 +66,18 @@ export default function Pageseo() {
         <div className="container mx-auto px-6 md:px-12 lg:px-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left Section */}
           <div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-center md:text-left text-gray-800">
-              <span className="text-primary-orange">Boost Rankings</span> with
-              Meta-ads SEO Optimization
+            <h1 className="text-3xl sm:text-4xl md:text-5xl  font-bold pb-5 text-center md:text-left text-gray-800">
+              Maximize Your Reach, Multiply{" "}
+              <span className="text-primary-orange">
+                Your Leads with Meta Ads!{" "}
+              </span>{" "}
             </h1>
             <p className="text-base sm:text-lg text-gray-800 mb-6 text-center md:text-left">
-              Enhance your{" "}
+              Generate designed to grow your business.{" "}
               <span className="font-bold text-gray-800">
-                business’s SERP rankings
+                top-quality leads with our expert Meta ad services,{" "}
               </span>{" "}
-              with our expert on-page SEO optimization.
+              designed to grow your business.
             </p>
             <div className="flex justify-center md:justify-start gap-4">
               <button className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition">
@@ -118,17 +121,13 @@ export default function Pageseo() {
         <div className="w-full">
           <h2 className="font-bold text-3xl md:text-5xl leading-normal px-2  py-4 text-gray-800">
             Navigating success with strategic{" "}
-            <span className="text-primary-orange">
-              Search Engine Optimization
-            </span>
+            <span className="text-primary-orange">Meta ads </span>
           </h2>
           <p className="text-xl text-gray-600  py-4 px-7">
-            Difmo's on-page specialists are your partners in digital success. We
-            understand the intricacies of search engines and user behavior. We
-            work closely with you to understand your goals, target audience, and
-            brand voice. Through meticulous audits, keyword research, content
-            optimization, and technical enhancements, we transform your website
-            into a high-performing asset that delivers measurable results.
+            Unlock new growth for your business with our Meta ad services. We
+            create and manage ad campaigns that attract the right customers and
+            help turn them into loyal clients. Our goal is to deliver a steady
+            flow of leads that match your business needs.
           </p>
           <button
             className="bg-deep-blue border-2 border-gray-400  text-center text-white rounded-xl p-2 flex justify-center "
@@ -162,8 +161,8 @@ export default function Pageseo() {
       </div>
       <AccordingListMeta />
       <FaqMeta />
-      <Seovediometa />
-      <OurContact />
+      {/* <Seovediometa /> */}
+      <Contactus />
     </>
   );
 }

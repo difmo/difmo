@@ -3,34 +3,31 @@ import { motion, useInView } from "framer-motion";
 
 const FaqInbiuonds = [
   {
-    question:
-      "What makes Difmo on-page optimization different from other providers?",
+    question: "Where can Inbound Marketing be applied?",
     answer:
-      " we combine unparalleled technical expertise with a deep understanding of your business objectives to craft strategies tailored to your unique needs. Our data-driven approach ensures continuous optimization, delivering measurable outcomes and maximizing the ROI of your investment. Partner with us to transform your vision into impactful solutions that drive growth and success.",
+      " Inbound marketing can be applied across various platforms, including your website, landing pages, social media, email campaigns, and more. It's effective for attracting visitors, converting leads, closing deals, and delighting customers.",
   },
   {
-    question: "Will difmo's on-page services work for my industry?",
+    question: "How do you measure the success of Inbound Marketing campaigns?",
     answer:
-      "Absolutely! Difmo Technologies offers on-page services that are tailored to meet the needs of any industry. Our team takes the time to understand your business goals, target audience, and competitive landscape to craft strategies that work specifically for your sector. Whether you're in e-commerce, healthcare, education, technology, or another field, our customized solutions are designed to drive results and help your business thrive.",
+      "We measure the success of inbound marketing campaigns by tracking key metrics such as website traffic, lead generation, conversion rates, and customer engagement. We provide regular reports to show progress and identify areas for improvement.",
   },
   {
-    question:
-      "How involved do I need to be in the on-page optimization process?",
+    question: "How long does it take to see results from Inbound Marketing?",
     answer:
-      "At Difmo Technologies, your involvement in the on-page optimization process is flexible and tailored to your preferences. We handle the technical and strategic work, requiring your input mainly during the initial stages to understand your business goals and for occasional feedback on recommendations. Beyond that, we take care of implementation, updates, and performance tracking, keeping you informed every step of the way.",
+      "The timeline for seeing results from inbound marketing can vary depending on your industry, goals, and the competitiveness of your market. However, you can typically expect to see initial improvements in traffic and engagement within a few months, with more substantial results over the course of 6-12 months.",
   },
   {
-    question:
-      "Does difmo offer other SEO services besides on-page optimization?",
+    question: "What kind of content do you create for Inbound Marketing?",
     answer:
-      "Yes, Difmo Technologies offers a range of SEO services beyond on-page optimization. Their comprehensive SEO solutions include off-page optimization, such as link building and social media integration, as well as technical SEO, focusing on improving website speed, mobile-friendliness, and crawlability. They also provide keyword research, competitor analysis, content marketing strategies, and local SEO to enhance visibility in regional searches. ",
+      "We create a wide range of content, including blog posts, ebooks, whitepapers, infographics, videos, social media posts, and more. Each piece of content is designed to attract, engage, and delight your audience at different stages of their buyer's journey.",
   },
-  {
-    question:
-      "How do I get started with Difmo's on-page optimization services?",
-    answer:
-      "simply contact their team through their website or provided channels to discuss your needs. They will conduct an initial consultation to understand your goals and perform a detailed website audit to identify optimization opportunities, such as improving meta tags, headers, keyword usage, and content structure. Based on this analysis, they’ll provide a customized proposal outlining their strategy and pricing.",
-  },
+  //   {
+  //     question:
+  //       "How do I get started with Difmo's on-page optimization services?",
+  //     answer:
+  //       "simply contact their team through their website or provided channels to discuss your needs. They will conduct an initial consultation to understand your goals and perform a detailed website audit to identify optimization opportunities, such as improving meta tags, headers, keyword usage, and content structure. Based on this analysis, they’ll provide a customized proposal outlining their strategy and pricing.",
+  //   },
 ];
 
 const FaqInbiuond = () => {

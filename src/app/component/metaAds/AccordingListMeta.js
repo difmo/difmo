@@ -1,5 +1,5 @@
 import { useState } from "react";
-import acco1 from "../../assets/marketing/1.png";
+import acco1 from "../../assets/marketing/meta.png";
 import Image from "next/image";
 import web from "../../assets/Deliver/code1.svg";
 import web1 from "../../assets/Deliver/serch.svg";
@@ -62,76 +62,77 @@ const AccordingListMeta = () => {
   const accordionData = [
     {
       id: 1,
-      title: "In-Depth Website Audit",
+      title: " SetupStrategy",
       content:
-        "We begin by thoroughly analyzing your website's current on-page elements, identifying areas for improvement and opportunities for optimization.",
+        " We begin by learning about your business and who your ideal customers are. Then, we create a custom plan for your ads.",
     },
     {
       id: 2,
-      title: "Keyword Research & Strategy",
+      title: "Ad Creation",
       content:
-        "We conduct extensive research to identify relevant keywords that align with your target audience's search intent. Our tailored keyword strategy incorporates these terms strategically.",
+        " Our creative team designs eye-catching ads with clear, persuasive messages.",
     },
     {
       id: 3,
-      title: "Content Optimization",
+      title: "Targeting the Right Audience",
       content:
-        "We optimize your website content to ensure it is engaging, informative, and SEO-friendly, driving more organic traffic.",
+        " We use Meta’s advanced tools to make sure your ads reach the right people.",
     },
     {
       id: 4,
-      title: "Technical SEO Enhancement",
+      title: "Launch & Monitor",
       content:
-        "Our team ensures your website is technically sound by optimizing page speed, mobile responsiveness, and other critical elements.",
+        " We launch your ads and keep a close eye on how they’re performing.",
     },
     {
       id: 5,
-      title: "Meta Tag Optimization",
+      title: "Ongoing Improvements",
       content:
-        "We craft compelling meta titles and descriptions that improve your click-through rates and search engine rankings.",
+        "We adjust your ads as needed to keep improving their performance.",
     },
     {
       id: 6,
-      title: "Performance Tracking & Reporting",
+      title: "Clear Reporting",
       content:
-        "We monitor your website's performance after implementing our on-page optimizations, tracking key metrics like organic traffic, search rankings, and user engagement.",
+        "You’ll get easy-to-understand reports showing how well your ads are doing.",
     },
   ];
   const cards = [
     {
-      title: "Website Audit Report",
+      title: "Custom Meta Ad Campaigns",
       description:
-        "A detailed on-page analysis of your website, highlighting strengths and weaknesses.",
+        "Tailored ad campaigns on Meta platforms, strategically crafted to align with your specific business objectives.",
       icon: web, // Tailwind icons can be used here
     },
+
     {
-      title: "Keyword Research & Strategy",
+      title: "Engaging Ad Designs",
       description:
-        "A list of keywords, search volumes, competitor analysis, and a website integration plan.",
-      icon: web1,
-    },
-    {
-      title: "On-Page Optimization Roadmap",
-      description:
-        "A clear outline of the recommended on-page actions, timelines, and expected outcomes.",
+        "Visually appealing images and compelling messages crafted to capture attention and drive interaction.",
       icon: note,
     },
     {
-      title: "Optimized Content",
+      title: "Targeted Ads",
       description:
-        "Rewritten or optimized content with targeted keywords for better search visibility and engagement.",
+        "We optimize your ads to reach the ideal audience, ensuring high-quality leads and better conversions.",
       icon: note1,
     },
     {
-      title: "Technical SEO Implementation",
+      title: "Performance Tracking",
       description:
-        "Resolution of technical issues like site speed, mobile optimization, and broken link fixes.",
+        "We monitor your ads in real-time, providing immediate insights and adjustments to maximize results.",
       icon: pancil,
     },
     {
-      title: "Meta Tag Optimization",
+      title: "Detailed Reports",
       description:
-        "Engaging meta titles and descriptions designed to attract clicks from search results.",
+        "Clear, concise reports that highlight your campaign's performance, key results, and areas for improvement.",
+      icon: pen,
+    },
+    {
+      title: "Continuous Support",
+      description:
+        "Our dedicated team offers ongoing assistance to ensure your campaign's success and optimize performance.",
       icon: pen,
     },
   ];
@@ -142,10 +143,8 @@ const AccordingListMeta = () => {
           Our <span className="text-primary-orange"> Process </span>
         </h1>
         <p className="text-xl flex justify-center text-gray-600 p-2">
-          Our on-page optimization process is designed to maximize your
-          website's potential and achieve tangible results. We follow a
-          comprehensive, data-driven approach to ensure your site performs at
-          its best:
+          We make it easy to run successful Meta ad campaigns. Here’s how it
+          works:
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2">
@@ -174,12 +173,12 @@ const AccordingListMeta = () => {
           Our Deliverables
         </h1>
         <p className="text-base sm:text-lg md:text-xl py-5    flex justify-center text-gray-600 ">
-          When you partner
+          When you choose our{" "}
           <span className="font-semibold">
             {" "}
-            with Difmo for on-page optimization,{" "}
+            meta ads services and decided to work with us,{" "}
           </span>
-          you can expect a comprehensive set of deliverables:
+          here’s what you’ll get:
         </p>
         {/* </div> */}
 

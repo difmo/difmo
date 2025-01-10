@@ -3,33 +3,30 @@ import { motion, useInView } from "framer-motion";
 
 const faqs = [
   {
-    question:
-      "What makes Difmo on-page optimization different from other providers?",
+    question: "How do you find the right audience for my Google Ads?",
     answer:
-      " we combine unparalleled technical expertise with a deep understanding of your business objectives to craft strategies tailored to your unique needs. Our data-driven approach ensures continuous optimization, delivering measurable outcomes and maximizing the ROI of your investment. Partner with us to transform your vision into impactful solutions that drive growth and success.",
+      " We research your market and understand your business goals to identify the best audience. We then use Google Ads' targeting tools to show your ads to the right people.",
   },
   {
-    question: "Will difmo's on-page services work for my industry?",
+    question: "What results can I expect from your lead generation services?",
     answer:
-      "Absolutely! Difmo Technologies offers on-page services that are tailored to meet the needs of any industry. Our team takes the time to understand your business goals, target audience, and competitive landscape to craft strategies that work specifically for your sector. Whether you're in e-commerce, healthcare, education, technology, or another field, our customized solutions are designed to drive results and help your business thrive.",
+      "Results vary, but our clients typically see an improvement in the quality of their leads, higher conversion rates, and better returns on their investment.",
   },
   {
-    question:
-      "How involved do I need to be in the on-page optimization process?",
+    question: "How do you measure the success of the Google Ads campaigns?",
     answer:
-      "At Difmo Technologies, your involvement in the on-page optimization process is flexible and tailored to your preferences. We handle the technical and strategic work, requiring your input mainly during the initial stages to understand your business goals and for occasional feedback on recommendations. Beyond that, we take care of implementation, updates, and performance tracking, keeping you informed every step of the way.",
+      "We track important numbers like clicks, conversions, and the cost per lead. We share these insights with you through regular reports.",
   },
   {
-    question:
-      "Does difmo offer other SEO services besides on-page optimization?",
+    question: "Can you manage my existing Google Ads account?",
     answer:
-      "Yes, Difmo Technologies offers a range of SEO services beyond on-page optimization. Their comprehensive SEO solutions include off-page optimization, such as link building and social media integration, as well as technical SEO, focusing on improving website speed, mobile-friendliness, and crawlability. They also provide keyword research, competitor analysis, content marketing strategies, and local SEO to enhance visibility in regional searches. ",
+      "Yes, we can take over your existing Google Ads account, improve its performance, and help you get better results. ",
   },
   {
     question:
-      "How do I get started with Difmo's on-page optimization services?",
+      "How soon will I see results?",
     answer:
-      "simply contact their team through their website or provided channels to discuss your needs. They will conduct an initial consultation to understand your goals and perform a detailed website audit to identify optimization opportunities, such as improving meta tags, headers, keyword usage, and content structure. Based on this analysis, they’ll provide a customized proposal outlining their strategy and pricing.",
+      "Most clients start seeing better leads and conversions within a few weeks of launching their campaign. We continually optimize to ensure long-term success.",
   },
 ];
 

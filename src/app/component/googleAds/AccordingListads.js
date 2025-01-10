@@ -1,5 +1,5 @@
 import { useState } from "react";
-import acco1 from "../../assets/marketing/1.png";
+import acco1 from "../../assets/marketing/google.gif";
 import Image from "next/image";
 
 import web from "../../assets/Deliver/code1.svg";
@@ -63,76 +63,76 @@ const AccordingListads = () => {
   const accordionData = [
     {
       id: 1,
-      title: "In-Depth Website Audit",
+      title: "Understanding Your Business",
       content:
-        "We begin by thoroughly analyzing your website's current on-page elements, identifying areas for improvement and opportunities for optimization.",
+        "We begin by gaining a deep understanding of your business goals and target audience. Then, we craft a tailored plan to ensure optimal results for your Google Ads campaign. ",
     },
     {
       id: 2,
-      title: "Keyword Research & Strategy",
+      title: "Creating the Ads",
       content:
-        "We conduct extensive research to identify relevant keywords that align with your target audience's search intent. Our tailored keyword strategy incorporates these terms strategically.",
+        "Our team crafts compelling ads that capture attention and inspire action, whether it’s clicking through, signing up, or making a purchase.",
     },
     {
       id: 3,
-      title: "Content Optimization",
+      title: "Targeting the Right Audience",
       content:
-        "We optimize your website content to ensure it is engaging, informative, and SEO-friendly, driving more organic traffic.",
+        "We leverage Google’s powerful tools to ensure your ads reach the people most likely to be interested in your business, maximizing relevance and engagement.",
     },
     {
       id: 4,
-      title: "Technical SEO Enhancement",
+      title: "Launching the Campaign",
       content:
-        "Our team ensures your website is technically sound by optimizing page speed, mobile responsiveness, and other critical elements.",
+        "We launch your ads on Google and closely monitor their performance to ensure optimal results. ",
     },
     {
       id: 5,
-      title: "Meta Tag Optimization",
+      title: "Continuous Optimization",
       content:
-        "We craft compelling meta titles and descriptions that improve your click-through rates and search engine rankings.",
+        "We consistently refine and improve your campaign to achieve even better results over time. ",
     },
     {
       id: 6,
-      title: "Performance Tracking & Reporting",
+      title: "Keeping You Informed",
       content:
-        "We monitor your website's performance after implementing our on-page optimizations, tracking key metrics like organic traffic, search rankings, and user engagement.",
+        "We provide clear, easy-to-understand reports on your ad performance, along with actionable insights for continuous improvement.",
     },
   ];
   const cards = [
     {
-      title: "Website Audit Report",
+      title: "Custom Campaign",
       description:
-        "A detailed on-page analysis of your website, highlighting strengths and weaknesses.",
+        "A personalized Google Ads strategy crafted to align perfectly with your unique business goals and target audience.",
       icon: web, // Tailwind icons can be used here
     },
     {
-      title: "Keyword Research & Strategy",
+      title: "Precise Targeting",
       description:
-        "A list of keywords, search volumes, competitor analysis, and a website integration plan.",
+        "We specialize in connecting with your ideal audience to deliver the highest quality leads for your business. ",
       icon: web1,
     },
     {
-      title: "On-Page Optimization Roadmap",
+      title: "Performance Tracking",
       description:
-        "A clear outline of the recommended on-page actions, timelines, and expected outcomes.",
+        "We track your ads in real time, delivering timely updates and making adjustments to ensure optimal results.",
       icon: note,
     },
     {
-      title: "Optimized Content",
+      title: "Clear Reports",
       description:
-        "Rewritten or optimized content with targeted keywords for better search visibility and engagement.",
+        "Actionable reports that clearly showcase campaign performance, highlighting key metrics and insights.",
       icon: note1,
     },
     {
-      title: "Technical SEO Implementation",
+      title: "Ongoing Support",
       description:
-        "Resolution of technical issues like site speed, mobile optimization, and broken link fixes.",
+        "Continuous assistance from our expert team, providing guidance to ensure campaign success.",
       icon: pancil,
     },
     {
-      title: "Meta Tag Optimization",
+      title: "Engaging Ads",
       description:
-        "Engaging meta titles and descriptions designed to attract clicks from search results.",
+        "Strategically designed ads that grab attention, spark interest, and encourage active engagement with your audience.",
       icon: pen,
     },
   ];
@@ -143,10 +143,8 @@ const AccordingListads = () => {
           Our <span className="text-primary-orange"> Process </span>
         </h1>
         <p className="text-xl flex justify-center text-gray-600 p-2">
-          Our on-page optimization process is designed to maximize your
-          website's potential and achieve tangible results. We follow a
-          comprehensive, data-driven approach to ensure your site performs at
-          its best:
+          Our streamlined process is designed to deliver the best results from
+          your Google Ads campaign:
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2">
