@@ -2,6 +2,10 @@
 
 import React from "react";
 import Image from "next/image";
+
+// import fqaQ from "../assets/backgrounds_images/mibileapp.png";
+// import webdevlopment from "../assets/webdevlopment .jpg";
+
 import Contactus from "../component/Contactus";
 
 const Mobiledevlopment = () => {
