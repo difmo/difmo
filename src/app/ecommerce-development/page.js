@@ -4,11 +4,9 @@ import React from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCogs, faUsers, faGlobe } from "@fortawesome/free-solid-svg-icons";
-import fqaQ from "../assets/backgrounds_images/mibileapp.png";
-import webdevlopment from "../assets/webdevlopment .jpg";
-import webimage from "../assets/dev.jpg";
-import software from "../assets/projectImages/sh.png";
-import appdev from "../assets/appdevs.png";
+// import webimage from "../assets/dev.jpg";
+// import software from "../assets/projectImages/sh.png";
+// import appdev from "../assets/appdevs.png";
 import apiint from "../assets/apiint.png";
 import crmimg from "../assets/crmimg.png";
 import consulating from "../assets/consulating.png";
@@ -23,18 +21,18 @@ const Mobiledevlopment = () => {
       id: 1,
       title: "Web Development",
       // imageUrl: webimage, // Add your image path here
-      imageUrl: software,
+      // imageUrl: software,
     },
     {
       id: 2,
       title: "Software development",
-      imageUrl: webimage, // Add your image path here
+      // imageUrl: webimage, // Add your image path here
       // imageUrl: software, // Add your image path here
     },
     {
       id: 3,
       title: "App development",
-      imageUrl: appdev, // Add your image path here
+      // imageUrl: appdev, // Add your image path here
     },
     {
       id: 4,
@@ -106,10 +104,10 @@ const Mobiledevlopment = () => {
       </div>
     </div>
 
-      <div className="mx-4 sm:mx-8 lg:mx-16 my-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="mx-4 my-20 sm:mx-8 lg:mx-16">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           <div className="col-span-2 rounded-lg">
-            <h2 className="md:text-3xl text-xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange mb-6">
+            <h2 className="mb-6 text-xl font-extrabold text-transparent md:text-3xl font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange">
             Elevating Your Business with Cutting-Edge eCommerce Solutions
             </h2>
             <p className="text-gray-700 text-[16px] leading-relaxed md:leading-loose tracking-wide text-justify">
@@ -117,7 +115,7 @@ const Mobiledevlopment = () => {
             </p>
           </div>
 
-          <div className="col-span-1 flex justify-center items-center">
+          <div className="flex items-center justify-center col-span-1">
             <Image
               src={fqaQ}
               alt="FAQ Illustration"
@@ -130,10 +128,10 @@ const Mobiledevlopment = () => {
         </div>
       </div>
 
-      <div className="bg-warm-gray py-2 pb-8">
+      <div className="py-2 pb-8 bg-warm-gray">
         <div className="mx-4 sm:mx-8 lg:mx-16">
           <div className="my-7">
-            <h2 className="md:text-3xl text-xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange mb-6">
+            <h2 className="mb-6 text-xl font-extrabold text-transparent md:text-3xl font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange">
             Mastering eCommerce Development Technologies for Your Success
             </h2>
             <p className="text-gray-700 px-4 sm:px-0 sm:pt-2 text-[16px] leading-relaxed md:leading-loose tracking-wide text-justify">
@@ -142,7 +140,7 @@ const Mobiledevlopment = () => {
           </div>
 
           <div className="flex justify-center py-8">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
               {cardData.map((card) => (
                 <div
                   key={card.id}
@@ -155,7 +153,7 @@ const Mobiledevlopment = () => {
                         alt={card.title}
                         width={100} // Set the width
                         height={100} // Set the height
-                        className="h-full w-full object-cover" // Add styling to the image
+                        className="object-cover w-full h-full" // Add styling to the image
                       />
                     </div>
 
@@ -163,7 +161,7 @@ const Mobiledevlopment = () => {
                       {card.title}
                     </h2>
                     <p className="text-gray-700 px-4 sm:px-0 sm:pt-2 text-[12px] leading-relaxed md:leading-loose tracking-wide text-justify">
-                      {/* <p className="font-concert text-start text-gray-700 leading-relaxed"> */}
+                      {/* <p className="leading-relaxed text-gray-700 font-concert text-start"> */}
                       {card.description}
                     </p>
                   </div>
@@ -173,8 +171,8 @@ const Mobiledevlopment = () => {
           </div>
         </div>
       </div>
-      <div className="py-2 pb-8   bg-warm-gray p-4 ">
-        <div className="rounded-lg shadow-2xl p-1">
+      <div className="p-4 py-2 pb-8 bg-warm-gray ">
+        <div className="p-1 rounded-lg shadow-2xl">
           <Contactus />
         </div>
       </div>

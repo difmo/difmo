@@ -74,10 +74,10 @@ const Mobiledevlopment = () => {
 
   return (
     <>
-      <div className="mx-4 sm:mx-8 lg:mx-28 my-20 pt-12">
+      <div className="pt-12 mx-4 my-20 sm:mx-8 lg:mx-28">
         <div className="">
           <div className="col-span-2 rounded-lg">
-            <h2 className="md:text-4xl text-xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange mb-6 flex justify-center">
+            <h2 className="flex justify-center mb-6 text-xl font-extrabold text-transparent md:text-4xl font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange">
               Mobile Development
             </h2>
             <p className="text-gray-700 text-[18px] leading-relaxed md:leading-loose tracking-wide text-justify  ">
@@ -95,8 +95,8 @@ const Mobiledevlopment = () => {
         </div>
       </div>
 
-      <div className="py-2 pb-8   bg-warm-gray p-4 ">
-        <div className="rounded-lg shadow-2xl p-1">
+      <div className="p-4 py-2 pb-8 bg-warm-gray ">
+        <div className="p-1 rounded-lg shadow-2xl">
           <Contactus />
         </div>
       </div>
@@ -135,10 +135,10 @@ const Mobiledevlopment = () => {
         </div>
       </div> */}
 
-      {/* <div className="mx-4 sm:mx-8 lg:mx-16 my-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {/* <div className="mx-4 my-20 sm:mx-8 lg:mx-16">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           <div className="col-span-2 rounded-lg">
-            <h2 className="md:text-3xl text-xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange mb-6">
+            <h2 className="mb-6 text-xl font-extrabold text-transparent md:text-3xl font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange">
               Elevating Your Business with Cutting-Edge Mobile App Solutions
             </h2>
             <p className="text-gray-700 text-[16px] leading-relaxed md:leading-loose tracking-wide text-justify">
@@ -160,7 +160,7 @@ const Mobiledevlopment = () => {
             </p>
           </div>
 
-          <div className="col-span-1 flex justify-center items-center"> */}
+          <div className="flex items-center justify-center col-span-1"> */}
       {/* <Image
               src={fqaQ}
               alt="FAQ Illustration"
@@ -180,10 +180,10 @@ const Mobiledevlopment = () => {
         </div>
       </div>
 
-      <div className="bg-warm-gray py-2 pb-8">
+      <div className="py-2 pb-8 bg-warm-gray">
         <div className="mx-4 sm:mx-8 lg:mx-16">
           <div className="my-7">
-            <h2 className="md:text-3xl text-xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange mb-6">
+            <h2 className="mb-6 text-xl font-extrabold text-transparent md:text-3xl font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange">
               Mastering Mobile Application Technologies for Your Success
             </h2>
             <p className="text-gray-700 px-4 sm:px-0 sm:pt-2 text-[16px] leading-relaxed md:leading-loose tracking-wide text-justify">
@@ -199,7 +199,7 @@ const Mobiledevlopment = () => {
           </div>
 
           <div className="flex justify-center py-8">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
               {cardData.map((card) => (
                 <div
                   key={card.id}
@@ -212,7 +212,7 @@ const Mobiledevlopment = () => {
                         alt={card.title}
                         width={100} // Set the width
                         height={100} // Set the height
-                        className="h-full w-full object-cover" // Add styling to the image
+                        className="object-cover w-full h-full" // Add styling to the image
                       />
                     </div>
 
@@ -220,7 +220,7 @@ const Mobiledevlopment = () => {
                       {card.title}
                     </h2>
                     <p className="text-gray-700 px-4 sm:px-0 sm:pt-2 text-[12px] leading-relaxed md:leading-loose tracking-wide text-justify">
-                      //* <p className="font-concert text-start text-gray-700 leading-relaxed"> *
+                      //* <p className="leading-relaxed text-gray-700 font-concert text-start"> *
                       {card.description}
                     </p>
                   </div>
