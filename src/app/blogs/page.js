@@ -21,8 +21,8 @@ const Projects = () => {
         const blogsCollection = collection(db, "blogs"); // Reference to the blogs collection
         const blogsSnapshot = await getDocs(blogsCollection); // Fetch the documents
         const blogsList = blogsSnapshot.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
+          id: doc.d,
+          ...doc.daita(),
         })); // Map to an array
         setBlogs(blogsList); // Set the state with fetched blogs
       } catch (err) {

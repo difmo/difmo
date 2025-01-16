@@ -1,21 +1,41 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from "react";
 import see1 from "../../assets/landing/landing1.png";
 import Image from "next/image";
+import OurContact from "../OurContact";
+import Link from "next/link";
+import RequestForm from "../RequestForm";
 
 const LandingPage = () => {
-  const [currentText, setCurrentText] = useState('');
-  const texts = ['Websites', 'Mobile Apps', 'Digital Solutions'];
+  const [currentText, setCurrentText] = useState("");
+  const texts = ["Websites", "Mobile Apps", "Digital Solutions"];
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const modalRef = useRef(null);
 
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
+
+  // Close modal when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        setIsModalOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   useEffect(() => {
     let index = 0;
 
     const type = () => {
       let charIndex = 0;
-      setCurrentText('');
+      setCurrentText("");
 
       const typeInterval = setInterval(() => {
         if (charIndex < texts.length) {
-          setCurrentText( texts[charIndex]);
+          setCurrentText(texts[charIndex]);
           charIndex++;
         } else {
           clearInterval(typeInterval);
@@ -40,148 +60,106 @@ const LandingPage = () => {
     };
 
     type();
-    return () => setCurrentText('');
+    return () => setCurrentText("");
   }, []);
-
+  const handleContactClick = () => {
+    // router.push("");
+    navigate("./ourcontact");
+  };
   return (
-    <div className="landing-page">
-      <div className="container">
+    <div className="landing-page bg-gradient-to-b from-gray-100 to-gray-200 py-12">
+      <div className="container  md:flex md:flex-wrap md:items-center md:justify-between md:max-w-7xl mx-auto px-4">
         {/* Text Section */}
-        <div className="text-content">
-          <h1>
-            <span className="highlight">Start, Build & Grow</span> your Business <br />
-            with <span className="highlight">{currentText}</span>
-          </h1>
-          <p>
-            Empowering Small Businesses: Build Stunning <span className="highlight">Websites</span>, 
-            Develop High-Performance <span className="highlight">Mobile Apps</span>, 
-            and Boost Growth with <span className="highlight">Expert SEO</span> & Digital Marketing Solutions.
+        <div className="text-content flex-1 my-8 ">
+          <div className="w-full flex justify-center">
+            <h1 className="text-4xl font-bold text-gray-800 mb-6 leading-relaxed">
+              <span className="bg-gradient-to-r from-red-400 to-purple-600 text-transparent bg-clip-text">
+                Start, Build & Grow
+              </span>{" "}
+              your Business with{" "}
+              <span className="bg-gradient-to-r from-red-400 to-purple-600 text-transparent bg-clip-text">
+                {currentText}
+              </span>
+            </h1>
+          </div>
+
+          <p className="text-2xl  text-gray-600 leading-relaxed mb-8">
+            Empowering Small Businesses: Build Stunning{" "}
+            <span className="bg-gradient-to-r from-red-400 to-purple-600 text-transparent bg-clip-text font-semibold">
+              Websites
+            </span>
+            , Develop High-Performance{" "}
+            <span className="bg-gradient-to-r from-red-400 to-purple-600 text-transparent bg-clip-text font-semibold">
+              Mobile Apps
+            </span>
+            , and Boost Growth with{" "}
+            <span className="bg-gradient-to-r from-red-400 to-purple-600 text-transparent bg-clip-text font-semibold">
+              Expert SEO
+            </span>{" "}
+            & Digital Marketing Solutions.
           </p>
-          <div className="buttons">
-            <button className="primary-btn">Let’s Talk</button>
-            <button className="secondary-btn">Pick a Plan</button>
+
+          <div className="flex flex-wrap gap-4">
+            <Link href={"/contact-us"}>
+              <button className="primary-btn bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300">
+                Let’s Talk
+              </button>
+            </Link>
+            <button
+              onClick={handleOpenModal}
+              className="flex items-center bg-red-500 text-white px-5 py-2 rounded-full hover:bg-red-600 transition duration-300"
+            >
+              <span>Request Demo</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-5 h-5 ml-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
           </div>
         </div>
-  
+
         {/* Image Section */}
-        <div className="image-content">
+        <div className="image-content flex justify-center text-center md:text-right mt-8 md:mt-0">
           <Image
             src={see1}
             alt="Business Illustration"
             width={500}
             height={500}
-            className="illustration"
+            className="mx-auto md:mx-0 justify-center"
           />
         </div>
       </div>
-  
-      {/* Styles */}
-      <style jsx>{`
-        .landing-page {
-          font-family: 'Arial', sans-serif;
-          background: linear-gradient(to bottom, #f9fafc, #eef2f7);
-          padding: 50px 20px;
-        }
-  
-        .container {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          max-width: 1200px;
-          margin: 0 auto;
-          flex-wrap: wrap; /* Make it responsive */
-        }
-  
-        .text-content {
-          flex: 1 1 50%;
-          margin: 20px;
-        }
-  
-        h1 {
-          font-size: clamp(2rem, 5vw, 3rem); /* Dynamic scaling */
-          line-height: 1.2;
-          margin-bottom: 20px;
-          font-weight: bold;
-          color: #333;
-        }
-  
-        .highlight {
-          background: linear-gradient(90deg, #ff6f61, #9c27b0);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-  
-        p {
-          font-size: clamp(1rem, 3vw, 1.3rem); /* Dynamic scaling */
-          line-height: 1.6;
-          margin-bottom: 30px;
-          color: #555;
-        }
-  
-        .buttons button {
-          padding: 12px 25px;
-          font-size: clamp(0.9rem, 2.5vw, 1rem); /* Dynamic scaling */
-          margin: 10px;
-          border: none;
-          border-radius: 25px;
-          cursor: pointer;
-          transition: background 0.3s;
-        }
-  
-        .primary-btn {
-          background-color: #007bff;
-          color: #fff;
-        }
-  
-        .primary-btn:hover {
-          background-color: #0056b3;
-        }
-  
-        .secondary-btn {
-          background-color: #f1f1f1;
-          color: #333;
-           background-color: #e0e0e0;
-          
-        }
-  
-        .secondary-btn:hover {
-          background-color: #e0e0e0;
-        }
-  
-        .image-content {
-          flex: 1 1 40%;
-          text-align: right;
-        }
-  
-        .illustration {
-          max-width: 100%;
-          height: auto;
-        }
-  
-        @media (max-width: 768px) {
-          .container {
-            flex-direction: column;
-          }
-  
-          .text-content {
-            text-align: center;
-          }
-  
-          .image-content {
-            text-align: center;
-            margin-top: 20px;
-          }
-        }
-  
-        @media (max-width: 480px) {
-          .buttons button {
-            padding: 10px 20px;
-          }
-        }
-      `}</style>
+
+      {/* Modal Section */}
+      {isModalOpen && (
+        <div className="fixed mt-16 inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div
+            className="modal-content bg-white rounded-lg shadow-lg p-6 max-w-lg relative"
+            ref={modalRef}
+          >
+            <button
+              className="absolute top-8 right-4 text-gray-600 hover:text-gray-800"
+              onClick={handleCloseModal}
+            >
+              &times;
+            </button>
+
+            <RequestForm />
+          </div>
+        </div>
+      )}
     </div>
   );
-  
 };
 
 export default LandingPage;
