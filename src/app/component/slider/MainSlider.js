@@ -35,7 +35,7 @@ const MainSlider = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-
+///
   const settings = {
     dots: true,
     infinite: true,

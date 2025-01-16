@@ -83,12 +83,12 @@ function RequestForm() {
   };
 
   return (
-    <div className="p-8 bg-white sm:w-full lg:w-2/4 md:w-2/4 ">
+    <div className="p-4 bg-white   ">
       <h2 className="mb-8 text-4xl font-extrabold text-center text-transparent bg-clip-text bg-secondary ">
         Request a Demo
       </h2>
-
-      <form onSubmit={handleSubmit} className="space-y-6">
+      {/* request page */}
+      <form onSubmit={handleSubmit} className="space-y-4">
         <CustomInput
           id="fullName"
           label="Full Name"
@@ -134,7 +134,7 @@ function RequestForm() {
         <CustomButton
           type="submit"
           label="Submit"
-          className="w-full py-2 text-base text-white bg-primary-orange hover:bg-[#ea130c9d] rounded transition duration-300 ease-in-out sm:py-3 sm:text-lg md:py-4 md:text-xl lg:py-5"
+          className="w-full py-2 text-base text-white bg-primary-orange hover:bg-[#ea130c9d] rounded transition duration-300 ease-in-out sm:py-3 sm:text-lg md:py-4 md:text-xl lg:py-2"
         />
       </form>
     </div>

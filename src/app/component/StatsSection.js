@@ -46,7 +46,10 @@ const StatsSection = () => {
             if (item.currentValue < targetValue) {
               return {
                 ...item,
-                currentValue: Math.min(item.currentValue + increment, targetValue),
+                currentValue: Math.min(
+                  item.currentValue + increment,
+                  targetValue
+                ),
               };
             }
             return item;
@@ -64,8 +67,12 @@ const StatsSection = () => {
   return (
     <div ref={sectionRef} className="py-12">
       <div className="text-center">
-        <h2 className="text-3xl font-bold sm:text-4xl">Why Choose Us?</h2>
-        <p className="mt-2 text-gray-600">Empowering businesses with scalable technology solutions.</p>
+        <h2 className="text-3xl text-gray-700 font-bold sm:text-4xl">
+          Why Choose Us?
+        </h2>
+        <p className="mt-2 text-gray-600">
+          Empowering businesses with scalable technology solutions.
+        </p>
       </div>
       <div className="grid grid-cols-2 gap-6 mt-8 sm:grid-cols-3 lg:grid-cols-6">
         {numbers.map((item, index) => (
