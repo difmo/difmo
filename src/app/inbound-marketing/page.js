@@ -77,7 +77,7 @@ export default function Pageseo() {
             <h1 className="mb-4 text-3xl font-bold text-center text-gray-800 sm:text-4xl md:text-5xl md:text-left line-">
               Upgrade Your
               <span className="ml-2 text-primary-orange">
-                  Marketing Approach
+                Marketing Approach
               </span>{" "}
               with Inbound Strategy!
             </h1>
@@ -98,15 +98,15 @@ export default function Pageseo() {
           </div>
 
           {/* Image Section */}
-                 <div className="image-content">
-                   <Image
-                     src={sco1}
-                     alt="Business Illustration"
-                     width={500}
-                     height={500}
-                     className="illustration"
-                   />
-                 </div>
+          <div className="image-content">
+            <Image
+              src={sco1}
+              alt="Business Illustration"
+              width={500}
+              height={500}
+              className="illustration"
+            />
+          </div>
         </div>
       </div>
 
@@ -135,12 +135,12 @@ export default function Pageseo() {
             and delighting your audience, we place your brand where your
             potential customers are actively seeking what you offer.
           </p>
-          <button
+          {/* <button
             className="flex justify-center p-2 text-center text-white border-2 border-gray-400 bg-deep-blue rounded-xl "
             onClick={openModal}
           >
-            {/* Get a Quote */}
-          </button>
+            Get a Quote
+          </button> */}
         </div>
       </div>
       {/*      */}

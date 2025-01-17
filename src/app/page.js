@@ -52,10 +52,10 @@ export default function Home() {
 
       {/* Get In Touch */}
       <div className="my-7 md:p-10 sm:mx-[2rem] md:my-3">
-        <h2 className="p-4 text-4xl font-extrabold md:text-3xl sm:p-0 font-lilita text-deep-blue">
+        <h2 className="p-4 text-4xl justify-center flex font-extrabold md:text-3xl sm:p-0 font-lilita text-deep-blue">
           Get In Touch
         </h2>
-        <p className="text-gray-700 px-4 sm:px-0 sm:pt-2 text-[16px] leading-relaxed md:leading-loose tracking-wide text-justify">
+        <p className="text-gray-700 px-4 md:px-10 pt-2 text-[16px] leading-relaxed md:leading-loose tracking-wide text-justify">
           At Difmo Technologies, we specialize in creating innovative,
           user-friendly mobile apps for Android and iOS. Our expert team
           delivers custom solutions that drive business success.

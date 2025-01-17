@@ -67,7 +67,7 @@ const StatsSection = () => {
   return (
     <div ref={sectionRef} className="py-12">
       <div className="text-center">
-        <h2 className="text-3xl text-gray-700 font-bold sm:text-4xl">
+        <h2 className="text-3xl text-deep-blue font-bold sm:text-4xl">
           Why Choose Us?
         </h2>
         <p className="mt-2 text-gray-600">

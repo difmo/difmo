@@ -101,16 +101,16 @@ const LandingPage = () => {
 
           <div className="flex flex-wrap gap-4">
             <Link href={"/contact-us"}>
-              <button className="primary-btn bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300">
+              <button className="px-6 py-3 text-white transition bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700">
                 Let’s Talk
               </button>
             </Link>
             <button
               onClick={handleOpenModal}
-              className="flex items-center bg-red-500 text-white px-5 py-2 rounded-full hover:bg-red-600 transition duration-300"
+              className="px-6 py-3 text-blue-600 transition border border-blue-600 rounded-lg shadow-lg hover:bg-blue-100"
             >
               <span>Request Demo</span>
-              <svg
+              {/* <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-5 h-5 ml-2"
                 fill="none"
@@ -123,7 +123,7 @@ const LandingPage = () => {
                   strokeWidth={2}
                   d="M9 5l7 7-7 7"
                 />
-              </svg>
+              </svg> */}
             </button>
           </div>
         </div>

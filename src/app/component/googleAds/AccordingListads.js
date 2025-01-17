@@ -2,7 +2,7 @@ import { useState } from "react";
 import acco1 from "../../assets/marketing/google.gif";
 import Image from "next/image";
 
-import web from "../../assets/Deliver/code1.svg";
+import web from "../../assets/Deliver/code2.svg";
 import web1 from "../../assets/Deliver/serch.svg";
 import note from "../../assets/Deliver/note.svg";
 import note1 from "../../assets/Deliver/note1.svg";
@@ -103,7 +103,7 @@ const AccordingListads = () => {
       title: "Custom Campaign",
       description:
         "A personalized Google Ads strategy crafted to align perfectly with your unique business goals and target audience.",
-      icon: web, // Tailwind icons can be used here
+      icon: web,
     },
     {
       title: "Precise Targeting",
