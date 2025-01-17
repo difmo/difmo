@@ -47,7 +47,7 @@ const Header = () => {
 
         {/* Hamburger Icon */}
         <button
-          className="text-2xl lg:hidden"
+          className="text-2xl dark:text-black lg:hidden"
           onClick={() => setIsMenuOpen(true)}
         >
           <HiOutlineMenu />
@@ -110,7 +110,7 @@ const Header = () => {
 
         {/* Popup Menu for Mobile */}
         {isMenuOpen && (
-          <div className="fixed inset-0 z-50 p-6 bg-white text-black">
+          <div className="fixed inset-0 z-50 p-6 bg-white  text-black">
             <div className="flex items-center justify-between mb-6">
               {/* Logo */}
               <Link href="/" className="flex items-center space-x-2">
@@ -119,27 +119,30 @@ const Header = () => {
                 </span>
               </Link>
               {/* Close Icon */}
-              <button className="text-3xl" onClick={() => setIsMenuOpen(false)}>
-                <HiOutlineX />
+              <button
+                className="text-3xl "
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <HiOutlineX className="text-black" />
               </button>
             </div>
 
             {/* Mobile Menu Links */}
-            <nav className="flex flex-col space-y-6">
-              <HeaderLink
+            <nav className="flex flex-col space-y-6 dark:text-black">
+              <Link
                 href="/"
                 isActive={isActive("/")}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
-              </HeaderLink>
-              <HeaderLink
+              </Link>
+              <Link
                 href="/about"
                 isActive={isActive("/about")}
                 onClick={() => setIsMenuOpen(false)}
               >
                 About Us
-              </HeaderLink>
+              </Link>
 
               <div>
                 <button
@@ -203,27 +206,27 @@ const Header = () => {
                   </div>
                 )}
               </div>
-              <HeaderLink
+              <Link
                 href="/projects"
                 isActive={isActive("/projects")}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Projects
-              </HeaderLink>
-              <HeaderLink
+              </Link>
+              <Link
                 href="/blogs"
                 isActive={isActive("/blogs")}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Blogs
-              </HeaderLink>
-              <HeaderLink
+              </Link>
+              <Link
                 href="/careers"
                 isActive={isActive("/careers")}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Careers
-              </HeaderLink>
+              </Link>
             </nav>
           </div>
         )}
@@ -277,14 +280,14 @@ const DropdownMenu = ({ title, isActive, items, closeMenu }) => {
           <ul className="py-2">
             {items.map((item) => (
               <li key={item.href}>
-                <Link
+                <div
                   href={item.href}
-                  // onClick={() => setIsMenuOpen(false)}
-                  onClick={closeMenu}
+                  onClick={() => setIsMenuOpen(false)}
+                  // onClick={closeMenu}
                   className="block px-4 py-2 hover:bg-gray-100 hover:text-primary-orange"
                 >
                   {item.label}
-                </Link>
+                </div>
               </li>
             ))}
           </ul>

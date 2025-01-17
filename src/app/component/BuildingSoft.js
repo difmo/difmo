@@ -9,7 +9,7 @@ const BuildingSoft = () => {
       <div className="grid items-center grid-cols-1 gap-8 md:grid-cols-2">
         {/* Text Section */}
         <div className="rounded-lg ">
-          <h2 className="mb-6 text-3xl font-bold leading-snug md:text-3xl highlight">
+          <h2 className="mb-6 text-3xl font-bold leading-snug md:text-3xl highlight bg-gradient-to-r from-red-400 to-purple-600 text-transparent bg-clip-text">
             Empowering with Cutting-Edge Software Solutions
           </h2>
           <p className="text-base leading-relaxed tracking-wide text-justify text-gray-700 md:text-lg">
