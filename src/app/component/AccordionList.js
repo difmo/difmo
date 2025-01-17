@@ -141,9 +141,12 @@ const AccordionList = () => {
       <div className=" bg-blue-50">
         {" "}
         <div className="px-16">
-          <h1 className="font-bold text-2xl md:text-5xl py-4 flex justify-center text-gray-800">
-            Our <span className="text-primary-orange"> Process </span>
-          </h1>
+          <div className="flex justify-center">
+            {" "}
+            <h1 className="font-bold text-2xl md:text-5xl py-4  text-gray-800">
+              Our <span className="text-primary-orange"> Process </span>
+            </h1>{" "}
+          </div>
           <p className="text-xl flex justify-center text-gray-600 p-2">
             Our on-page optimization process is designed to maximize your
             website's potential and achieve tangible results. We follow a
@@ -151,7 +154,7 @@ const AccordionList = () => {
             its best:
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 px-7">
           <div className="max-w-4xl mx-auto p-5">
             {accordionData.map((item) => (
               <Accordion
@@ -162,28 +165,24 @@ const AccordionList = () => {
               />
             ))}
           </div>
-          <div>
+          <div className="">
             <Image src={acco1} />
           </div>
         </div>
-        <div className=" flex justify-center py-3">
-          <p className="text-white bg-deep-blue py-2 px-4 rounded-xl border-2 border-gray-300">
-            Gat a Quote
-          </p>
-        </div>
         {/* Our Deliverables */}
         <div className="bg-gray-100 py-10">
-          <h1 className="font-bold text-2xl md:text-5xl flex justify-center py-2 text-gray-800 ">
+          <h1 className="font-bold text-2xl md:text-5xl flex justify-center py-2 text-deep-blue ">
             Our Deliverables
           </h1>
-          <p className="text-base sm:text-lg md:text-xl py-5    flex justify-center text-gray-600 ">
-            When you partner
-            <span className="font-semibold">
-              {" "}
-              with Difmo for on-page optimization,{" "}
-            </span>
-            you can expect a comprehensive set of deliverables:
-          </p>
+          <div className="flex justify-center">
+            <p className="text-base sm:text-lg md:text-xl py-5  text-gray-600 ">
+              When you partner{" "}
+              <span className="font-semibold">
+                with Difmo for on-page optimization,
+              </span>{" "}
+              you can expect a comprehensive set of deliverables:
+            </p>
+          </div>
           {/* </div> */}
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

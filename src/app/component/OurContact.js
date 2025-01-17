@@ -4,7 +4,6 @@ import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { db } from "../config/config"; // Ensure the Firebase setup is correct
 import { collection, addDoc, Timestamp } from "firebase/firestore";
 
-
 import Formcontect from "./OurContactForm";
 
 const OurContact = () => {
