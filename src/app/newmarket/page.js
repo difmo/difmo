@@ -7,6 +7,8 @@ import AccordionList from "../component/AccordionList";
 import FAQ from "../component/Faq";
 import Contact from "../contact-us/page";
 import RequestForm from "../component/RequestForm"; // Ensure this is correctly imported
+import Link from "next/link";
+import Contactus from "../component/Contactus";
 
 export default function Pageseo() {
   const [currentText, setCurrentText] = useState("");
@@ -128,9 +130,12 @@ export default function Pageseo() {
               >
                 Get a Quote
               </button>
-              <button className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg shadow-lg hover:bg-blue-100 transition">
+              <Link
+                href={"/contact-us"}
+                className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg shadow-lg hover:bg-blue-100 transition"
+              >
                 Book a Consultation
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -166,7 +171,7 @@ export default function Pageseo() {
 
       <AccordionList />
       <FAQ />
-      <Contact />
+      <Contactus />
 
       {/* Modal */}
       {isModalOpen && (

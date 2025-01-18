@@ -162,11 +162,11 @@ const AccordingListads = () => {
           <Image src={acco1} />
         </div>
       </div>
-      <div className=" flex justify-center py-3">
+      {/* <div className=" flex justify-center py-3">
         <p className="text-white bg-deep-blue py-2 px-4 rounded-xl border-2 border-gray-300">
           Gat a Quote
         </p>
-      </div>
+      </div> */}
       {/* Our Deliverables */}
       <div className="bg-gray-100 py-10">
         <h1 className="font-bold text-2xl md:text-5xl flex justify-center py-2 text-gray-800 ">

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import sco1 from "../assets/landing/landing1.png";
 import sco2 from "../assets/marketing/google.gif";
@@ -9,8 +9,12 @@ import app from "../assets/Deliver/app.svg";
 import AccordingListads from "../component/googleAds/AccordingListads";
 import Faqads from "../component/googleAds/Faqads";
 import Seovedioads from "../component/googleAds/Seovedioads";
+import Link from "next/link";
+import RequestForm from "../component/RequestForm";
+import Contactus from "../component/Contactus";
 export default function Pageseo() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const modalRef = useRef(null);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -19,6 +23,19 @@ export default function Pageseo() {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
+
+  // Close modal when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        setIsModalOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
   const features = [
     {
       icon: "📊", // Replace with an appropriate icon or image
@@ -64,7 +81,7 @@ export default function Pageseo() {
         <div className="container grid items-center grid-cols-1 gap-8 px-6 mx-auto md:px-12 lg:px-20 md:grid-cols-2">
           {/* Left Section */}
           <div>
-            <h1 className="mb-4 text-3xl font-bold text-center text-gray-800 sm:text-4xl md:text-5xl md:text-left">
+            <h1 className="mb-4 text-3xl font-bold leading-relaxed md:leading-tight text-center text-gray-800 sm:text-4xl md:text-5xl md:text-left">
               Maximize Your Impact, Multiply {""}
               <span className="text-primary-orange">
                 Your Leads with Google Ads!{" "}
@@ -77,26 +94,32 @@ export default function Pageseo() {
               </span>{" "}
               powered by our expert services!
             </p>
-            <div className="flex justify-center gap-4 md:justify-start">
-              <button className="px-6 py-3 text-white transition bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700">
+            <div className="flex justify-center md:justify-start gap-4">
+              <button
+                onClick={handleOpenModal}
+                className="bg-blue-600 text-white px-12 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition"
+              >
                 Get a Quote
               </button>
-              <button className="px-6 py-3 text-blue-600 transition border border-blue-600 rounded-lg shadow-lg hover:bg-blue-100">
+              <Link
+                href={"/contact-us"}
+                className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg shadow-lg hover:bg-blue-100 transition"
+              >
                 Book a Consultation
-              </button>
+              </Link>
             </div>
           </div>
 
           {/* Image Section */}
-                          <div className="image-content">
-                            <Image
-                              src={sco1}
-                              alt="Business Illustration"
-                              width={500}
-                              height={500}
-                              className="illustration"
-                            />
-                          </div>
+          <div className="image-content">
+            <Image
+              src={sco1}
+              alt="Business Illustration"
+              width={500}
+              height={500}
+              className="illustration"
+            />
+          </div>
         </div>
       </div>
 
@@ -115,7 +138,7 @@ export default function Pageseo() {
         {/* Content Section */}
 
         <div className="w-full">
-          <h2 className="px-2 py-4 text-3xl font-bold leading-normal text-gray-800 md:text-5xl">
+          <h2 className="px-2 py-4 text-3xl font-bold md:leading-tight text-gray-800 md:text-5xl">
             Achieve success with expertly crafted{" "}
             <span className="text-primary-orange">Google Ads strategies!</span>
           </h2>
@@ -127,12 +150,12 @@ export default function Pageseo() {
             business by delivering a steady stream of high-quality leads
             tailored to your needs.
           </p>
-          <button
+          {/* <button
             className="flex justify-center p-2 text-center text-white border-2 border-gray-400 bg-deep-blue rounded-xl "
             onClick={openModal}
           >
             Get a Quote
-          </button>
+          </button> */}
         </div>
       </div>
       {/*      */}
@@ -160,7 +183,24 @@ export default function Pageseo() {
       <AccordingListads />
       <Faqads />
       {/* <Seovedioads /> */}
-      <OurContact />
+      <Contactus />
+      {/* Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div
+            className="modal-content bg-white rounded-lg shadow-lg p-6 max-w-lg relative"
+            ref={modalRef}
+          >
+            <button
+              className="absolute top-4 right-4 text-gray-600 hover:text-gray-800"
+              onClick={handleCloseModal}
+            >
+              &times;
+            </button>
+            <RequestForm />
+          </div>
+        </div>
+      )}
     </>
   );
 }

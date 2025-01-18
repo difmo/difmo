@@ -161,12 +161,7 @@ const AccordingListInbiund = () => {
           <Image src={sco2} />
         </div>
       </div>
-      <div className="flex justify-center py-3 ">
-        <p className="px-8 py-2 text-white border-2 border-gray-300 bg-deep-blue rounded-xl">
-          GET STARTED
-        </p>
-      </div>
-      {/* Our Deliverables */}
+           {/* Our Deliverables */}
       <div className="py-10 bg-gray-100">
         <h1 className="flex justify-center py-2 text-2xl font-bold text-gray-800 md:text-5xl ">
           Our Deliverables

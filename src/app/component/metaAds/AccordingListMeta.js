@@ -164,13 +164,13 @@ const AccordingListMeta = () => {
           <Image src={sco1} />
         </div>
       </div>
-      <div className="flex justify-center py-3 ">
+      {/* <div className="flex justify-center py-3 ">
         <p className="px-4 py-2 text-white border-2 border-gray-300 bg-deep-blue rounded-xl">
           Gat a Quote
         </p>
-      </div>
+      </div> */}
       {/* Our Deliverables */}
-      <div className="py-10 bg-gray-100">
+      <div className="py-4 bg-gray-100">
         <h1 className="flex justify-center py-2 text-2xl font-bold text-gray-800 md:text-5xl ">
           Our Deliverables
         </h1>

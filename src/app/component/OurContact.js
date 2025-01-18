@@ -13,7 +13,7 @@ const OurContact = () => {
         <div className="container flex flex-col gap-8 mx-auto lg:flex-row">
           {/* Left section with image */}
 
-          <div className="p-8 bg-secondary border-secondary   rounded-[50px]  lg:w-2/3">
+          <div className="p-8 bg-secondary border-secondary rounded-2xl  md:rounded-[50px]  lg:w-2/3">
             <h2 className="mb-8 text-4xl font-extrabold text-center text-transparent text-white bg-clip-text">
               Quick Contact
             </h2>
