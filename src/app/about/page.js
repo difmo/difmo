@@ -90,7 +90,7 @@ const About = () => {
           </div>
           <div className="flex items-center justify-center col-span-1">
             <Image
-              // src={fqaQ}
+              src={fqaQ}
               alt="FAQ Illustration"
               className="w-full max-w-md bg-cover"
               priority
