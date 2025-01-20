@@ -7,6 +7,8 @@ import { faCogs, faUsers, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import fqaQ from "../assets/Deliver/a2.png";
 import about from "../assets/blogsvg/about.svg";
 import Link from "next/link";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import TeamSection from "../component/teamMembers";
 
 // Reusable Core Value Card Component
 const CoreValueCard = ({ icon, title, description }) => (
@@ -52,30 +54,23 @@ const About = () => {
   return (
     <>
       {/* Hero Section */}
-      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen">
-        <Image
-          src={about}
-          alt="About Illustration"
-          className="brightness-75"
-          fill
-          style={{ objectFit: "cover" }}
-          priority
-        />
-        <div className="absolute inset-0 flex flex-col items-center justify-center px-4 space-y-4 text-center sm:px-8 md:px-16">
-          <h1 className="text-3xl font-bold text-white sm:text-5xl md:text-6xl">
-            Leading Innovation, Empowering Growth
-          </h1>
-          <p className="text-lg text-white sm:text-xl md:text-2xl">
-            Transforming Ideas into Digital Realities
-          </p>
-        </div>
-      </div>
+      <section className="bg-blue-00 text-center text-gray-700 py-12">
+        <h1 className="bg-gradient-to-r from-red-400 to-purple-600 text-transparent bg-clip-text font-semibold text-5xl pb-2">
+          Technology at Work for You
+        </h1>
+        <p className=" text-3xl md:text-4xl font-medium py-2">
+          Providing the effective solution for your most complex problem
+        </p>
+        {/* <p className="text-sm font-light">
+          Automated Work + Faster Process = Happy Client
+        </p> */}
+      </section>
 
       {/* About Us Section */}
       <div className="mx-4 my-20 sm:mx-8 lg:mx-16">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           <div className="col-span-1">
-            <h2 className="mb-6 text-3xl font-extrabold text-deep-blue">
+            <h2 className="mb-6  text-2xl md:text-3xl font-extrabold text-deep-blue">
               Transforming Businesses Through Technology
             </h2>
             <p className="text-base leading-relaxed tracking-wide text-justify text-gray-700 md:leading-loose">
@@ -95,7 +90,7 @@ const About = () => {
           </div>
           <div className="flex items-center justify-center col-span-1">
             <Image
-              src={fqaQ}
+              // src={fqaQ}
               alt="FAQ Illustration"
               className="w-full max-w-md bg-cover"
               priority
@@ -122,7 +117,8 @@ const About = () => {
           </div>
         </div>
       </div>
-
+      {/* Meet Our Team */}
+      {/* <TeamSection /> */}
       {/* Call to Action */}
       <div className="px-2 py-10 text-center text-white bg-gradient-to-r from-deep-blue to-primary-orange">
         <h2 className="text-3xl font-extrabold sm:text-4xl">
@@ -143,48 +139,3 @@ const About = () => {
 };
 
 export default About;
-
-{
-  /* Meet Our Team */
-}
-//  <div className="py-6 sm:mx-8 lg:mx-16">
-//  <h1 className="text-3xl md:text-5xl font-extrabold py-5 text-center text-deep-blue">
-//    Meet Our Team
-//  </h1>
-//  <div className="flex py-5 border border-gray-300 rounded-md">
-//    <div className="w-1/2 flex justify-center">
-//      <Image
-//        src={fqaQ1}
-//        alt="Pritam Sharma"
-//        className="h-80 w-80 object-cover rounded-lg"
-//      />
-//    </div>
-//    <div className="w-1/2 px-4">
-//      <h1 className="text-3xl font-extrabold text-gray-700">
-//        Pritam Sharma
-//      </h1>
-//      <div className="flex gap-3 py-4">
-//        <Link href="https://www.linkedin.com">
-//          <FaLinkedin className="h-10 w-10 text-deep-blue hover:text-primary-orange" />
-//        </Link>
-//        <Link href="https://www.instagram.com">
-//          <FaInstagram className="h-10 w-10 text-red-500 hover:text-primary-orange" />
-//        </Link>
-//        <Link href="https://www.facebook.com">
-//          <FaFacebook className="h-10 w-10 text-deep-blue hover:text-primary-orange" />
-//        </Link>
-//      </div>
-//      <p className="text-gray-600 leading-7">
-//        As a Software Developer with a strong foundation in React Native,
-//        Flutter, and Node.js, I specialize in building high-performance
-//        mobile and web applications. With a passion for creating intuitive
-//        user experiences, I have honed my expertise in developing scalable
-//        and maintainable code for cross-platform applications. My ability
-//        to seamlessly integrate cutting-edge technologies ensures that the
-//        software I develop is not only functional but also optimized for
-//        speed and efficiency. I am eager to specialize in databases,
-//        particularly NoSQL, MongoDB, and Firebase, where I aim to leverage
-//      </p>
-//    </div>
-//  </div>
-// </div>

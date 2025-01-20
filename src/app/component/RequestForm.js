@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import CustomInput from "./CustomInput";
 import CustomButton from "./Buttons/CustomButton";
-import { db, firebase } from "../config/config";
-// import { db } from "."; // Import db (Firestore) from your Firebase setup
+import { db } from "../config/config"; // Assuming you're using Firestore
+import { collection, addDoc, serverTimestamp } from "firebase/firestore"; // Import Firestore methods
 
 function RequestForm() {
   const [formData, setFormData] = useState({
@@ -19,6 +19,8 @@ function RequestForm() {
     number: "",
     message: "",
   });
+
+  const [selectedOption, setSelectedOption] = useState(""); // State for dropdown selection
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -52,19 +54,32 @@ function RequestForm() {
       newErrors.message = "Message is required.";
       valid = false;
     }
-
+    if (id === "number" && /[^0-9]/.test(value)) {
+      return; // Prevent non-numeric input
+    }
     setErrors(newErrors);
     return valid;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Validate before submitting
     if (!validate()) {
       return;
     }
 
     try {
-      // Simulating a submission
+      // Firestore: Add a new document to the "requestsform" collection
+      await addDoc(collection(db, "requestForm"), {
+        fullName: formData.fullName,
+        email: formData.email,
+        number: formData.number,
+        message: formData.message,
+        projectType: selectedOption,
+        date: serverTimestamp(),
+      });
+
       console.log("Form submitted:", formData);
       alert("Message sent successfully!");
 
@@ -76,6 +91,7 @@ function RequestForm() {
         message: "",
         date: "",
       });
+      setSelectedOption(""); // Reset the selected dropdown option
     } catch (error) {
       console.error("Error sending data to Firebase: ", error);
       alert("Failed to send message. Please try again.");
@@ -83,12 +99,14 @@ function RequestForm() {
   };
 
   return (
-    <div className="p-4 bg-white   ">
-      <h2 className="mb-8 text-4xl font-extrabold text-center text-transparent bg-clip-text bg-secondary ">
+    <div className=" bg-white ">
+      <h2 className="my-2 text-4xl font-extrabold text-center text-transparent bg-clip-text px-2 bg-secondary">
         Request a Demo
       </h2>
-      {/* request page */}
-      <form onSubmit={handleSubmit} className="space-y-4">
+
+      {/* Request Form */}
+      <form onSubmit={handleSubmit} className="space-y-2 md:space-y-3 px-2">
+        {/* Full Name Input */}
         <CustomInput
           id="fullName"
           label="Full Name"
@@ -100,6 +118,7 @@ function RequestForm() {
           className="text-sm sm:text-base md:text-lg lg:text-xl"
         />
 
+        {/* Email Address Input */}
         <CustomInput
           id="email"
           label="Email Address"
@@ -111,9 +130,12 @@ function RequestForm() {
           className="text-sm sm:text-base md:text-lg lg:text-xl"
         />
 
+        {/* Mobile Number Input */}
         <CustomInput
           id="number"
           label="Mobile Number"
+          type="tel"
+          pattern="[0-9]{10}"
           placeholder="Enter your mobile number"
           value={formData.number}
           onChange={handleChange}
@@ -121,9 +143,35 @@ function RequestForm() {
           className="text-sm sm:text-base md:text-lg lg:text-xl"
         />
 
+        {/* Project Type Dropdown */}
+        <div>
+          <label
+            htmlFor="projectType"
+            className="block text-sm font-medium text-gray-800 mb-1"
+          >
+            Select Project Type
+          </label>
+          <select
+            id="projectType"
+            value={selectedOption}
+            onChange={(e) => setSelectedOption(e.target.value)}
+            className="appearance-none border-2 border-gray-300 w-full py-2.5 px-4 text-gray-800 leading-tight focus:outline-none focus:ring-1 focus:ring-primary-orange focus:border-primary-orange transition-all duration-300 ease-in-out rounded-md"
+          >
+            <option value="" disabled>
+              Choose a type
+            </option>
+            <option value="mobileApp">Mobile App</option>
+            <option value="website">Website</option>
+            <option value="seoService">SEO Service</option>
+            <option value="ecommerce">E-Commerce</option>
+          </select>
+        </div>
+
+        {/* Message Input */}
         <CustomInput
           id="message"
           label="Message"
+          type="textarea"
           placeholder="Enter your message"
           value={formData.message}
           onChange={handleChange}
@@ -131,6 +179,7 @@ function RequestForm() {
           className="text-sm sm:text-base md:text-lg lg:text-xl"
         />
 
+        {/* Submit Button */}
         <CustomButton
           type="submit"
           label="Submit"

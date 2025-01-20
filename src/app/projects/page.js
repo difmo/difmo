@@ -10,30 +10,31 @@ import Projects from "../our-projects/page";
 const About = () => {
   return (
     <>
-      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen">
-        {/* Image Component */}
+      <div>
+        <h1 className="text-2xl md:text-5xl flex justify-center text-deep-blue font-bold py-10  bg-gray-100">
+          Live Projects Showcase
+        </h1>
+      </div>
+      {/* <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen">
+   
         <Image
           src={about}
           alt="Contact Illustration"
           layout="fill"
           objectFit="cover"
-          className="brightness-75"
         />
 
-        {/* Text Overlay */}
+    
         <div className="absolute inset-0 flex flex-col items-center justify-center px-4 space-y-4 text-center sm:px-8">
-          <h1 className="text-2xl font-bold leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
+          <h1 className="text-2xl font-bold leading-tight text-gray-800 sm:text-4xl md:text-5xl lg:text-6xl">
             Live Projects Showcase
           </h1>
-          <p className="text-sm font-medium text-white sm:text-lg md:text-xl lg:text-2xl">
+          <p className="text-sm font-medium text-gray-800 sm:text-lg md:text-xl lg:text-2xl">
             Explore our impactful digital solutions
           </p>
         </div>
-        {/* Call to Action Button */}
-        {/* <button className="px-4 py-2 mt-6 font-semibold text-white transition duration-300 ease-in-out bg-orange-600 rounded-lg sm:px-6 sm:py-3 hover:bg-primary-orange">
-            Read Below More Product
-          </button> */}
-      </div>
+     
+      </div> */}
 
       <div className="px-6 py-12 bg-gray-100">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">

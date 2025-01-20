@@ -31,6 +31,7 @@ import j8 from "../assets/ourprojects/jyoti/j8.png";
 import j9 from "../assets/ourprojects/jyoti/j9.png";
 import j10 from "../assets/ourprojects/jyoti/j10.png";
 import j11 from "../assets/ourprojects/jyoti/j11.png";
+// import { descriptors } from "chart.js/dist/core/core.defaults";
 
 export const projects = [
   {
@@ -38,6 +39,7 @@ export const projects = [
     title: "DifEat",
     description:
       "DifEat offers a fast and reliable food and water delivery service right to your doorstep. With a user-friendly app, customers can easily browse through a wide variety of meals, snacks, and beverages. Whether you're craving local delicacies or need essentials delivered quickly, DifEat ensures timely service and affordable prices. The app's eco-friendly practices, such as minimizing packaging waste, along with its seamless user experience, make DifEat a top choice for a sustainable and convenient food delivery service.",
+    subdescriptors: "Why Choose DifEat?",
     image: [difeat],
     link: "https://www.difeat.com/",
   },

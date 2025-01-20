@@ -264,10 +264,10 @@ const Footer = () => {
           <Link href="/privacy-policy" className="mx-3 hover:underline">
             Privacy Policy
           </Link>
-          ||
+          {/* ||
           <Link href="/cookie-policy" className="mx-3 hover:underline">
             Cookie Policy
-          </Link>
+          </Link> */}
         </span>
       </div>
     </footer>

@@ -61,7 +61,7 @@ const BlogDetails = () => {
 
   return (
     <>
-      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen">
+      {/* <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen">
         <Image
           src={about}
           alt="Blog Header"
@@ -76,14 +76,14 @@ const BlogDetails = () => {
           <p className="mt-2 text-lg font-medium text-orange-300 sm:text-xl lg:text-2xl">
             Discover insights and inspiration on Difmo’s web development!
           </p>
-          {/* <button
+          <button
             className="px-4 py-2 mt-4 font-semibold text-white transition duration-300 ease-in-out bg-orange-600 rounded-lg sm:px-6 sm:py-3 hover:bg-primary-orange"
             aria-label="Explore more blogs"
           >
             Explore More Blogs
-          </button> */}
+          </button>
         </div>
-      </div>
+      </div> */}
 
       {/* Blog Content Section */}
       <div className="container mx-auto p-6 md:p-12">

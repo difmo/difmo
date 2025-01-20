@@ -8,14 +8,20 @@ import logo from "../assets/svgfiles/blacklogo1.svg";
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for popup menu
-  const pathname = usePathname(); // Current route for active styling
-  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false); // Mobile dropdown toggle
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
+  const pathname = usePathname();
+
   // Helper to determine if a link is active
   const isActive = (path) => pathname === path;
+
+  // Close all menus
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    closeDropdown();
+  };
+
+  // Close desktop dropdown
   const closeDropdown = () => {
     setIsDropdownOpen(false);
   };
@@ -64,19 +70,18 @@ const Header = () => {
           <DropdownMenu
             title="Services"
             isActive={isActive("/services")}
+            closeMenu={() => setIsMenuOpen(false)}
             items={[
               { href: "/web-development", label: "Web Development" },
               { href: "/mobile-development", label: "Mobile Development" },
-              // {
-              //   href: "/ecommerce-development",
-              //   label: "E-Commerce Development",
-              // },
-              { href: "/software-maintenance", label: "Software Maintenance" },
-              { href: "/software-testing", label: "Software Testing" },
+              {
+                href: "/software-maintenance",
+                label: "Software Maintenance Services",
+              },
+              { href: "/software-testing", label: "Software Testing Services" },
             ]}
-            // closeMenu={closeMenu}
-            closeMenu={() => setIsMenuOpen(false)}
           />
+
           <HeaderLink href="/projects" isActive={isActive("/projects")}>
             Projects
           </HeaderLink>
@@ -249,16 +254,17 @@ const HeaderLink = ({ href, isActive, children }) => (
   </Link>
 );
 
-const DropdownMenu = ({ title, isActive, items, closeMenu }) => {
+const DropdownMenu = ({ title, items, closeMenu }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
     <div
-      className="relative "
+      className="relative"
       onMouseEnter={() => setIsDropdownOpen(true)}
       onMouseLeave={() => setIsDropdownOpen(false)}
     >
-      <button className="flex items-center space-x-1 hover:text-primary-orange">
+      {/* Menu Title */}
+      <div className="flex items-center space-x-1 hover:text-primary-orange cursor-pointer">
         <span>{title}</span>
         <svg
           className="w-4 h-4"
@@ -274,20 +280,21 @@ const DropdownMenu = ({ title, isActive, items, closeMenu }) => {
             d="M19 9l-7 7-7-7"
           />
         </svg>
-      </button>
+      </div>
+
+      {/* Dropdown Menu */}
       {isDropdownOpen && (
         <div className="absolute left-0 w-56 pt-3 bg-white rounded-md shadow-lg top-full">
           <ul className="py-2">
             {items.map((item) => (
               <li key={item.href}>
-                <div
+                <a
                   href={item.href}
-                  onClick={() => setIsMenuOpen(false)}
-                  // onClick={closeMenu}
+                  onClick={closeMenu}
                   className="block px-4 py-2 hover:bg-gray-100 hover:text-primary-orange"
                 >
                   {item.label}
-                </div>
+                </a>
               </li>
             ))}
           </ul>
