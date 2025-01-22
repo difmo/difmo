@@ -10,12 +10,6 @@ import RequestForm from "../RequestForm"; // Assuming the path to your RequestFo
 // Dynamically import Slider
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
-// Import images
-import image1 from "../../assets/home1.jpg";
-import image2 from "../../assets/home2.jpg";
-import image3 from "../../assets/home3.jpg";
-import image4 from "../../assets/home4.jpg";
-
 const MainSlider = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const modalRef = useRef(null);
@@ -35,7 +29,7 @@ const MainSlider = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-///
+  ///
   const settings = {
     dots: true,
     infinite: true,
@@ -49,28 +43,28 @@ const MainSlider = () => {
 
   const images = [
     {
-      src: image1,
+      // src: image1,
       alt: "Slide 1",
       title: "Empower Your Digital Presence",
       description:
         "Build feature-rich web applications that drive engagement and elevate your brand.",
     },
     {
-      src: image2,
+      // src: image2,
       alt: "Slide 2",
       title: "Seamless Mobile App Development",
       description:
         "Deliver fast, user-friendly Android and iOS apps that create unforgettable experiences.",
     },
     {
-      src: image3,
+      // src: image3,
       alt: "Slide 3",
       title: "Unified Cross-Platform Solutions",
       description:
         "Build apps for mobile, web, and desktop simultaneously using cutting-edge technology stacks.",
     },
     {
-      src: image4,
+      // src: image4,
       alt: "Slide 4",
       title: "Custom Software Tailored to Scale",
       description:

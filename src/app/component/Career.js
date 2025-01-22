@@ -1,185 +1,227 @@
 "use client";
+
 import { useState } from "react";
-import { db } from "../config/config"; // Ensure the Firebase setup is correct
-import { collection, addDoc, Timestamp } from "firebase/firestore";
+import { useForm } from "react-hook-form";
+import { db, storage } from "../config/config";
+import "firebase/compat/storage"; // Ensure this is imported
 
-const Career = () => {
-  const [formData, setFormData] = useState({
-    position: "",
-    fullName: "",
-    email: "",
-    number: "",
-    dob: "",
-    gender: "",
-    address: "",
-    education: "",
-    graduation: "",
-    postGraduation: "",
-    ppgCourse: "",
-    certificates: "",
-    experience: "",
-    resume: "",
-  });
+function Career() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-  const [errors, setErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
 
-  const validate = () => {
-    const newErrors = {};
+  const onSubmit = async (data) => {
+    try {
+      let resumeUrl = "No file uploaded";
 
-    if (!formData.position) newErrors.position = "Position is required.";
-    if (!formData.fullName) newErrors.fullName = "Full name is required.";
-    if (!formData.email) {
-      newErrors.email = "Email is required.";
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = "Enter a valid email address.";
-    }
-    if (!formData.number) {
-      newErrors.number = "Phone number is required.";
-    } else if (!/^\d{10}$/.test(formData.number)) {
-      newErrors.number = "Phone number must be 10 digits.";
-    }
-    if (!formData.dob) newErrors.dob = "Date of birth is required.";
-    if (!formData.gender) newErrors.gender = "Gender is required.";
-    if (!formData.address) newErrors.address = "Address is required.";
-    if (!formData.education) newErrors.education = "Education is required.";
-    if (!formData.graduation)
-      newErrors.graduation = "Graduation details are required.";
-    if (!formData.postGraduation)
-      newErrors.postGraduation = "Post-graduation details are required.";
-    if (!formData.ppgCourse)
-      newErrors.ppgCourse = "Professional courses are required.";
-    if (!formData.certificates)
-      newErrors.certificates = "Certificates or skills are required.";
-    if (!formData.experience)
-      newErrors.experience = "Work experience is required.";
-    if (!formData.resume) {
-      newErrors.resume = "Resume or portfolio link is required.";
-    } else if (!/^https?:\/\/.+$/.test(formData.resume)) {
-      newErrors.resume = "Enter a valid URL for the resume.";
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0; // No errors
-  };
-
-  const handleChange = (e) => {
-    const { id, value } = e.target;
-    setFormData({ ...formData, [id]: value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (validate()) {
-      setIsSubmitting(true);
-      try {
-        await addDoc(collection(db, "jobApplications"), {
-          ...formData,
-          createdAt: Timestamp.now(),
-        });
-        alert("Application submitted successfully!");
-        setFormData({
-          position: "",
-          fullName: "",
-          email: "",
-          number: "",
-          dob: "",
-          gender: "",
-          address: "",
-          education: "",
-          graduation: "",
-          postGraduation: "",
-          ppgCourse: "",
-          certificates: "",
-          experience: "",
-          resume: "",
-        });
-      } catch (error) {
-        console.error("Error adding document: ", error);
-        alert("An error occurred while submitting your application.");
-      } finally {
-        setIsSubmitting(false);
+      // Check if a resume file is uploaded
+      if (data.resume && data.resume[0]) {
+        const file = data.resume[0];
+        const storageRef = storage.ref(`resumes/${file.name}`); // Use storage.ref() here
+        await storageRef.put(file); // Use put() for uploading files
+        resumeUrl = await storageRef.getDownloadURL(); // Use getDownloadURL() to get the file URL
       }
-    } else {
-      console.error("Validation errors:", errors);
+
+      // Add form data to Firestore
+      await db.collection("jobApplications").add({
+        position: data.position,
+        fullName: data.fullName,
+        email: data.email,
+        number: data.number,
+        dob: data.dob,
+        address: data.address,
+        state: data.state,
+        city: data.city,
+
+        gender: data.gender,
+        education: data.education,
+        experience: data.experience,
+        resume: resumeUrl,
+      });
+
+      setSubmitMessage("Form submitted successfully!");
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setSubmitMessage("Error submitting form, please try again.");
     }
   };
 
   return (
-    <div className="min-h-screen">
-      <div className="container grid grid-cols-1 gap-8 py-10 mx-auto md:grid-cols-1 md:px-36">
-        <div className="col-span-1 p-4 bg-white rounded-lg shadow-lg">
-          <h2 className="md:text-3xl text-xl font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange mb-6 text-center">
-            Apply for a Job
-          </h2>
-          <form className="text-gray-800" onSubmit={handleSubmit}>
-            {[
-              { id: "position", label: "Position to Apply for", type: "text" },
-              { id: "fullName", label: "Full Name", type: "text" },
-              { id: "email", label: "Email", type: "email" },
-              { id: "number", label: "Phone Number", type: "text" },
-              { id: "dob", label: "Date of Birth", type: "date" },
-              { id: "gender", label: "Gender", type: "text" },
-              { id: "address", label: "Address", type: "text" },
-              { id: "education", label: "Education", type: "text" },
-              { id: "graduation", label: "Graduation", type: "text" },
-              {
-                id: "postGraduation",
-                label: "Post-Graduation",
-                type: "text",
-              },
-              { id: "ppgCourse", label: "Professional Courses", type: "text" },
-              {
-                id: "certificates",
-                label: "Certificates/Skills",
-                type: "text",
-              },
-              { id: "experience", label: "Work Experience", type: "text" },
-              {
-                id: "resume",
-                label: "Resume/Portfolio Link",
-                type: "file",
-              },
-            ].map((field) => (
-              <div className="mb-4" key={field.id}>
-                <label
-                  htmlFor={field.id}
-                  className="block text-sm font-medium mb-2"
+    <div className="min-h-screen bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 flex justify-center text-gray-700 items-center px-4 py-10">
+      <div className="max-w-4xl w-full bg-white shadow-lg rounded-xl p-6 sm:p-10">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-pink-600 mb-6">
+          Apply for a Job
+        </h2>
+        <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
+          {[
+            {
+              id: "position",
+              label: "Position",
+              options: [
+                "--Select--",
+                "Software Development",
+                "Frontend Developer",
+                "Backend Developer",
+                "Full Stack Developer",
+                "Mobile App Developer",
+                "Web Developer",
+                "UI/UX Designer",
+                "Software Engineer",
+                "Other",
+              ],
+            },
+            { id: "fullName", label: "Full Name", type: "text" },
+            { id: "email", label: "Email", type: "email" },
+            { id: "number", label: "Phone Number", type: "text" },
+            { id: "dob", label: "Date of Birth", type: "date" },
+            { id: "address", label: "Address", type: "text" },
+            { id: "state", label: "State", type: "text" },
+            { id: "city", label: "City", type: "text" },
+
+            {
+              id: "gender",
+              label: "Gender",
+              options: ["--Select--", "Male", "Female", "Other"],
+            },
+            {
+              id: "education",
+              label: "Education",
+              options: [
+                "Select education",
+                "High School",
+                "Bachelor's",
+                "Master's",
+                "PhD",
+                "Other",
+              ],
+            },
+            {
+              id: "experience",
+              label: "Work Experience (Years)",
+              options: ["--Select--", 0, 1, 2, 3, 4, 5, 6],
+            },
+            { id: "resume", label: "Resume/Portfolio Upload", type: "file" },
+          ].map((field) => (
+            <div key={field.id} className="space-y-2">
+              <label
+                htmlFor={field.id}
+                className="block text-lg font-medium text-gray-700"
+              >
+                {field.label}
+              </label>
+              {field.options ? (
+                <select
+                  id={field.id}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-400 focus:outline-none"
+                  {...register(field.id, {
+                    required: `${field.label} is required.`,
+                  })}
                 >
-                  {field.label}
-                </label>
+                  {field.options.map((option, index) => (
+                    <option
+                      key={index}
+                      value={option === "--Select--" ? "" : option}
+                    >
+                      {option}
+                    </option>
+                  ))}
+                </select>
+              ) : field.type === "file" ? (
+                <input
+                  id={field.id}
+                  type="file"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-400 focus:outline-none"
+                  {...register(field.id, {
+                    required: `${field.label} is required.`,
+                    validate: (value) => {
+                      const file = value[0];
+                      if (!file) return "Resume is required.";
+                      const allowedFileTypes = [
+                        "application/pdf",
+                        "application/msword",
+                        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                      ];
+                      if (!allowedFileTypes.includes(file.type)) {
+                        return "File type must be PDF or DOC/DOCX";
+                      }
+                      if (file.size > 5 * 1024 * 1024) {
+                        return "File size must be under 5MB.";
+                      }
+                    },
+                  })}
+                />
+              ) : (
                 <input
                   id={field.id}
                   type={field.type}
-                  className="w-full px-4 py-2 border rounded-md"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-400 focus:outline-none"
                   placeholder={`Enter ${field.label.toLowerCase()}`}
-                  value={formData[field.id]}
-                  onChange={handleChange}
+                  {...register(field.id, {
+                    required: `${field.label} is required.`,
+                    ...(field.type === "email" && {
+                      pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                        message: "Enter a valid email address.",
+                      },
+                    }),
+                    ...(field.type === "text" &&
+                      field.id === "number" && {
+                        pattern: {
+                          value: /^[0-9]{10}$/,
+                          message: "Enter a valid 10-digit phone number.",
+                        },
+                      }),
+                    ...(field.type === "date" && {
+                      validate: (value) => {
+                        const today = new Date();
+                        const dob = new Date(value);
+                        return (
+                          dob <= today ||
+                          "Date of birth cannot be in the future."
+                        );
+                      },
+                    }),
+                  })}
                 />
-                {errors[field.id] && (
-                  <p className="text-red-500 text-sm">{errors[field.id]}</p>
-                )}
-              </div>
-            ))}
-
-            <div className="flex justify-center">
-              <button
-                type="submit"
-                className={`w-[50%] p-5 py-2 my-5 text-white rounded-lg transition duration-300 ${
-                  isSubmitting
-                    ? "bg-gray-400 cursor-not-allowed"
-                    : "bg-primary-orange hover:bg-deep-blue"
-                }`}
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? "Submitting..." : "Submit "}
-              </button>
+              )}
+              {errors[field.id] && (
+                <p className="text-red-500 text-sm">
+                  {errors[field.id].message}
+                </p>
+              )}
             </div>
-          </form>
-        </div>
+          ))}
+
+          <div className="flex justify-center">
+            <button
+              type="submit"
+              className="w-full sm:w-auto px-6 py-3 text-lg font-semibold text-white rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-500 hover:to-purple-500 focus:ring-4 focus:ring-purple-300 transition duration-300"
+            >
+              Submit
+            </button>
+          </div>
+
+          {submitMessage && (
+            <div className="mt-4 text-center text-lg">
+              <p
+                className={
+                  submitMessage.includes("Error")
+                    ? "text-red-500"
+                    : "text-green-500"
+                }
+              >
+                {submitMessage}
+              </p>
+            </div>
+          )}
+        </form>
       </div>
     </div>
   );
-};
+}
 
 export default Career;

@@ -15,6 +15,7 @@
     "aos": "^2.3.4",
     "chart.js": "^4.4.5",
     "firebase": "^10.14.1",
+    "formik": "^2.4.6",
     "framer-motion": "^11.11.9",
     "lottie-react": "^2.4.0",
     "mdb-react-ui-kit": "^9.0.0",
@@ -23,6 +24,7 @@
     "react": "^18",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18",
+    "react-hook-form": "^7.54.2",
     "react-icons": "^5.4.0",
     "react-photo-album": "^2.4.1",
     "react-quill": "^2.0.0",
@@ -30,7 +32,8 @@
     "react-table": "^7.8.0",
     "react-video-js-player": "^1.1.1",
     "slick-carousel": "^1.8.1",
-    "three": "^0.169.0"
+    "three": "^0.169.0",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
     "postcss": "^8",

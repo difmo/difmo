@@ -9,7 +9,7 @@ import about from "../assets/blogsvg/about.svg";
 import Link from "next/link";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import TeamSection from "../component/teamMembers";
-
+import { motion } from "framer-motion";
 // Reusable Core Value Card Component
 const CoreValueCard = ({ icon, title, description }) => (
   <div className="p-6 transition-transform transform bg-white rounded-lg shadow-xl hover:scale-105">
@@ -50,7 +50,44 @@ const About = () => {
       icon: faUsers,
     },
   ];
-
+  const features = [
+    {
+      title: "Full-Service Digital",
+      description:
+        "We provide a full-service digital solution for your project. This solution reduces cost, allows total ownership of the project with superior quality and timely delivery.",
+      icon: "💻",
+    },
+    {
+      title: "Delivered on Time",
+      description:
+        "We understand the value of being 100% reliable, and we want to offer excellent service that exceeds your expectations. We always want to be given to on-time project delivery.",
+      icon: "⏰",
+    },
+    {
+      title: "Customer Support (24/7)",
+      description:
+        "Our mission is to provide the best possible service to our customers and make software development a better experience. Which is why we provide 24/7 customer support.",
+      icon: "🎧",
+    },
+    {
+      title: "Culture of Innovation",
+      description:
+        "We believe that only with an innovative culture can you lead the industry. We have developed a unique business model that combines creativity and quality to create success.",
+      icon: "📊",
+    },
+    {
+      title: "Flexibility",
+      description:
+        "We are a flexible business. We make it easy for you to be part of the partnership, by offering flexible pricing and intense collaboration.",
+      icon: "🔄",
+    },
+    {
+      title: "Born Digital",
+      description:
+        "Our new-age digital solutions have helped our clients remain digitally advanced and sustainable in the face of uncertain challenges since 2008.",
+      icon: "🌐",
+    },
+  ];
   return (
     <>
       {/* Hero Section */}
@@ -100,12 +137,12 @@ const About = () => {
       </div>
 
       {/* Core Values Section */}
-      <div className="py-10 bg-warm-gray">
+      <div className="py-10 bg-warm-gray ">
         <div className="mx-4 sm:mx-8 lg:mx-16">
           <h2 className="mb-6 text-3xl font-extrabold text-deep-blue">
             Our Core Values: Guiding Our Every Step
           </h2>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3 ">
             {cardData.map((card) => (
               <CoreValueCard
                 key={card.id}
@@ -117,8 +154,34 @@ const About = () => {
           </div>
         </div>
       </div>
+
+      <div className="max-w-7xl mx-auto py-6">
+        <h1 className="text-3xl font-bold text-center text-deep-blue mb-8">
+          Our Features
+        </h1>
+        <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          {features.map((feature, index) => (
+            <motion.div
+              key={index}
+              className="bg-white text-gray-800  rounded-lg p-6 transition-all hover:bg-oceanic hover:text-white"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <div className="text-4xl mb-4 w-12 py-1 bg-white rounded-md">
+                {feature.icon}
+              </div>
+              <div>
+                <h2 className="text-xl font-semibold mb-2 transition-colors">
+                  {feature.title}
+                </h2>
+                <p className="transition-colors">{feature.description}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
       {/* Meet Our Team */}
-      {/* <TeamSection /> */}
+      <TeamSection />
       {/* Call to Action */}
       <div className="px-2 py-10 text-center text-white bg-gradient-to-r from-deep-blue to-primary-orange">
         <h2 className="text-3xl font-extrabold sm:text-4xl">

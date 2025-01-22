@@ -1,63 +1,76 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
-// Use the correct public folder image or import properly
-import primary from "../../../public/pritam.png";
-
+import dinesh from "../../../public/image/dinesh.jpeg";
+import aman from "../../../public/image/aman.png";
+import amar from "../../../public/image/amar.jpg";
+import pritam1 from "../../../public/image/pritam1.png";
+import vimalraj from "../../../public/image/vimalraj.png";
 const teamMembers = [
   {
     name: "Er.Dinesh Kumar",
-    image: primary, // Correct usage with imported image
+    image: dinesh, // Correct usage with imported image
     description:
-      "As a Software Developer with a strong foundation in React Native, Flutter, and Node.js, I specialize in building high-performance mobile and web applications. With a passion for creating intuitive user experiences, I have honed my expertise in developing scalable and maintainable code for cross-platform applications. My ability to seamlessly integrate cutting-edge technologies ensures that the software I develop is not only functional but also optimized for speed and efficiency. I am eager to specialize in databases, particularly NoSQL, MongoDB, and Firebase.",
+      "Software Engineer with 4+ years of experience in React Native, Flutter, and cross-platform mobile app development for Android and iOS. Proficient in backend technologies including Firebase, Google Cloud, React.js, and Node.js, delivering seamless, scalable, and high-performance applications.",
     socials: {
-      linkedin: "https://www.linkedin.com",
-      instagram: "https://www.instagram.com",
-      facebook: "https://www.facebook.com",
+      linkedin: "https://www.linkedin.com/in/dineshappdeveloper/ ",
+      instagram: "https://www.instagram.com/dineshkumartlbupi/",
+      facebook: "https://www.facebook.com/dineshkumartlbupi",
     },
   },
+  // {
+  //   name: "Er.Akash Gupta",
+  //   image: "", // Correct usage with imported image
+  //   description:
+  //     "Android & Flutter Developer with expertise in Java, Kotlin, and Flutter, specializing in high-performance cross-platform mobile applications. Proficient in creating intuitive user experiences for Android and iOS, integrating APIs, and ensuring efficient, scalable performance. Skilled in Android architecture components, Flutter widgets, and state management to deliver robust mobile solutions",
+  //   socials: {
+  //     linkedin: "https://www.linkedin.com/in/aakash-kumar-gupta/",
+  //     instagram: "",
+  //     facebook: "",
+  //   },
+  // },
   {
     name: "Er.Pritam Sharma",
-    image: primary, // Correct usage with imported image
+    image: pritam1, // Correct usage with imported image
     description:
-      "As a Software Developer with a strong foundation in React Native, Flutter, and Node.js, I specialize in building high-performance mobile and web applications. With a passion for creating intuitive user experiences, I have honed my expertise in developing scalable and maintainable code for cross-platform applications. My ability to seamlessly integrate cutting-edge technologies ensures that the software I develop is not only functional but also optimized for speed and efficiency. I am eager to specialize in databases, particularly NoSQL, MongoDB, and Firebase.",
+      "Software Developer specializing in React Native, Flutter, and Node.js, with expertise in building high-performance mobile and web applications. I focus on creating scalable, maintainable, and intuitive user experiences while seamlessly integrating modern technologies. Skilled in NoSQL, MongoDB, and Firebase, I aim to optimize software for speed, efficiency, and functionality.",
     socials: {
-      linkedin: "https://www.linkedin.com",
-      instagram: "https://www.instagram.com",
-      facebook: "https://www.facebook.com",
+      linkedin: "https://www.linkedin.com/in/pritamksharma/",
+      instagram: "https://www.instagram.com/pritamk_sharma/",
+      facebook: "",
     },
   },
   {
     name: "Er.Vimalraj",
-    image: primary, // Correct usage with imported image
+    image: vimalraj, // Correct usage with imported image
     description:
-      "As a Software Developer with a strong foundation in React Native, Flutter, and Node.js, I specialize in building high-performance mobile and web applications. With a passion for creating intuitive user experiences, I have honed my expertise in developing scalable and maintainable code for cross-platform applications. My ability to seamlessly integrate cutting-edge technologies ensures that the software I develop is not only functional but also optimized for speed and efficiency. I am eager to specialize in databases, particularly NoSQL, MongoDB, and Firebase.",
+      "Frontend Developer specializing in Next.js, React Native, React.js, and JavaScript. Proficient in modern UI frameworks like Tailwind CSS and Bootstrap, with strong expertise in HTML5 and API integration to create responsive, user-friendly, and dynamic web applications.",
     socials: {
-      linkedin: "https://www.linkedin.com",
-      instagram: "https://www.instagram.com",
-      facebook: "https://www.facebook.com",
+      linkedin: "https://www.linkedin.com/in/vimal-raj-frontend-developer/",
+      instagram: "https://www.instagram.com/vr854302/",
+      facebook: "https://www.facebook.com/vimalraj.raj.5667",
     },
   },
   {
     name: "Er.Aman Kumar",
-    image: primary, // Correct usage with imported image
+    image: aman, // Correct usage with imported image
     description:
-      "As a Software Developer with a strong foundation in React Native, Flutter, and Node.js, I specialize in building high-performance mobile and web applications. With a passion for creating intuitive user experiences, I have honed my expertise in developing scalable and maintainable code for cross-platform applications. My ability to seamlessly integrate cutting-edge technologies ensures that the software I develop is not only functional but also optimized for speed and efficiency. I am eager to specialize in databases, particularly NoSQL, MongoDB, and Firebase.",
+      "Software Developer at Difmo Technologies specializing in mobile app development with React Native, Flutter, and Android. I build scalable, high-performance apps for Android and iOS, leveraging Java, Kotlin, and cross-platform frameworks.",
     socials: {
-      linkedin: "https://www.linkedin.com",
-      instagram: "https://www.instagram.com",
-      facebook: "https://www.facebook.com",
+      linkedin: "https://www.linkedin.com/in/aman-software-developer/",
+      instagram: "https://www.instagram.com/aman13_70/",
+      facebook: "https://www.facebook.com/profile.php?id=100022683532377",
     },
   },
   {
     name: "Amar Maurya",
-    image: primary, // Correct usage with imported image
+    image: amar, // Correct usage with imported image
     description:
-      "As a Software Developer with a strong foundation in React Native, Flutter, and Node.js, I specialize in building high-performance mobile and web applications. With a passion for creating intuitive user experiences, I have honed my expertise in developing scalable and maintainable code for cross-platform applications. My ability to seamlessly integrate cutting-edge technologies ensures that the software I develop is not only functional but also optimized for speed and efficiency. I am eager to specialize in databases, particularly NoSQL, MongoDB, and Firebase.",
+      "Software Developer at Difmo Technologies, specializing in React.js, Next.js, Node.js, Express.js, Google Cloud, Firebase, and MongoDB. Proficient in developing scalable, modern web applications and backend solutions, leveraging cutting-edge technologies to deliver exceptional software products.",
     socials: {
-      linkedin: "https://www.linkedin.com",
-      instagram: "https://www.instagram.com",
-      facebook: "https://www.facebook.com",
+      linkedin: "https://www.linkedin.com/in/amar-maurya1234/",
+      instagram: "https://www.instagram.com/amarmaurya_official/",
+      facebook: "https://www.facebook.com/profile.php?id=100019601992354",
     },
   },
 
@@ -66,37 +79,38 @@ const teamMembers = [
 
 export default function TeamSection() {
   return (
-    <div className="py-6 sm:mx-8 lg:mx-16">
+    <div className="py-6 px-4 md:px-10">
       <h1 className="text-3xl md:text-5xl font-extrabold py-5 text-center text-deep-blue">
         Meet Our Team
       </h1>
       {teamMembers.map((member) => (
-        <div className=" flex py-5 border border-gray-300 rounded-md mb-6">
+        <div
+          className="flex flex-col md:flex-row py-5 border border-gray-300 rounded-md mb-6"
+          key={member.name}
+        >
           {/* Image Section */}
-          <div className="w-1/2 flex justify-center">
+          <div className="w-full md:w-1/2 flex justify-center">
             <Image
               src={member.image}
               alt={member.name}
-              width={320}
-              height={320}
-              className="h-80 w-80 object-cover rounded-lg"
+              className="h-72 w-full md:h-[350px] md:w-80 bg-cover md:object-cover md:rounded-lg "
             />
           </div>
 
           {/* Member Details Section */}
-          <div className="w-1/2 px-4">
-            <h1 className="text-3xl font-extrabold text-gray-700">
+          <div className="w-full md:w-1/2 p-4">
+            <h1 className="text-2xl md:text-3xl font-extrabold text-gray-700  hover:text-primary-orange">
               {member.name}
             </h1>
             <div className="flex gap-3 py-4">
               <Link href={member.socials.linkedin} target="_blank">
-                <FaLinkedin className="h-10 w-10 text-deep-blue hover:text-primary-orange" />
+                <FaLinkedin className="h-6 w-6 text-deep-blue hover:text-primary-orange" />
               </Link>
               <Link href={member.socials.instagram} target="_blank">
-                <FaInstagram className="h-10 w-10 text-red-500 hover:text-primary-orange" />
+                <FaInstagram className="h-6 w-6 text-red-500 hover:text-primary-orange" />
               </Link>
               <Link href={member.socials.facebook} target="_blank">
-                <FaFacebook className="h-10 w-10 text-deep-blue hover:text-primary-orange" />
+                <FaFacebook className="h-6 w-6 text-deep-blue hover:text-primary-orange" />
               </Link>
             </div>
             <p className="text-gray-600 leading-7">{member.description}</p>
