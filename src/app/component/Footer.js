@@ -247,7 +247,8 @@ const Footer = () => {
       <div className="flex flex-col-reverse items-center justify-center mt-8 mb-2 sm:flex-row sm:items-center ">
         {/* Copyright notice */}
         <span className="mb-4 text-sm text-white dark:text-gray-400 sm:text-center sm:mb-0">
-          © 2024{" "}
+          © 2025
+          {" "}
           <a href="#" className="hover:underline">
             DIFMO TECHNOLOGIES
           </a>

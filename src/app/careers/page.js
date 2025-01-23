@@ -64,7 +64,7 @@ const About = () => {
 
       <PhotoGallery />
       {/* /////////////  video ///////////////// */}
-      <div className="flex items-center justify-center h-full bg-gray-50 z-70 ">
+      <div className="flex items-center justify-center h-full  bg-gray-50 z-70 ">
         <div className="grid w-full grid-cols-1 gap-8 px-6 py-10 lg:grid-cols-2 max-w-7xl">
           {/* Left Video/Image Section */}
           <div className="relative w-full h-64 sm:h-96 lg:h-full bg-gray-200 rounded-lg shadow-md ">

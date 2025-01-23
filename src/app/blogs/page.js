@@ -54,7 +54,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="py-12 bg-gray-100">
+    <div className="py-12 bg-white">
       <div className="container px-4 mx-auto sm:px-6 lg:px-8">
         <h2 className="mb-8 text-3xl font-bold text-center text-deep-blue">
           Difmo Technologies Blog
@@ -63,12 +63,12 @@ const Projects = () => {
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
           {blogs.map((blog) => (
             <Link href={`/blogs/${blog.id}`} key={blog.id}>
-              <div className="overflow-hidden transition-shadow duration-300 ease-in-out bg-white rounded-lg shadow-md hover:shadow-lg">
-                <div className="relative w-full h-full">
+              <div className="overflow-hidden hover:scale-y-105 ease-in-out bg-white rounded-lg hover:bg-gray-100 ">
+                <div className="relative  rounded-xl w-full h-full">
                   <img
                     src={blog.image || "/default-image.jpg"} // Fallback for missing images
                     alt={blog.title || "Blog Image"} // Fallback for missing titles
-                    className="bg-cover w-full h-full"
+                    className="bg-cover p-4 w-full h-full"
                   />
                 </div>
                 <div className="p-6">
