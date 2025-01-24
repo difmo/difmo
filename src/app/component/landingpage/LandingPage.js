@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import see1 from "../../assets/landing/landing1.png";
-import Image from "next/image";
+
 import OurContact from "../OurContact";
 import Link from "next/link";
 import RequestForm from "../RequestForm";
+import MainSlider from "../slider/MainSlider";
 
 const LandingPage = () => {
   const [currentText, setCurrentText] = useState("");
@@ -62,17 +62,18 @@ const LandingPage = () => {
     type();
     return () => setCurrentText("");
   }, []);
-  const handleContactClick = () => {
-    // router.push("");
-    navigate("./ourcontact");
-  };
+  // const handleContactClick = () => {
+  //   // router.push("");
+  //   navigate("/contact-us");
+  //   <contact-us />;
+  // };
   return (
     <div className="landing-page bg-gradient-to-b from-gray-100 to-gray-200 py-12">
-      <div className="container  md:flex md:flex-wrap md:items-center md:justify-between md:max-w-7xl mx-auto px-4">
+      <div className="flex flex-wrap items-center justify-center md:flex-nowrap">
         {/* Text Section */}
-        <div className="text-content flex-1 my-8 ">
+        <div className="text-content w-full md:w-1/2 px-4 my-8">
           <div className="w-full flex justify-center">
-            <h1 className="text-4xl font-bold text-gray-800 mb-6 leading-relaxed">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 leading-relaxed text-center md:text-left">
               <span className="bg-gradient-to-r from-red-400 to-purple-600 text-transparent bg-clip-text">
                 Start, Build & Grow
               </span>{" "}
@@ -83,7 +84,7 @@ const LandingPage = () => {
             </h1>
           </div>
 
-          <p className="text-2xl  text-gray-600 leading-relaxed mb-8">
+          <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 leading-relaxed mb-8 text-center md:text-left">
             Empowering Small Businesses: Build Stunning{" "}
             <span className="bg-gradient-to-r from-red-400 to-purple-600 text-transparent bg-clip-text font-semibold">
               Websites
@@ -99,7 +100,7 @@ const LandingPage = () => {
             & Digital Marketing Solutions.
           </p>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 justify-center md:justify-start">
             <Link href={"/contact-us"}>
               <button className="px-6 py-3 text-white transition bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700">
                 Let’s Talk
@@ -110,33 +111,13 @@ const LandingPage = () => {
               className="px-6 py-3 text-blue-600 transition border border-blue-600 rounded-lg shadow-lg hover:bg-blue-100"
             >
               <span>Request Demo</span>
-              {/* <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-5 h-5 ml-2"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg> */}
             </button>
           </div>
         </div>
 
         {/* Image Section */}
-        <div className="image-content flex justify-center text-center md:text-right mt-8 md:mt-0">
-          <Image
-            src={see1}
-            alt="Business Illustration"
-            width={500}
-            height={500}
-            className="mx-auto md:mx-0 justify-center"
-          />
+        <div className="w-full md:w-1/2 px-4">
+          <MainSlider />
         </div>
       </div>
 

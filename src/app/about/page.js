@@ -91,13 +91,13 @@ const About = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-blue-00 text-center text-gray-700 py-12">
+      <section className=" text-center text-gray-700 pt-12">
         <h1 className="bg-gradient-to-r from-red-400 to-purple-600 text-transparent bg-clip-text font-semibold text-5xl pb-2">
           Technology at Work for You
         </h1>
-        <p className=" text-3xl md:text-4xl font-medium py-2">
+        {/* <p className=" text-3xl md:text-4xl font-medium py-2">
           Providing the effective solution for your most complex problem
-        </p>
+        </p> */}
         {/* <p className="text-sm font-light">
           Automated Work + Faster Process = Happy Client
         </p> */}
