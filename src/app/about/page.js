@@ -5,9 +5,7 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCogs, faUsers, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import fqaQ from "../assets/Deliver/a2.png";
-import about from "../assets/blogsvg/about.svg";
 import Link from "next/link";
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import TeamSection from "../component/teamMembers";
 import { motion } from "framer-motion";
 // Reusable Core Value Card Component

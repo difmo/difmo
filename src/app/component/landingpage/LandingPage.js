@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 
-import OurContact from "../OurContact";
 import Link from "next/link";
 import RequestForm from "../RequestForm";
 import MainSlider from "../slider/MainSlider";

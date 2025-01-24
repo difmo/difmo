@@ -1,8 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { collection, getDocs, deleteDoc, doc } from "firebase/firestore";
-import { db } from "../config/config";
+// import { db } from "../config/config";
 import { useRouter } from "next/navigation";
+import { db } from "../../config/config";
 
 const AllBlogs = () => {
   const [blogs, setBlogs] = useState([]);
