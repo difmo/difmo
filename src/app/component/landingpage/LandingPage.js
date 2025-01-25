@@ -5,7 +5,8 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import RequestForm from "../RequestForm";
 import MainSlider from "../slider/MainSlider";
-
+import img from "../../assets/landing/landing1.png";
+import Image from "next/image";
 const LandingPage = () => {
   const [currentText, setCurrentText] = useState("");
   const texts = ["Websites", "Mobile Apps", "Digital Solutions"];
@@ -63,11 +64,11 @@ const LandingPage = () => {
     type();
     return () => setCurrentText("");
   }, []);
-  // const handleContactClick = () => {
-  //   // router.push("");
-  //   navigate("/contact-us");
-  //   <contact-us />;
-  // };
+  const handleContactClick = () => {
+    // router.push("");
+    navigate("/contact-us");
+    // <contact-us />;
+  };
   return (
     <div className="landing-page bg-gradient-to-b from-gray-100 to-gray-200 py-12">
       <div className="flex flex-wrap items-center justify-center md:flex-nowrap">
@@ -118,7 +119,8 @@ const LandingPage = () => {
 
         {/* Image Section */}
         <div className="w-full md:w-1/2 px-4">
-          <MainSlider />
+          <Image src={img} />
+          {/* <MainSlider /> */}
         </div>
       </div>
 
