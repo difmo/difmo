@@ -1,32 +1,27 @@
 "use client";
-import { useRouter } from "next/navigation";
+
+import { useRouter, usePathname } from "next/navigation";
 import { useEffect } from "react";
 import Script from "next/script";
 
 import BuildingSoft from "./component/BuildingSoft";
 import Development from "./component/Development";
 import OurServices from "./component/OurServices";
-import MainSlider from "./component/slider/MainSlider";
 import OurContact from "./component/OurContact";
 import LandingPage from "./component/landingpage/LandingPage";
 
 export default function Home() {
   const router = useRouter(); // Initialize the Next.js router
+  const pathname = usePathname(); // Get the current pathname
 
   // Google Analytics - Track Route Changes
-  useEffect(() => {
-    const handleRouteChange = (url) => {
-      if (window.gtag) {
-        window.gtag("config", "G-YJS1KZQ78Q", {
-          page_path: url,
-        });
-      }
-    };
-    router.events?.on("routeChangeComplete", handleRouteChange);
-    return () => {
-      router.events?.off("routeChangeComplete", handleRouteChange);
-    };
-  }, [router.events]);
+  useEffect(() => { 
+    if (window.gtag) {
+      window.gtag("config", "G-YJS1KZQ78Q", {
+        page_path: pathname,
+      });
+    }
+  }, [pathname]); // Track changes to the pathname
 
   const handleViewMoreClick = () => {
     router.push("/our-projects"); // Navigate to the projects page

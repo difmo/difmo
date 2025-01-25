@@ -1,8 +1,10 @@
+"use client";
+
 import React, { Component } from "react";
 import Carousel from "react-spring-3d-carousel";
 import uuidv4 from "uuid";
 import { config } from "react-spring";
-import phoneImage from "../../assets/phone.png"; // Assuming this is your image file
+
 
 export default class Example extends Component {
   state = {
