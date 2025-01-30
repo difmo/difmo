@@ -70,7 +70,7 @@ const LandingPage = () => {
     // <contact-us />;
   };
   return (
-    <div className="landing-page bg-gradient-to-b from-gray-100 to-gray-200 py-12">
+    <div className="landing-page bg-white py-12">
       <div className="flex flex-wrap items-center justify-center md:flex-nowrap">
         {/* Text Section */}
         <div className="text-content w-full md:w-1/2 px-4 my-8">
@@ -118,7 +118,7 @@ const LandingPage = () => {
         </div>
 
         {/* Image Section */}
-        <div className="w-full md:w-1/2 px-4">
+        <div className="flex flex-wrap items-center justify-center md:flex-nowrap">
           <Image src={img} />
           {/* <MainSlider /> */}
         </div>
