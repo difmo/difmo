@@ -10,15 +10,15 @@ import PhotoGallery from "../component/PhotoGallery";
 const About = () => {
   return (
     <>
-      <div className="flex flex-col items-center justify-center min-h-screen px-4 pt-10 bg-secondary border-secondary md:flex-row md:pt-16 md:px-6 lg:px-20">
+      <div className="flex flex-col items-center justify-center min-h-screen px-4 pt-10 md:flex-row md:pt-16 md:px-6 lg:px-20">
         {/* Left Content Section */}
         <div className="w-full p-2 md:w-1/2 md:p-3">
-          <h1 className="py-3 text-2xl font-bold text-white sm:text-2xl md:text-3xl lg:text-4xl">
+          <h1 className="py-3 text-2xl font-bold text-black sm:text-2xl md:text-3xl lg:text-4xl">
             Looking For An Exciting{" "}
             <span className="text-primary-orange">Career in Technology</span>{" "}
             And Innovat ion
           </h1>
-          <p className="py-2 mt-4 text-base text-white sm:text-lg md:text-xl">
+          <p className="py-2 mt-4 text-base text-black sm:text-lg md:text-xl">
             Join our dynamic team and make an impact!
             <span className="font-semibold"> Explore</span> opportunities to
             grow,learn, and achieve your

@@ -1,13 +1,13 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCogs, faUsers, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import fqaQ from "../assets/Deliver/a2.png";
 import Link from "next/link";
 import TeamSection from "../component/teamMembers";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 // Reusable Core Value Card Component
 const CoreValueCard = ({ icon, title, description }) => (
   <div className="p-6 transition-transform transform bg-white rounded-lg shadow-xl hover:scale-105">
@@ -89,23 +89,29 @@ const About = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className=" text-center text-gray-700 pt-12">
-        <h1 className="bg-gradient-to-r from-red-400 to-purple-600 text-transparent bg-clip-text font-semibold text-5xl pb-2">
+      <section className="text-center text-black pt-12">
+        <motion.h1
+          className="font-semibold text-3xl sm:text-4xl md:text-5xl pb-2"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           Technology at Work for You
-        </h1>
-        {/* <p className=" text-3xl md:text-4xl font-medium py-2">
-          Providing the effective solution for your most complex problem
-        </p> */}
-        {/* <p className="text-sm font-light">
-          Automated Work + Faster Process = Happy Client
-        </p> */}
+        </motion.h1>
       </section>
 
       {/* About Us Section */}
-      <div className="mx-4 my-20 sm:mx-8 lg:mx-16">
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          <div className="col-span-1">
-            <h2 className="mb-6  text-2xl md:text-3xl font-extrabold text-deep-blue">
+      <div className="mx-4 my-20 sm:px-8 lg:px-16">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 md:grid-cols-2">
+          <motion.div
+            className="col-span-1"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="mb-6 text-2xl sm:text-3xl md:text-3xl font-extrabold text-black">
               Transforming Businesses Through Technology
             </h2>
             <p className="text-base leading-relaxed tracking-wide text-justify text-gray-700 md:leading-loose">
@@ -117,72 +123,111 @@ const About = () => {
               elevate brands, drive success, and provide exceptional value to
               clients across the globe. We believe in the power of innovation
               and continuously push the boundaries of technology to ensure your
-              business stays ahead of the curve. Our comprehensive suite of
-              services—ranging from custom software and mobile app development
-              to digital marketing strategies—ensures your digital presence is
-              impactful and engaging.
+              business stays ahead of the curve.
             </p>
-          </div>
-          <div className="flex items-center justify-center col-span-1">
+          </motion.div>
+          <motion.div
+            className="flex items-center justify-center col-span-1"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <Image
               src={fqaQ}
               alt="FAQ Illustration"
               className="w-full max-w-md bg-cover"
               priority
             />
-          </div>
+          </motion.div>
         </div>
       </div>
 
       {/* Core Values Section */}
-      <div className="py-10 bg-warm-gray ">
-        <div className="mx-4 sm:mx-8 lg:mx-16">
-          <h2 className="mb-6 text-3xl font-extrabold text-deep-blue">
+      <div className="py-10 bg-warm-gray">
+        <div className="px-4 sm:px-8 lg:px-16">
+          <motion.h2
+            className="mb-6 text-3xl sm:text-4xl md:text-3xl font-extrabold text-black"
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             Our Core Values: Guiding Our Every Step
-          </h2>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3 ">
-            {cardData.map((card) => (
-              <CoreValueCard
+          </motion.h2>
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-1 md:grid-cols-3">
+            {cardData.map((card, index) => (
+              <motion.div
                 key={card.id}
-                icon={card.icon}
-                title={card.title}
-                description={card.description}
-              />
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                viewport={{ once: true }}
+              >
+                <CoreValueCard
+                  icon={card.icon}
+                  title={card.title}
+                  description={card.description}
+                />
+              </motion.div>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto py-6">
-        <h1 className="text-3xl font-bold text-center text-deep-blue mb-8">
+      {/* Features Section */}
+      {/* <div className=" mx-auto py-6">
+        <h1 className="text-3xl font-bold text-center text-black mb-8">
           Our Features
         </h1>
         <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              className="bg-white text-gray-800  rounded-lg p-6 transition-all hover:bg-oceanic hover:text-white"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <div className="text-4xl mb-4 w-12 py-1 bg-white rounded-md">
-                {feature.icon}
-              </div>
-              <div>
-                <h2 className="text-xl font-semibold mb-2 transition-colors">
-                  {feature.title}
-                </h2>
-                <p className="transition-colors">{feature.description}</p>
-              </div>
-            </motion.div>
-          ))}
+          {features.map((feature, index) => {
+            const ref = useRef(null);
+            const isInView = useInView(ref, {
+              triggerOnce: true,
+              threshold: 0.2,
+            });
+
+            // Determine row index for animation direction
+            const rowIndex = Math.floor(index / 3);
+            const initialX = rowIndex % 2 === 0 ? -50 : 50;
+
+            return (
+              <motion.div
+                ref={ref}
+                key={index}
+                className="bg-white  text-gray-800 rounded-lg p-6 transition-all hover:bg-oceanic hover:text-white"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                initial={{ opacity: 0, x: initialX }}
+                animate={isInView ? { opacity: 1, x: 0 } : {}}
+                transition={{
+                  duration: 0.6,
+                  ease: "easeOut",
+                  delay: index * 0.15,
+                }}
+              >
+                <div className="text-4xl mb-4 w-12 py-1 bg-white rounded-md">
+                  {feature.icon}
+                </div>
+                <div>
+                  <h2 className="text-xl sm:text-2xl font-semibold mb-2 transition-colors">
+                    {feature.title}
+                  </h2>
+                  <p className="transition-colors">{feature.description}</p>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
-      </div>
-      {/* Meet Our Team */}
-      <TeamSection />
-      {/* Call to Action */}
+      </div> */}
+
+      {/* Meet Our Team Section */}
+      {/* <TeamSection /> */}
+
+      {/* Call to Action Section */}
       <div className="px-2 py-10 text-center text-white bg-gradient-to-r from-deep-blue to-primary-orange">
-        <h2 className="text-3xl font-extrabold sm:text-4xl">
+        <h2 className="text-3xl sm:text-4xl font-extrabold">
           Ready to Transform Your Business?
         </h2>
         <p className="mt-4 text-lg sm:text-xl">

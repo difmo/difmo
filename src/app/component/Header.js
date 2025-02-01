@@ -41,14 +41,17 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="sticky top-0 left-0 z-50 w-full bg-white shadow-sm">
+    <header className="sticky top-0 left-0 z-50 w-full bg-white ">
       <div className="container flex items-center justify-between px-6 py-2 mx-auto">
         {/* Logo Section */}
         <Link href="/" className="flex items-center space-x-2">
-          <Image src={logo} alt="Difmo Logo" width={150} height={64} />
-          {/* <span className="text-2xl font-semibold text-primary-orange">
-            Difmo Technologies
-          </span> */}
+          <Image
+            src={logo}
+            alt="Difmo Logo"
+            // width={150}
+            // height={64}
+            className="w-auto h-14 md:h-10 bg-cover"
+          />
         </Link>
 
         {/* Hamburger Icon */}
@@ -93,7 +96,7 @@ const Header = () => {
           </HeaderLink>
           <Link
             href="/contact-us"
-            className="items-center justify-center hidden h-9 px-5 space-x-2 text-white transition-colors duration-300 bg-primary-orange rounded-3xl md:flex hover:bg-[#ff8d89]"
+            className="items-center justify-center hidden h-9 px-5 space-x-2 text-white hover:text-black transition-colors duration-300 bg-[#111827] rounded-xl md:flex hover:bg-slate-200"
           >
             <p>GET STARTED</p>
             <svg

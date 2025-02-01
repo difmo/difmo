@@ -1,15 +1,20 @@
 import React from "react";
 import see from "../assets/landing/landing5.png";
 import Image from "next/image";
-
+import { motion } from "framer-motion";
 const BuildingSoft = () => {
   return (
-    <div className="mx-4 my-12 mt-20 sm:mx-8 lg:mx-16">
+    <div className="mx-4 my-12  sm:mx-8 lg:mx-16">
       {/* Grid Container for responsive layout */}
       <div className="grid items-center grid-cols-1 gap-8 md:grid-cols-2">
         {/* Text Section */}
-        <div className="rounded-lg ">
-          <h2 className="mb-6 text-3xl font-bold leading-snug md:text-3xl highlight bg-gradient-to-r from-red-400 to-purple-600 text-transparent bg-clip-text">
+        <motion.div
+          className="rounded-lg"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h2 className="mb-12 text-3xl font-bold leading-snug md:text-3xl text-black">
             Empowering with Cutting-Edge Software Solutions
           </h2>
           <p className="text-base leading-relaxed tracking-wide text-justify text-gray-700 md:text-lg">
@@ -20,10 +25,15 @@ const BuildingSoft = () => {
             secure, and user-friendly solutions that drive real impact. Let’s
             bring your vision to life.
           </p>
-        </div>
+        </motion.div>
 
         {/* Image Section */}
-        <div className="relative">
+        <motion.div
+          className="relative md:mt-10"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+        >
           <Image
             src={see}
             alt="Empowering Innovators"
@@ -31,7 +41,7 @@ const BuildingSoft = () => {
           />
           {/* Optional overlay for added design */}
           <div className="absolute inset-0 opacity-20"></div>
-        </div>
+        </motion.div>
       </div>
       {/* Styles */}
       <style jsx>{`

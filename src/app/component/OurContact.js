@@ -13,7 +13,7 @@ const OurContact = () => {
         <div className="container flex flex-col gap-8 mx-auto lg:flex-row">
           {/* Left section with image */}
 
-          <div className="p-8 bg-secondary border-secondary rounded-2xl  md:rounded-[50px]  lg:w-2/3">
+          <div className="p-8 bg-[#111827] rounded-3xl  md:rounded-lg  lg:w-2/3">
             <h2 className="mb-8 text-4xl font-extrabold text-center text-transparent text-white bg-clip-text">
               Quick Contact
             </h2>
@@ -57,7 +57,7 @@ const OurContact = () => {
             {/* Address */}
             <div className="p-6 border-b border-gray-200">
               <span className="block mb-3 text-white">Address</span>
-              <span className="text-white ">
+              <span className="text-white hover:text-primary-orange ">
                 4/37 Vibhav Khand, Gomtinagar, Lucknow, Uttar Pradesh, 226010
               </span>
             </div>
@@ -73,7 +73,7 @@ const OurContact = () => {
                 >
                   <FaFacebook
                     size={32}
-                    className="text-white transition-all duration-300 hover:text-white"
+                    className="text-white transition-all duration-300 hover:text-primary-orange"
                   />
                 </a>
                 <a
@@ -83,7 +83,7 @@ const OurContact = () => {
                 >
                   <FaTwitter
                     size={32}
-                    className="text-white transition-all duration-300 hover:text-white"
+                    className="text-white transition-all duration-300 hover:text-primary-orange"
                   />
                 </a>
                 <a
@@ -93,7 +93,7 @@ const OurContact = () => {
                 >
                   <FaLinkedin
                     size={32}
-                    className="text-white transition-all duration-300 hover:text-white"
+                    className="text-white transition-all duration-300 hover:text-primary-orange"
                   />
                 </a>
                 <a
@@ -103,7 +103,7 @@ const OurContact = () => {
                 >
                   <FaInstagram
                     size={32}
-                    className="text-white transition-all duration-300 hover:text-white"
+                    className="text-white transition-all duration-300 hover:text-primary-orange"
                   />
                 </a>
               </div>
@@ -116,11 +116,11 @@ const OurContact = () => {
 
       <div className="mx-auto lg:flex-row">
         <div className="px-6 mx-auto sm:px-8 lg:px-16">
-          <h2 className="mb-6 text-5xl font-extrabold text-center text-deep-blue sm:mb-10">
+          <h2 className="mb-6 text-5xl font-extrabold text-center text-black sm:mb-10">
             Our Location
           </h2>
 
-          <p className="max-w-3xl mx-auto mb-10 text-xl text-center text-gray-700">
+          <p className="max-w-3xl mx-auto mb-10 text-lg text-center text-gray-700">
             Visit us at our office to see how we innovate and bring your ideas
             to life. Explore the map below to find our exact location.
           </p>

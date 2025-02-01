@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-
+// import { useState, useRef, useEffect } from "react";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import RequestForm from "../RequestForm";
 import MainSlider from "../slider/MainSlider";
@@ -70,17 +71,23 @@ const LandingPage = () => {
     // <contact-us />;
   };
   return (
-    <div className="landing-page bg-white py-12">
+    <div className="landing-page bg-white px-2md:px-20 lg:px-20">
       <div className="flex flex-wrap items-center justify-center md:flex-nowrap">
         {/* Text Section */}
-        <div className="text-content w-full md:w-1/2 px-4 my-8">
+        <motion.div
+          className="text-content w-full md:w-1/2 px-4 my-8"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <div className="w-full flex justify-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 leading-relaxed text-center md:text-left">
-              <span className="bg-gradient-to-r from-red-400 to-purple-600 text-transparent bg-clip-text">
+              <span className="text-primary-orange bg-clip-text">
                 Start, Build & Grow
               </span>{" "}
               your Business with{" "}
-              <span className="bg-gradient-to-r from-red-400 to-purple-600 text-transparent bg-clip-text">
+              <span className="text-primary-orange bg-clip-text">
                 {currentText}
               </span>
             </h1>
@@ -88,15 +95,15 @@ const LandingPage = () => {
 
           <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 leading-relaxed mb-8 text-center md:text-left">
             Empowering Small Businesses: Build Stunning{" "}
-            <span className="bg-gradient-to-r from-red-400 to-purple-600 text-transparent bg-clip-text font-semibold">
+            <span className="text-primary-orange bg-clip-text font-semibold">
               Websites
             </span>
             , Develop High-Performance{" "}
-            <span className="bg-gradient-to-r from-red-400 to-purple-600 text-transparent bg-clip-text font-semibold">
+            <span className="text-primary-orange bg-clip-text font-semibold">
               Mobile Apps
             </span>
             , and Boost Growth with{" "}
-            <span className="bg-gradient-to-r from-red-400 to-purple-600 text-transparent bg-clip-text font-semibold">
+            <span className="text-primary-orange bg-clip-text font-semibold">
               Expert SEO
             </span>{" "}
             & Digital Marketing Solutions.
@@ -104,24 +111,29 @@ const LandingPage = () => {
 
           <div className="flex flex-wrap gap-4 justify-center md:justify-start">
             <Link href={"/contact-us"}>
-              <button className="px-6 py-3 text-white transition bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700">
+              <button className="px-6 py-3 text-white hover:text-black transition bg-[#111827] rounded-lg shadow-lg hover:border-primary-orange hover:border hover:bg-gray-200">
                 Let’s Talk
               </button>
             </Link>
             <button
               onClick={handleOpenModal}
-              className="px-6 py-3 text-blue-600 transition border border-blue-600 rounded-lg shadow-lg hover:bg-blue-100"
+              className="px-6 py-3 text-black hover:text-white bg-gray-200 transition border border-primary-orange rounded-lg shadow-lg hover:bg-[#111827]"
             >
               <span>Request Demo</span>
             </button>
           </div>
-        </div>
+        </motion.div>
 
         {/* Image Section */}
-        <div className="flex flex-wrap items-center justify-center md:flex-nowrap">
-          <Image src={img} />
-          {/* <MainSlider /> */}
-        </div>
+        <motion.div
+          className="flex flex-wrap items-center justify-center md:flex-nowrap"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <Image src={img} alt="Landing Image" />
+        </motion.div>
       </div>
 
       {/* Modal Section */}
@@ -137,7 +149,6 @@ const LandingPage = () => {
             >
               &times;
             </button>
-
             <RequestForm />
           </div>
         </div>

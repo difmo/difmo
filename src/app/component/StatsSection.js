@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-
+import { motion } from "framer-motion";
 const data = [
   { label: "Mobile Apps Developed", value: "70+" },
   { label: "Happy Partners", value: "19+" },
@@ -9,6 +9,19 @@ const data = [
   { label: "Raised through Developed Apps", value: "$86" },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { staggerChildren: 0.2, duration: 0.6 },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
 const StatsSection = () => {
   const [inView, setInView] = useState(false);
   const [numbers, setNumbers] = useState(
@@ -66,27 +79,47 @@ const StatsSection = () => {
 
   return (
     <div ref={sectionRef} className="py-12">
-      <div className="text-center">
-        <h2 className="text-3xl text-deep-blue font-bold sm:text-4xl">
+      <motion.div
+        className="text-center"
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+      >
+        <motion.h2
+          className="text-3xl text-black font-bold sm:text-4xl"
+          variants={itemVariants}
+        >
           Why Choose Us?
-        </h2>
-        <p className="mt-2 text-gray-600">
+        </motion.h2>
+        <motion.p
+          className="my-2 text-gray-600 text-lg"
+          variants={itemVariants}
+        >
           Empowering businesses with scalable technology solutions.
-        </p>
-      </div>
-      <div className="grid grid-cols-2 gap-6 mt-8 sm:grid-cols-3 lg:grid-cols-6">
+        </motion.p>
+      </motion.div>
+      <motion.div
+        className="grid grid-cols-1 gap-6 mt-8 sm:grid-cols-3 lg:grid-cols-6"
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+      >
         {numbers.map((item, index) => (
-          <div key={index} className="text-center">
-            <div className="text-4xl font-bold text-blue-600">
+          <motion.div
+            key={index}
+            className="text-center py-2"
+            variants={itemVariants}
+          >
+            <div className="text-4xl font-bold text-primary-orange">
               {formatNumber(item.currentValue)}
               <span className="text-xl font-medium">
                 {item.value.replace(/[^a-zA-Z+$]/g, "")}
               </span>
             </div>
             <p className="mt-2 text-gray-700">{item.label}</p>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

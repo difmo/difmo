@@ -51,9 +51,9 @@ function Career() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 flex justify-center text-gray-700 items-center px-4 py-10">
+    <div className="min-h-screen flex justify-center text-gray-700 items-center px-4 py-10">
       <div className="max-w-4xl w-full bg-white shadow-lg rounded-xl p-6 sm:p-10">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-pink-600 mb-6">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-center text-black">
           Apply for a Job
         </h2>
         <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
@@ -199,7 +199,7 @@ function Career() {
           <div className="flex justify-center">
             <button
               type="submit"
-              className="w-full sm:w-auto px-6 py-3 text-lg font-semibold text-white rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-500 hover:to-purple-500 focus:ring-4 focus:ring-purple-300 transition duration-300"
+              className="w-full sm:w-auto px-12 py-3 text-lg font-semibold text-white hover:text-black  rounded-xl bg-black hover:bg-gray-200"
             >
               Submit
             </button>
