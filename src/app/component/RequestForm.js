@@ -59,10 +59,10 @@ function RequestForm() {
           { id: "email", label: "Email", type: "email" },
           { id: "number", label: "Phone Number", type: "text" },
         ].map((field) => (
-          <div key={field.id} className="">
+          <div key={field.id} className="space-y-2">
             <label
               htmlFor={field.id}
-              className="block text-lg font-medium text-gray-700"
+              className=" text-lg font-medium text-gray-700"
             >
               {field.label}
             </label>
@@ -104,7 +104,7 @@ function RequestForm() {
         <div className="flex justify-center">
           <button
             type="submit"
-            className="w-full sm:w-auto px-12 mt-6 py-3 text-lg font-semibold text-white hover:text-black rounded-xl bg-[#111827] hover:bg-gray-200"
+            className="w-full px-12 mt-6 py-3 text-lg font-semibold text-white hover:text-black rounded-xl bg-[#111827] hover:bg-gray-200"
           >
             Submit
           </button>

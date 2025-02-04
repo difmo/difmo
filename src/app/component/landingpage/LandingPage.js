@@ -7,6 +7,7 @@ import Link from "next/link";
 import RequestForm from "../RequestForm";
 import MainSlider from "../slider/MainSlider";
 import img from "../../assets/landing/landing1.png";
+import svg from "../../assets/backgroundsvg/card.svg";
 import Image from "next/image";
 const LandingPage = () => {
   const [currentText, setCurrentText] = useState("");
@@ -71,8 +72,17 @@ const LandingPage = () => {
     // <contact-us />;
   };
   return (
-    <div className="landing-page bg-white px-2md:px-20 lg:px-20">
-      <div className="flex flex-wrap items-center justify-center md:flex-nowrap">
+    <div className="landing-page bg-white px-2 md:px-20 lg:px-20 top-10">
+      <div className="flex flex-wrap items-center justify-center md:flex-nowrap ">
+        <div className="absolute inset-0 ">
+          <Image
+            src={svg}
+            alt="Background SVG"
+            layout="fill"
+            // objectFit="cover"
+            className="opacity-30 md:object-cover" // Adjust opacity as needed
+          />
+        </div>
         {/* Text Section */}
         <motion.div
           className="text-content w-full md:w-1/2 px-4 my-8"
