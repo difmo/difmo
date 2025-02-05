@@ -12,7 +12,7 @@ const About = () => {
     <>
       <div className="flex flex-col items-center justify-center min-h-screen px-4 pt-10 md:flex-row md:pt-16 md:px-6 lg:px-20">
         {/* Left Content Section */}
-        <div className="w-full p-2 md:w-1/2 md:p-3">
+        <div className="w-full p-2 md:w-1/2 md:p-3 pt-12">
           <h1 className="py-3 text-2xl font-bold text-black sm:text-2xl md:text-3xl lg:text-4xl">
             Looking For An Exciting{" "}
             <span className="text-primary-orange">Career in Technology</span>{" "}

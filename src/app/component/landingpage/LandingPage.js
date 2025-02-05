@@ -92,7 +92,7 @@ const LandingPage = () => {
           viewport={{ once: true }}
         >
           <div className="w-full flex justify-center">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 leading-relaxed text-center md:text-left">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 leading-relaxed text-center md:text-left pt-24">
               <span className="text-primary-orange bg-clip-text">
                 Start, Build & Grow
               </span>{" "}
@@ -103,7 +103,7 @@ const LandingPage = () => {
             </h1>
           </div>
 
-          <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 leading-relaxed mb-8 text-center md:text-left">
+          <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 leading-relaxed mb-8 text-center md:text-left py-5">
             Empowering Small Businesses: Build Stunning{" "}
             <span className="text-primary-orange bg-clip-text font-semibold">
               Websites
