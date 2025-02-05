@@ -88,7 +88,7 @@ export default function SoftwareMaintenance() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="bg-gray-100 text-gray-900">
+      <div className="bg-gray-100 text-gray-900 pt-24">
         <header className="bg-red-600 text-white py-6 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl font-bold">

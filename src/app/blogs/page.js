@@ -54,7 +54,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="py-12 bg-white">
+    <div className="py-12 bg-white pt-24">
       <div className="container px-4 mx-auto sm:px-6 lg:px-8">
         <h2 className="mb-8 text-3xl font-bold text-center text-deep-blue">
           Difmo Technologies Blog

@@ -15,7 +15,7 @@ import Chatingwebsite from "../component/webComponent/Chatingwebsite";
 const Webdevlopment = () => {
   return (
     <>
-      <div className="mx-4 m sm:mx-8 lg:mx-28 pt-8">
+      <div className="mx-4 m sm:mx-8 lg:mx-28 pt-24">
         <div className="">
           <div className="col-span-2 rounded-lg">
             <h2 className="flex justify-center mb-6 text-xl font-extrabold text-transparent md:text-4xl font-lilita bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange">

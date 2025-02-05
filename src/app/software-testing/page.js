@@ -12,7 +12,7 @@ import Contactus from "../component/Contactus";
 const Mobiledevlopment = () => {
   return (
     <>
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-50 pt-24">
         {/* Hero Section */}
         <div className="px-4 py-16 text-center text-white bg-deep-blue md:px-12">
           <h1 className="text-4xl font-bold md:text-5xl">

@@ -34,8 +34,7 @@ const Contact = () => {
 
   return (
     <>
-      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen">
-    
+      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen pt-24">
         <Image
           src={contact}
           alt="Contact Illustration"
@@ -45,7 +44,6 @@ const Contact = () => {
         />
 
         <div className="absolute inset-0 flex flex-col items-center justify-center px-4 space-y-4 text-center sm:px-8 md:px-16 sm:space-y-6 md:space-y-8">
-          
           <h1 className="text-2xl font-bold leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
             Do You Need a Technology Partner <br className="hidden sm:inline" />{" "}
             For Your Business Idea?
