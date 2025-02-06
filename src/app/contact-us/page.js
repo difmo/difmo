@@ -8,54 +8,27 @@ import contact from "../assets/contact.jpeg";
 import OurContact from "../component/OurContact";
 
 const Contact = () => {
-  const cardData = [
-    {
-      id: 1,
-      title: "Mission",
-      description:
-        "At Difmo Technology, our mission is to innovate and deliver cutting-edge solutions that empower businesses and create positive societal impact. We strive to simplify complex challenges with advanced technology while fostering long-term growth for our clients and communities.",
-      icon: faCogs, // Icon for Mission
-    },
-    {
-      id: 2,
-      title: "Vision",
-      description:
-        "Our vision is to be a global leader in technological innovation, offering transformative solutions that drive business success and positively impact communities worldwide. We aim to expand our reach, adapting to diverse markets and empowering people through the power of technology.",
-      icon: faGlobe, // Icon for Vision
-    },
-    {
-      id: 3,
-      title: "Values",
-      description:
-        "At Difmo Technology, we are guided by our core values: Integrity, Innovation, Collaboration, and Impact. We are committed to ethical practices, continuous learning, and fostering a culture that celebrates creativity and drives positive change both within our organization and in the communities we serve.",
-      icon: faUsers, // Icon for Values
-    },
-  ];
+  
 
   return (
     <>
-      {/* <div className=" w-full  pt-24">
-        <div className=" inset-0 flex flex-col items-center justify-center px-4 space-y-4 text-center sm:px-8 md:px-16 sm:space-y-6 md:space-y-8">
-          <h1 className="text-2xl font-bold leading-tight text-gray-700 sm:text-4xl md:text-5xl lg:text-6xl">
-            Do You Need a Technology Partner <br className="hidden sm:inline" />{" "}
-            For Your Business Idea?
-          </h1>
-
-          <ul className="space-y-2 text-sm text-gray-700 sm:text-md md:text-lg lg:text-xl">
-            <li>
-              Our experts are ready to connect with you upon receiving your
-              inquiry.
-            </li>
-          </ul>
-        </div>
-      </div> */}
-
       {/* <div className="py-24"> */}
-      <div className="bg-slate-200 py-24 px-10">
+      <div className="bg-slate-50 py-24 px-10">
         <h1 className="text-4xl flex justify-center font-bold px-10 text-gray-800 ">
           {" "}
           Contect Us
         </h1>
+        <div className="py-2">
+          {" "}
+          <p className="text-lg flex justify-center  px-0 md:px-[390px] lg:px-[390px] text-gray-700 ">
+            Have questions or need assistance? We're here to help! Reach out to
+            us
+          </p>
+          <p className="text-lg flex justify-center  px-0 md:px-[430px] lg:px-[430px] text-gray-700 ">
+            {" "}
+            through any of the following channels.
+          </p>
+        </div>
         <OurContact />
         {/* </div> */}
       </div>

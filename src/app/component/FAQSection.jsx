@@ -1,0 +1,91 @@
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+
+export default function FAQSection() {
+  return (
+    <div className="max-w-screen-2xl mx-auto text-gray-700  pt-10">
+      <h2 className="text-2xl font-semibold text-center mb-6">
+        Frequently Asked Questions
+      </h2>
+      <div className="grid md:grid-cols-2 gap-16">
+        <div className="p-4   bg-white">
+          <h3 className="font-semibold">What are your response times?</h3>
+          <p className="text-gray-600 text-sm mt-2 py-2">
+            We typically respond to all inquiries within 24 hours during
+            business days. For urgent matters, please call our support line.
+          </p>
+        </div>
+        <div className="p-4   bg-white">
+          <h3 className="font-semibold">Do you offer emergency support?</h3>
+          <p className="text-gray-600 text-sm mt-2 py-2">
+            Yes, we provide 24/7 emergency support for critical issues. Please
+            call our emergency hotline at +1 (555) 999-8888.
+          </p>
+        </div>
+        <div className="p-4   bg-white">
+          <h3 className="font-semibold">
+            Can I schedule an in-person meeting?
+          </h3>
+          <p className="text-gray-600 text-sm mt-2 py-2">
+            Yes, you can schedule an in-person meeting at our office. Please
+            contact us via email or phone to arrange an appointment.
+          </p>
+        </div>
+        <div className="p-4   bg-white ">
+          <h3 className="font-semibold">What’s your refund policy?</h3>
+          <p className="text-gray-600 text-sm mt-2 py-2">
+            We offer a 30-day money-back guarantee on all our services. Please
+            refer to our terms and conditions for detailed information.
+          </p>
+        </div>
+      </div>
+      {/* Social Media Links */}
+      <div className="pt-14  ">
+        <span className=" pb-6 font-bold text-2xl text-gray-700 flex  justify-center">
+          Contect With Us
+        </span>
+        <div className="flex space-x-6 justify-center">
+          <a
+            href="https://www.facebook.com/difmotech"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaFacebook
+              size={32}
+              className="text-gray-400 transition-all duration-300 hover:text-primary-orange"
+            />
+          </a>
+          <a
+            href="https://x.com/difmotech"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTwitter
+              size={32}
+              className="text-gray-400 transition-all duration-300 hover:text-primary-orange"
+            />
+          </a>
+          <a
+            href="https://in.linkedin.com/company/difmo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin
+              size={32}
+              className="text-gray-400 transition-all duration-300 hover:text-primary-orange"
+            />
+          </a>
+          <a
+            href="https://www.instagram.com/thedifmo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram
+              size={32}
+              className="text-gray-400 transition-all duration-300 hover:text-primary-orange"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}

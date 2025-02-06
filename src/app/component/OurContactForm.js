@@ -54,7 +54,7 @@ function Formcontect() {
   };
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md border-2 border-red-600">
+    <div className="bg-white p-6 rounded-lg  ">
       <h2 className="text-2xl font-bold text-center text-gray-800">Reach Us</h2>
       <p className="text-center text-gray-700 mb-6">
         Please complete the form below to request a quote, and we’ll be in
