@@ -1,14 +1,13 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-// import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import RequestForm from "../RequestForm";
-import MainSlider from "../slider/MainSlider";
 import img from "../../assets/landing/landing1.png";
 import svg from "../../assets/backgroundsvg/card.svg";
 import Image from "next/image";
+
 const LandingPage = () => {
   const [currentText, setCurrentText] = useState("");
   const texts = ["Websites", "Mobile Apps", "Digital Solutions"];
@@ -30,62 +29,50 @@ const LandingPage = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  // Typing Effect
   useEffect(() => {
     let index = 0;
+    let charIndex = 0;
+    let isDeleting = false;
 
-    const type = () => {
-      let charIndex = 0;
-      setCurrentText("");
-
-      const typeInterval = setInterval(() => {
-        if (charIndex < texts.length) {
-          setCurrentText(texts[charIndex]);
-          charIndex++;
-        } else {
-          clearInterval(typeInterval);
-          setTimeout(deleteText, 1000);
+    const typeEffect = () => {
+      if (!isDeleting) {
+        setCurrentText(texts[index].slice(0, charIndex + 1));
+        charIndex++;
+        if (charIndex === texts[index].length) {
+          setTimeout(() => (isDeleting = true), 1000);
         }
-      }, 1000);
-    };
-
-    const deleteText = () => {
-      let charIndex = texts[index].length;
-
-      const deleteInterval = setInterval(() => {
-        if (charIndex > 0) {
-          setCurrentText((prev) => prev.slice(0, -1));
-          charIndex--;
-        } else {
-          clearInterval(deleteInterval);
+      } else {
+        setCurrentText(texts[index].slice(0, charIndex - 1));
+        charIndex--;
+        if (charIndex === 0) {
+          isDeleting = false;
           index = (index + 1) % texts.length;
-          setTimeout(type, 300);
         }
-      }, 100);
+      }
     };
 
-    type();
-    return () => setCurrentText("");
+    const typingInterval = setInterval(typeEffect, 150);
+    return () => clearInterval(typingInterval);
   }, []);
-  const handleContactClick = () => {
-    // router.push("");
-    navigate("/contact-us");
-    // <contact-us />;
-  };
+
   return (
-    <div className="landing-page bg-white px-2 md:px-20 lg:px-20 top-10">
-      <div className="flex flex-wrap items-center justify-center md:flex-nowrap ">
-        <div className="absolute inset-0 ">
+    <div className="landing-page bg-white px-2 md:px-20 lg:px-20 top-10 ">
+      <div className="flex flex-wrap items-center justify-center md:flex-nowrap">
+        {/* Background SVG */}
+        <div className="absolute inset-0 z-10 ">
           <Image
             src={svg}
             alt="Background SVG"
             layout="fill"
-            // objectFit="cover"
-            className="opacity-30 md:object-cover z-10" // Adjust opacity as needed
+            className="opacity-30 md:object-cover"
           />
         </div>
+
         {/* Text Section */}
         <motion.div
-          className="text-content w-full md:w-1/2 px-4 my-8"
+          className="text-content w-full md:w-1/2 px-4 my-8 z-20"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -119,8 +106,9 @@ const LandingPage = () => {
             & Digital Marketing Solutions.
           </p>
 
+          {/* Buttons */}
           <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-            <Link href={"/contact-us"}>
+            <Link href="/contact-us">
               <button className="px-6 py-3 text-white hover:text-black transition bg-[#111827] rounded-lg shadow-lg hover:border-primary-orange hover:border hover:bg-gray-200">
                 Let’s Talk
               </button>
@@ -136,7 +124,7 @@ const LandingPage = () => {
 
         {/* Image Section */}
         <motion.div
-          className="flex flex-wrap items-center justify-center md:flex-nowrap"
+          className="flex flex-wrap items-center justify-center md:flex-nowrap z-50"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}

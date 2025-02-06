@@ -38,10 +38,11 @@ const Header = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
+    -z;
   }, []);
 
   return (
-    <header className=" fixed top-0 left-0 z-10 border-b border-gray-100  w-full ">
+    <header className=" fixed top-0 left-0  w-full ">
       <div className="container flex items-center justify-between px-6 py-2 mx-auto">
         {/* Logo Section */}
         <Link href="/" className="flex items-center space-x-2">

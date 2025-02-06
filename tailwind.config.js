@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -7,6 +8,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      zIndex: {
+        60: "60",
+        999: "999",
+      },
       colors: {
         "primary-orange": "#e00909", // Red-Orange Accent
         secondary: "#273d6b", // Blue Secondary Color

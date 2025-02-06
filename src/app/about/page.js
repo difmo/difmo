@@ -101,7 +101,7 @@ We build technology responsibly, ensuring a sustainable impact.",
   ];
   return (
     <>
-      <div className="relative">
+      <div className="relative z-30">
         {/* Background SVG */}
 
         {/* About Us Section */}
@@ -142,7 +142,7 @@ We build technology responsibly, ensuring a sustainable impact.",
                 <Image
                   src={about}
                   alt="FAQ Illustration"
-                  className="w-full max-w-md bg-cover"
+                  className="w-full max-w-md bg-cover "
                   priority
                 />
               </motion.div>
