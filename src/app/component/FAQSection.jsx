@@ -2,7 +2,7 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 export default function FAQSection() {
   return (
-    <div className="max-w-screen-2xl mx-auto text-gray-700  pt-10">
+    <div className="px-2 md:max-w-screen-2xl mx-auto text-gray-700  pt-10">
       <h2 className="text-2xl font-semibold text-center mb-6">
         Frequently Asked Questions
       </h2>

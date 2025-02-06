@@ -10,11 +10,11 @@ import FAQSection from "./FAQSection";
 
 const OurContact = () => {
   return (
-    <div className="w-full px-4 sm:px-6 lg:px-16 py-4 bg-gray-50">
+    <div className="w-full px-2 sm:px-6 lg:px-16 py-4 bg-gray-50">
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:py-16">
         {/* Left section with contact info */}
         <div className="w-full">
-          <div className="rounded-lg bg-white border-gray-500 p-6 md:p-8">
+          <div className="rounded-lg bg-white border-gray-500 py-6 md:p-8">
             <h2 className="font-extrabold text-2xl md:text-3xl text-black mb-6">
               Get in Touch
             </h2>
@@ -77,7 +77,7 @@ const OurContact = () => {
             </div>
             {/* Business Hours */}
           </div>
-          <div className="mt-6 rounded-xl text-black  bg-white p-4">
+          <div className="mt-6 rounded-xl text-black  bg-white md:p-4">
             <h2 className="text-xl font-semibold mb-4">Business Hours</h2>
             <div className="space-y-2">
               <div className="flex justify-between border-b pb-2">
@@ -105,7 +105,7 @@ const OurContact = () => {
         <h2 className="text-3xl md:text-5xl font-extrabold text-gray-700 mb-6">
           Our Location
         </h2>
-        <p className="max-w-3xl mx-auto text-lg text-gray-700 mb-6">
+        <p className="max-w-3xl md:mx-auto text-lg text-gray-700 mb-6">
           Visit us at our office to see how we innovate and bring your ideas to
           life. Explore the map below to find our exact location.
         </p>
