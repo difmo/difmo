@@ -11,7 +11,7 @@ import svg from "../assets/backgroundsvg/card1.svg";
 import icon3 from "../assets/Values.png";
 import icon2 from "../assets/Vision.png";
 import icon1 from "../assets/misson.png";
-import about from "../assets/backgroundsvg/Group.png";
+import about1 from "../assets/backgroundsvg/Group.png";
 import { motion, useInView } from "framer-motion";
 // Reusable Core Value Card Component
 const CoreValueCard = ({ icon, title, subtitle, description }) => (
@@ -101,7 +101,7 @@ We build technology responsibly, ensuring a sustainable impact.",
   ];
   return (
     <>
-      <div className="relative z-30">
+      <div className=" z-30">
         {/* Background SVG */}
 
         {/* About Us Section */}
@@ -135,23 +135,20 @@ We build technology responsibly, ensuring a sustainable impact.",
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <motion.div
-                whileHover={{ scale: 1.05, rotate: 2 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
+              <div className="">
                 <Image
-                  src={about}
+                  src={about1}
                   alt="FAQ Illustration"
-                  className="w-full max-w-md bg-cover "
+                  className="w-full max-w-md bg-cover   "
                   priority
                 />
-              </motion.div>
+              </div>
             </motion.div>
           </div>
         </div>
 
         {/* Core Values Section */}
-        <div className="py-10 bg-warm-gray">
+        <div className="py-10 bg-warm-gray relative z-20">
           <div className="px-4 sm:px-8 lg:px-16">
             <motion.h2
               className="my-6 text-3xl sm:text-4xl md:text-3xl font-extrabold text-black"
