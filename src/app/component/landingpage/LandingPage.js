@@ -58,15 +58,15 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <div className="landing-page bg-white px-2 md:px-20 lg:px-20 top-10 relative z-10 ">
+    <div className="landing-page bg-white px-2 md:px-20 lg:px-20 relative z-10 ">
       <div className="flex flex-wrap items-center justify-center md:flex-nowrap">
         {/* Background SVG */}
-        <div className=" inset-0  ">
+        <div className=" inset-0 absolute ">
           <Image
             src={svg}
             alt="Background SVG"
             layout="fill"
-            className="opacity-30 md:object-cover absolute"
+            className="opacity-30 md:object-cover "
           />
         </div>
 

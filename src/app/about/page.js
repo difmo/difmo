@@ -105,15 +105,9 @@ We build technology responsibly, ensuring a sustainable impact.",
         {/* Background SVG */}
 
         {/* About Us Section */}
-        <div className="mx-4 pb-20 pt-32 bottom-0 sm:px-8 lg:px-16">
+        <div className="mx-4 pb-20 pt-32 bottom-0 sm:px-8 lg:px-16 relative z-50">
           <div className="grid  grid-cols-1 gap-6 sm:grid-cols-1 md:grid-cols-2">
-            <motion.div
-              className="col-span-1"
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
+            <motion.div>
               <h2 className="mb-6 text-2xl sm:text-3xl md:text-3xl font-extrabold text-black">
                 Empowering Digital Futures{" "}
               </h2>
@@ -151,7 +145,8 @@ We build technology responsibly, ensuring a sustainable impact.",
         <div className="py-10 bg-warm-gray relative z-20">
           <div className="px-4 sm:px-8 lg:px-16">
             <motion.h2
-              className="my-6 text-3xl sm:text-4xl md:text-3xl font-extrabold text-black"
+              c
+              lassName="my-6 text-3xl sm:text-4xl md:text-3xl font-extrabold text-black"
               initial={{ opacity: 0, y: -30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -161,20 +156,14 @@ We build technology responsibly, ensuring a sustainable impact.",
             </motion.h2>
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-1 md:grid-cols-3">
               {cardData.map((card, index) => (
-                <motion.div
-                  key={card.id}
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
-                  viewport={{ once: true }}
-                >
+                <div key={card.id}>
                   <CoreValueCard
                     icon={card.icon}
                     title={card.title}
                     subtitle={card.subtitle}
                     description={card.description}
                   />
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -198,19 +187,10 @@ We build technology responsibly, ensuring a sustainable impact.",
               const initialX = rowIndex % 2 === 0 ? -50 : 50;
 
               return (
-                <motion.div
+                <div
                   ref={ref}
                   key={index}
                   className="bg-white  text-gray-800 rounded-lg p-6 transition-all hover:bg-oceanic hover:text-white"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  initial={{ opacity: 0, x: initialX }}
-                  animate={isInView ? { opacity: 1, x: 0 } : {}}
-                  transition={{
-                    duration: 0.6,
-                    ease: "easeOut",
-                    delay: index * 0.15,
-                  }}
                 >
                   <div className="text-4xl mb-4 w-12 py-1 bg-white rounded-md">
                     {feature.icon}
@@ -221,7 +201,7 @@ We build technology responsibly, ensuring a sustainable impact.",
                     </h2>
                     <p className="transition-colors">{feature.description}</p>
                   </div>
-                </motion.div>
+                </div>
               );
             })}
           </div>
