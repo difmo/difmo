@@ -18,7 +18,7 @@ export default function FAQSection() {
           <h3 className="font-semibold">Do you offer emergency support?</h3>
           <p className="text-gray-600 text-sm mt-2 py-2">
             Yes, we provide 24/7 emergency support for critical issues. Please
-            call our emergency hotline at +1 (555) 999-8888.
+            call our emergency hotline at +91 945-579-1624.
           </p>
         </div>
         <div className="p-4   bg-white">
