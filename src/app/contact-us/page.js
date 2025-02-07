@@ -8,29 +8,22 @@ import contact from "../assets/contact.jpeg";
 import OurContact from "../component/OurContact";
 
 const Contact = () => {
-  
-
   return (
     <>
       {/* <div className="py-24"> */}
-      <div className="bg-slate-50 py-24 md:px-10">
-        <h1 className="text-4xl flex justify-center font-bold px-10 text-gray-800 ">
-          {" "}
+      <div className="bg-slate-50 py-8 pt-24 md:py-24 px-4 md:px-10">
+        <h1 className="text-4xl py-3 font-bold text-gray-800 text-center mb-8">
           Contact Us
         </h1>
-        <div className="py-2">
-          {" "}
-          <p className="text-lg flex justify-center  px-0 md:px-[390px] lg:px-[390px] text-gray-700 ">
+        <div className="text-lg text-gray-700">
+          <p className="mb-4 text-center w-full md:px-44">
             Have questions or need assistance? We're here to help! Reach out to
-            us
-          </p>
-          <p className="text-lg flex justify-center  px-0 md:px-[430px] lg:px-[430px] text-gray-700 ">
-            {" "}
-            through any of the following channels.
+            us through any of the following channels.
           </p>
         </div>
+
         <OurContact />
-        {/* </div> */}
+        
       </div>
     </>
   );
