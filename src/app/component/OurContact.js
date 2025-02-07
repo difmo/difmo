@@ -29,13 +29,13 @@ const OurContact = () => {
               </div>
               <a
                 href="tel:+919455791624"
-                className="block text-black hover:text-primary-orange hover:underline mt-1"
+                className="block px-8 text-black hover:text-primary-orange hover:underline mt-1"
               >
                 +91 945-579-1624
               </a>
               <a
                 href="tel:+918172848306"
-                className="block text-black hover:text-primary-orange hover:underline mt-1"
+                className="block px-8 text-black hover:text-primary-orange hover:underline mt-1"
               >
                 +91 817-284-8306
               </a>
@@ -51,13 +51,13 @@ const OurContact = () => {
               </div>
               <a
                 href="mailto:info@difmo.com"
-                className="block text-black hover:text-primary-orange hover:underline mt-1"
+                className="block px-8 text-black hover:text-primary-orange hover:underline mt-1"
               >
                 info@difmo.com
               </a>
               <a
                 href="mailto:difmotech@gmail.com"
-                className="block text-black hover:text-primary-orange hover:underline mt-1"
+                className="block px-8 text-black hover:text-primary-orange hover:underline mt-1"
               >
                 difmotech@gmail.com
               </a>
@@ -71,7 +71,7 @@ const OurContact = () => {
                 />
                 <span className="font-semibold">Address</span>
               </div>
-              <p className="text-black">
+              <p className="text-black px-8">
                 4/37 Vibhav Khand, Gomtinagar, Lucknow, Uttar Pradesh, 226010
               </p>
             </div>
