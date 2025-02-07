@@ -49,7 +49,7 @@ export default function Home() {
       <div className="bg-slate-50 py-24 px-2 md:px-10">
         <h1 className="text-4xl flex justify-center font-bold px-10 text-gray-800 ">
           {" "}
-          Contect Us
+          Contact Us
         </h1>
         <div className="py-2">
           {" "}
