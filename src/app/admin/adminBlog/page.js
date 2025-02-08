@@ -58,11 +58,11 @@ const AllBlogs = () => {
     return <div className="py-10 text-center text-red-500">{error}</div>;
 
   return (
-    <div className="max-w-6xl px-6 py-12 mx-auto">
+    <div className="max-w-6xl px-6 py-12 mx-auto text-black">
       <div className="flex items-center justify-between mb-8">
-        <h2 className="text-4xl font-semibold text-gray-800">All Blogs</h2>
+        <h2 className="text-4xl font-semibold text-gray-900">All Blogs</h2>
         <button
-          className="px-6 py-2 font-semibold text-white transition duration-300 ease-in-out bg-red-500 rounded-lg shadow-lg hover:bg-primary-orange"
+          className="px-6 py-2 font-semibold text-black transition duration-300 ease-in-out bg-red-500 rounded-lg shadow-lg hover:bg-primary-orange"
           onClick={() => router.push("/addblog")}
         >
           Add Blog

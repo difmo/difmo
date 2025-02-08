@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useEffect, useState } from "react";
 import { useTable } from "react-table";
@@ -6,15 +6,10 @@ import { useTable } from "react-table";
 import { Bar } from "react-chartjs-2";
 import "tailwindcss/tailwind.css";
 import { auth, db, storage } from "../config/config.js";
-import {
-  collection,
-  getDocs,
-  doc,
-  getDoc,
-} from 'firebase/firestore';
-import { getDownloadURL, ref } from 'firebase/storage';
+import { collection, getDocs, doc, getDoc } from "firebase/firestore";
+import { getDownloadURL, ref } from "firebase/storage";
 import { useRouter } from "next/navigation";
-
+import Adminsidenav from "./sidebar'/adminsidenav.js";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -51,7 +46,7 @@ const Admin = () => {
         );
         const applicationsData = [];
         const images = {};
-        
+
         for (const doc of applicationsSnapshot.docs) {
           const data = doc.data();
           const timestamp = data.timestamp?.toDate
@@ -68,7 +63,7 @@ const Admin = () => {
             images[doc.id] = imageURL;
           }
         }
-        
+
         setApplications(applicationsData);
         setApplicationImages(images);
 
@@ -217,9 +212,27 @@ const Admin = () => {
     []
   );
 
-  const { getTableProps: getApplicationTableProps, getTableBodyProps: getApplicationTableBodyProps, headerGroups: applicationHeaderGroups, rows: applicationRows, prepareRow: prepareApplicationRow } = useTable({ columns: applicationColumns, data: applications });
-  const { getTableProps: getUserTableProps, getTableBodyProps: getUserTableBodyProps, headerGroups: userHeaderGroups, rows: userRows, prepareRow: prepareUserRow } = useTable({ columns: userColumns, data: users });
-  const { getTableProps: getContactMessagesTableProps, getTableBodyProps: getContactMessagesTableBodyProps, headerGroups: contactMessagesHeaderGroups, rows: contactMessagesRows, prepareRow: prepareContactMessageRow } = useTable({ columns: contactMessagesColumns, data: contactMessages });
+  const {
+    getTableProps: getApplicationTableProps,
+    getTableBodyProps: getApplicationTableBodyProps,
+    headerGroups: applicationHeaderGroups,
+    rows: applicationRows,
+    prepareRow: prepareApplicationRow,
+  } = useTable({ columns: applicationColumns, data: applications });
+  const {
+    getTableProps: getUserTableProps,
+    getTableBodyProps: getUserTableBodyProps,
+    headerGroups: userHeaderGroups,
+    rows: userRows,
+    prepareRow: prepareUserRow,
+  } = useTable({ columns: userColumns, data: users });
+  const {
+    getTableProps: getContactMessagesTableProps,
+    getTableBodyProps: getContactMessagesTableBodyProps,
+    headerGroups: contactMessagesHeaderGroups,
+    rows: contactMessagesRows,
+    prepareRow: prepareContactMessageRow,
+  } = useTable({ columns: contactMessagesColumns, data: contactMessages });
 
   const internshipCount = applications.length;
   const userCount = users.length;
@@ -238,65 +251,54 @@ const Admin = () => {
 
   return (
     <>
-
-   
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center">
-    <header className="bg-white shadow w-full">
-    <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 pt-[12rem]">
-      <h1 className="text-3xl font-bold text-gray-900">Admin Panel</h1>
-      <button
-        className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300 ease-in-out"
-        // onClick={() => navigate('/adminBlog')}>
-            onClick={() => router.push('/adminBlog')}>
-        Go to Blog Section
-      </button>
-    </div>
-  </header>
-      <main className="flex-grow w-full max-w-7xl mx-auto p-6 space-y-12 overflow-y-auto">
-        {/* Metrics cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="bg-white shadow-lg rounded-lg p-6">
-            <h2 className="text-2xl font-bold text-gray-700">Metrics</h2>
-            <div className="flex flex-wrap justify-between mt-4">
-              <div className="bg-blue-500 text-white p-4 rounded-lg mb-4 md:mb-0 md:w-1/3">
-                <h3 className="text-lg font-bold">Internship Students</h3>
-                <p className="text-2xl">{internshipCount}</p>
+      <div className="flex flex-col md:flex-row min-h-screen">
+        <div className="w-full z-10 min-h-screen md:w-[10%]">
+          <Adminsidenav />
+        </div>
+        <div className="w-full md:w-[90%] bg-gray-50 flex flex-col pt-24 px-4 md:px-6">
+          <main className="flex-grow mx-auto space-y-12 mt-16 w-full max-w-7xl">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-white shadow-lg rounded-xl p-6 border-l-4 border-blue-500">
+                <h3 className="text-lg font-semibold text-gray-700">
+                  Internship Students
+                </h3>
+                <p className="text-3xl font-bold text-blue-600">
+                  {internshipCount}
+                </p>
               </div>
-              <div className="bg-green-500 text-white p-4 rounded-lg mb-4 md:mb-0 md:w-1/3">
-                <h3 className="text-lg font-bold">Registered Users</h3>
-                <p className="text-2xl">{userCount}</p>
+              <div className="bg-white shadow-lg rounded-xl p-6 border-l-4 border-green-500">
+                <h3 className="text-lg font-semibold text-gray-700">
+                  Registered Users
+                </h3>
+                <p className="text-3xl font-bold text-green-600">{userCount}</p>
               </div>
-              <div className="bg-indigo-500 text-white p-4 rounded-lg md:w-1/3">
-                <h3 className="text-lg font-bold">Contact Messages</h3>
-                <p className="text-2xl">{contactMessagesCount}</p>
+              <div className="bg-white shadow-lg rounded-xl p-6 border-l-4 border-indigo-500">
+                <h3 className="text-lg font-semibold text-gray-700">
+                  Contact Messages
+                </h3>
+                <p className="text-3xl font-bold text-indigo-600">
+                  {contactMessagesCount}
+                </p>
               </div>
             </div>
-          </div>
-          <div className="bg-white shadow-lg rounded-lg p-6">
-            <h2 className="text-2xl font-bold text-gray-700">Data Overview</h2>
-            {/* Bar chart */}
-            <Bar data={chartData} />
-          </div>
-        </div>
-
-        {/* Section for internship applications */}
-        <section>
-          <h2 className="text-2xl font-bold mb-6 text-gray-700">
-            Internship Applications
-          </h2>
-          <div className="bg-white shadow overflow-hidden sm:rounded-lg">
-            <div className="overflow-x-auto">
-              <table
-                {...getApplicationTableProps()}
-                className="min-w-full divide-y divide-gray-200"
-              >
-                <thead className="bg-gray-50">
+            <div className="bg-white shadow-lg rounded-xl p-6">
+              <h2 className="text-2xl font-bold text-gray-700 mb-4">
+                Data Overview
+              </h2>
+              <Bar data={chartData} />
+            </div>
+            <section className="bg-white shadow-lg rounded-xl p-6 overflow-x-auto">
+              <h2 className="text-2xl font-bold mb-4 text-gray-700">
+                Internship Applications
+              </h2>
+              <table className="w-full border-collapse border border-gray-200 rounded-lg">
+                <thead className="bg-gray-100">
                   {applicationHeaderGroups.map((headerGroup) => (
                     <tr {...headerGroup.getHeaderGroupProps()}>
                       {headerGroup.headers.map((column) => (
                         <th
                           {...column.getHeaderProps()}
-                          className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                          className="px-2 py-3 text-xs font-medium text-gray-600 uppercase"
                         >
                           {column.render("Header")}
                         </th>
@@ -304,18 +306,15 @@ const Admin = () => {
                     </tr>
                   ))}
                 </thead>
-                <tbody
-                  {...getApplicationTableBodyProps()}
-                  className="bg-white divide-y divide-gray-200"
-                >
+                <tbody className="divide-y divide-gray-200">
                   {applicationRows.map((row) => {
                     prepareApplicationRow(row);
                     return (
-                      <tr {...row.getRowProps()}>
+                      <tr {...row.getRowProps()} className="hover:bg-gray-50">
                         {row.cells.map((cell) => (
                           <td
                             {...cell.getCellProps()}
-                            className="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                            className="px-4 py-4 text-sm text-gray-700"
                           >
                             {cell.render("Cell")}
                           </td>
@@ -325,113 +324,125 @@ const Admin = () => {
                   })}
                 </tbody>
               </table>
-            </div>
-          </div>
-        </section>
-
-        {/* Section for registered users */}
-        <section className="bg-white shadow overflow-hidden sm:rounded-lg max-h-[calc(100vh-25rem)]">
-          <h2 className="text-2xl font-bold mb-6 text-gray-700 p-3">
-            Registered Users
-          </h2>
-          <div className="overflow-y-auto">
-            <table
-              {...getUserTableProps()}
-              className="min-w-full divide-y divide-gray-200"
-            >
-              <thead className="bg-gray-50">
-                {userHeaderGroups.map((headerGroup) => (
-                  <tr {...headerGroup.getHeaderGroupProps()}>
-                    {headerGroup.headers.map((column) => (
-                      <th
-                        {...column.getHeaderProps()}
-                        className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                      >
-                        {column.render("Header")}
-                      </th>
-                    ))}
-                  </tr>
-                ))}
-              </thead>
-              <tbody
-                {...getUserTableBodyProps()}
-                className="bg-white divide-y divide-gray-200"
-              >
-                {userRows.map((row) => {
-                  prepareUserRow(row);
-                  return (
-                    <tr
-                      {...row.getRowProps()}
-                      className={
-                        row.original.newUser ? "newDataHighlight" : ""
-                      }
-                    >
-                      {row.cells.map((cell) => (
-                        <td
-                          {...cell.getCellProps()}
-                          className="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+            </section>
+            <section className="bg-white shadow-lg rounded-xl p-3 overflow-x-auto">
+              <h2 className="text-2xl font-bold mb-4 text-gray-700">
+                Registered Users
+              </h2>
+              <table className="w-full min-w-max border-collapse border border-gray-200 rounded-lg">
+                <thead className="bg-gray-100">
+                  {userHeaderGroups.map((headerGroup) => (
+                    <tr {...headerGroup.getHeaderGroupProps()}>
+                      {headerGroup.headers.map((column) => (
+                        <th
+                          {...column.getHeaderProps()}
+                          className="px-4 py-3 text-xs font-medium text-gray-600 uppercase"
                         >
-                          {cell.render("Cell")}
-                        </td>
+                          {column.render("Header")}
+                        </th>
                       ))}
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        {/* Section for contact messages */}
-        <section className="bg-white shadow overflow-hidden sm:rounded-lg max-h-[calc(100vh-25rem)]">
-          <h2 className="text-2xl font-bold mb-6 text-gray-700 p-3">
-            Contact Messages from Clients
-          </h2>
-          <div className="overflow-y-auto">
-            <table
-              {...getContactMessagesTableProps()}
-              className="min-w-full divide-y divide-gray-200"
-            >
-              <thead className="bg-gray-50">
-                {contactMessagesHeaderGroups.map((headerGroup) => (
-                  <tr {...headerGroup.getHeaderGroupProps()}>
-                    {headerGroup.headers.map((column) => (
-                      <th
-                        {...column.getHeaderProps()}
-                        className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                      >
-                        {column.render("Header")}
+                      <th className="px-4 py-3 text-xs font-medium text-gray-600 uppercase">
+                        Actions
                       </th>
-                    ))}
-                  </tr>
-                ))}
-              </thead>
-              <tbody
-                {...getContactMessagesTableBodyProps()}
-                className="bg-white divide-y divide-gray-200"
-              >
-                {contactMessagesRows.map((row) => {
-                  prepareContactMessageRow(row);
-                  return (
-                    <tr {...row.getRowProps()}>
-                      {row.cells.map((cell) => (
-                        <td
-                          {...cell.getCellProps()}
-                          className="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                        >
-                          {cell.render("Cell")}
-                        </td>
-                      ))}
                     </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
-        </section>
-      </main>
-    </div>
-  </>
+                  ))}
+                </thead>
+                <tbody className="divide-y divide-gray-200">
+                  {userRows.map((row) => {
+                    prepareUserRow(row);
+                    return (
+                      <tr {...row.getRowProps()} className="hover:bg-gray-50">
+                        {row.cells.map((cell) => (
+                          <td
+                            {...cell.getCellProps()}
+                            className="px-4 py-4 text-sm text-gray-700"
+                          >
+                            {cell.render("Cell")}
+                          </td>
+                        ))}
+                        <td className="px-4 py-4 text-sm text-gray-700 flex gap-2">
+                          <button
+                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded text-xs"
+                            onClick={() => handleEdit(row.original.id)}
+                          >
+                            Edit
+                          </button>
+                          <button
+                            className="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-3 rounded text-xs"
+                            onClick={() => handleDelete(row.original.id)}
+                          >
+                            Delete
+                          </button>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </section>
+
+            {/* Contact Messages */}
+            <section className="bg-white shadow-lg rounded-xl p-6">
+              <h2 className="text-2xl font-bold mb-4 text-gray-700">
+                Contact Messages
+              </h2>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse border border-gray-200 rounded-lg">
+                  <thead className="bg-gray-100">
+                    {contactMessagesHeaderGroups.map((headerGroup) => (
+                      <tr {...headerGroup.getHeaderGroupProps()}>
+                        {headerGroup.headers.map((column) => (
+                          <th
+                            {...column.getHeaderProps()}
+                            className="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase"
+                          >
+                            {column.render("Header")}
+                          </th>
+                        ))}
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase">
+                          Actions
+                        </th>
+                      </tr>
+                    ))}
+                  </thead>
+                  <tbody className="divide-y divide-gray-200">
+                    {contactMessagesRows.map((row) => {
+                      prepareContactMessageRow(row);
+                      return (
+                        <tr {...row.getRowProps()} className="hover:bg-gray-50">
+                          {row.cells.map((cell) => (
+                            <td
+                              {...cell.getCellProps()}
+                              className="px-6 py-4 text-sm text-gray-700"
+                            >
+                              {cell.render("Cell")}
+                            </td>
+                          ))}
+                          <td className="px-6 py-4 text-sm text-gray-700 flex ">
+                            <button
+                              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2"
+                              onClick={() => handleEdit(row.original.id)} // Replace with your edit function and pass appropriate row data
+                            >
+                              Edit
+                            </button>
+                            <button
+                              className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+                              onClick={() => handleDelete(row.original.id)} // Replace with your delete function and pass appropriate row data
+                            >
+                              Delete
+                            </button>
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </>
   );
 };
 

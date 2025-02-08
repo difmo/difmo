@@ -41,7 +41,7 @@ const ProjectDetails = ({ params }) => {
         {/* Project Image */}
         <div className="relative w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden">
           <Image
-            src={project.image[0]}
+            src={project.image  }
             alt={project.title}
             layout="fill"
             objectFit="contain"
@@ -77,32 +77,29 @@ const ProjectDetails = ({ params }) => {
               Does your need match our expertise?
             </b>
           )}
-          <Link
-          href="/contact-us"
-          >
-          
-          <button 
-          href="/contact-us"
-          className="flex items-center justify-center w-full px-6 py-3 space-x-2 text-lg font-semibold text-center text-white transition-all border-2 border-white rounded-lg bg-primary-orange hover:bg-red-800 sm:max-w-screen-lg sm:ml-auto focus:outline-none focus:ring-2 focus:ring-red-300">
-            <span>GET STARTED</span>
-            <svg
-              className="w-6 h-6 text-white"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+          <Link href="/contact-us">
+            <button
+              href="/contact-us"
+              className="flex items-center justify-center w-full px-6 py-3 space-x-2 text-lg font-semibold text-center text-white transition-all border-2 border-white rounded-lg bg-primary-orange hover:bg-red-800 sm:max-w-screen-lg sm:ml-auto focus:outline-none focus:ring-2 focus:ring-red-300"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M10 6l6 6-6 6"
-              ></path>
-            </svg>
-          </button>
+              <span>GET STARTED</span>
+              <svg
+                className="w-6 h-6 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M10 6l6 6-6 6"
+                ></path>
+              </svg>
+            </button>
           </Link>
         </div>
-
       </div>
     </div>
   );

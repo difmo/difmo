@@ -9,6 +9,8 @@ import Development from "./component/Development";
 import OurServices from "./component/OurServices";
 import OurContact from "./component/OurContact";
 import LandingPage from "./component/landingpage/LandingPage";
+import AddBlogForm from "./admin/addblog/page";
+import Createproject from "./admin/adminProject/Createproject";
 
 export default function Home() {
   const router = useRouter(); // Initialize the Next.js router
@@ -74,6 +76,8 @@ export default function Home() {
           gtag('config', 'G-YJS1KZQ78Q');
         `}
       </Script>
+      <AddBlogForm />
+      <Createproject />
     </>
   );
 }

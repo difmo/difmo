@@ -32,13 +32,13 @@ const Projects = () => {
                   {project.title}
                 </h3>
                 <p className="text-gray-700 text-[16px] sm:pt-2 leading-loose tracking-wide text-justify">
-                  {project.description.length > 65
+                  {project.description.length < 65
                     ? `${project.description.slice(0, 65)}...`
                     : project.description}
                 </p>
                 <div className="mt-4">
                   <Link
-                    href={`/our-projects/${project.id}`}
+                    href={`/our-projects/${project.id[0]}`}
                     className="absolute bottom-4 right-4 text-[#26baf6] font-semibold cursor-pointer animate-blink"
                   >
                     View Details

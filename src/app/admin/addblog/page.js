@@ -5,7 +5,7 @@ import dynamic from "next/dynamic"; // Import dynamic for SSR handling
 import "react-quill/dist/quill.snow.css";
 import { collection, addDoc, Timestamp } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
-import { db, storage } from "../config/config";
+import { db, storage } from "../../config/config";
 import { useRouter } from "next/navigation";
 
 // Dynamically import ReactQuill with ssr: false
@@ -121,8 +121,8 @@ const AddBlogForm = () => {
   };
 
   return (
-    <div className="max-w-2xl p-8 mx-auto bg-white rounded-lg shadow-md">
-      <h2 className="mb-6 text-2xl font-bold">Add New Blog</h2>
+    <div className="max-w-2xl p-8 mx-auto bg-white rounded-lg shadow-md text-black">
+      <h2 className="mb-6 text-2xl font-bold text-black">Add New Blog</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Title Input */}
         <div>
