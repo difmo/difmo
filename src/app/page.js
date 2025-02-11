@@ -76,8 +76,8 @@ export default function Home() {
           gtag('config', 'G-YJS1KZQ78Q');
         `}
       </Script>
-      <AddBlogForm />
-      <Createproject />
+      {/* <AddBlogForm />
+      <Createproject /> */}
     </>
   );
 }

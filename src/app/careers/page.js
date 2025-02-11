@@ -1,33 +1,33 @@
 "use client";
 
 import React from "react";
+// src / app / assets / career / career.jpg;
 import Image from "next/image";
-import see1 from "../assets/career/alpha.jpg";
+import see1 from "../assets/career/career.jpg";
 // import see2 from "../assets/career/xyz1.jpg";
 import Link from "next/link";
 import JoinRemoteTeam from "../component/JoinRemoteTeam";
 import PhotoGallery from "../component/PhotoGallery";
+import WhyJoin from "../component/WhyJoin";
 const About = () => {
   return (
     <>
       <div className="flex flex-col items-center justify-center min-h-screen px-4 pt-10 md:flex-row md:pt-16 md:px-6 lg:px-20">
         {/* Left Content Section */}
-        <div className="w-full p-2 md:w-1/2 md:p-3 pt-12">
-          <h1 className="py-3 text-2xl font-bold text-black sm:text-2xl md:text-3xl lg:text-4xl">
-            Looking For An Exciting{" "}
-            <span className="text-primary-orange">Career in Technology</span>{" "}
-            And Innovat ion
+        <div className="w-full px-4 py-6 md:w-1/2 md:py-12 flex flex-col justify-center items-start">
+          <h1 className="py-3 text-2xl font-bold text-black sm:text-3xl md:text-4xl lg:text-5xl leading-tight">
+            Join <span className="text-primary-orange">Our Team</span> of
+            Innovators
           </h1>
-          <p className="py-2 mt-4 text-base text-black sm:text-lg md:text-xl">
-            Join our dynamic team and make an impact!
-            <span className="font-semibold"> Explore</span> opportunities to
-            grow,learn, and achieve your
-            <span className="font-semibold"> professional </span> goals with us.
+          <p className="py-2 mt-4 text-sm sm:text-base md:text-lg lg:text-xl text-black leading-relaxed">
+            Be part of a global team that's transforming the
+            <span className="font-semibold"> future of technology.</span> We're
+            looking for passionate individuals who want to make an impact.
           </p>
-          <div className="py-5">
+          <div className="mt-6">
             <Link
               href="/apply-job"
-              className="mt-6 text-white px-6 py-2 sm:px-8 sm:py-3 bg-primary-orange rounded-3xl  hover:bg-[#ff8d89]"
+              className="inline-block text-white px-6 py-3 sm:px-9 sm:py-4 bg-black rounded-lg hover:bg-gray-700 transition duration-300"
             >
               Apply Now
             </Link>
@@ -35,33 +35,18 @@ const About = () => {
         </div>
 
         {/* Right Image Section */}
-        <div className="relative flex items-center justify-center w-full mt-8 md:w-1/2 md:mt-0">
-          {/* Small Image */}
-          <div className="absolute right-0 h-32 overflow-hidden border-4 rounded-lg shadow-lg -top-16 w-28 sm:h-40 sm:w-36 md:h-60 md:w-52 border-primary-orange">
+        <div className=" flex items-center justify-center w-full mt-8 md:w-1/2 md:mt-0">
+          <div className="relative md:right-20   rounded-lg shadow-xl  ">
+            {" "}
             <Image
               src={see1}
               alt="Small team photo"
-              layout="fill"
-              // objectFit="cover"
+              className="h-80   w-80 md:h-[500px] md:w-[500px] "
             />
           </div>
-
-          {/* Large Circular Image */}
-          <div
-            className="border-4 rounded-full shadow-xl border-primary-orange"
-            style={{
-              backgroundImage: `url('/bgim.png')`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              width: "90%", // Dynamically adjust for smaller screens
-              maxWidth: "500px", // Cap size for larger screens
-              aspectRatio: "1", // Ensures perfect circle
-              backgroundRepeat: "no-repeat",
-            }}
-          ></div>
         </div>
       </div>
-
+      <WhyJoin />
       <PhotoGallery />
       {/* /////////////  video ///////////////// */}
       <div className="flex items-center justify-center h-full  bg-gray-50 z-70 ">
