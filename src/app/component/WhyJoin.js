@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { FaChartLine, FaGlobe, FaLightbulb } from "react-icons/fa"; // Importing icons
 
@@ -24,13 +26,13 @@ function WhyJoin() {
   ];
 
   return (
-    <div className="py-12 text-center">
+    <div className="py-12 text-left px-4  md:px-6 lg:px-14 ">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-black">Why Join</h1>
-        <h3 className="text-xl text-gray-700 mt-2">
+        <h1 className="text-3xl font-bold text-black py-3 ">Why Join Us</h1>
+        <h3 className="text-2xl font-bold text-gray-700   mt-2">
           Everything you need to grow your career
         </h3>
-        <p className="text-gray-600 mt-4">
+        <p className="text-gray-600 mt-4 ">
           Join a company that values innovation, growth, and your personal
           development.
         </p>
@@ -40,11 +42,12 @@ function WhyJoin() {
         {benefits.map((benefit, index) => (
           <div
             key={index}
-            className="flex flex-col items-start max-w-xs text-left"
+            className="flex flex-col items-start lg:max-w-sm md:max-w-sm
+            text-left "
           >
-            <span className="text-2xl">{benefit.icon}</span>
-            <h3 className="font-semibold mt-2 text-primary-orange">
-              {benefit.title}
+            <h3 className="font-semibold py-2  text-primary-orange flex text-xl">
+              <span className="">{benefit.icon}</span>
+              <span className=""> {benefit.title}</span>
             </h3>
             <p className="text-gray-600">{benefit.description}</p>
           </div>

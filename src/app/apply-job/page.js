@@ -1,14 +1,14 @@
-import React from 'react'
-import Career from '../component/Career'
+import React from "react";
+import Career from "../component/Career";
 
 const page = () => {
   return (
     <>
-    <div>
-        <Career/>
-    </div>
+      <div>
+        <Career />
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default page
+export default page;
