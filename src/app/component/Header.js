@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { HiOutlineMenu, HiOutlineX } from "react-icons/hi"; // Icons for menu and close
+import { HiOutlineMenu, HiOutlineX } from "react-icons/hi"; // Icons for menu and 
 import logo from "../assets/svgfiles/blacklogo1.svg";
 
 const Header = () => {
