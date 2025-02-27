@@ -10,7 +10,22 @@ const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
+  const [scrolling, setScrolling] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   // Helper to determine if a link is active
   const isActive = (path) => pathname === path;
@@ -42,8 +57,12 @@ const Header = () => {
   }, []);
 
   return (
-    <header className=" fixed top-0 left-0  w-full z-60 ">
-      <div className="container flex items-center justify-between px-6 py-2 mx-auto">
+    <header
+      className={`fixed top-0 left-0 w-full z-60 px-20 transition-all duration-300 ${
+        scrolling ? "bg-white " : "bg-transparent"
+      }`}
+    >
+      <div className="container flex items-center justify-between px-6 py-2 mx-auto ">
         {/* Logo Section */}
         <Link href="/" className="flex items-center space-x-2">
           <Image
@@ -51,7 +70,7 @@ const Header = () => {
             alt="Difmo Logo"
             // width={150}
             // height={64}
-            className="w-auto h-14 md:h-10 bg-cover"
+            className="w-auto h-10 md:h-10 bg-cover"
           />
         </Link>
 

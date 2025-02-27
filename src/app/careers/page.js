@@ -41,10 +41,11 @@ const About = () => {
         <div className=" flex items-center justify-center w-full mt-8 md:w-1/2 md:mt-0">
           <div className="relative rounded-md shadow-xl  ">
             {" "}
-            <Image
-              src={see1}
+            <img
+              src="https://img.freepik.com/free-photo/guy-shows-document-girl-group-young-freelancers-office-have-conversation-working_146671-13569.jpg?ga=GA1.1.877235173.1735105969&semt=ais_hybrid"
               alt="Small team photo"
-              className="h-80   w-96 md:h-[450px] md:w-[450px] "
+              // className="h-80   w-96 md:h-[450px] md:w-[450px] "
+              className="h-full w-full bg-cover"
             />
           </div>
         </div>
