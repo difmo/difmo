@@ -6,7 +6,7 @@ import acco2 from "../assets/marketing/seo2.png";
 import AccordionList from "../component/AccordionList";
 import FAQ from "../component/Faq";
 import Contact from "../contact-us/page";
-import RequestForm from "../component/RequestForm"; // Ensure this is correctly imported
+import RequestForm from "../component/RequestForm"; // Ensure  is correctly imported
 import Link from "next/link";
 import Contactus from "../component/Contactus";
 

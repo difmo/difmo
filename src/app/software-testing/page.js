@@ -14,7 +14,7 @@ const Mobiledevlopment = () => {
     <>
       <div className="min-h-screen bg-gray-50 pt-24">
         {/* Hero Section */}
-        <div className="px-4 py-16 text-center text-white bg-deep-blue md:px-12">
+        <div className="px-4 py-16 text-center text-white bg-primary-orange md:px-12">
           <h1 className="text-4xl font-bold md:text-5xl">
             Ensuring Quality eCommerce Solutions through Rigorous Software
             Testing
@@ -31,7 +31,7 @@ const Mobiledevlopment = () => {
             <h2 className="mb-6 text-3xl font-bold text-deep-blue">
               Why Software Testing Matters in eCommerce
             </h2>
-            <p className="text-lg leading-relaxed">
+            <p className="text-lg leading-relaxed text-gray-700">
               In today’s dynamic digital marketplace, delivering seamless online
               shopping experiences is crucial for business success. At Difmo
               Technologies, we don't just build innovative eCommerce
@@ -48,7 +48,7 @@ const Mobiledevlopment = () => {
             <h2 className="mb-6 text-3xl font-bold text-deep-blue">
               Mastering eCommerce Development Technologies for Your Success
             </h2>
-            <p className="mb-6 text-lg leading-relaxed">
+            <p className="mb-6 text-lg leading-relaxed text-gray-700">
               At Difmo Technologies, our years of expertise in eCommerce
               development have not only made us leaders in the industry but have
               also highlighted the importance of top-notch software testing
@@ -83,7 +83,7 @@ const Mobiledevlopment = () => {
             <h2 className="mb-6 text-3xl font-bold text-deep-blue">
               Stay Ahead with Difmo Technologies
             </h2>
-            <p className="mb-6 text-lg leading-relaxed">
+            <p className="mb-6 text-lg leading-relaxed text-gray-700">
               By adopting the most advanced testing methodologies, we eliminate
               bugs and performance issues, keeping your eCommerce solutions
               running flawlessly. Stay ahead of the competition with innovative,

@@ -86,7 +86,7 @@ const BlogDetails = () => {
       </div> */}
 
       {/* Blog Content Section */}
-      <div className="container mx-auto p-6 md:p-12">
+      <div className="container mx-auto p-6 md:pt-32 md:px-12 ">
         {/* Blog Title */}
         <h2 className="md:text-4xl text-xl font-lilita mb-8 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange">
           {blog.title}

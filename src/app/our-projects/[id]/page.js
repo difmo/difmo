@@ -1,3 +1,98 @@
+// import React from "react";
+// const page = () => {
+//   <div className="bg-white p-4 shadow rounded">
+//     <h2 className="font-semibold text-black">Budget Overview</h2>
+//     <div className="mt-4 flex justify-center">
+//       {/* <PieChart width={200} height={200}>
+//         <Pie
+//           data={budgetData}
+//           cx="50%"
+//           cy="50%"
+//           outerRadius={60}
+//           fill="#8884d8"
+//           dataKey="value"
+//           label
+//         >
+//           {budgetData.map((entry, index) => (
+//             <Cell key={`cell-${index}`} fill={entry.color} />
+//           ))}
+//         </Pie>
+//         <Tooltip />
+//         <Legend />
+//       </PieChart> */}
+//     </div>
+//   </div>;
+
+//   return (
+//     <div className="p-6 bg-gray-100 min-h-screen">
+//       <div className="max-w-6xl mx-auto bg-white p-6 shadow-md rounded-lg">
+//         <h1 className="text-2xl font-bold text-black">Enterprise Mobile App Development</h1>
+//         <p className="text-gray-600">Started: Jan 15, 2024 - Due: Dec 31, 2024</p>
+
+//         <div className="grid grid-cols-3 gap-6 mt-6">
+//           <div className="bg-white p-4 shadow rounded">
+//             <h2 className="font-semibold text-black">Project Progress</h2>
+//             <div className="mt-2">
+//               <div className="w-full bg-gray-200 rounded-full h-2.5">
+//                 <div className="bg-black h-2.5 rounded-full" style={{ width: "100%" }}></div>
+//               </div>
+//               <p className="mt-2 text-gray-600">100%</p>
+//             </div>
+//           </div>
+
+//           <div className="bg-white p-4 shadow rounded">
+//             <h2 className="font-semibold text-black">Budget Overview</h2>
+//             <div className="mt-4 flex justify-center">[Pie Chart Placeholder]</div>
+//           </div>
+//           <div className="bg-white p-4 shadow rounded">
+//             <h2 className="font-semibold text-black">Team Performance</h2>
+//             <div className="mt-4 flex justify-center">[Line Chart Placeholder]</div>
+//           </div>
+//         </div>
+
+//        <div className="mt-6 bg-white p-4 shadow rounded">
+//           <h2 className="font-semibold text-black">Milestone Timeline</h2>
+//           <ul className="mt-4">
+//             <li className="mb-2 text-black">
+//               ✅ <strong>Project Kickoff</strong>
+//               <p className="text-gray-600">Completed on January 15, 2025</p>
+//             </li>
+//             <li className="mb-2 text-black">
+//               ✅ <strong>Design Phase</strong>
+//               <p className="text-gray-600">Completed on March 25, 2025</p>
+//             </li>
+//             <li className="mb-2 text-black">
+//               ✅ <strong>Development Phase</strong>
+//               <p className="text-gray-600">Completed on December 15, 2025 </p>
+//             </li>
+//           </ul>
+//         </div>
+
+//         <div className="mt-6 grid grid-cols-2 gap-6">
+//           <div className="bg-white p-4 shadow rounded">
+//             <h2 className="font-semibold text-black">Recent Updates</h2>
+//             <ul className="mt-4 text-gray-600">
+//               <li> New feature branch created - 2 hours ago</li>
+//               <li> UI Design Review completed - Yesterday</li>
+//               <li> Project documentation updated - 2 days ago</li>
+//             </ul>
+//           </div>
+//           <div className="bg-white p-4 shadow rounded">
+//             <h2 className="font-semibold text-black">Risk Assessment</h2>
+//             <ul className="mt-4">
+//               <li className="text-gray-600">🔴 High - Resource availability</li>
+//               <li className="text-gray-600">🟡 Medium - Technical complexity</li>
+//               <li className="text-gray-600">🟢 Low - Budget overrun</li>
+//             </ul>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default page;
+
 import Image from "next/image";
 import { projects } from "../../component/projects";
 import Link from "next/link";
@@ -41,7 +136,7 @@ const ProjectDetails = ({ params }) => {
         {/* Project Image */}
         <div className="relative w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden">
           <Image
-            src={project.image  }
+            src={project.image}
             alt={project.title}
             layout="fill"
             objectFit="contain"
