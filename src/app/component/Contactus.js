@@ -1,6 +1,8 @@
 import React from "react";
 import Formcontect from "./OurContactForm";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope, faMapMarkerAlt, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const Contactus = () => {
   return (
@@ -9,102 +11,89 @@ const Contactus = () => {
         <h1 className="text-2xl md:text-5xl ">Get In Touch</h1>
       </div>
       <div className="md:flex gap-7 px-2 md:px-10 py-5 justify-center">
-        <div className="p-8 bg-secondary border-secondary  rounded-2xl  lg:rounded-[50px]  w-full lg:w-2/4 md:pb-5 mb-4">
-          <h2 className="mb-8 text-4xl font-extrabold text-center text-transparent text-white bg-clip-text">
-            Quick Contact
-          </h2>
-          <h2 className="mb-8 font-extrabold text-center text-white capitalize bg-clip-text bg-gradient-to-r ">
-            Feel free to contact with our team
-          </h2>
-          {/* Phone Number */}
-          <div className="p-6 border-b border-gray-200">
-            <span className="block mb-3 text-white">Phone Number</span>
-            <a
-              href="tel:+919455791624"
-              className="block text-white hover:text-primary-orange hover:underline"
-            >
-              +91 945-579-1624
-            </a>
-            <a
-              href="tel:+918172848306"
-              className="block text-white hover:text-primary-orange hover:underline"
-            >
-              +91 817-284-8306
-            </a>
+ <div className="w-full">
+          <div className="rounded-lg bg-white border-gray-500 py-6 md:p-8">
+            <h2 className="font-extrabold text-2xl md:text-3xl text-black mb-6">
+              Get in Touch
+            </h2>
+            {/* Phone Number */}
+            <div className="mb-4">
+              <div className="flex items-center text-black">
+                <FontAwesomeIcon
+                  icon={faPhone }
+                  className="w-5 h-5 mr-2 text-primary-orange"
+                />
+                <span className="font-semibold">Phone Number</span>
+              </div>
+              <a
+                href="tel:+919455791624"
+                className="block px-8 text-black hover:text-primary-orange hover:underline mt-1"
+              >
+                +91 945-579-1624
+              </a>
+              <a
+                href="tel:+918172848306"
+                className="block px-8 text-black hover:text-primary-orange hover:underline mt-1"
+              >
+                +91 817-284-8306
+              </a>
+            </div>
+            {/* Email Address */}
+            <div className="mb-4">
+              <div className="flex items-center text-black">
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  className="w-5 h-5 mr-2 text-primary-orange"
+                />
+                <span className="font-semibold">Email Address</span>
+              </div>
+              <a
+                href="mailto:info@difmo.com"
+                className="block px-8 text-black hover:text-primary-orange hover:underline mt-1"
+              >
+                info@difmo.com
+              </a>
+              <a
+                href="mailto:difmotech@gmail.com"
+                className="block px-8 text-black hover:text-primary-orange hover:underline mt-1"
+              >
+                difmotech@gmail.com
+              </a>
+            </div>
+            {/* Address */}
+            <div className=" border-gray-200 ">
+              <div className="flex items-center text-black">
+                <FontAwesomeIcon
+                  icon={faMapMarkerAlt}
+                  className="w-5 h-5 mr-2 text-primary-orange"
+                />
+                <span className="font-semibold">Address</span>
+              </div>
+              <p className="text-black px-8">
+                4/37 Vibhav Khand, Gomtinagar, Lucknow, Uttar Pradesh, 226010
+              </p>
+            </div>
+            {/* Business Hours */}
           </div>
-
-          {/* Email Address */}
-          <div className="p-6 border-b border-gray-200">
-            <span className="block mb-3 text-white">Email Address</span>
-            <a
-              href="mailto:info@difmo.com"
-              className="block text-white hover:text-primary-orange hover:underline"
-            >
-              info@difmo.com
-            </a>
-            <a
-              href="mailto:difmotech@gmail.com"
-              className="block text-white hover:text-primary-orange hover:underline"
-            >
-              difmotech@gmail.com
-            </a>
-          </div>
-
-          {/* Address */}
-          <div className="p-6 border-b border-gray-200">
-            <span className="block mb-3 text-white">Address</span>
-            <span className="text-white ">
-              4/37 Vibhav Khand, Gomtinagar, Lucknow, Uttar Pradesh, 226010
-            </span>
-          </div>
-
-          {/* Social Media Links */}
-          <div className="p-6">
-            <span className="block mb-3 text-white">Follow Us</span>
-            <div className="flex space-x-6">
-              <a
-                href="https://www.facebook.com/difmotech"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaFacebook
-                  size={32}
-                  className="text-white transition-all duration-300 hover:text-white"
-                />
-              </a>
-              <a
-                href="https://x.com/difmotech"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaTwitter
-                  size={32}
-                  className="text-white transition-all duration-300 hover:text-white"
-                />
-              </a>
-              <a
-                href="https://in.linkedin.com/company/difmo"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedin
-                  size={32}
-                  className="text-white transition-all duration-300 hover:text-white"
-                />
-              </a>
-              <a
-                href="https://www.instagram.com/thedifmo"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaInstagram
-                  size={32}
-                  className="text-white transition-all duration-300 hover:text-white"
-                />
-              </a>
+          <div className="mt-6 rounded-xl text-black  bg-white md:p-4">
+            <h2 className="text-xl font-semibold mb-4">Business Hours</h2>
+            <div className="space-y-2">
+              <div className="flex justify-between border-b pb-2">
+                <span>Monday - Friday</span>
+                <span className="font-medium">10:00 AM - 7:00 PM</span>
+              </div>
+              <div className="flex justify-between border-b pb-2">
+                <span>Saturday</span>
+                <span className="font-medium">10:00 AM - 4:00 PM</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Sunday</span>
+                <span className="font-medium">Closed</span>
+              </div>
             </div>
           </div>
         </div>
+
         <Formcontect />
       </div>
     </>

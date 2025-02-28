@@ -109,13 +109,13 @@ const LandingPage = () => {
           {/* Buttons */}
           <div className="flex flex-wrap gap-4 justify-center md:justify-start">
             <Link href="/contact-us">
-              <button className="px-6 py-3 text-white hover:text-black transition bg-[#111827] rounded-lg shadow-lg hover:border-primary-orange hover:border hover:bg-gray-200">
+              <button className="px-6 py-3 text-white hover:text-black transition bg-[#111827] rounded-lg shadow-lg hover:border-red-200 hover:border hover:bg-gray-200">
                 Let’s Talk
               </button>
             </Link>
             <button
               onClick={handleOpenModal}
-              className="px-6 py-3 text-black hover:text-white bg-gray-200 transition border border-primary-orange rounded-lg shadow-lg hover:bg-[#111827]"
+              className="px-6 py-3 text-black hover:text-white bg-gray-200 transition border border-red-200 rounded-lg shadow-lg hover:bg-[#111827]"
             >
               <span>Request Demo</span>
             </button>
