@@ -77,7 +77,7 @@ const RequestForm = ({ isOpen, onClose }) => {
             ✖
           </button>
         </div>
-        <form onSubmit={handleSubmit} className="mt-10 mt-10 px-8">
+        <form onSubmit={handleSubmit} className="mt-10 mb-10 px-8">
           {[
             { id: "fullName", label: "Full Name", type: "text" },
             { id: "email", label: "Email", type: "email" },
