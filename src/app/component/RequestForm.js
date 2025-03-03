@@ -1,8 +1,24 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect } from "react";
 import { db } from "../config/config";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 const RequestForm = ({ isOpen, onClose }) => {
+  const modalRef = useRef(null);
+
+  // Handle click outside to close modal
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        onClose();
+      }
+    };
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isOpen, onClose]);
+
+
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
