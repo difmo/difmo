@@ -141,22 +141,9 @@ const LandingPage = () => {
             className="modal-content bg-white rounded-lg shadow-lg p-6 max-w-lg relative"
             ref={modalRef}
           >
-            {/* <button
-              className="absolute top-8 right-4 text-gray-600 hover:text-gray-800"
-              onClick={handleCloseModal}
-            >
-              &times;
-            </button> */}
-
-            <div className="relative bg-gradient-to-r from-red-400 to-pink-500 h-16 rounded-t-lg flex justify-end items-center">
-          <button
-            onClick={handleCloseModal}
-            className="absolute -top-4 -right-4 bg-white shadow-lg text-black w-10 h-10 rounded-full flex items-center justify-center border border-gray-300 hover:bg-gray-100"
-          >
-            ✖
-          </button>
-        </div>
-            <RequestForm />
+          
+          
+            <RequestForm  isOpen={isModalOpen} onClose={handleCloseModal}/>
           </div>
         </div>
       )}
