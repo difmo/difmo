@@ -66,8 +66,8 @@ const RequestForm = ({ isOpen, onClose }) => {
 
   if (!isOpen) return null;
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 px-12">
-      <div ref={modalRef} className="bg-white rounded-lg shadow-lg w-full max-w-2xl relative">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 px-8">
+      <div ref={modalRef} className="bg-white rounded-lg shadow-lg w-full max-w-2xl relative px-8">
         {/* Header with Close Button */}
         <div className="relative bg-gradient-to-r from-red-400 to-pink-500 h-16 rounded-t-lg flex justify-end items-center">
           <button
