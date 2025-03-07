@@ -5,4 +5,4 @@ const nextConfig = {
   },
 };
 
-export default nextConfig; // Use ES module export syntax
+export default nextConfig; // Use ES module export syntaxds
