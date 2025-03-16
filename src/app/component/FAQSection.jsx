@@ -41,7 +41,7 @@ export default function FAQSection() {
       {/* Social Media Links */}
       <div className="pt-14  ">
         <span className=" pb-6 font-bold text-2xl text-gray-700 flex  justify-center">
-          Contact With Us
+          Connect With Us
         </span>
         <div className="flex space-x-6 justify-center">
           <a
