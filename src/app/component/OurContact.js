@@ -14,7 +14,7 @@ const OurContact = () => {
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:py-16">
         {/* Left section with contact info */}
         <div className="w-full">
-          <div className="rounded-lg bg-white border-gray-500 py-6 md:p-8">
+          <div className="rounded-lg bg-transparent md:bg-white border-gray-500 py-6 md:p-8">
             <h2 className="font-extrabold text-2xl md:text-3xl text-black mb-6">
               Get in Touch
             </h2>
