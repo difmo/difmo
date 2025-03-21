@@ -77,7 +77,7 @@ const OurContact = () => {
             </div>
             {/* Business Hours */}
           </div>
-          <div className="mt-6 rounded-xl text-black  bg-white md:p-4">
+          <div className="mt-6 rounded-xl text-black  md:bg-white md:p-4">
             <h2 className="text-xl font-semibold mb-4">Business Hours</h2>
             <div className="space-y-2">
               <div className="flex justify-between border-b pb-2">
