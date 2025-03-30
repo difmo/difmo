@@ -30,9 +30,11 @@ const BusinessProfiledata = ({ data }) => {
                 <li key={i}>✔ {feature}</li>
               ))}
             </ul>
-            <button className="mt-6 bg-black text-white py-2 px-4 rounded w-full">
-              Get Started
-            </button>
+            <Link href="/contact-us">
+              <button className="mt-6 bg-black text-white py-2 px-4 rounded w-full">
+                Get Started
+              </button>
+            </Link>
           </div>
         ))}
       </div>
@@ -40,9 +42,12 @@ const BusinessProfiledata = ({ data }) => {
       {/* Development Process */}
       <div className="mt-16">
         <h3 className="text-2xl font-bold mb-8">Our Development Process</h3>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 p-4">
           {data.processSteps.map((step, index) => (
-            <div key={index} className="text-center">
+            <div
+              key={index}
+              className="text-center  border bg-white rounded-xl border-gray-200 py-4 px-6"
+            >
               <div className="text-4xl mb-4">{step.icon}</div>
               <h4 className="font-semibold mb-2">{step.title}</h4>
               <p className="text-gray-600">{step.description}</p>
