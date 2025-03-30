@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../config/config"; // Adjust the path to your Firebase config
 import { useParams } from "next/navigation";
-// import about from "../../assets/about.jpg";
 import Image from "next/image";
 
 const BlogDetails = () => {
