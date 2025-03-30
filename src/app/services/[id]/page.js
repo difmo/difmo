@@ -12,8 +12,7 @@ const Mobiledevlopment = ({ params }) => {
   }
   return (
     <>
-      <div className="mx-4 lg:mx-28 pt-24">
-     
+      <div className="mx-4 lg:mx-28 pt-24 bg-slate-50">
         <div className="">
           <BusinessProfilemobile data={project} />
         </div>

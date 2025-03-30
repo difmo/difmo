@@ -17,7 +17,7 @@ const BusinessProfiledata = ({ data }) => {
         {data.solutions.map((solution, index) => (
           <div
             key={index}
-            className="p-6 rounded-2xl hover:shadow-red-400 hover:shadow-2xl transition"
+            className="p-3 rounded-2xl bg-white hover:shadow-red-400 hover:shadow-2xl transition border "
           >
             <Image
               src={solution.image}
@@ -42,12 +42,9 @@ const BusinessProfiledata = ({ data }) => {
       {/* Development Process */}
       <div className="mt-16">
         <h3 className="text-2xl font-bold mb-8">Our Development Process</h3>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 p-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 p-4 border bg-white rounded-xl border-gray-200 ">
           {data.processSteps.map((step, index) => (
-            <div
-              key={index}
-              className="text-center  border bg-white rounded-xl border-gray-200 py-4 px-6"
-            >
+            <div key={index} className="text-center  ">
               <div className="text-4xl mb-4">{step.icon}</div>
               <h4 className="font-semibold mb-2">{step.title}</h4>
               <p className="text-gray-600">{step.description}</p>
@@ -57,7 +54,7 @@ const BusinessProfiledata = ({ data }) => {
       </div>
 
       {/* Final CTA Section */}
-      <div className="mt-8 text-center bg-gray-100 p-6 rounded-lg">
+      <div className="mt-8 text-center p-6 rounded-lg">
         <h2 className="text-xl font-bold">{data.cta.ctaTitle}</h2>
         <p className="text-sm mt-2">{data.cta.ctaSubtitle}</p>
         <Link href="/contact-us">
