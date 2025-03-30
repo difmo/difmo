@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { HiOutlineMenu, HiOutlineX } from "react-icons/hi"; // Icons for menu and 
+import { HiOutlineMenu, HiOutlineX } from "react-icons/hi"; // Icons for menu and
 import logo from "../assets/svgfiles/blacklogo1.svg";
 
 const Header = () => {
@@ -95,13 +95,19 @@ const Header = () => {
             isActive={isActive("/services")}
             closeMenu={() => setIsMenuOpen(false)}
             items={[
-              { href: "/web-development", label: "Web Development" },
-              { href: "/mobile-development", label: "Mobile Development" },
+              { href: "/services/web", label: "Web Development" },
+              {
+                href: "/services/mobile",
+                label: "Mobile Development",
+              },
               {
                 href: "/software-maintenance",
                 label: "Software Maintenance Services",
               },
-              { href: "/software-testing", label: "Software Testing Services" },
+              {
+                href: "/software-testing",
+                label: "Software Testing Services",
+              },
             ]}
           />
 
@@ -204,14 +210,14 @@ const Header = () => {
                 {isMobileDropdownOpen && (
                   <div className="ml-4">
                     <Link
-                      href="/web-development"
+                      href="/services/web"
                       className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Web Development
                     </Link>
                     <Link
-                      href="/mobile-development"
+                      href="/services/mobile"
                       className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
                       onClick={() => setIsMenuOpen(false)}
                     >

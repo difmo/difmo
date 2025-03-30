@@ -1,9 +1,12 @@
+
+
 "use client";
 
 import React from "react";
 
-import SoftwareMaintenance from "../component/SoftwareMaintenance";
+// import SoftwareMaintenance from "../component/SoftwareMaintenance";
 import Contactus from "../component/Contactus";
+import SoftwareMaintenance from "../component/SoftwareMaintenance";
 
 const Mobiledevlopment = () => {
   // const cardData = [

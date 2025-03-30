@@ -13,8 +13,7 @@ const TrustPilotWidget = () => {
     return () => {
       document.body.removeChild(script);
     };
-  }, []); // Empty dependency array means this effect runs once, when the component mounts
-
+  }, []); 
   return (
     <div className="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6740a2ef7a770a6694f85d76" data-style-height="52px" data-style-width="100%">
       <a href="https://www.trustpilot.com/review/difmo.com" target="_blank" rel="noopener noreferrer">Trustpilot</a>

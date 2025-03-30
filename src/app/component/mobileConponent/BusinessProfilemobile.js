@@ -1,114 +1,68 @@
-import React from "react";
-import ecom from "../../assets/mobiledeveoper/business.jpg";
+"use client";
+import React, { useEffect, useState } from "react";
+import { data } from "../Alldata"; // Import both data and mobile
 import Image from "next/image";
-import { FaCheck } from "react-icons/fa";
-import CustomButton from "../Buttons/CustomButton";
-import { motion } from "framer-motion";
+import { useParams } from "react-router-dom";
 import Link from "next/link";
 
-const features = [
-  "Home",
-  "Contact Us",
-  "Services",
-  "About Us",
-  "Business Map Integration",
-  "Privacy Policy",
-  "Terms & Conditions",
-];
-
-function BusinessProfilemobile() {
+const BusinessProfiledata = ({ data }) => {
   return (
-    <div className="py-10">
-      {/* Heading */}
-      <motion.h1
-        className="text-left text-3xl sm:text-4xl md:text-4xl py-6 font-lilita font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-deep-blue to-primary-orange"
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        Business Profile
-      </motion.h1>
+    <div className="p-6 md:p-12 bg-gray-50 text-center text-gray-700">
+      {/* CTA Section */}
+      <h2 className="text-3xl font-bold mb-4">{data.cta.title}</h2>
+      <p className="mb-10 text-gray-600">{data.cta.subtitle}</p>
 
-      {/* Content Section */}
-      <motion.div
-        className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-      >
-        {/* Text Section */}
-        <motion.div
-          className="md:w-1/2 py-7"
-          initial={{ x: -50, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
-          <p className="text-sm sm:text-base md:text-lg p-4 text-gray-700">
-            We design custom websites to elevate your business, combining
-            creativity and functionality to build a strong online presence,
-            attract customers, and drive success in the digital world.
-          </p>
-          <ul className="list-none space-y-2">
-            {features.map((feature, index) => (
-              <motion.li
-                key={index}
-                className="text-sm sm:text-base md:text-lg px-4 text-gray-700 flex items-center gap-4"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                <FaCheck className="text-green-500" />
-                {feature}
-              </motion.li>
-            ))}
-          </ul>
-          <div className="p-5 flex gap-4">
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Link href="/contact-us">
-                <CustomButton
-                  className="bg-primary-orange text-white p-3 w-36 rounded-3xl flex justify-center hover:bg-[#f8710f]  border-2 border-deep-blue"
-                  fname="Get Started"
-                />
-              </Link>
-            </motion.div>
-            {/* <motion.div
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Link href="/blogs">
-                <CustomButton
-                  className="bg-primary-orange text-white p-3 w-36 rounded-3xl flex justify-center hover:bg-[#f8710f]"
-                  fname="Learn More"
-                />
-              </Link>
-            </motion.div> */}
+      {/* Solutions Section */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {data.solutions.map((solution, index) => (
+          <div
+            key={index}
+            className="p-6 rounded-2xl hover:shadow-red-400 hover:shadow-2xl transition"
+          >
+            <Image
+              src={solution.image}
+              alt={solution.title}
+              className=" mb-4 bg-cover h-ful w-full"
+            />
+            <h3 className="text-xl font-semibold mb-4">{solution.title}</h3>
+            <ul className="text-left text-gray-600 space-y-2">
+              {solution.features.map((feature, i) => (
+                <li key={i}>✔ {feature}</li>
+              ))}
+            </ul>
+            <button className="mt-6 bg-black text-white py-2 px-4 rounded w-full">
+              Get Started
+            </button>
           </div>
-        </motion.div>
+        ))}
+      </div>
 
-        {/* Image Section */}
-        <motion.div
-          className="md:w-1/2 px-4 sm:px-6 "
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          whileHover={{ scale: 1.05 }}
-        >
-          <Image
-            src={ecom}
-            alt="Business Profile Illustration"
-            className="rounded-xl shadow-2xl"
-            layout="responsive"
-            width={500}
-            height={400}
-          />
-        </motion.div>
-      </motion.div>
+      {/* Development Process */}
+      <div className="mt-16">
+        <h3 className="text-2xl font-bold mb-8">Our Development Process</h3>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {data.processSteps.map((step, index) => (
+            <div key={index} className="text-center">
+              <div className="text-4xl mb-4">{step.icon}</div>
+              <h4 className="font-semibold mb-2">{step.title}</h4>
+              <p className="text-gray-600">{step.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Final CTA Section */}
+      <div className="mt-8 text-center bg-gray-100 p-6 rounded-lg">
+        <h2 className="text-xl font-bold">{data.cta.ctaTitle}</h2>
+        <p className="text-sm mt-2">{data.cta.ctaSubtitle}</p>
+        <Link href="/contact-us">
+          <button className="mt-4 bg-gray-900 text-white px-6 py-2 rounded-xl">
+            {data.cta.ctaButton}
+          </button>
+        </Link>
+      </div>
     </div>
   );
-}
+};
 
-export default BusinessProfilemobile;
+export default BusinessProfiledata;
