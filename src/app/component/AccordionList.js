@@ -17,7 +17,7 @@ const Accordion = ({ title, content, id }) => {
 
   return (
     <div className="border rounded-md shadow-sm bg-white mb-4">
-      {/* Accordion Header */}
+      {/* Accordion */}
       <div className="kt-accordion-header-wrap">
         <button
           className={`w-full flex justify-between items-center px-5 py-3 text-left ${
