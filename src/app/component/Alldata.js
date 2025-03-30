@@ -5,7 +5,6 @@ import busin from "../assets/servicesimg/IMG@1x (1).png";
 import busin1 from "../assets/servicesimg/IMG@1x.png";
 import chat from "../assets/chat.png";
 import corporate from "../assets/corporate.png";
-// import persnol from "../assets/"
 import you from "../assets/Cover2.png";
 const data = [
   {
