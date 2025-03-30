@@ -118,7 +118,7 @@ const OurContact = () => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             className="w-full h-full"
-          ></iframe>
+          > difmo technologies</iframe>
         </div>
       </div>
       {/* FAQ Section */}
