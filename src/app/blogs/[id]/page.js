@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../config/config"; // Adjust the path to your Firebase config
 import { useParams } from "next/navigation";
-import about from "../../assets/about.jpg";
+// import about from "../../assets/about.jpg";
 import Image from "next/image";
 
 const BlogDetails = () => {
@@ -63,7 +63,7 @@ const BlogDetails = () => {
     <>
       {/* <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen">
         <Image
-          src={about}
+          // src={about}
           alt="Blog Header"
           layout="fill"
           objectFit="cover"
