@@ -7,14 +7,16 @@ const CustomInput = ({
   onChange,
   value,
   error,
-}) => {
+}) =>
+   {
   return (
     <div className="relative mb-1">
       <label
         className="block mb-1 text-sm text-gray-800 transition-all duration-300 ease-in-out"
         htmlFor={id}
       >
-        {label}
+        {label.split("*")[0]}
+        <span className="text-red-500">*</span>
       </label>
       <input
         className="appearance-none border-2 border-gray-300 w-full py-2.5 px-4 text-gray-800 leading-tight focus:outline-none focus:ring-1 focus:ring-primary-orange focus:border-primary-orange transition-all duration-300 ease-in-out rounded-md"
@@ -25,7 +27,7 @@ const CustomInput = ({
         onChange={onChange}
         style={style}
       />
-      <p className="mt-1 text-xs italic text-red-500">{error}</p>
+      <p className="mt-1 text-xs italic text-red-500 ">{error }</p>
     </div>
   );
 };

@@ -65,34 +65,52 @@ function Formcontect() {
           id="fullName"
           label="Full Name"
           type="text"
+          placeholder=" Name (required)"
           value={formData.fullName}
           onChange={handleChange}
           error={errors.fullName}
         />
         <CustomInput
           id="email"
-          label="Email Address"
+          label="Email Address "
           type="email"
+          placeholder=" Email address (required)"
           value={formData.email}
           onChange={handleChange}
           error={errors.email}
         />
         <CustomInput
           id="number"
-          label="Mobile Number"
+          label="Phone Number"
+          placeholder=" Phone number (required)"
           type="text"
           value={formData.number}
           onChange={handleChange}
           error={errors.number}
         />
-        <CustomInput
+
+        <label
+          htmlFor="message"
+          className="block text-sm font-medium text-gray-700 "
+        >
+          Message<span className="text-red-500">*</span>
+        </label>
+        <textarea
           id="message"
-          label="Message"
-          type="textarea"
+          name="message"
+          placeholder="Type your message here..."
           value={formData.message}
           onChange={handleChange}
-          error={errors.message}
+          className={`p-3 border w-full text-gray-800 leading-tight rounded-md transition-all duration-300 ease-in-out focus:outline-none focus:ring-1 ${
+            errors.message
+              ? " focus:ring-red-500"
+              : "border-gray-300 focus:ring-primary-orange focus:border-primary-orange"
+          }`}
+          style={{ height: "7em" }}
         />
+        {errors.message && (
+          <p className="text-red-500 text-sm ">{errors.message}</p>
+        )}
         <CustomButton
           type="submit"
           label="Submit"
