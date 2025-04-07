@@ -41,6 +41,7 @@ function Career() {
         education: data.education,
         experience: data.experience,
         resume: resumeUrl,
+        submittedAt: new Date().toISOString(),
       });
 
       setSubmitMessage("Form submitted successfully!");
