@@ -101,7 +101,7 @@ function Formcontect() {
           placeholder="Type your message here..."
           value={formData.message}
           onChange={handleChange}
-          className={`p-3 border w-full text-gray-800 leading-tight rounded-md transition-all duration-300 ease-in-out focus:outline-none focus:ring-1 ${
+          className={`p-3 border-2 w-full text-gray-800 leading-tight rounded-md transition-all duration-300 ease-in-out focus:outline-none focus:ring-1 ${
             errors.message
               ? " focus:ring-red-500"
               : "border-gray-300 focus:ring-primary-orange focus:border-primary-orange"
