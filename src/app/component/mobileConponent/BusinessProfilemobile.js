@@ -27,7 +27,9 @@ const BusinessProfiledata = ({ data }) => {
             <h3 className="text-xl font-semibold mb-4">{solution.title}</h3>
             <ul className="text-left text-gray-600 space-y-2">
               {solution.features.map((feature, i) => (
-                <li key={i}>✔ {feature}</li>
+                <li className="p" key={i}>
+                  ✔ {feature}
+                </li>
               ))}
             </ul>
             <Link href="/contact-us">

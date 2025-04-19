@@ -87,7 +87,7 @@ const data = [
         image: chat,
         features: [
           "Real-time messaging with WebSocket & Firebase",
-          "End-to-end encryption for secure communication",
+          "End-to-end encryption for secure ",
           "Voice and video calling integration",
         ],
       },
@@ -106,7 +106,7 @@ const data = [
         features: [
           "User-friendly UI with interactive feeds",
           "AI-driven content recommendations",
-          "Live streaming and community engagement features",
+          "Live streaming and community  engagement features",
         ],
       },
     ],

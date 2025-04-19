@@ -30,7 +30,7 @@ const footerData = {
         { name: "Home", path: "/" },
         { name: "About Us", path: "/about" },
         // { name: "Pricing", path: "#" },
-        { name: "Services", path: "/web-development" },
+        { name: "Services", path: "/service" },
         { name: "Contact Us", path: "/contact-us" },
         // { name: "Term And Condition", path: "/termandcondition" },
         // { name: "Privacy And Policy", path: "/privacypolicy" },
@@ -39,13 +39,13 @@ const footerData = {
     {
       title: "Services",
       links: [
-        { name: "Web Development", path: "/web-development" },
+        { name: "Web Development", path: "/services/web" },
         {
           name: "Mobile App Development",
-          path: "/mobile-development",
+          path: "/services/mobile",
         },
-        { name: "UI/UX Design", path: "/web-development" },
         { name: "Software Maintenance", path: "/software-maintenance" },
+        { name: "Software Testing", path: "/software-testing" },
         // { name: "Cloud Computing", path: "/services/cloud-computing" },
         // {
         //   name: "Blockchain Solutions",
@@ -247,8 +247,7 @@ const Footer = () => {
       <div className="flex flex-col-reverse items-center justify-center mt-8 mb-2 sm:flex-row sm:items-center ">
         {/* Copyright notice */}
         <span className="mb-4 text-sm text-white dark:text-gray-400 sm:text-center sm:mb-0">
-          © 2025
-          {" "}
+          © 2025{" "}
           <a href="#" className="hover:underline">
             DIFMO TECHNOLOGIES
           </a>
