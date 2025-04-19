@@ -91,7 +91,7 @@ const Mobiledevlopment = () => {
               technology—only from Difmo Technologies.
             </p>
             <a
-              href="/contact"
+              href="/contact-us"
               className="px-6 py-3 text-lg font-semibold text-white transition duration-300 rounded-lg bg-deep-blue hover:bg-blue-700"
             >
               Contact Us Today

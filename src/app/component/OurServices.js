@@ -101,27 +101,25 @@ const OurServices = () => {
 
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center">
         {servicesData.map((service, index) => (
-          <Link href={service.link || "#"} key={index}>
-            <motion.div
-              className="bg-white text-gray-800 rounded-lg p-6 transition-all hover:bg-oceanic hover:text-white flex flex-col items-center duration-300 ease-in-out transform hover:scale-105 cursor-pointer"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-            >
-              <div className="flex items-center justify-center w-16 h-16 mb-4 bg-white rounded-full shadow-md">
-                <FontAwesomeIcon
-                  icon={service.icon}
-                  className={`text-3xl ${service.textColor}`}
-                />
-              </div>
-              <h3 className={`text-xl font-semibold mb-3 ${service.textColor}`}>
-                {service.title}
-              </h3>
-              <p className="text-center">{service.description}</p>
-            </motion.div>
-          </Link>
+          <motion.div
+            className="bg-white text-gray-800 rounded-lg p-6 transition-all hover:bg-oceanic hover:text-white flex flex-col items-center duration-300 ease-in-out transform hover:scale-105"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+          >
+            <div className="flex items-center justify-center w-16 h-16 mb-4 bg-white rounded-full shadow-md">
+              <FontAwesomeIcon
+                icon={service.icon}
+                className={`text-3xl ${service.textColor}`}
+              />
+            </div>
+            <h3 className={`text-xl font-semibold mb-3 ${service.textColor}`}>
+              {service.title}
+            </h3>
+            <p className="text-center">{service.description}</p>
+          </motion.div>
         ))}
       </div>
 
