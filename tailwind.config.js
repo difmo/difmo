@@ -14,7 +14,7 @@ module.exports = {
       },
       colors: {
         "primary-orange": "#e00909", // Red-Orange Accent
-        secondary: "#273d6b", // Blue Secondary Color
+        "secondary":"#273d6b", // Blue Secondary Color
         "deep-blue": "#00509D", // Deep Blue Accent
         "golden-yellow": "#FFC107", // Golden Yellow
         "light-orange": "#FF9E57", // Lighter Orange
