@@ -94,7 +94,7 @@ const About = () => {
           <h2 className="my-6 text-xl font-extrabold text-center text-transparent text-white md:text-3xl font-lilita">
             Ready to Join Us?
           </h2>
-          <p className="">
+          <p className="text-white">
             Take the next step in your career journey and be part of something
             extraordinary.
           </p>
