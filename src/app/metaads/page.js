@@ -180,24 +180,8 @@ export default function Pageseo() {
       <Contactus />
       {/* Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-          <div
-            ref={modalRef}
-            className="relative max-w-lg w-full bg-white rounded-lg shadow-lg p-6"
-          >
-            <button
-              aria-label="Close Modal"
-              onClick={handleCloseModal}
-              className="absolute top-4 right-4 text-gray-600 hover:text-gray-800 text-2xl"
-            >
-              &times;
-            </button>
-          </div>
-          {isModalOpen && (
-            <div className="fixed mt-16 inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 px-4 sm:px-6 md:px-8">
-              <RequestForm isOpen={isModalOpen} onClose={handleCloseModal} />
-            </div>
-          )}
+        <div className="fixed mt-16 inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 px-4 sm:px-6 md:px-8">
+          <RequestForm isOpen={isModalOpen} onClose={handleCloseModal} />
         </div>
       )}
     </>

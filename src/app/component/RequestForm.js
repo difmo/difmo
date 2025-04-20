@@ -1,4 +1,4 @@
-import React, { useState ,useEffect,useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { db } from "../config/config";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
@@ -17,7 +17,6 @@ const RequestForm = ({ isOpen, onClose }) => {
     }
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpen, onClose]);
-
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -67,7 +66,10 @@ const RequestForm = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 px-8">
-      <div ref={modalRef} className="bg-white rounded-lg shadow-lg w-full max-w-2xl relative ">
+      <div
+        ref={modalRef}
+        className="bg-white rounded-lg shadow-lg w-full max-w-2xl relative "
+      >
         {/* Header with Close Button */}
         <div className="relative bg-gradient-to-r from-red-400 to-pink-500 h-16 rounded-t-lg flex justify-end items-center">
           <button
@@ -93,7 +95,7 @@ const RequestForm = ({ isOpen, onClose }) => {
               <input
                 id={field.id}
                 type={field.type}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-400 focus:outline-none"
+                className="w-full px-4 py-2 border text-gray-800 border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-400 focus:outline-none"
                 placeholder={`Enter ${field.label.toLowerCase()}`}
                 value={formData[field.id]}
                 onChange={handleChange}
@@ -113,7 +115,7 @@ const RequestForm = ({ isOpen, onClose }) => {
             </label>
             <select
               id="projectType"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-400 text-gray-500 focus:outline-none"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-400 text-gray-800 focus:outline-none"
               value={formData.projectType}
               onChange={handleChange}
             >
@@ -151,6 +153,6 @@ const RequestForm = ({ isOpen, onClose }) => {
       </div>
     </div>
   );
-}
+};
 
 export default RequestForm;
