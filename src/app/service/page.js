@@ -115,9 +115,6 @@ export default function page() {
       {/* Services Grid */}
       <section className="py-20 px-6 bg-gray-100 text-black">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-semibold mb-10 text-center">
-            What We Offer
-          </h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {services.map((item, idx) => {
               const direction =
@@ -129,7 +126,7 @@ export default function page() {
                   whileInView={fadeVariants[direction].animate}
                   transition={{ delay: idx * 0.1, duration: 0.5 }}
                   viewport={{ once: true }}
-                  className=" p-3 rounded-2xl bg-white hover:shadow-red-400 hover:shadow-2xl transition border"
+                  className=" p-3 rounded-2xl bg-oceania  border-oceania border-3 hover:shadow-red-400 hover:shadow-2xl transition border"
                 >
                   <h3 className="text-xl font-bold mb-3">{item.title}</h3>
                   <p className="text-gray-600">{item.description}</p>

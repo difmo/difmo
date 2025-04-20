@@ -22,6 +22,8 @@ module.exports = {
         "warm-white": "#FFFFFF", // Background White
         "warm-gray": "#F5F5F5", // Background Gray
         "light-gray": "#D3D3D3", // Dividers/Border Gray
+        "oceania": "linear-gradient(to right, #EE1C24, #F65E13, #FFAA00)",
+
       },
       backgroundborder: {
         oceania: "linear-gradient(to right, #EE1C24, #F65E13, #FFAA00)",

@@ -8,7 +8,6 @@ import logo from "../assets/svgfiles/logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
-  faGithub,
   faInstagram,
   faLinkedin,
   faTwitter,
@@ -86,7 +85,7 @@ const footerData = {
       href: "https://www.instagram.com/thedifmo",
       icon: faInstagram,
     },
-    { name: "GitHub", href: "https://github.com/difmo", icon: faGithub },
+
     {
       name: "YouTube",
       href: "https://www.youtube.com/@thedifmo",
@@ -125,8 +124,7 @@ const Footer = () => {
               className="object-contain w-auto h-16 mb-5"
             />
             <h3>
-              Enhancing Customer Experience with Innovative Web and Mobile App
-              Solutions
+              Enhancing Customer Experience with Innovative Web and Mobile
             </h3>
             <div className="flex flex-col justify-between md:flex-row">
               {/* <p className="max-w-md mx-auto mt-4 text-sm text-white md:mx-0">
