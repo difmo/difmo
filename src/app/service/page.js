@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const services = [
   {
@@ -201,12 +202,12 @@ export default function page() {
             Let Difmo turn your idea into a fully functional product. We’re just
             one click away.
           </p>
-          <a
-            href="/contact-us"
+          <Link
+            to="/contact-us"
             className="inline-block px-8 py-3 bg-white text-blue-600 font-semibold rounded-full hover:bg-gray-100 transition"
           >
             Get in Touch
-          </a>
+          </Link>
         </div>
       </motion.section>
     </div>

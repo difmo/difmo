@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link"; // Corrected import
 import Image from "next/image";
 import { projects } from "../component/projects"; // Ensure this path is correct
+import Link from "next/link";
 
 const categories = ["All", "Web Design", "Mobile Apps", "Branding"];
 
@@ -105,9 +105,12 @@ export default function FeaturedProjects() {
             Let's create something amazing together
           </p>
           <div className="mt-6">
-            <button className="px-8 py-3 text-lg text-white hover:text-black rounded-md bg-black hover:bg-gray-200 transition">
+            <Link
+              href="/contact-us"
+              className="px-8 py-3 text-lg text-white hover:text-black rounded-md bg-black hover:bg-gray-200 transition"
+            >
               Get in Touch
-            </button>
+            </Link>
           </div>
         </div>
       </div>
