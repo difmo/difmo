@@ -120,6 +120,8 @@ const Header = () => {
           <HeaderLink href="/careers" isActive={isActive("/careers")}>
             Careers
           </HeaderLink>
+
+              <button class="mantine-focus-auto mantine-active container flex items-center p-24 rounded-2xl undefined m_77c9d27d mantine-Button-root m_87cf2631 mantine-UnstyledButton-root" data-variant="gradient" data-size="md" type="button" style="--button-height: var(--button-height-md); --button-padding-x: var(--button-padding-x-md); --button-fz: var(--mantine-font-size-md); --button-radius: var(--mantine-radius-xl); --button-bg: linear-gradient(45deg, var(--mantine-color-blue-filled) 0%, var(--mantine-color-cyan-filled) 100%); --button-hover: linear-gradient(45deg, var(--mantine-color-blue-filled) 0%, var(--mantine-color-cyan-filled) 100%); --button-color: var(--mantine-color-white); --button-bd: none; background: linear-gradient(to right, rgb(27, 153, 248), rgb(51, 185, 255)); transition: background 0.5s, box-shadow 0.5s;"><span class="m_80f1301b mantine-Button-inner"><span class="m_811560b9 mantine-Button-label"><span class="flex"><span class="text" style="color: rgb(255, 255, 255);">Get in touch</span></span></span></span></button>
           <Link
             href="/contact-us"
             className="items-center justify-center hidden h-9 px-5 space-x-2 text-white hover:text-black transition-colors duration-300 bg-[#e00909] rounded-xl md:flex hover:bg-slate-200"
