@@ -122,7 +122,7 @@ const Header = () => {
           </HeaderLink>
           <Link
             href="/contact-us"
-            className="items-center justify-center hidden h-9 px-5 space-x-2 text-white hover:text-black transition-colors duration-300 bg-[#f3411b] rounded-xl md:flex hover:bg-slate-200"
+            className="items-center justify-center hidden h-9 px-5 space-x-2 text-white hover:text-black transition-colors duration-300 bg-[#e00909] rounded-xl md:flex hover:bg-slate-200"
           >
             <p>Get in touch</p>
             <svg
