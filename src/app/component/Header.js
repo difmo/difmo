@@ -124,7 +124,7 @@ const Header = () => {
             href="/contact-us"
             className="items-center justify-center hidden h-9 px-5 space-x-2 text-white hover:text-black transition-colors duration-300 bg-[#111827] rounded-xl md:flex hover:bg-slate-200"
           >
-            <p>GET STARTED</p>
+            <p>GET in Touch</p>
             <svg
               className="w-5 h-5 animate-bounce-right"
               fill="none"
