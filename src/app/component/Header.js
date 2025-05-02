@@ -70,7 +70,7 @@ const Header = () => {
           <HeaderLink href="/careers" isActive={isActive("/careers")}>Careers</HeaderLink>
           <Link
             href="/contact-us"
-            className="h-10 px-5 py-2 text-white text-base bg-[#e00909] hover:text-black hover:bg-gray-200 transition rounded-[8px]"
+            className="h-10 px-5 py-1 text-white text-base bg-[#e00909] hover:text-black hover:bg-gray-200 transition rounded-[8px]"
           >
             Get in touch
           </Link>
