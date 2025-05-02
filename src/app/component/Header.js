@@ -40,7 +40,7 @@ const Header = () => {
         scrolling ? "bg-white shadow" : "bg-transparent"
       }`}
     >
-      <div className="container flex items-center justify-between px-3 py-2 mx-auto">
+      <div className="container flex items-center justify-between px-6 py-2 mx-auto">
         <Link href="/" className="flex items-center space-x-2">
           <Image src={logo} alt="Difmo Logo" className="w-auto h-10 md:h-10 bg-cover" />
         </Link>
