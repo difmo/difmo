@@ -41,16 +41,10 @@ const Header = () => {
       }`}
     >
       <div className="container flex items-center justify-between px-6 py-2 mx-auto">
-        {/* Logo Section */}
         <Link href="/" className="flex items-center space-x-2">
-          <Image
-            src={logo}
-            alt="Difmo Logo"
-            className="w-auto h-10 md:h-10 bg-cover"
-          />
+          <Image src={logo} alt="Difmo Logo" className="w-auto h-10 md:h-10 bg-cover" />
         </Link>
 
-        {/* Hamburger Icon */}
         <button
           className="text-2xl dark:text-black lg:hidden"
           onClick={() => setIsMenuOpen(true)}
@@ -59,10 +53,9 @@ const Header = () => {
         </button>
 
         {/* Desktop Navigation */}
-        <nav className="items-center hidden space-x-8 text-sm font-medium text-gray-800 lg:flex">
+        <nav className="hidden lg:flex items-center space-x-10 text-base font-medium text-gray-800">
           <HeaderLink href="/" isActive={isActive("/")}>Home</HeaderLink>
           <HeaderLink href="/about" isActive={isActive("/about")}>About Us</HeaderLink>
-
           <DropdownMenu
             title="Services"
             items={[
@@ -72,30 +65,14 @@ const Header = () => {
               { href: "/software-testing", label: "Software Testing Services" },
             ]}
           />
-
           <HeaderLink href="/projects" isActive={isActive("/projects")}>Projects</HeaderLink>
           <HeaderLink href="/blogs" isActive={isActive("/blogs")}>Blogs</HeaderLink>
           <HeaderLink href="/careers" isActive={isActive("/careers")}>Careers</HeaderLink>
-
           <Link
             href="/contact-us"
-            className="items-center justify-center hidden h-10 px-5 space-x-2 text-white hover:text-black transition-colors duration-300 bg-[#e00909] rounded-xl md:flex hover:bg-slate-200"
+            className="h-10 px-5 py-2 text-white text-base bg-[#e00909] hover:text-black hover:bg-gray-200 transition rounded-xl"
           >
-            <p>Get in touch</p>
-            <svg
-              className="w-5 h-5 animate-bounce-right"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M5 12h14m-6-6l6 6-6 6"
-              />
-            </svg>
+            Get in touch
           </Link>
         </nav>
 
@@ -110,8 +87,7 @@ const Header = () => {
                 <HiOutlineX />
               </button>
             </div>
-
-            <nav className="flex flex-col space-y-6">
+            <nav className="flex flex-col space-y-6 text-lg font-medium">
               <Link href="/" onClick={() => setIsMenuOpen(false)}>Home</Link>
               <Link href="/about" onClick={() => setIsMenuOpen(false)}>About Us</Link>
 
@@ -122,7 +98,7 @@ const Header = () => {
                 >
                   Services
                   <svg
-                    className="w-4 h-4 ml-1 transition-transform duration-200"
+                    className="w-5 h-5 ml-1 transition-transform"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -130,29 +106,15 @@ const Header = () => {
                       transform: isMobileDropdownOpen ? "rotate(180deg)" : "rotate(0deg)",
                     }}
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M19 9l-7 7-7-7"
-                    />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-
                 {isMobileDropdownOpen && (
-                  <div className="ml-4 mt-2">
-                    <Link href="/services/web" onClick={() => setIsMenuOpen(false)}>
-                      Web Development
-                    </Link>
-                    <Link href="/services/mobile" onClick={() => setIsMenuOpen(false)}>
-                      Mobile Development
-                    </Link>
-                    <Link href="/software-maintenance" onClick={() => setIsMenuOpen(false)}>
-                      Software Maintenance Services
-                    </Link>
-                    <Link href="/software-testing" onClick={() => setIsMenuOpen(false)}>
-                      Software Testing Services
-                    </Link>
+                  <div className="ml-4 mt-2 space-y-2">
+                    <Link href="/services/web" onClick={() => setIsMenuOpen(false)}>Web Development</Link>
+                    <Link href="/services/mobile" onClick={() => setIsMenuOpen(false)}>Mobile Development</Link>
+                    <Link href="/software-maintenance" onClick={() => setIsMenuOpen(false)}>Software Maintenance</Link>
+                    <Link href="/software-testing" onClick={() => setIsMenuOpen(false)}>Software Testing</Link>
                   </div>
                 )}
               </div>
@@ -178,8 +140,8 @@ const Header = () => {
 const HeaderLink = ({ href, isActive, children }) => (
   <Link
     href={href}
-    className={`relative hover:text-primary-orange ${
-      isActive ? "font-semibold" : ""
+    className={`relative text-lg hover:text-primary-orange transition ${
+      isActive ? "font-semibold text-primary-orange" : ""
     }`}
   >
     {children}
@@ -198,29 +160,19 @@ const DropdownMenu = ({ title, items }) => {
       onMouseEnter={() => setIsDropdownOpen(true)}
       onMouseLeave={() => setIsDropdownOpen(false)}
     >
-      <button className="flex items-center hover:text-primary-orange">
+      <button className="flex items-center text-lg hover:text-primary-orange">
         {title}
-        <svg
-          className="w-4 h-4 ml-1"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M19 9l-7 7-7-7"
-          />
+        <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
         </svg>
       </button>
       {isDropdownOpen && (
-        <div className="absolute left-0 w-56 mt-2 bg-white shadow-lg border rounded-md">
+        <div className="absolute left-0 w-64 mt-2 bg-white shadow-lg border rounded-md py-2">
           {items.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-orange"
+              className="block px-6 py-3 text-base text-gray-700 hover:bg-gray-100 hover:text-primary-orange transition"
             >
               {item.label}
             </Link>
