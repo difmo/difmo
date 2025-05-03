@@ -6,7 +6,7 @@ import { FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
 import dinesh from "../../../public/image/dinesh.jpeg";
 import aman from "../../../public/image/aman.png";
 import amar from "../../../public/image/amar.jpg";
-import pritam1 from "../../../public/image/pritam1.png";
+import pritam1 from "../../../public/image/pritam2.png";
 import vimalraj from "../../../public/image/vimalraj.png";
 
 const teamMembers = [
