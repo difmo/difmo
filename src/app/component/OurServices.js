@@ -79,14 +79,14 @@ const OurServices = () => {
 
   return (
     <div className="mx-4 my-12 sm:mx-8 lg:mx-16" ref={sectionRef}>
-      <motion.h1
+      <motion.p
         className="text-center text-black font-bold text-5xl py-5"
         initial={{ opacity: 0, y: 50 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
       >
         Our Services
-      </motion.h1>
+      </motion.p>
       <motion.p
         className="text-gray-700 text-lg leading-relaxed md:leading-loose tracking-wide text-justify mb-8"
         initial={{ opacity: 0, y: 50 }}

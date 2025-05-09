@@ -14,9 +14,9 @@ const BuildingSoft = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="mb-12 text-3xl font-bold leading-snug md:text-3xl text-black">
+          <p className="mb-12 text-3xl font-bold leading-snug md:text-3xl text-black">
             Empowering with Cutting-Edge Software Solutions
-          </h2>
+          </p>
           <p className="text-base leading-relaxed tracking-wide text-justify text-gray-700 md:text-lg">
             In today’s digital world, a strong online presence is essential. At{" "}
             <strong>Our Company</strong>, we create websites and software that
