@@ -30,9 +30,9 @@ const socialLinks = [
 export default function FAQSection() {
   return (
     <div className="px-2 md:max-w-screen-2xl mx-auto text-gray-700  pt-10">
-      <h2 className="text-2xl font-semibold text-center mb-6">
+      <p className="text-2xl font-semibold text-center mb-6">
         Frequently Asked Questions
-      </h2>
+      </p>
       <div className="grid md:grid-cols-2 gap-16">
         <div className="p-4   bg-white">
           <h3 className="font-semibold">What are your response times?</h3>

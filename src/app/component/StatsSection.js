@@ -85,12 +85,12 @@ const StatsSection = () => {
         animate="visible"
         variants={containerVariants}
       >
-        <motion.h2
+        <motion.p
           className="text-3xl text-black font-bold sm:text-4xl"
           variants={itemVariants}
         >
           Why Choose Us?
-        </motion.h2>
+        </motion.p>
         <motion.p
           className="my-2 text-gray-600 text-lg"
           variants={itemVariants}

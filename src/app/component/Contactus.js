@@ -17,9 +17,9 @@ const Contactus = () => {
       <div className="md:flex gap-7 px-2 md:px-10 py-5 justify-center">
         <div className="w-full md:w-1/2">
           <div className="rounded-lg bg-white border-gray-500 py-6 md:p-8">
-            <h2 className="font-extrabold text-2xl md:text-3xl text-black mb-6">
+            <p className="font-extrabold text-2xl md:text-3xl text-black mb-6">
               Get in Touch
-            </h2>
+            </p>
             {/* Phone Number */}
             <div className="mb-4">
               <div className="flex items-center text-black">
@@ -80,7 +80,7 @@ const Contactus = () => {
             {/* Business Hours */}
           </div>
           <div className="mt-6 rounded-lg bg-white text-black border-gray-500 md:p-4">
-            <h2 className="text-xl font-semibold mb-4">Business Hours</h2>
+            <p className="text-xl font-semibold mb-4">Business Hours</p>
             <div className="space-y-2">
               <div className="flex justify-between border-b pb-2">
                 <span>Monday - Friday</span>

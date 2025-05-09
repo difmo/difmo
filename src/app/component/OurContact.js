@@ -15,9 +15,9 @@ const OurContact = () => {
         {/* Left section with contact info */}
         <div className="w-full">
           <div className="rounded-lg bg-transparent md:bg-white border-gray-500 py-6 md:p-8">
-            <h2 className="font-extrabold text-2xl md:text-3xl text-black mb-6">
+            <p className="font-extrabold text-2xl md:text-3xl text-black mb-6">
               Get in Touch
-            </h2>
+            </p>
             {/* Phone Number */}
             <div className="mb-4">
               <div className="flex items-center text-black">
@@ -78,7 +78,7 @@ const OurContact = () => {
             {/* Business Hours */}
           </div>
           <div className="mt-6 rounded-xl text-black  md:bg-white md:p-4">
-            <h2 className="text-xl font-semibold mb-4">Business Hours</h2>
+            <p className="text-xl font-semibold mb-4">Business Hours</p>
             <div className="space-y-2">
               <div className="flex justify-between border-b pb-2">
                 <span>Monday - Friday</span>
@@ -102,9 +102,9 @@ const OurContact = () => {
       </div>
       {/* Map Section */}
       <div className="w-full mt-10 text-center">
-        <h2 className="text-3xl md:text-5xl font-extrabold text-gray-700 mb-6">
+        <p className="text-3xl md:text-5xl font-extrabold text-gray-700 mb-6">
           Our Location
-        </h2>
+        </p>
         <p className="max-w-3xl md:mx-auto text-lg text-gray-700 mb-6">
           Visit us at our office to see how we innovate and bring your ideas to
           life. Explore the map below to find our exact location.

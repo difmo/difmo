@@ -7,9 +7,9 @@ const Development = () => {
     <section className="mx-4 my-12 lg:my-20 sm:mx-8 lg:mx-16">
       {/* Title Section */}
       <div className="mb-8 text-center">
-        <h2 className="text-4xl font-bold text-black">
+        <p className="text-4xl font-bold text-black">
           Our Development Life Cycle
-        </h2>
+        </p>
         <p className="mt-4 text-lg text-gray-600 sm:text-base md:text-lg">
           Empowering businesses with scalable technology solutions.
         </p>

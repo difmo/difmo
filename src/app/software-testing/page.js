@@ -102,9 +102,9 @@ const Mobiledevlopment = () => {
         {/* FAQ Section */}
         <section className="px-4 py-12 bg-gray-100 md:px-12">
           <div className="max-w-5xl mx-auto">
-            <h2 className="mb-6 text-3xl font-bold text-deep-blue">
+            <p className="mb-6 text-3xl font-bold text-deep-blue">
               Frequently Asked Questions
-            </h2>
+            </p>
             <div className="space-y-6">
               <div>
                 <h3 className="text-lg font-semibold text-gray-800">
