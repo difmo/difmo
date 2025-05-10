@@ -42,7 +42,11 @@ const Header = () => {
     >
       <div className="container flex items-center justify-between px-6 py-2 mx-auto">
         <Link href="/" className="flex items-center space-x-2">
-          <Image src={logo} alt="Difmo Logo" className="w-auto h-10 md:h-10 bg-cover" />
+          <Image
+            src={logo}
+            alt="Difmo Logo"
+            className="w-auto h-10 md:h-10 bg-cover"
+          />
         </Link>
 
         <button
@@ -54,23 +58,36 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center space-x-10 text-base font-medium text-gray-800">
-          <HeaderLink href="/" isActive={isActive("/")}>Home</HeaderLink>
-          <HeaderLink href="/about" isActive={isActive("/about")}>About Us</HeaderLink>
+          <HeaderLink href="/" isActive={isActive("/")}>
+            Home
+          </HeaderLink>
+          <HeaderLink href="/about" isActive={isActive("/about")}>
+            About Us
+          </HeaderLink>
           <DropdownMenu
             title="Services"
             items={[
               { href: "/services/web", label: "Web Development" },
               { href: "/services/mobile", label: "Mobile Development" },
-              { href: "/software-maintenance", label: "Software Maintenance Services" },
+              {
+                href: "/software-maintenance",
+                label: "Software Maintenance Services",
+              },
               { href: "/software-testing", label: "Software Testing Services" },
             ]}
           />
-          <HeaderLink href="/projects" isActive={isActive("/projects")}>Projects</HeaderLink>
-          <HeaderLink href="/blogs" isActive={isActive("/blogs")}>Blogs</HeaderLink>
-          <HeaderLink href="/careers" isActive={isActive("/careers")}>Careers</HeaderLink>
+          <HeaderLink href="/projects" isActive={isActive("/projects")}>
+            Projects
+          </HeaderLink>
+          <HeaderLink href="/blogs" isActive={isActive("/blogs")}>
+            Blogs
+          </HeaderLink>
+          <HeaderLink href="/careers" isActive={isActive("/careers")}>
+            Careers
+          </HeaderLink>
           <Link
             href="/contact-us"
-            className="h-10 px-5 py-1 text-white text-base bg-[#e00909] hover:text-black hover:bg-gray-200 transition rounded-[8px]"
+            className=" px-5 py-2 text-white text-base bg-[#e00909] hover:text-black hover:bg-gray-200 transition rounded-[8px]"
           >
             Get in touch
           </Link>
@@ -80,7 +97,10 @@ const Header = () => {
         {isMenuOpen && (
           <div className="fixed inset-0 z-50 p-6 bg-white text-black">
             <div className="flex items-center justify-between mb-6">
-              <Link href="/" className="text-2xl font-semibold text-primary-orange">
+              <Link
+                href="/"
+                className="text-2xl font-semibold text-primary-orange"
+              >
                 Difmo Technologies
               </Link>
               <button className="text-3xl" onClick={() => setIsMenuOpen(false)}>
@@ -88,8 +108,12 @@ const Header = () => {
               </button>
             </div>
             <nav className="flex flex-col space-y-6 text-lg font-medium">
-              <Link href="/" onClick={() => setIsMenuOpen(false)}>Home</Link>
-              <Link href="/about" onClick={() => setIsMenuOpen(false)}>About Us</Link>
+              <Link href="/" onClick={() => setIsMenuOpen(false)}>
+                Home
+              </Link>
+              <Link href="/about" onClick={() => setIsMenuOpen(false)}>
+                About Us
+              </Link>
 
               <div>
                 <button
@@ -103,28 +127,61 @@ const Header = () => {
                     stroke="currentColor"
                     viewBox="0 0 24 24"
                     style={{
-                      transform: isMobileDropdownOpen ? "rotate(180deg)" : "rotate(0deg)",
+                      transform: isMobileDropdownOpen
+                        ? "rotate(180deg)"
+                        : "rotate(0deg)",
                     }}
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M19 9l-7 7-7-7"
+                    />
                   </svg>
                 </button>
                 {isMobileDropdownOpen && (
                   <div className="ml-4 mt-2 space-y-2">
-                    <Link href="/services/web" onClick={() => setIsMenuOpen(false)}>Web Development</Link>
-                    <Link href="/services/mobile" onClick={() => setIsMenuOpen(false)}>Mobile Development</Link>
-                    <Link href="/software-maintenance" onClick={() => setIsMenuOpen(false)}>Software Maintenance</Link>
-                    <Link href="/software-testing" onClick={() => setIsMenuOpen(false)}>Software Testing</Link>
+                    <Link
+                      href="/services/web"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Web Development
+                    </Link>
+                    <Link
+                      href="/services/mobile"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Mobile Development
+                    </Link>
+                    <Link
+                      href="/software-maintenance"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Software Maintenance
+                    </Link>
+                    <Link
+                      href="/software-testing"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Software Testing
+                    </Link>
                   </div>
                 )}
               </div>
 
-              <Link href="/projects" onClick={() => setIsMenuOpen(false)}>Projects</Link>
-              <Link href="/blogs" onClick={() => setIsMenuOpen(false)}>Blogs</Link>
-              <Link href="/careers" onClick={() => setIsMenuOpen(false)}>Careers</Link>
+              <Link href="/projects" onClick={() => setIsMenuOpen(false)}>
+                Projects
+              </Link>
+              <Link href="/blogs" onClick={() => setIsMenuOpen(false)}>
+                Blogs
+              </Link>
+              <Link href="/careers" onClick={() => setIsMenuOpen(false)}>
+                Careers
+              </Link>
               <Link
                 href="/contact-us"
-                className="inline-block mt-4 text-center bg-[#e00909] text-white px-5 py-2 rounded-xl"
+                className=" text-center py-2 bg-[#e00909] text-white px-5 rounded-xl flex items-center justify-center"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Get in touch
@@ -162,8 +219,18 @@ const DropdownMenu = ({ title, items }) => {
     >
       <button className="flex items-center text-lg hover:text-primary-orange">
         {title}
-        <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+        <svg
+          className="w-4 h-4 ml-1"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M19 9l-7 7-7-7"
+          />
         </svg>
       </button>
       {isDropdownOpen && (
