@@ -45,7 +45,7 @@ const Header = () => {
           <Image
             src={logo}
             alt="Difmo Logo"
-            className="w-auto  bg-cover"
+            className="w-auto h-12 md:h-12 bg-cover"
           />
         </Link>
 
