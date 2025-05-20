@@ -30,16 +30,16 @@ const Contactus = () => {
                 <span className="font-semibold">Phone Number</span>
               </div>
               <a
+                href="tel:+919519202509"
+                className="block px-8 text-black hover:text-primary-orange hover:underline mt-1"
+              >
+                +91 951-920-2025
+              </a>
+              <a
                 href="tel:+919455791624"
                 className="block px-8 text-black hover:text-primary-orange hover:underline mt-1"
               >
                 +91 945-579-1624
-              </a>
-              <a
-                href="tel:+918172848306"
-                className="block px-8 text-black hover:text-primary-orange hover:underline mt-1"
-              >
-                +91 817-284-8306
               </a>
             </div>
             {/* Email Address */}
