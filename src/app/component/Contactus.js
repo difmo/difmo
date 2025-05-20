@@ -33,7 +33,7 @@ const Contactus = () => {
                 href="tel:+919519202509"
                 className="block px-8 text-black hover:text-primary-orange hover:underline mt-1"
               >
-                +91 951-920-2025
+                +91 951-920-2509
               </a>
               <a
                 href="tel:+919455791624"
