@@ -105,7 +105,7 @@ We build technology responsibly, ensuring a sustainable impact.",
         {/* Background SVG */}
 
         {/* About Us Section */}
-        <div className="mx-4 pb-20 pt-32 bottom-0 sm:px-8 lg:px-16 relative z-50">
+        <div className="mx-4 pb-20 pt-32 bottom-0 sm:px-8 lg:px-16 relative z-30">
           <div className="grid  grid-cols-1 gap-6 sm:grid-cols-1 md:grid-cols-2">
             <motion.div>
               <h2 className="mb-6 text-2xl sm:text-3xl md:text-3xl font-extrabold text-black">

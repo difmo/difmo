@@ -26,19 +26,19 @@ const OurContact = () => {
                   className="w-5 h-5 mr-2 text-primary-orange"
                 />
                 <span className="font-semibold">Phone Number</span>
-              </div>
+              </div>  <a
+                href="tel:+919519202509"
+                className="block px-8 text-black hover:text-primary-orange hover:underline mt-1"
+              >
+                +91 951-920-2509
+              </a>
               <a
                 href="tel:+919455791624"
                 className="block px-8 text-black hover:text-primary-orange hover:underline mt-1"
               >
                 +91 945-579-1624
               </a>
-              <a
-                href="tel:+918172848306"
-                className="block px-8 text-black hover:text-primary-orange hover:underline mt-1"
-              >
-                +91 817-284-8306
-              </a>
+            
             </div>
             {/* Email Address */}
             <div className="mb-4">
