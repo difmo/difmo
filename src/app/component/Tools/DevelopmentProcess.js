@@ -31,7 +31,7 @@ const processSteps = [
 
 const DevelopmentProcess = () => {
   return (
-    <div className="mt-16 relative z-60 px-4 md:px-8">
+    <div className="mt-16 relative  px-4 md:px-8">
       <h3 className="text-3xl font-bold text-center mb-12 text-gray-800">
         Our Development Process
       </h3>
