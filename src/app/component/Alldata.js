@@ -1,14 +1,59 @@
-import ecom from "../assets/mobiledeveoper/business.jpg";
-import be from "../assets/mobiledeveoper/mobile.png";
+
 import Ecom from "../assets/servicesimg/IMG@1x (2).png";
 import busin from "../assets/servicesimg/IMG@1x (1).png";
 import busin1 from "../assets/servicesimg/IMG@1x.png";
 import chat from "../assets/chat.png";
 import corporate from "../assets/corporate.png";
 import you from "../assets/Cover2.png";
+
+// web stuff
+import react from '../assets/developertool/web/react.svg';
+import vue from '../assets/developertool/web/Vue.svg';
+import bootstrap from '../assets/developertool/web/bootstrap.svg';
+import tailwind from '../assets/developertool/web/tailwind.svg';
+import Nodejs from '../assets/developertool/web/Nodejs.svg';
+
+// ios stuff
+
+import android from '../assets/developertool/ios/android.svg';
+import androidstudio from '../assets/developertool/ios/androidstudio.svg';
+import flutter from '../assets/developertool/ios/flutter.svg';
+import ios from '../assets/developertool/ios/ios.svg';
+import xcode from '../assets/developertool/ios/xcode.svg';
+
+
 const data = [
   {
     id: "web",
+
+    tools: [
+      {
+        name: "React",
+        image: react,
+        description: "A JavaScript library for building user interfaces",
+      },
+      {
+        name: "Vue.js",
+        image: vue,
+        description: "The Progressive JavaScript Framework",
+      },
+      {
+        name: "Bootstrap",
+        image: bootstrap,
+        description: "Front-end framework for responsive web design",
+      },
+      {
+        name: "Tailwind CSS",
+        image: tailwind,
+        description: "Utility-first CSS framework for custom designs",
+      },
+      {
+        name: "Node.js",
+        image: Nodejs,
+        description: "JavaScript runtime for building server-side applications",
+      },
+    ],
+
     cta: {
       title: "Web Development Solutions",
       subtitle:
@@ -22,7 +67,7 @@ const data = [
         title: "E-Commerce Website ",
         image: Ecom,
         features: [
-          "Custom websites tailored to your   brand",
+          "Custom websites tailored your brand",
           "Responsive and mobile-friendly design",
           "SEO-optimized for better visibility",
         ],
@@ -74,6 +119,34 @@ const data = [
   },
   {
     id: "mobile",
+     tools: [
+      {
+        name: "React",
+        image: android,
+        description: "A JavaScript library for building user interfaces",
+      },
+      {
+        name: "Vue.js",
+        image: androidstudio,
+        description: "The Progressive JavaScript Framework",
+      },
+      {
+        name: "Bootstrap",
+        image: flutter,
+        description: "Front-end framework for responsive web design",
+      },
+      {
+        name: "Tailwind CSS",
+        image: ios,
+        description: "Utility-first CSS framework for custom designs",
+      },
+      {
+        name: "XCode",
+        image: xcode,
+        description: "XCode is an integrated development environment (IDE) for macOS",
+      },
+    ],
+
     cta: {
       title: "Empower Your Mobile Experience",
       subtitle: "Build innovative and high-performance mobile applications.",

@@ -34,11 +34,10 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolling ? "bg-white shadow-md" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolling ? "bg-white shadow-md" : "bg-transparent"
+        }`}
     >
-      <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto py-2 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image src={logo} alt="Difmo Logo" className="h-12 w-auto" />
@@ -55,9 +54,8 @@ const Header = () => {
         {/* Desktop Nav */}
 
         <nav
-          className={`hidden ${
-            scrolling ? "px-8 py-2" : "shadow-lg border px-8 py-2 rounded-full"
-          } lg:flex items-center space-x-8 text-gray-800 font-medium`}
+          className={`hidden pl-8 ${scrolling ? "" : "shadow-lg border   rounded-full"
+            } lg:flex items-center space-x-8 text-gray-800 font-medium`}
         >
           <HeaderLink href="/" isActive={isActive("/")}>
             Home
@@ -85,7 +83,7 @@ const Header = () => {
           </HeaderLink>
 
           {/* Icons + Get in Touch Button */}
-          <div className="flex items-center space-x-4  rounded-full px-2  bg-secondary">
+          <div className="flex items-center space-x-4  rounded-full px-1  bg-secondary">
             <a
               href="https://wa.me/+919519202509"
               target="_blank"
@@ -166,7 +164,7 @@ const Header = () => {
             <Link
               href="/contact-us"
               onClick={() => setIsMenuOpen(false)}
-              className="bg-[#e00909] text-white px-4 py-2 rounded-lg text-center"
+              className="bg-[#e00909] text-white px-4  rounded-lg text-center"
             >
               Get in touch
             </Link>
@@ -180,9 +178,8 @@ const Header = () => {
 const HeaderLink = ({ href, isActive, children }) => (
   <Link
     href={href}
-    className={`relative hover:text-[#e00909] transition ${
-      isActive ? "font-semibold text-[#e00909]" : ""
-    }`}
+    className={`relative hover:text-[#e00909] transition ${isActive ? "font-semibold text-[#e00909]" : ""
+      }`}
   >
     {children}
     {isActive && (
@@ -218,7 +215,7 @@ const DropdownMenu = ({ title, items }) => {
         </svg>
       </button>
       {isDropdownOpen && (
-        <div className="absolute top-full left-0 mt-2 w-64 bg-white border rounded-lg shadow-lg py-2 z-50 transition-all duration-300">
+        <div  > <div className="absolute top-full left-0  w-64 bg-white border rounded-lg shadow-lg py-2 z-50 transition-all duration-300">
           {items.map((item) => (
             <Link
               key={item.href}
@@ -228,7 +225,9 @@ const DropdownMenu = ({ title, items }) => {
               {item.label}
             </Link>
           ))}
-        </div>
+        </div></div>
+
+
       )}
     </div>
   );
