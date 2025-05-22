@@ -34,18 +34,18 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolling ? "bg-white shadow-md" : "bg-transparent"
+      className={`fixed  top-0 left-0 w-full z-50 transition-all duration-300 ${scrolling ? "bg-white shadow-md" : "bg-transparent"
         }`}
     >
-      <div className="max-w-7xl mx-auto py-2 flex items-center justify-between">
+      <div className="max-w-7xl  mx-auto py-2 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center">
-          <Image src={logo} alt="Difmo Logo" className="h-12 w-auto" />
+        <Link href="/" className="flex items-center ">
+          <Image src={logo} alt="Difmo Logo" className="h-12 w-auto ml-5" />
         </Link>
 
         {/* Hamburger for mobile */}
         <button
-          className="lg:hidden text-2xl"
+          className="lg:hidden text-2xl mr-5 text-black"
           onClick={() => setIsMenuOpen(true)}
         >
           <HiOutlineMenu />
@@ -110,7 +110,7 @@ const Header = () => {
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-white z-50 p-6">
+        <div className="fixed inset-0 bg-white text-black z-50 p-6">
           <div className="flex items-center justify-between mb-6">
             <Link href="/" className="text-2xl font-bold text-[#e00909]">
               Difmo
@@ -128,7 +128,7 @@ const Header = () => {
             </Link>
             <div>
               <span className="font-semibold">Services</span>
-              <div className="ml-4 mt-2 space-y-2">
+              <div className="ml-4 flex-col flex mt-2 space-y-2">
                 <Link href="/services/web" onClick={() => setIsMenuOpen(false)}>
                   Web Development
                 </Link>

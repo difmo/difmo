@@ -1,10 +1,7 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCogs, faUsers, faGlobe } from "@fortawesome/free-solid-svg-icons";
-import contact from "../assets/contact.jpeg";
+
 import OurContact from "../component/OurContact";
 
 const Contact = () => {
@@ -13,7 +10,7 @@ const Contact = () => {
       {/* <div className="py-24"> */}
       <div className="bg-slate-50 py-8 pt-24 md:py-24 px-2 md:px-24">
         <h1 className="text-4xl py-3 font-bold text-gray-800 text-center mb-8">
-          Contact Us
+          Contact fUs
         </h1>
         <div className="text-lg text-gray-700">
           <p className="mb-4 text-center w-full lg:px-44">

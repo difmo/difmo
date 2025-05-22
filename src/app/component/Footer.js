@@ -110,12 +110,11 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#111827] text-white  relative overflow-hidden w-full font-poppins pl-5 sm:pl-0 pt-10">
-      <div className="relative z-10 max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-5 md:text-left">
+    <footer className="bg-[#111827] text-white bg-gradient-to-br from-[#002D55] via-[#00325d] to-[#002D55] relative overflow-hidden w-full font-poppins pl-5 sm:pl-0 ">
+      <div className="relative m-10 bg-[#002D55] md:px-28 py-16 rounded-full z-10 max-w-screen-xl  mx-auto ">
+        <div className="grid  grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-5 text-center">
           {/* First column with logo, description, and social icons */}
-          {/* <Pageseo /> */}
-          <div>
+          <div className="flex flex-col items-center justify-center h-full">
             <Image
               src={logo}
               alt="Company Logo"
@@ -123,14 +122,15 @@ const Footer = () => {
               height={96}
               className="object-contain w-auto h-16 mb-5"
             />
-            <h3>
-              Enhancing Customer Experience with Innovative Web and Mobile
+            <h3 className="text-center">
+              Enhancing Customer Experience  with Innovative <br/> Web and Mobile
             </h3>
             <div className="flex flex-col justify-between md:flex-row">
               {/* <p className="max-w-md mx-auto mt-4 text-sm text-white md:mx-0">
-            At Difmo Technologies, we don’t just build software—we craft the
-            future. Powered by innovation, driven for global impact.
-          </p> */}
+                At Difmo Technologies, we don’t just build software—we craft the
+                future. Powered by innovation, driven for global impact.
+              </p> */}
+         
               <div className="flex justify-center mt-4 space-x-4 md:justify-start">
                 {footerData.social.map((social, index) => (
                   <a
@@ -153,7 +153,7 @@ const Footer = () => {
 
           {/* Second column with links */}
           <div className="mb-6">
-            <h2 className="mb-4 text-sm font-semibold text-white uppercase">
+            <h2 className="mb-4 text-sm font-semibold  text-white uppercase">
               {footerData.sections[0].title}
             </h2>
             <ul className="font-medium text-white">

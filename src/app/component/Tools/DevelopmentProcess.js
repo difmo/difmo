@@ -35,7 +35,7 @@ const DevelopmentProcess = () => {
       <h3 className="text-3xl font-bold text-center mb-12 text-gray-800">
         Our Development Process
       </h3>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 bg-white/20 backdrop-blur-lg rounded-2xl border border-gray-200 shadow-lg p-8">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 bg-white/20 backdrop-blur-lg rounded-2xl border border-gray-200 shadow-lg p-8"> 
         {processSteps.map((step, index) => (
           <div
             key={index}
