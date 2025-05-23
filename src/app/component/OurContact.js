@@ -175,7 +175,3 @@ on something cool\n together
 };
 
 export default OurContact;
-
-
-
-make design like screenshort
