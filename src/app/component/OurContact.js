@@ -16,7 +16,7 @@ import letter from "../assets/backgroundsvg/letter_send 1.png";
 
 const OurContact = () => {
   return (
-    <div className="w-full min-h-screen flex items-center justify-center bg-[#1E003A] text-white p-8">
+    <div className="w-full min-h-screen flex items-center justify-center  text-white p-8">
   <div className="w-full max-w-6xl bg-white rounded-lg flex flex-col lg:flex-row overflow-hidden shadow-2xl">
     
     {/* Left Section */}
