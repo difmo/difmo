@@ -1,4 +1,3 @@
-[media pointer="file-service://file-KHuw2pFdixPNT3ZwK4jAUz"]
 "use client";
 import Formcontect from "./OurContactForm";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
