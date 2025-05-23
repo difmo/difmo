@@ -24,7 +24,8 @@ const OurContact = () => {
           <div className="relative w-full rounded-lg bg-[#002D55] text-white p-6 sm:p-8 overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl">
             <div className="relative z-10">
               <h2 className="text-2xl sm:text-3xl font-extrabold mb-6">
-                Get in Touch
+                Let’s discuss\n
+on something cool\n together
               </h2>
               {/* Phone Number */}
               <div className="mb-6">
