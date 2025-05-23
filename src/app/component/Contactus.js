@@ -21,7 +21,8 @@ on something cool\n together</h1>
         <div className="w-full md:w-1/2">
           <div className="rounded-lg bg-white border-gray-500 py-6 md:p-8">
             <p className="font-extrabold text-2xl md:text-3xl text-black mb-6">
-              Get in Touch
+              Let’s discuss\n
+on something cool\n together
             </p>
             {/* Phone Number */}
             <div className="mb-4">
