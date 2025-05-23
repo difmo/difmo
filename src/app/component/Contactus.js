@@ -12,7 +12,9 @@ const Contactus = () => {
   return (
     <>
       <div className="flex justify-center font-bold py-3 text-deep-blue">
-        <h1 className="text-2xl md:text-5xl ">Get In Touch</h1>
+        <h1 className="text-2xl md:text-5xl ">
+    Let’s discuss\n
+on something cool\n together</h1>
       </div>
       <div className="md:flex gap-7 px-2 md:px-10 py-5 justify-center">
         <div className="w-full md:w-1/2">
